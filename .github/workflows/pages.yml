@@ -1,4 +1,4 @@
-# 构建 dist 并部署到 GitHub Pages（推送到 main 即自动发布 live demo）
+# Build dist dan deploy ke GitHub Pages untuk domain custom.
 name: Deploy to GitHub Pages
 
 on:
@@ -25,7 +25,7 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - run: npm run build:pages # 含模板同步检查；--base=/OpenBox3D/ 适配 Pages 子路径
+      - run: npm run build:pages
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:

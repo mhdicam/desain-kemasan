@@ -1,22 +1,22 @@
-// 把 .boxproj 工程文件转为本仓库的内置示例盒：
-//   node scripts/boxproj-to-preset.mjs /路径/工程.boxproj
-// 图片 dataURL 抽取为 public/preset/layer-<id>.<ext>，工程裁剪后写 src/preset/preset-box.json。
-// 用法也写在 package.json：npm run preset:from -- /路径/工程.boxproj
+// 把 .boxproj file proyekjadi本仓库的Box contoh bawaan：
+//   node scripts/boxproj-to-preset.mjs /path/工程.boxproj
+// Gambar dataURL 抽pakai为 public/preset/layer-<id>.<ext>，工程Crop后写 src/preset/preset-box.json。
+// 用法也写在 package.json：npm run preset:from -- /path/工程.boxproj
 import fs from 'node:fs';
 import path from 'node:path';
 
 const src = process.argv[2];
-if (!src) { console.error('用法：node scripts/boxproj-to-preset.mjs /路径/工程.boxproj'); process.exit(1); }
+if (!src) { console.error('Cara pakai: node scripts/boxproj-to-preset.mjs /path/proyek.boxproj'); process.exit(1); }
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const doc = JSON.parse(fs.readFileSync(src, 'utf8'));
 if (doc.schema !== 'box3d-project' || doc.version !== 1 || !doc.box || !doc.design || !Array.isArray(doc.design.layers)) {
-  console.error('不是有效的 Box3D 工程文件（schema box3d-project v1）。');
+  console.error('Bukan file proyek Box3D valid (schema box3d-project v1).');
   process.exit(1);
 }
 
 const presetDir = path.join(root, 'public', 'preset');
-fs.rmSync(presetDir, { recursive: true, force: true }); // 清掉上一代示例盒素材
+fs.rmSync(presetDir, { recursive: true, force: true }); // hapus generasi sebelumnyabox contohasset
 fs.mkdirSync(presetDir, { recursive: true });
 
 const EXT = { png: 'png', jpeg: 'jpg', webp: 'webp' };
@@ -30,7 +30,7 @@ for (const layer of doc.design.layers) {
   extracted++;
 }
 
-doc.meta = { id: 'preset', name: '内置示例盒', createdAt: doc.meta && doc.meta.createdAt, updatedAt: doc.meta && doc.meta.updatedAt, thumbnail: '' }; // 封面启动后自动重捕，不进仓库
+doc.meta = { id: 'preset', name: 'Box contoh bawaan', createdAt: doc.meta && doc.meta.createdAt, updatedAt: doc.meta && doc.meta.updatedAt, thumbnail: '' }; // coversetelah startupambil ulang otomatis，tidak masuk repo
 const out = path.join(root, 'src', 'preset', 'preset-box.json');
 fs.writeFileSync(out, JSON.stringify(doc, null, 2));
-console.log('完成：抽取图片 ' + extracted + ' 张 → public/preset/；工程 → src/preset/preset-box.json（' + Math.round(fs.statSync(out).size / 1024) + ' KB）');
+console.log('Selesai: ekstrak gambar ' + extracted + ' buah → public/preset/; proyek → src/preset/preset-box.json (' + Math.round(fs.statSync(out).size / 1024) + ' KB)');

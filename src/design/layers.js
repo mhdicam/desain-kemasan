@@ -1,11 +1,11 @@
-// 图层模型：bbox、DPI、跨压痕/越界警示（移植原型逻辑）
-export const FIN = { none: '', foil: '烫金', silver: '烫银', uv: 'UV', gloss: '亮面', emboss: '压纹', holo: '镭射' };
-export const FIN_NAMES = { foil: '烫金', silver: '烫银', uv: '局部 UV', gloss: '亮面', emboss: '压纹', holo: '镭射' };
-export const randomImageName = () => '图片·' + Math.random().toString(36).slice(2, 6).toUpperCase();
+// Layer模型：bbox, DPI, lintasGaris lipat/keluar batasPeringatan (移植lama型逻辑)
+export const FIN = { none: '', foil: 'Foil emas', silver: 'Foil perak', uv: 'UV', gloss: 'Gloss', emboss: 'Emboss', holo: 'Holografik' };
+export const FIN_NAMES = { foil: 'Foil emas', silver: 'Foil perak', uv: 'Spot UV', gloss: 'Gloss', emboss: 'Emboss', holo: 'Holografik' };
+export const randomImageName = () => 'Gambar·' + Math.random().toString(36).slice(2, 6).toUpperCase();
 export const layerNameOf = l => {
   if (l && typeof l.name === 'string' && l.name.trim()) return l.name.trim();
-  if (l && l.kind === 'image') return '图片·' + Number(l.id || 0).toString(36).toUpperCase().padStart(4, '0').slice(-4);
-  return l && l.content || '(空)';
+  if (l && l.kind === 'image') return 'Gambar·' + Number(l.id || 0).toString(36).toUpperCase().padStart(4, '0').slice(-4);
+  return l && l.content || '(kosong)';
 };
 
 export function bboxOf(l) {
@@ -23,7 +23,7 @@ export function dpiOf(l) {
   return Math.round(l.pxw / (l.w / 25.4));
 }
 
-// 图集 UV 用：每个面板（fill 多边形）的包围盒，供 3D 与导出对齐
+// atlas UV 用：setiap面板 (fill 多边形)的包围盒，供 3D 与导出selaras
 export function panelBoxes(g) {
   return g.fills.map(pts => {
     let x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9;
@@ -34,27 +34,27 @@ export function panelBoxes(g) {
 
 export function warnsOf(l, creaseSegs, sbb) {
   const b = bboxOf(l), out = [];
-  // 已绑定容器的图层会在所有渲染/导出链路统一裁切；越过容器边界不再是生产警示。
+  // terikat容器的Layer会在semuarender/导出pipeline统一crop；越过容器边界不再是生产Peringatan。
   if (l.panelId == null) {
     for (const seg2 of creaseSegs) {
       const p1 = seg2[0], p2 = seg2[1];
       if (Math.abs(p1[0] - p2[0]) < 0.01) {
         const cx = p1[0], y0 = Math.min(p1[1], p2[1]), y1 = Math.max(p1[1], p2[1]);
-        if (cx > b[0] && cx < b[0] + b[2] && y0 < b[1] + b[3] && y1 > b[1]) { out.push('跨压痕线：折角处图案会断裂/变形'); break; }
+        if (cx > b[0] && cx < b[0] + b[2] && y0 < b[1] + b[3] && y1 > b[1]) { out.push('Melintasi garis lipat: artwork bisa patah/terdistorsi di sudut lipatan'); break; }
       } else if (Math.abs(p1[1] - p2[1]) < 0.01) {
         const cy = p1[1], x0 = Math.min(p1[0], p2[0]), x1 = Math.max(p1[0], p2[0]);
-        if (cy > b[1] && cy < b[1] + b[3] && x0 < b[0] + b[2] && x1 > b[0]) { out.push('跨压痕线：折角处图案会断裂/变形'); break; }
+        if (cy > b[1] && cy < b[1] + b[3] && x0 < b[0] + b[2] && x1 > b[0]) { out.push('Melintasi garis lipat: artwork bisa patah/terdistorsi di sudut lipatan'); break; }
       }
     }
-    if (b[0] < sbb[0] - 0.5 || b[1] < sbb[1] - 0.5 || b[0] + b[2] > sbb[2] + 0.5 || b[1] + b[3] > sbb[3] + 0.5) out.push('超出版面：已进入出血/废料区');
+    if (b[0] < sbb[0] - 0.5 || b[1] < sbb[1] - 0.5 || b[0] + b[2] > sbb[2] + 0.5 || b[1] + b[3] > sbb[3] + 0.5) out.push('Keluar layout: masuk area bleed/limbah');
   }
-  if (l.kind === 'image') { const dpi = dpiOf(l); if (dpi < 300) out.push('分辨率不足：' + dpi + ' dpi < 300 dpi'); }
+  if (l.kind === 'image') { const dpi = dpiOf(l); if (dpi < 300) out.push('Resolusi kurang: ' + dpi + ' dpi < 300 dpi'); }
   return out;
 }
 
-// 工艺图片的有效 mask：RGB 置白、alpha = 亮度 × 原 alpha。
-// 标准 PBR 灰度工艺图（黑=无效果、白=满效果、灰=过渡）经此转为镂空权重；
-// 旧版 RGBA 抠图（原色+alpha）也兼容（亮度×alpha≈强度）。按 img 对象缓存。
+// FinishingGambar的valid mask：RGB set putih, alpha = brightness × lama alpha。
+// 标准 PBR 灰度FinishingG (黑=tanpa efek, 白=efek penuh, 灰=transisi)经此jadibobot mask；
+// lama plat RGBA cutoutG (lama色+alpha)也kompatibel (brightness×alpha≈intensitas)。berdasarkan img objekcache。
 const craftMaskCache = new WeakMap();
 function craftMaskOf(img) {
   let m = craftMaskCache.get(img);
@@ -75,8 +75,8 @@ function craftMaskOf(img) {
   return m;
 }
 
-// 统一绘制一个图层到 2d canvas（导出 PDF / 3D 烘焙共用）
-// sc = px/mm 缩放；fill 覆盖颜色（工艺 mask 用 '#fff' 等）
+// 统一绘制satuLayer到 2d canvas (Ekspor PDF / 3D 烘焙reuse)
+// sc = px/mm Zoom；fill menimpa颜色 (Finishing mask 用 '#fff' 等)
 export function drawLayer(ctx, l, sc, fill, clipPts) {
   ctx.save();
   if (clipPts && clipPts.length > 2) {
@@ -104,14 +104,14 @@ export function drawLayer(ctx, l, sc, fill, clipPts) {
     ctx.fillStyle = fill || (l.finish === 'emboss' ? 'rgba(33,29,24,0.12)' : l.finish === 'foil' ? '#C9A227' : l.finish === 'silver' ? '#B8BAC4' : (l.color || '#211d18'));
     ctx.fillRect(l.x * sc, l.y * sc, l.w * sc, l.h * sc);
   } else if (l.img) {
-    // 真实图片（支持裁剪）
+    // aktualGambar (支持Crop)
     const cr = l.crop || [0, 0, 1, 1];
     const iw = l.img.naturalWidth, ih = l.img.naturalHeight;
     const sx = cr[0] * iw, sy = cr[1] * ih, sw = cr[2] * iw, sh = cr[3] * ih;
     const dx = l.x * sc, dy = l.y * sc, dw = l.w * sc, dh = l.h * sc;
     if (fill || (l.finish && l.finish !== 'none')) {
-      // 工艺图层（mask 或底色 tint）：先在独立画布上按有效 mask（亮度×alpha）镂空，再正常合成
-      // —— 避免 destination-in 直接作用在主画布上抹掉其他内容
+      // FinishingLayer (mask 或bawah色 tint)：先在独立kanvas上berdasarkanvalid mask (brightness×alpha)镂空，再regular常合成
+      // —— hindari destination-in 直接作用在主kanvas上抹掉其他Konten
       const t = document.createElement('canvas');
       t.width = Math.max(1, Math.ceil(dw)); t.height = Math.max(1, Math.ceil(dh));
       const tg = t.getContext('2d');
@@ -125,10 +125,10 @@ export function drawLayer(ctx, l, sc, fill, clipPts) {
       ctx.drawImage(l.img, sx, sy, sw, sh, dx, dy, dw, dh);
     }
   } else if (fill) {
-    // 工艺 mask 模式：图片占位区域实心填充
+    // Finishing mask 模式：Gambararea placeholdersolid fill
     ctx.fillStyle = fill; ctx.fillRect(l.x * sc, l.y * sc, l.w * sc, l.h * sc);
   } else {
-    // 图片占位框
+    // Gambar占位框
     ctx.strokeStyle = fill || '#b3a88f'; ctx.lineWidth = fill ? 2 : sc * 0.3;
     if (!fill) ctx.setLineDash([sc * 2, sc * 1.4]);
     ctx.strokeRect(l.x * sc, l.y * sc, l.w * sc, l.h * sc); ctx.setLineDash([]);

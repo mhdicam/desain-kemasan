@@ -1,7 +1,7 @@
 {
   "name": "openbox3d",
   "version": "0.1.0",
-  "description": "OpenBox3D 苏哇工作台 — 浏览器内的包装盒设计工作台：参数化刀版、分层设计、PBR 3D 折叠预览与印刷 PDF 导出",
+  "description": "OpenBox3D Studio Kemasan — Studio desain kemasan berbasis browser: dieline parametrik, desain berlapis, pratinjau lipat 3D PBR, dan ekspor PDF cetak",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
     "dev": "vite",
     "prebuild": "npm run check:template-sync",
     "build": "vite build",
-    "build:pages": "npm run check:template-sync && vite build --base=/OpenBox3D/",
+    "build:pages": "npm run check:template-sync && vite build --base=/",
     "check:template-sync": "node scripts/check-template-sync.mjs",
     "preset:from": "node scripts/boxproj-to-preset.mjs",
     "preview": "vite preview"

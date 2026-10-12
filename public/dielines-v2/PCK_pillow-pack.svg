@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="227.0000mm" version="1.1" viewBox="0 0 342.0000 227.0000" width="342.0000mm">
+  <defs/>
+  <rect fill="white" height="227.0" width="342.0" x="0" y="0"/>
+  <g fill="#334155" id="INFO">
+    <text font-family="DejaVu Sans,Arial" font-size="6.8" font-weight="bold" x="20" y="15">Pillow Pack - flow wrap film</text>
+    <text font-family="Arial" font-size="3.1" x="20" y="23">Film width 290 mm; repeat length 140 mm</text>
+    <text font-family="Arial" font-size="2.9" x="20" y="30">FILM_SEAL_NOT_BOX_FOLD | ENGINEERING SAMPLE | UNIT: mm | SCALE 1:1</text>
+    <text fill="#52647b" font-family="Arial" font-size="2.7" x="145.0" y="114.0">PRODUCT PRINT PANEL</text>
+  </g>
+  <g id="CUT">
+    <polyline fill="none" points="316.0,48.0 316.0,188.0 26.0,188.0 26.0,48.0 316.0,48.0" stroke="#d52f37" stroke-width="0.34"/>
+  </g>
+  <g id="GLUE"/>
+  <g id="SEAL">
+    <polyline fill="none" points="41.0,48.0 41.0,188.0 26.0,188.0 26.0,48.0 41.0,48.0" stroke="#9263b0" stroke-dasharray="1.5,1.2" stroke-width="0.21"/>
+    <polyline fill="none" points="316.0,48.0 316.0,188.0 301.0,188.0 301.0,48.0 316.0,48.0" stroke="#9263b0" stroke-dasharray="1.5,1.2" stroke-width="0.21"/>
+    <polyline fill="none" points="316.0,48.0 316.0,57.0 26.0,57.0 26.0,48.0 316.0,48.0" stroke="#9263b0" stroke-dasharray="1.5,1.2" stroke-width="0.21"/>
+    <polyline fill="none" points="316.0,179.0 316.0,188.0 26.0,188.0 26.0,179.0 316.0,179.0" stroke="#9263b0" stroke-dasharray="1.5,1.2" stroke-width="0.21"/>
+  </g>
+  <g id="SAFE">
+    <polyline fill="none" points="290.0,66.0 290.0,170.0 52.0,170.0 52.0,66.0 290.0,66.0" stroke="#138a5e" stroke-dasharray="1.5,1.2" stroke-width="0.21"/>
+  </g>
+  <g id="CREASE"/>
+  <g id="INFO">
+    <text fill="#475569" font-family="Arial" font-size="2.9" x="20" y="204.0">RED cut | BLUE fold | PURPLE film seal | GREY glue | GREEN safe printing</text>
+    <text fill="#475569" font-family="Arial" font-size="2.6" x="20" y="211.0">Flat flexible-film layout. FIN SEAL x0-15 and x275-290; transverse seals y0-9 and y131-140. NO carton</text>
+    <text fill="#475569" font-family="Arial" font-size="2.6" x="20" y="215.0">creases.</text>
+  </g>
+</svg>

@@ -1,4 +1,4 @@
-// 压纹方向与通道合成：旧图层回退全局方向，重叠处按图层顺序由顶层覆盖。
+// Embossarah与komposit channel：lamaLayerfallbackarah global，area overlapberdasarkanLayerurutanoleh layer atasmenimpa。
 import { drawLayer } from './layers.js';
 import { clipPtsOf } from './containers.js';
 

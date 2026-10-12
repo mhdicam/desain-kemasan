@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="437.213mm" version="1.1" viewBox="0 0 283.947 437.213" width="283.947mm">
+  <defs/>
+  <rect fill="white" height="437.21332877596484" width="283.94714599609284" x="0" y="0"/>
+  <g fill="#334155" id="INFO">
+    <text font-family="DejaVu Sans,Arial,sans-serif" font-size="7" font-weight="bold" x="18" y="13">Cylinder box</text>
+    <text font-family="Arial,sans-serif" font-size="3.6" x="18" y="21">24-facet tube nominal diameter 75 mm x height 125 mm; cap tabs separate, material tolerance pending</text>
+    <text font-family="Arial,sans-serif" font-size="3" x="18" y="27">PROTOTYPE_REQUIRED | STRUCTURAL_DIELINE</text>
+    <text font-family="Arial,sans-serif" font-size="2.6" x="18" y="421.21332877596484">Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off.</text>
+  </g>
+  <g color="#dc4eb8" id="BLEED">
+    <polyline fill="none" points="268.9471,44.0 268.0685,41.8787 265.9471,41.0 255.9471,41.0 255.9471,37.0 255.0685,34.8787 252.9471,34.0 18.0,34.0 15.8787,34.8787 15.0,37.0 15.0,162.0 15.8787,164.1213 18.0,165.0 252.9471,165.0 255.0685,164.1213 255.9471,162.0 255.9471,158.0 265.9471,158.0 268.0685,157.1213 268.9471,155.0 268.9471,44.0" stroke="#dc4eb8" stroke-dasharray="1.3,1.1" stroke-width="0.16"/>
+    <polyline fill="none" points="25.9667,257.0 24.7452,257.9055 24.2831,259.9368 25.211,266.9853 26.1832,268.8278 27.5974,269.3863 26.6519,270.577 26.7313,272.6588 29.4518,279.2269 30.8678,280.755 32.3783,280.9284 31.7732,282.3233 32.3887,284.3136 36.7165,289.9538 38.4797,291.0634 39.9837,290.8399 39.7602,292.3439 40.8698,294.1071 46.51,298.4349 48.5003,299.0504 49.8952,298.4453 50.0686,299.9558 51.5967,301.3717 58.1648,304.0923 60.2466,304.1717 61.4373,303.2262 61.9958,304.6404 63.8383,305.6125 70.8867,306.5405 72.9181,306.0783 73.8236,304.8569 74.7291,306.0783 76.7604,306.5405 83.8088,305.6125 85.6514,304.6404 86.2099,303.2262 87.4006,304.1717 89.4824,304.0923 96.0505,301.3717 97.5786,299.9558 97.752,298.4453 99.1469,299.0504 101.1372,298.4349 106.7773,294.1071 107.887,292.3439 107.6635,290.8399 109.1675,291.0634 110.9307,289.9538 115.2585,284.3136 115.8739,282.3233 115.2688,280.9284 116.7794,280.755 118.1953,279.2269 120.9159,272.6588 120.9953,270.577 120.0498,269.3863 121.464,268.8278 122.4361,266.9853 123.3641,259.9368 122.9019,257.9055 121.6804,257.0 122.9019,256.0945 123.3641,254.0632 122.4361,247.0147 121.464,245.1722 120.0498,244.6137 120.9953,243.423 120.9159,241.3412 118.1953,234.7731 116.7794,233.245 115.2688,233.0716 115.8739,231.6767 115.2585,229.6864 110.9307,224.0462 109.1675,222.9366 107.6635,223.1601 107.887,221.6561 106.7773,219.8929 101.1372,215.5651 99.1469,214.9496 97.752,215.5547 97.5786,214.0442 96.0505,212.6283 89.4824,209.9077 87.4006,209.8283 86.2099,210.7738 85.6514,209.3596 83.8088,208.3875 76.7604,207.4595 74.7291,207.9217 73.8236,209.1431 72.9181,207.9217 70.8867,207.4595 63.8383,208.3875 61.9958,209.3596 61.4373,210.7738 60.2466,209.8283 58.1648,209.9077 51.5967,212.6283 50.0686,214.0442 49.8952,215.5547 48.5003,214.9496 46.51,215.5651 40.8698,219.8929 39.7602,221.6561 39.9837,223.1601 38.4797,222.9366 36.7165,224.0462 32.3887,229.6864 31.7732,231.6767 32.3783,233.0716 30.8678,233.245 29.4518,234.7731 26.7313,241.3412 26.6519,243.423 27.5974,244.6137 26.1832,245.1722 25.211,247.0147 24.2831,254.0632 24.7452,256.0945 25.9667,257.0" stroke="#dc4eb8" stroke-dasharray="1.3,1.1" stroke-width="0.16"/>
+    <polyline fill="none" points="25.9667,367.6472 24.7452,368.5526 24.2831,370.584 25.211,377.6324 26.1832,379.475 27.5974,380.0334 26.6519,381.2242 26.7313,383.306 29.4518,389.874 30.8678,391.4022 32.3783,391.5756 31.7732,392.9705 32.3887,394.9608 36.7165,400.6009 38.4797,401.7105 39.9837,401.4871 39.7602,402.9911 40.8698,404.7542 46.51,409.0821 48.5003,409.6975 49.8952,409.0924 50.0686,410.603 51.5967,412.0189 58.1648,414.7395 60.2466,414.8189 61.4373,413.8734 61.9958,415.2876 63.8383,416.2597 70.8867,417.1877 72.9181,416.7255 73.8236,415.504 74.7291,416.7255 76.7604,417.1877 83.8088,416.2597 85.6514,415.2876 86.2099,413.8734 87.4006,414.8189 89.4824,414.7395 96.0505,412.0189 97.5786,410.603 97.752,409.0924 99.1469,409.6975 101.1372,409.0821 106.7773,404.7542 107.887,402.9911 107.6635,401.4871 109.1675,401.7105 110.9307,400.6009 115.2585,394.9608 115.8739,392.9705 115.2688,391.5756 116.7794,391.4022 118.1953,389.874 120.9159,383.306 120.9953,381.2242 120.0498,380.0334 121.464,379.475 122.4361,377.6324 123.3641,370.584 122.9019,368.5526 121.6804,367.6472 122.9019,366.7417 123.3641,364.7103 122.4361,357.6619 121.464,355.8194 120.0498,355.2609 120.9953,354.0701 120.9159,351.9884 118.1953,345.4203 116.7794,343.8922 115.2688,343.7187 115.8739,342.3238 115.2585,340.3335 110.9307,334.6934 109.1675,333.5838 107.6635,333.8073 107.887,332.3033 106.7773,330.5401 101.1372,326.2123 99.1469,325.5968 97.752,326.2019 97.5786,324.6913 96.0505,323.2754 89.4824,320.5548 87.4006,320.4755 86.2099,321.421 85.6514,320.0068 83.8088,319.0346 76.7604,318.1067 74.7291,318.5688 73.8236,319.7903 72.9181,318.5688 70.8867,318.1067 63.8383,319.0346 61.9958,320.0068 61.4373,321.421 60.2466,320.4755 58.1648,320.5548 51.5967,323.2754 50.0686,324.6913 49.8952,326.2019 48.5003,325.5968 46.51,326.2123 40.8698,330.5401 39.7602,332.3033 39.9837,333.8073 38.4797,333.5838 36.7165,334.6934 32.3887,340.3335 31.7732,342.3238 32.3783,343.7187 30.8678,343.8922 29.4518,345.4203 26.7313,351.9884 26.6519,354.0701 27.5974,355.2609 26.1832,355.8194 25.211,357.6619 24.2831,364.7103 24.7452,366.7417 25.9667,367.6472" stroke="#dc4eb8" stroke-dasharray="1.3,1.1" stroke-width="0.16"/>
+  </g>
+  <g fill="none" id="GLUE" stroke="#9199a4">
+    <polyline fill="none" points="263.9471,47.0 263.9471,152.0 254.9471,152.0 254.9471,47.0 263.9471,47.0" stroke="#9199a4" stroke-dasharray="2,1" stroke-width="0.22"/>
+  </g>
+  <g fill="none" id="SEAL" stroke="#9c62be"/>
+  <g fill="none" id="SAFE" stroke="#21a068"/>
+  <g fill="none" id="ARTWORK_AREA" stroke="#334155"/>
+  <g fill="none" id="CREASE" stroke="#176ac8">
+    <polyline fill="none" points="27.7895,37.0 27.7895,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="37.5789,37.0 37.5789,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="47.3684,37.0 47.3684,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="57.1579,37.0 57.1579,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="66.9473,37.0 66.9473,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="76.7368,37.0 76.7368,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="86.5263,37.0 86.5263,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="96.3157,37.0 96.3157,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="106.1052,37.0 106.1052,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="115.8946,37.0 115.8946,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="125.6841,37.0 125.6841,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="135.4736,37.0 135.4736,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="145.263,37.0 145.263,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="155.0525,37.0 155.0525,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="164.842,37.0 164.842,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="174.6314,37.0 174.6314,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="184.4209,37.0 184.4209,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="194.2104,37.0 194.2104,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="203.9998,37.0 203.9998,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="213.7893,37.0 213.7893,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="223.5788,37.0 223.5788,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="233.3682,37.0 233.3682,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="243.1577,37.0 243.1577,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="252.9471,37.0 252.9471,162.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="73.8236,294.8236 64.0341,293.5348" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="64.0341,293.5348 54.9118,289.7562" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="54.9118,289.7562 47.0783,283.7453" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="47.0783,283.7453 41.0674,275.9118" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="41.0674,275.9118 37.2888,266.7895" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="37.2888,266.7895 36.0,257.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="36.0,257.0 37.2888,247.2105" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="37.2888,247.2105 41.0674,238.0882" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="41.0674,238.0882 47.0783,230.2547" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="47.0783,230.2547 54.9118,224.2438" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="54.9118,224.2438 64.0341,220.4652" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="64.0341,220.4652 73.8236,219.1764" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="73.8236,219.1764 83.6131,220.4652" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="83.6131,220.4652 92.7354,224.2438" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="92.7354,224.2438 100.5689,230.2547" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="100.5689,230.2547 106.5798,238.0882" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="106.5798,238.0882 110.3584,247.2105" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="110.3584,247.2105 111.6472,257.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="111.6472,257.0 110.3584,266.7895" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="110.3584,266.7895 106.5798,275.9118" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="106.5798,275.9118 100.5689,283.7453" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="100.5689,283.7453 92.7354,289.7562" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="92.7354,289.7562 83.6131,293.5348" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="83.6131,293.5348 73.8236,294.8236" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="73.8236,405.4708 64.0341,404.182" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="64.0341,404.182 54.9118,400.4034" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="54.9118,400.4034 47.0783,394.3925" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="47.0783,394.3925 41.0674,386.559" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="41.0674,386.559 37.2888,377.4366" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="37.2888,377.4366 36.0,367.6472" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="36.0,367.6472 37.2888,357.8577" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="37.2888,357.8577 41.0674,348.7354" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="41.0674,348.7354 47.0783,340.9019" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="47.0783,340.9019 54.9118,334.891" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="54.9118,334.891 64.0341,331.1124" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="64.0341,331.1124 73.8236,329.8236" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="73.8236,329.8236 83.6131,331.1124" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="83.6131,331.1124 92.7354,334.891" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="92.7354,334.891 100.5689,340.9019" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="100.5689,340.9019 106.5798,348.7354" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="106.5798,348.7354 110.3584,357.8577" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="110.3584,357.8577 111.6472,367.6472" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="111.6472,367.6472 110.3584,377.4366" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="110.3584,377.4366 106.5798,386.559" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="106.5798,386.559 100.5689,394.3925" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="100.5689,394.3925 92.7354,400.4034" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="92.7354,400.4034 83.6131,404.182" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="83.6131,404.182 73.8236,405.4708" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+  </g>
+  <g fill="none" id="PERF" stroke="#ed8d20"/>
+  <g fill="none" id="KISS_CUT" stroke="#cb7619"/>
+  <g fill="none" id="CUT" stroke="#d8313d">
+    <polyline fill="none" points="48.3362,217.9452 42.6961,222.273 47.0783,230.2547 39.0966,225.8725 34.7687,231.5127 41.0674,238.0882 32.2235,235.9212 29.5029,242.4893 37.2888,247.2105 28.1854,247.4063 27.2574,254.4547 36.0,257.0 27.2574,259.5453 28.1854,266.5937 37.2888,266.7895 29.5029,271.5107 32.2235,278.0788 41.0674,275.9118 34.7687,282.4873 39.0966,288.1275 47.0783,283.7453 42.6961,291.727 48.3362,296.0548 54.9118,289.7562 52.7448,298.6001 59.3128,301.3207 64.0341,293.5348 64.2299,302.6382 71.2783,303.5662 73.8236,294.8236 76.3688,303.5662 83.4173,302.6382 83.6131,293.5348 88.3343,301.3207 94.9024,298.6001 92.7354,289.7562 99.3109,296.0548 104.9511,291.727 100.5689,283.7453 108.5506,288.1275 112.8784,282.4873 106.5798,275.9118 115.4237,278.0788 118.1443,271.5107 110.3584,266.7895 119.4618,266.5937 120.3897,259.5453 111.6472,257.0 120.3897,254.4547 119.4618,247.4063 110.3584,247.2105 118.1443,242.4893 115.4237,235.9212 106.5798,238.0882 112.8784,231.5127 108.5506,225.8725 100.5689,230.2547 104.9511,222.273 99.3109,217.9452 92.7354,224.2438 94.9024,215.3999 88.3343,212.6793 83.6131,220.4652 83.4173,211.3618 76.3688,210.4338 73.8236,219.1764 71.2783,210.4338 64.2299,211.3618 64.0341,220.4652 59.3128,212.6793 52.7448,215.3999 54.9118,224.2438 48.3362,217.9452" stroke="#d8313d" stroke-width="0.35"/>
+    <polyline fill="none" points="59.3128,323.3265 52.7448,326.0471 54.9118,334.891 48.3362,328.5923 42.6961,332.9202 47.0783,340.9019 39.0966,336.5197 34.7687,342.1598 41.0674,348.7354 32.2235,346.5684 29.5029,353.1364 37.2888,357.8577 28.1854,358.0535 27.2574,365.1019 36.0,367.6472 27.2574,370.1924 28.1854,377.2408 37.2888,377.4366 29.5029,382.1579 32.2235,388.726 41.0674,386.559 34.7687,393.1345 39.0966,398.7746 47.0783,394.3925 42.6961,402.3742 48.3362,406.702 54.9118,400.4034 52.7448,409.2473 59.3128,411.9679 64.0341,404.182 64.2299,413.2854 71.2783,414.2133 73.8236,405.4708 76.3688,414.2133 83.4173,413.2854 83.6131,404.182 88.3343,411.9679 94.9024,409.2473 92.7354,400.4034 99.3109,406.702 104.9511,402.3742 100.5689,394.3925 108.5506,398.7746 112.8784,393.1345 106.5798,386.559 115.4237,388.726 118.1443,382.1579 110.3584,377.4366 119.4618,377.2408 120.3897,370.1924 111.6472,367.6472 120.3897,365.1019 119.4618,358.0535 110.3584,357.8577 118.1443,353.1364 115.4237,346.5684 106.5798,348.7354 112.8784,342.1598 108.5506,336.5197 100.5689,340.9019 104.9511,332.9202 99.3109,328.5923 92.7354,334.891 94.9024,326.0471 88.3343,323.3265 83.6131,331.1124 83.4173,322.009 76.3688,321.081 73.8236,329.8236 71.2783,321.081 64.2299,322.009 64.0341,331.1124 59.3128,323.3265" stroke="#d8313d" stroke-width="0.35"/>
+    <polyline fill="none" points="265.9471,44.0 252.9471,44.0 252.9471,37.0 18.0,37.0 18.0,162.0 252.9471,162.0 252.9471,155.0 265.9471,155.0 265.9471,44.0" stroke="#d8313d" stroke-width="0.35"/>
+  </g>
+  <text fill="#475569" font-family="Arial,sans-serif" font-size="2.7" x="18" y="431.21332877596484">RED=cut  BLUE=crease  ORANGE=perforation/kiss  PURPLE=seal  GRAY=glue  MAGENTA=bleed</text>
+</svg>

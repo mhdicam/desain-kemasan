@@ -1,6 +1,6 @@
-// PDF 导出：1:1 矢量刀线 + 专色 Separation（CutContour/Crease）+ 叠印 + TrimBox/BleedBox
-// 生产稿：兼容既有视觉；专业净稿：仅四色图层、纯白纸面、无页内说明。二者均无 ICC，不宣称 PDF/X。
-// 评审稿：图稿 RGB JPEG（DCTDecode）
+// PDF 导出：1:1 矢量Dieline + 专色 Separation (CutContour/Crease)+ 叠印 + TrimBox/BleedBox
+// 生产稿：kompatibel既有视觉；专业净稿：仅四色Layer, putih polospermukaan kertas, 无pagedalamcatatan。二者均无 ICC，不klaim PDF/X。
+// 评审稿：artwork RGB JPEG (DCTDecode)
 import { geomOf } from '../dieline/geom.js';
 import { drawLayer } from '../design/layers.js';
 import { clipPtsOf } from '../design/containers.js';
@@ -47,7 +47,7 @@ export function pageBoxes(s, g) {
   return { b, ox, oy, Wmm, Hmm, k, Wpt, Hpt, trim, trimRect };
 }
 
-// 朴素 RGB→CMYK（无色彩管理）
+// 朴素 RGB→CMYK (无色彩管理)
 function rgbToCmyk(img) {
   const n = img.length / 4;
   const out = new Uint8Array(n * 4);
@@ -69,7 +69,7 @@ export async function zlib(bytes) {
   return new Uint8Array(buf);
 }
 
-// 图稿画布：面板底 + 图层
+// artworkkanvas：面板bawah + Layer
 async function renderArt(s, g, boxes, S, processOnly = false) {
   await document.fonts.ready;
   const cv = document.createElement('canvas');
@@ -90,14 +90,14 @@ async function renderArt(s, g, boxes, S, processOnly = false) {
 export async function exportPDF(s, mat, mode = 'cmyk') {
   const professional = mode === 'professional';
   const missing = s.layers.filter(l => l.visible && (l.finish || 'none') === 'none' && l.kind === 'image' && !l.img);
-  if (professional && missing.length) throw new Error('专业净稿未导出：存在 ' + missing.length + ' 个尚未加载的四色图片图层。');
+  if (professional && missing.length) throw new Error('Artwork final tidak diekspor: ada ' + missing.length + ' layer gambar CMYK belum dimuat.');
   const g = geomOf(s, mat.t);
   const boxes = pageBoxes(s, g);
   const { b, ox, oy, Wpt, Hpt, trim, trimRect } = boxes;
   const k = boxes.k;
   const S = mode === 'rgb' ? 8 : 300 / 25.4;   // 生产/专业稿 300dpi，评审稿 ≈203dpi
   const cv = await renderArt(s, g, boxes, S, professional);
-  // 图像对象
+  // imageobjek
   let imgObj;
   if (mode !== 'rgb') {
     const rgba = cv.getContext('2d').getImageData(0, 0, cv.width, cv.height).data;
@@ -111,11 +111,11 @@ export async function exportPDF(s, mat, mode = 'cmyk') {
   const path = ty => g.segs.filter(sg => sg.t === ty).map(sg =>
     sg.pts.map((p, i) => PX(p[0]) + ' ' + PY(p[1]) + (i ? ' l' : ' m')).join(' ') + ' S').join('\n');
   const info = (TPLS.find(x => x.id === s.tpl) || {}).code + ' ' + s.L + 'x' + s.W + 'x' + s.H + 'mm t=' + mat.t + ' bleed=' + b + 'mm scale 1:1 ' + (mode === 'rgb' ? 'RGB' : 'CMYK');
-  // 刀线描边：生产稿 = 专色 Separation 叠印（RIP/Acrobat）；评审稿 = DeviceRGB（任何查看器可见）
+  // Dieline描边：生产稿 = 专色 Separation 叠印 (RIP/Acrobat)；评审稿 = DeviceRGB (任何查看器terlihat)
   const dieline = mode !== 'rgb'
     ? '/OP1 gs\n/CS2 CS 1 SCN 0.9 w\n' + path('crease') + '\n/CS1 CS 1 SCN 0.9 w\n' + path('cut') + '\n'
     : '0.9 w 0.18 0.49 0.27 RG\n' + path('crease') + '\n0.9 w 0.78 0.06 0.18 RG\n' + path('cut') + '\n';
-  // 专业净稿只保留四色图稿与专色刀线；兼容生产稿/评审稿继续保留可视说明。
+  // 专业净稿只jaga四色artwork与专色Dieline；kompatibel生产稿/评审稿lanjutsimpan catatan visual。
   const marks = professional ? '' : '0.4 w 0.55 0.55 0.55 RG [2 2] 0 d ' + trimRect + ' re S [] 0 d\n'
     + 'BT /F1 7 Tf 0.13 0.11 0.09 rg 6 ' + (Hpt - 11).toFixed(2) + ' Td (' + info + ') Tj ET\n'
     + 'BT /F1 6 Tf 0.78 0.06 0.18 rg 6 ' + (Hpt - 20).toFixed(2) + ' Td (RED = CUT' + (mode === 'cmyk' ? ' / CutContour spot overprint' : '') + ') Tj ET\n'

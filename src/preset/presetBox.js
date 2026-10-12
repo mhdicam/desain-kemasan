@@ -1,26 +1,26 @@
-// 预设示例盒：首次启动与顶栏「重置示例盒」时载入，让新用户开箱即有一只完成度较高的盒子。
+// presetbox contoh：startup pertama与topbar「Reset Contoh Box」时dimuat，让user barumulai即有一只kesiapan较Tinggi的盒子。
 //
-// —— 如何替换为你自己的预设盒 ——
-// 1. 在工作台里设计好盒子，顶栏「导出工程」保存 .boxproj 文件；
-// 2. 仓库根目录运行：npm run preset:from -- /路径/你的工程.boxproj
-//    （图层图片会抽取到 public/preset/，工程裁剪后写入 src/preset/preset-box.json）；
-// 3. 重新 npm run dev / npm run build 即生效。
+// —— caraGantike milikmupreset盒 ——
+// 1. 在workbench里Desain好盒子，topbar「Ekspor Proyek」simpan .boxproj 文件；
+// 2. jalankan di root repo：npm run preset:from -- /path/proyekmu.boxproj
+//     (LayerGambar会抽pakai到 public/preset/，工程Crop后写入 src/preset/preset-box.json)；
+// 3. ulang npm run dev / npm run build agar aktif。
 //
-// preset-box.json 就是标准 .boxproj（box3d-project v1），加载逻辑与「导入工程」一致。
+// preset-box.json adalah standar .boxproj (box3d-project v1)，logika muat与「Impor Proyek」sama。
 import { projectStateOf } from '../projects/projects.js';
 import presetDoc from './preset-box.json';
 
 let cache = null;
 
-// 返回可直接传给 store.reset 的 patch；结果缓存，供「重置示例盒」重复使用。
+// kembalikanbisa langsung dikirim ke store.reset 的 patch；hasil di-cache，供「Reset Contoh Box」pakai ulang。
 export async function loadPresetBox() {
   if (cache) return cache;
-  const qp = new URLSearchParams(location.search); // 调试深链优先：?view=/?fold= 不被预设覆盖
-  const patch = await projectStateOf(presetDoc, 'three'); // 首屏即 3D 视图
+  const qp = new URLSearchParams(location.search); // debugdeep link prioritas：?view=/?fold= tidakpresetmenimpa
+  const patch = await projectStateOf(presetDoc, 'three'); // layar awal 3D view
   cache = {
     ...patch,
-    view: qp.get('view') || 'three',
-    fold: qp.has('fold') ? +qp.get('fold') : 100 // 闭合态成品盒
+    view: 'home',
+    fold: qp.has('fold') ? +qp.get('fold') : 100 // box jadi tertutup
   };
   return cache;
 }

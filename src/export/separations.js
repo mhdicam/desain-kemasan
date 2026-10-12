@@ -1,4 +1,4 @@
-// 工艺分版导出（P0 基线）：每个工艺一个单色 1:1 PDF（黑=该工艺覆盖区），供制版直接使用
+// Finishingseparasi导出 (P0 baseline)：setiapFinishingsatumonokrom 1:1 PDF (黑=tersebutFinishingmenimpaarea)，供pembuatan plat直接使用
 import { geomOf } from '../dieline/geom.js';
 import { drawLayer } from '../design/layers.js';
 import { composeEmbossChannels } from '../design/emboss.js';
@@ -8,18 +8,18 @@ import { writePdf, pageBoxes, zlib, pdfTextStream } from './pdf.js';
 export async function exportSeparations(s, mat) {
   await document.fonts.ready;
   const missing = s.layers.filter(l => l.visible && l.finish && l.finish !== 'none' && l.kind === 'image' && !l.img);
-  if (missing.length) throw new Error('工艺分版未导出：存在 ' + missing.length + ' 个尚未加载的工艺图片图层。');
+  if (missing.length) throw new Error('Separasi finishing tidak diekspor: ada ' + missing.length + ' layer gambar finishing belum dimuat.');
   const g = geomOf(s, mat.t);
   const { b, ox, oy, Wmm, Hmm, k, Wpt, Hpt, trim, trimRect } = pageBoxes(s, g);
   const S = 300 / 25.4;
   const emboss = composeEmbossChannels({ layers: s.layers.filter(l => l.visible && l.finish === 'emboss'), panels: g.panels, W: Math.round(Wmm * S), H: Math.round(Hmm * S), S, ox, oy, fallbackDir: s.embDir });
   const PROCS = [
-    { key: 'foil', match: l => l.finish === 'foil' || l.finish === 'silver', label: 'HOT-FOIL', cn: '烫金版' },
-    { key: 'uv', match: l => l.finish === 'uv', label: 'SPOT-UV', cn: 'UV版' },
-    { key: 'gloss', match: l => l.finish === 'gloss', label: 'SPOT-GLOSS', cn: '亮面版' },
-    { key: 'holo', match: l => l.finish === 'holo', label: 'HOLO-FOIL', cn: '镭射版' },
-    { key: 'emboss-up', mask: emboss.up, exists: emboss.hasUp, label: 'EMBOSS UP ' + s.embDepth + 'MM', cn: '击凸版' },
-    { key: 'emboss-down', mask: emboss.down, exists: emboss.hasDown, label: 'EMBOSS DOWN ' + s.embDepth + 'MM', cn: '击凹版' }
+    { key: 'foil', match: l => l.finish === 'foil' || l.finish === 'silver', label: 'HOT-FOIL', cn: 'Plat foil' },
+    { key: 'uv', match: l => l.finish === 'uv', label: 'SPOT-UV', cn: 'Plat UV' },
+    { key: 'gloss', match: l => l.finish === 'gloss', label: 'SPOT-GLOSS', cn: 'Plat gloss' },
+    { key: 'holo', match: l => l.finish === 'holo', label: 'HOLO-FOIL', cn: 'Plat holografik' },
+    { key: 'emboss-up', mask: emboss.up, exists: emboss.hasUp, label: 'EMBOSS UP ' + s.embDepth + 'MM', cn: 'Plat emboss naik' },
+    { key: 'emboss-down', mask: emboss.down, exists: emboss.hasDown, label: 'EMBOSS DOWN ' + s.embDepth + 'MM', cn: 'Plat deboss turun' }
   ];
   const base = s.tpl + '_' + s.L + 'x' + s.W + 'x' + s.H;
   let made = 0;
@@ -51,7 +51,7 @@ export async function exportSeparations(s, mat) {
       imgObj,
       '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>',
       pdfTextStream(content)
-    ], base + '_' + proc.key + '_plate.pdf');
+    ], base + '_' + proc.key + '_ plate.pdf');
   }
-  if (!made) alert('没有可分版的工艺图层：请先在「设计」页为图层指定烫金/UV/亮面/压纹/镭射工艺。');
+  if (!made) alert('Tidak ada layer finishing untuk separasi. Tetapkan foil/UV/gloss/emboss/holografik di halaman Desain dulu.');
 }

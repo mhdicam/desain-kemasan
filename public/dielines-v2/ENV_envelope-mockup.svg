@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="310.0000mm" version="1.1" viewBox="0 0 316.0000 310.0000" width="316.0000mm">
+  <defs/>
+  <rect fill="white" height="310.0" width="316.0" x="0" y="0"/>
+  <g fill="#334155" id="INFO">
+    <text font-family="DejaVu Sans,Arial" font-size="6.8" font-weight="bold" x="20" y="15">DL Envelope - four flap blank</text>
+    <text font-family="Arial" font-size="3.1" x="20" y="23">Finished center body 220 x 110 mm</text>
+    <text font-family="Arial" font-size="2.9" x="20" y="30">FOLD_WITH_GLUE | ENGINEERING SAMPLE | UNIT: mm | SCALE 1:1</text>
+    <text fill="#52647b" font-family="Arial" font-size="2.7" x="130.0" y="166.0">BODY 220 x 110</text>
+    <text fill="#52647b" font-family="Arial" font-size="2.7" x="136.0" y="73.0">TOP FLAP</text>
+    <text fill="#52647b" font-family="Arial" font-size="2.7" x="125.0" y="253.0">BOTTOM FLAP</text>
+    <text fill="#52647b" font-family="Arial" font-size="2.7" x="26.0" y="172.0">GLUE</text>
+    <text fill="#52647b" font-family="Arial" font-size="2.7" x="270.0" y="172.0">GLUE</text>
+  </g>
+  <g id="CUT">
+    <polyline fill="none" points="245.0,84.0 178.0,48.0 138.0,48.0 71.0,84.0 48.0,111.0 26.0,144.0 26.0,191.0 48.0,221.0 78.0,240.0 124.0,271.0 192.0,271.0 238.0,240.0 268.0,221.0 290.0,191.0 290.0,144.0 268.0,111.0 245.0,84.0" stroke="#d52f37" stroke-width="0.34"/>
+  </g>
+  <g id="GLUE">
+    <polyline fill="none" points="28.0,151.0 44.0,123.0 44.0,209.0 28.0,184.0 28.0,151.0" stroke="#9c9da4" stroke-dasharray="1.5,1.2" stroke-width="0.21"/>
+    <polyline fill="none" points="272.0,123.0 288.0,151.0 288.0,184.0 272.0,209.0 272.0,123.0" stroke="#9c9da4" stroke-dasharray="1.5,1.2" stroke-width="0.21"/>
+  </g>
+  <g id="SEAL"/>
+  <g id="SAFE">
+    <polyline fill="none" points="258.0,124.0 258.0,208.0 58.0,208.0 58.0,124.0 258.0,124.0" stroke="#138a5e" stroke-dasharray="1.5,1.2" stroke-width="0.21"/>
+  </g>
+  <g id="CREASE">
+    <polyline fill="none" points="48.0,111.0 268.0,111.0" stroke="#2267c5" stroke-dasharray="3,1.4" stroke-width="0.32"/>
+    <polyline fill="none" points="48.0,221.0 268.0,221.0" stroke="#2267c5" stroke-dasharray="3,1.4" stroke-width="0.32"/>
+    <polyline fill="none" points="48.0,111.0 48.0,221.0" stroke="#2267c5" stroke-dasharray="3,1.4" stroke-width="0.32"/>
+    <polyline fill="none" points="268.0,111.0 268.0,221.0" stroke="#2267c5" stroke-dasharray="3,1.4" stroke-width="0.32"/>
+  </g>
+  <g id="INFO">
+    <text fill="#475569" font-family="Arial" font-size="2.9" x="20" y="287.0">RED cut | BLUE fold | PURPLE film seal | GREY glue | GREEN safe printing</text>
+    <text fill="#475569" font-family="Arial" font-size="2.6" x="20" y="294.0">Fold lower flap over side flaps; glue on SIDE flaps; upper flap closes last. Adhesive placement must be</text>
+    <text fill="#475569" font-family="Arial" font-size="2.6" x="20" y="298.0">prototyped.</text>
+  </g>
+</svg>

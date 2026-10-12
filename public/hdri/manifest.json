@@ -12,7 +12,7 @@
       "resolution": "1024x512",
       "bytes": 1686299,
       "md5": "74e6ef69ea9024c2cc25b3a7de8ec2f7",
-      "note": "亮伞形软箱+白天花板，高反差，~5400K；drei `studio` preset 本尊"
+      "note": "softbox payung terang + plafon putih, kontras tinggi, ~5400K; preset drei `studio` asli"
     },
     {
       "id": "studio_small_08",
@@ -22,7 +22,7 @@
       "resolution": "1024x512",
       "bytes": 1508872,
       "md5": "de3ba64222895aca876b1d1c2e0cf81a",
-      "note": "软箱+无影墙，冷调干净，EV17 ~6000K"
+      "note": "softbox + cyclorama, tone dingin bersih, EV17 ~6000K"
     },
     {
       "id": "studio_small_09",
@@ -32,7 +32,7 @@
       "resolution": "1024x512",
       "bytes": 1615248,
       "md5": "d5d7eb9d26d341d6aa4d11c1a54fd97c",
-      "note": "软箱+无影墙，暖调 2750K，精品氛围"
+      "note": "softbox + cyclorama, tone hangat 2750K, nuansa premium"
     },
     {
       "id": "white_studio_03",
@@ -42,7 +42,7 @@
       "resolution": "1024x512",
       "bytes": 1390531,
       "md5": "6d2782035a887a4f649f3929d5900efc",
-      "note": "白色无影棚+伞箱，白底电商首选，~5300K"
+      "note": "studio putih + umbrella box, pilihan e-commerce, ~5300K"
     },
     {
       "id": "white_studio_06",
@@ -52,7 +52,7 @@
       "resolution": "1024x512",
       "bytes": 1330672,
       "md5": "d9950d6316c57b1b92494d909bd1a92a",
-      "note": "白色无影棚，高调"
+      "note": "studio putih, high-key"
     },
     {
       "id": "cyclorama_hard_light",
@@ -62,7 +62,7 @@
       "resolution": "1024x512",
       "bytes": 1409707,
       "md5": "dc91db55904c205bd6b44e4029972962",
-      "note": "超亮纯白弧形棚，硬光，EV26 ~5400K"
+      "note": "cyclorama putih sangat terang, hard light, EV26 ~5400K"
     },
     {
       "id": "photo_studio_01",
@@ -72,7 +72,7 @@
       "resolution": "1024x512",
       "bytes": 1597273,
       "md5": "4c8387fcee212ab164636994067085fe",
-      "note": "冷荧光、中反差，EV15 ~5622K"
+      "note": "fluoresen dingin, kontras sedang, EV15 ~5622K"
     }
   ]
 }

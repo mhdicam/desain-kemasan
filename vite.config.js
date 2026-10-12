@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// 安全基线：仅绑定 127.0.0.1——局域网（192.168.x.x / 10.x.x.x）不可达；
-// 高位随机端口 26847 避免与本机其他测试项目冲突；strictPort 防止端口被占用后静默漂移。
+// Baseline keamanan: bind hanya 127.0.0.1 — LAN (192.168.x.x / 10.x.x.x)tidak bisa akses；
+// Port tinggi 26847 menghindari konflik test lokal; strictPort mencegah pindah diam-diam saat port terpakai.
 export default defineConfig({
   plugins: [react()],
   server: { port: 26847, host: '127.0.0.1', strictPort: true },

@@ -1,4 +1,4 @@
-// 设计容器：面板命中、旧图层归属、参数变化重映射。容器几何始终来自 geomOf。
+// Desain容器：hit panel, lamaLayerassignment, parameterperubahanremap。容器geometriselalu dari geomOf。
 import { bboxOf } from './layers.js';
 
 export const bboxOfPts = pts => pts.reduce((b, p) => [
@@ -47,7 +47,7 @@ export const bindLayersToContainers = (layers, g) => layers.map(l => bindLayerTo
 const round = v => Math.round(v * 1000) / 1000;
 const panelBox = panel => bboxOfPts(panel.pts);
 
-// 保留图层在旧容器内的相对中心；尺寸统一缩放，避免盒型参数变化时破坏宽高比。
+// jagaLayer在lama容器dalam的pusat relatif；Ukuranskala seragam，hindariTipe boxparameterperubahan时rusakrasio lebar-tinggi。
 export function reflowLayersToContainers(layers, oldG, nextG) {
   const nextHero = heroContainerOf(nextG);
   return layers.map(raw => {

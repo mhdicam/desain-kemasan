@@ -1,0 +1,3845 @@
+{
+  "exportedAt": "2026-10-12T12:46:32.275Z",
+  "stats": {
+    "total": 92,
+    "byCategory": {
+      "packaging": 28,
+      "device-gadget": 9,
+      "apparel": 9,
+      "merchandise": 9,
+      "print-stationery": 13,
+      "display-booth": 9,
+      "food-beverage": 9,
+      "custom-model": 6
+    },
+    "productionReady": 10,
+    "mockupReady": 92,
+    "statusCounts": {
+      "Produksi Valid": 10,
+      "Butuh Dieline": 18,
+      "Mockup Visual": 46,
+      "Desain Siap": 12,
+      "Butuh 3D Mesh": 2,
+      "Butuh Brief": 4
+    }
+  },
+  "models": [
+    {
+      "id": "rte",
+      "code": "RTE",
+      "name": "Reverse tuck end",
+      "sub": "Folding carton",
+      "productCategory": "packaging",
+      "category": "folding-carton",
+      "subCategory": "folding-carton",
+      "mockup": false,
+      "tags": [
+        "retail",
+        "snack",
+        "cosmetic"
+      ],
+      "stock": "Ivory / art paper",
+      "difficulty": "Mudah",
+      "mode": "Dieline + Desain + 3D",
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "GEOMETRY_DRAFT",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "90 x 40 x 140 mm (nominal box, board caliper compensation pending)",
+        "output": {
+          "svg": "structural-dielines/RTE_rte.svg",
+          "dxf": "structural-dielines/RTE_rte.dxf",
+          "pdf": "structural-dielines/RTE_rte.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Size is a configurable catalogue default; verify before production."
+      }
+    },
+    {
+      "id": "ste",
+      "code": "STE",
+      "name": "Straight tuck end",
+      "sub": "Folding carton",
+      "productCategory": "packaging",
+      "category": "folding-carton",
+      "subCategory": "folding-carton",
+      "mockup": false,
+      "tags": [
+        "retail",
+        "food",
+        "pharma"
+      ],
+      "stock": "Ivory / art paper",
+      "difficulty": "Mudah",
+      "mode": "Dieline + Desain + 3D",
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "GEOMETRY_DRAFT",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "90 x 40 x 140 mm (nominal box, board caliper compensation pending)",
+        "output": {
+          "svg": "structural-dielines/STE_ste.svg",
+          "dxf": "structural-dielines/STE_ste.dxf",
+          "pdf": "structural-dielines/STE_ste.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Size is a configurable catalogue default; verify before production."
+      }
+    },
+    {
+      "id": "gable-box",
+      "code": "GBL",
+      "name": "Gable Box",
+      "sub": "Folding carton · handle",
+      "productCategory": "packaging",
+      "category": "folding-carton",
+      "subCategory": "folding-carton",
+      "mockup": false,
+      "tags": [
+        "gift",
+        "handle",
+        "retail"
+      ],
+      "stock": "Ivory / kraft",
+      "difficulty": "Menengah",
+      "mode": "Dieline + Desain + 3D",
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PROTOTYPE_REQUIRED",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "130 x 85 x 100 mm; fold-up handle and closure geometry requires fit test",
+        "output": {
+          "svg": "structural-dielines/GBL_gable-box.svg",
+          "dxf": "structural-dielines/GBL_gable-box.dxf",
+          "pdf": "structural-dielines/GBL_gable-box.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off."
+      }
+    },
+    {
+      "id": "window-carton",
+      "code": "WIN",
+      "name": "Window Carton",
+      "sub": "Folding carton · window",
+      "productCategory": "packaging",
+      "category": "folding-carton",
+      "subCategory": "folding-carton",
+      "mockup": false,
+      "tags": [
+        "window",
+        "display",
+        "bakery"
+      ],
+      "stock": "Ivory + PET window",
+      "difficulty": "Menengah",
+      "mode": "Dieline + Desain + 3D",
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "GEOMETRY_DRAFT",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "90 x 40 x 140 mm (nominal box, board caliper compensation pending)",
+        "output": {
+          "svg": "structural-dielines/WIN_window-carton.svg",
+          "dxf": "structural-dielines/WIN_window-carton.dxf",
+          "pdf": "structural-dielines/WIN_window-carton.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. PET clear window requires separate patch with 7 mm bonding overlap. Size is a configurable catalogue default; verify before production."
+      }
+    },
+    {
+      "id": "auto-lock-bottom",
+      "code": "ALB",
+      "name": "Auto Lock Bottom Box",
+      "sub": "Folding carton · auto lock",
+      "productCategory": "packaging",
+      "category": "folding-carton",
+      "subCategory": "folding-carton",
+      "mockup": false,
+      "tags": [
+        "retail",
+        "auto lock",
+        "bottom"
+      ],
+      "stock": "Ivory 350gsm+",
+      "difficulty": "Lanjut",
+      "mode": "Dieline + Desain + 3D",
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PROTOTYPE_REQUIRED",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "90 x 40 x 140 mm (nominal box, board caliper compensation pending)",
+        "output": {
+          "svg": "structural-dielines/ALB_auto-lock-bottom.svg",
+          "dxf": "structural-dielines/ALB_auto-lock-bottom.dxf",
+          "pdf": "structural-dielines/ALB_auto-lock-bottom.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Crash lock hinges and glue alignment require engineering validation; DO NOT run production without sample."
+      }
+    },
+    {
+      "id": "mailer",
+      "code": "MLR",
+      "name": "Mailer box",
+      "sub": "Corrugated · tanpa lem",
+      "productCategory": "packaging",
+      "category": "ecommerce",
+      "subCategory": "ecommerce",
+      "mockup": false,
+      "tags": [
+        "shipping",
+        "subscription",
+        "gift"
+      ],
+      "stock": "Corrugated E/F flute",
+      "difficulty": "Menengah",
+      "mode": "Dieline + Desain + 3D",
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PROTOTYPE_REQUIRED",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "220 x 150 x 55 mm nominal (corrugated; tab/slot closure requires fit test)",
+        "output": {
+          "svg": "structural-dielines/MLR_mailer.svg",
+          "dxf": "structural-dielines/MLR_mailer.dxf",
+          "pdf": "structural-dielines/MLR_mailer.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off."
+      }
+    },
+    {
+      "id": "lidbase",
+      "code": "TDG",
+      "name": "Lid and base",
+      "sub": "Dua bagian",
+      "productCategory": "packaging",
+      "category": "rigid-set",
+      "subCategory": "rigid-set",
+      "mockup": false,
+      "tags": [
+        "gift",
+        "premium",
+        "display"
+      ],
+      "stock": "Board / ivory tebal",
+      "difficulty": "Menengah",
+      "mode": "Dieline + Desain + 3D",
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "GEOMETRY_DRAFT",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "standard reference size",
+        "output": {
+          "svg": "structural-dielines/TDG_lidbase.svg",
+          "dxf": "structural-dielines/TDG_lidbase.dxf",
+          "pdf": "structural-dielines/TDG_lidbase.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Base and lid are two separate cuts. Clearance shown as provisional; board caliper and wrap allowance must be applied. Size is a configurable catalogue default; verify before production."
+      }
+    },
+    {
+      "id": "drawer",
+      "code": "DRW",
+      "name": "Drawer box",
+      "sub": "Tray dalam + sleeve",
+      "productCategory": "packaging",
+      "category": "rigid-set",
+      "subCategory": "rigid-set",
+      "mockup": false,
+      "tags": [
+        "sleeve",
+        "gift",
+        "cosmetic"
+      ],
+      "stock": "Board / ivory tebal",
+      "difficulty": "Menengah",
+      "mode": "Dieline + Desain + 3D",
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "GEOMETRY_DRAFT",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "standard reference size",
+        "output": {
+          "svg": "structural-dielines/DRW_drawer.svg",
+          "dxf": "structural-dielines/DRW_drawer.dxf",
+          "pdf": "structural-dielines/DRW_drawer.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Tray and sleeve shown as separate connected blanks. Fit gap not yet validated. Size is a configurable catalogue default; verify before production."
+      }
+    },
+    {
+      "id": "cyl",
+      "code": "CYL",
+      "name": "Cylinder box",
+      "sub": "Tube · 24 sisi",
+      "productCategory": "packaging",
+      "category": "tube-special",
+      "subCategory": "tube-special",
+      "mockup": false,
+      "tags": [
+        "tube",
+        "premium",
+        "food"
+      ],
+      "stock": "Art paper / board",
+      "difficulty": "Lanjut",
+      "mode": "Dieline + Desain + 3D",
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PROTOTYPE_REQUIRED",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "24-facet tube nominal diameter 75 mm x height 125 mm; cap tabs separate, material tolerance pending",
+        "output": {
+          "svg": "structural-dielines/CYL_cyl.svg",
+          "dxf": "structural-dielines/CYL_cyl.dxf",
+          "pdf": "structural-dielines/CYL_cyl.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off."
+      }
+    },
+    {
+      "id": "hex",
+      "code": "HEX",
+      "name": "Hexagon box",
+      "sub": "Hex tube",
+      "productCategory": "packaging",
+      "category": "tube-special",
+      "subCategory": "tube-special",
+      "mockup": false,
+      "tags": [
+        "hexagon",
+        "premium",
+        "gift"
+      ],
+      "stock": "Art paper / board",
+      "difficulty": "Lanjut",
+      "mode": "Dieline + Desain + 3D",
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PROTOTYPE_REQUIRED",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "6-facet tube nominal diameter 75 mm x height 125 mm; cap tabs separate, material tolerance pending",
+        "output": {
+          "svg": "structural-dielines/HEX_hex.svg",
+          "dxf": "structural-dielines/HEX_hex.dxf",
+          "pdf": "structural-dielines/HEX_hex.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off."
+      }
+    },
+    {
+      "id": "hanger-box",
+      "category": "packaging",
+      "subCategory": "folding-carton",
+      "code": "HNG",
+      "name": "Hanger Box",
+      "sub": "Retail box dengan lubang gantung euro slot.",
+      "tags": [
+        "retail",
+        "hanger",
+        "euro slot"
+      ],
+      "stock": "Ivory / art carton",
+      "difficulty": "Menengah",
+      "mode": "Dieline + Desain + 3D",
+      "productCategory": "packaging",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "GEOMETRY_DRAFT",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "90 x 40 x 140 mm (nominal box, board caliper compensation pending)",
+        "output": {
+          "svg": "structural-dielines/HNG_hanger-box.svg",
+          "dxf": "structural-dielines/HNG_hanger-box.dxf",
+          "pdf": "structural-dielines/HNG_hanger-box.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Euro hanging slot example; confirm retail rack standard. Size is a configurable catalogue default; verify before production."
+      }
+    },
+    {
+      "id": "pillow-box",
+      "category": "packaging",
+      "subCategory": "folding-carton",
+      "code": "PLW",
+      "name": "Pillow Box",
+      "sub": "Kemasan kurva untuk aksesori, gift, dan kosmetik kecil.",
+      "tags": [
+        "gift",
+        "curve",
+        "retail"
+      ],
+      "stock": "Ivory / kraft",
+      "difficulty": "Menengah",
+      "mode": "Dieline + Desain + 3D",
+      "productCategory": "packaging",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PROTOTYPE_REQUIRED",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "130 x 75 mm nominal pillow body (oval depth; closure curvature trial required)",
+        "output": {
+          "svg": "structural-dielines/PLW_pillow-box.svg",
+          "dxf": "structural-dielines/PLW_pillow-box.dxf",
+          "pdf": "structural-dielines/PLW_pillow-box.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off."
+      }
+    },
+    {
+      "id": "pizza-box",
+      "category": "packaging",
+      "subCategory": "ecommerce",
+      "code": "PZA",
+      "name": "Pizza Box",
+      "sub": "Box corrugated lipat untuk pizza dan bakery.",
+      "tags": [
+        "food",
+        "corrugated",
+        "takeaway"
+      ],
+      "stock": "Corrugated E/F flute",
+      "difficulty": "Menengah",
+      "mode": "Dieline + Desain + 3D",
+      "productCategory": "packaging",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PROTOTYPE_REQUIRED",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "310 x 310 x 43 mm nominal (corrugated; tab/slot closure requires fit test)",
+        "output": {
+          "svg": "structural-dielines/PZA_pizza-box.svg",
+          "dxf": "structural-dielines/PZA_pizza-box.dxf",
+          "pdf": "structural-dielines/PZA_pizza-box.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off."
+      }
+    },
+    {
+      "id": "shipping-box",
+      "category": "packaging",
+      "subCategory": "ecommerce",
+      "code": "SHP",
+      "name": "Shipping Box RSC",
+      "sub": "Box kirim standar regular slotted carton.",
+      "tags": [
+        "shipping",
+        "rsc",
+        "corrugated"
+      ],
+      "stock": "Corrugated B/C flute",
+      "difficulty": "Menengah",
+      "mode": "Dieline + Desain + 3D",
+      "productCategory": "packaging",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "GEOMETRY_DRAFT",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "250 x 160 x 140 mm nominal internal; corrugated t~3 mm, flute vertical",
+        "output": {
+          "svg": "structural-dielines/SHP_shipping-box.svg",
+          "dxf": "structural-dielines/SHP_shipping-box.dxf",
+          "pdf": "structural-dielines/SHP_shipping-box.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Size is a configurable catalogue default; verify before production."
+      }
+    },
+    {
+      "id": "sleeve-tray",
+      "category": "packaging",
+      "subCategory": "rigid-set",
+      "code": "SLV",
+      "name": "Sleeve + Tray",
+      "sub": "Tray geser dengan sleeve luar untuk premium pack.",
+      "tags": [
+        "sleeve",
+        "tray",
+        "premium"
+      ],
+      "stock": "Board / ivory tebal",
+      "difficulty": "Menengah",
+      "mode": "Dieline + Desain + 3D",
+      "productCategory": "packaging",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "GEOMETRY_DRAFT",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "standard reference size",
+        "output": {
+          "svg": "structural-dielines/SLV_sleeve-tray.svg",
+          "dxf": "structural-dielines/SLV_sleeve-tray.dxf",
+          "pdf": "structural-dielines/SLV_sleeve-tray.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Tray and sleeve shown as separate connected blanks. Fit gap not yet validated. Size is a configurable catalogue default; verify before production."
+      }
+    },
+    {
+      "id": "book-box",
+      "category": "packaging",
+      "subCategory": "rigid-set",
+      "code": "BKB",
+      "name": "Book Style Box",
+      "sub": "Rigid box magnet model buku untuk gift set.",
+      "tags": [
+        "rigid",
+        "magnet",
+        "premium"
+      ],
+      "stock": "Greyboard + wrap paper",
+      "difficulty": "Lanjut",
+      "mode": "Dieline + Desain + 3D",
+      "productCategory": "packaging",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PROTOTYPE_REQUIRED",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "standard reference size",
+        "output": {
+          "svg": "structural-dielines/BKB_book-box.svg",
+          "dxf": "structural-dielines/BKB_book-box.dxf",
+          "pdf": "structural-dielines/BKB_book-box.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Magnetic book box requires glued greyboard components, separate wrapper, magnet positions and insert; this is not a complete rigid-box manufacturing specification."
+      }
+    },
+    {
+      "id": "standup-pouch",
+      "category": "packaging",
+      "subCategory": "pouch-flexible",
+      "code": "SUP",
+      "name": "Stand Up Pouch",
+      "sub": "Pouch berdiri dengan zipper untuk snack dan kopi.",
+      "tags": [
+        "pouch",
+        "zipper",
+        "snack"
+      ],
+      "stock": "PET / AL / PE film",
+      "difficulty": "Menengah",
+      "mode": "Desain + 3D",
+      "productCategory": "packaging",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PROTOTYPE_REQUIRED",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "140 mm body x 210 mm height; 45 mm bottom gusset; seal width 9-12 mm nominal",
+        "output": {
+          "svg": "structural-dielines/SUP_standup-pouch.svg",
+          "dxf": "structural-dielines/SUP_standup-pouch.dxf",
+          "pdf": "structural-dielines/SUP_standup-pouch.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off."
+      }
+    },
+    {
+      "id": "flat-sachet",
+      "category": "packaging",
+      "subCategory": "pouch-flexible",
+      "code": "SCH",
+      "name": "Flat Sachet",
+      "sub": "Sachet pipih untuk sample, kopi, dan bumbu.",
+      "tags": [
+        "sachet",
+        "sample",
+        "film"
+      ],
+      "stock": "Laminated film",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "productCategory": "packaging",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NEEDS_PHYSICAL_TEST",
+        "dielineKind": "FLEXIBLE_FILM_TEMPLATES",
+        "nominalDimensions": "Flat sachet nominal outer 95 x 150 mm; four-side seal reference",
+        "output": {
+          "svg": "flexible-film-templates/SCH_flat-sachet.svg",
+          "dxf": "flexible-film-templates/SCH_flat-sachet.dxf",
+          "pdf": "flexible-film-templates/SCH_flat-sachet.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off.",
+        "cutFoldAuditV4": {
+          "id": "flat-sachet",
+          "code": "SCH",
+          "model": "Flat Sachet",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "flexible-film-templates",
+          "class": "FLEXIBLE-FILM",
+          "outerCutRectangle": true,
+          "cutContourCount": 1,
+          "creaseLineCount": 0,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 0,
+          "sealZones": 4,
+          "review": "CLASSIFIED_EXISTING_TEMPLATE",
+          "status": "NEEDS_PHYSICAL_TEST",
+          "notes": "Four-sided heat-sealed bag uses rectangular film blank; sealing is supplier-dependent.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "pillow-pack",
+      "category": "packaging",
+      "subCategory": "pouch-flexible",
+      "code": "PCK",
+      "name": "Pillow Pack",
+      "sub": "Flow wrap/pillow pack untuk snack bar dan bakery.",
+      "tags": [
+        "flow wrap",
+        "snack",
+        "film"
+      ],
+      "stock": "OPP / PET film",
+      "difficulty": "Menengah",
+      "mode": "Desain + 3D",
+      "productCategory": "packaging",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NEEDS_PHYSICAL_TEST",
+        "dielineKind": "FLEXIBLE_FILM_TEMPLATES",
+        "nominalDimensions": "Flow wrap film width 290 mm x cut repeat 140 mm; heat-seal zones provisional",
+        "output": {
+          "svg": "flexible-film-templates/PCK_pillow-pack.svg",
+          "dxf": "flexible-film-templates/PCK_pillow-pack.dxf",
+          "pdf": "flexible-film-templates/PCK_pillow-pack.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off.",
+        "cutFoldAuditV4": {
+          "id": "pillow-pack",
+          "code": "PCK",
+          "model": "Pillow Pack",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "flexible-film-templates",
+          "class": "FLEXIBLE-FILM",
+          "outerCutRectangle": true,
+          "cutContourCount": 1,
+          "creaseLineCount": 0,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 0,
+          "sealZones": 4,
+          "review": "REVISED_ENGINEERING_SAMPLE",
+          "status": "NEEDS_PHYSICAL_TEST",
+          "notes": "Removed fictitious paper crease, added top/bottom seal and fin-seal; machine film web repeat depends on packaging machine.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "spout-pouch",
+      "category": "packaging",
+      "subCategory": "pouch-flexible",
+      "code": "SPT",
+      "name": "Spout Pouch",
+      "sub": "Pouch cairan dengan tutup spout.",
+      "tags": [
+        "liquid",
+        "spout",
+        "refill"
+      ],
+      "stock": "Laminated film + cap",
+      "difficulty": "Lanjut",
+      "mode": "Desain + 3D",
+      "productCategory": "packaging",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PROTOTYPE_REQUIRED",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "125 mm body x 180 mm height; 30 mm bottom gusset; seal width 9-12 mm nominal",
+        "output": {
+          "svg": "structural-dielines/SPT_spout-pouch.svg",
+          "dxf": "structural-dielines/SPT_spout-pouch.dxf",
+          "pdf": "structural-dielines/SPT_spout-pouch.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Spout hole nominal 14 mm only: fitment/welding flange must match selected supplier."
+      }
+    },
+    {
+      "id": "paper-cup-packaging",
+      "category": "packaging",
+      "subCategory": "food-service",
+      "code": "CUP",
+      "name": "Paper Cup",
+      "sub": "Cup kopi dengan dieline wrap melengkung.",
+      "tags": [
+        "coffee",
+        "cup",
+        "wrap"
+      ],
+      "stock": "PE coated paper",
+      "difficulty": "Menengah",
+      "mode": "Dieline + Desain + 3D",
+      "productCategory": "packaging",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PROTOTYPE_REQUIRED",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "Frustum top OD 90 / bottom OD 62 / wall 110 mm; film/board stretch excluded",
+        "output": {
+          "svg": "structural-dielines/CUP_paper-cup-packaging.svg",
+          "dxf": "structural-dielines/CUP_paper-cup-packaging.dxf",
+          "pdf": "structural-dielines/CUP_paper-cup-packaging.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Unrolled conical frustum: top OD 90 mm; bottom OD 62 mm; height 110 mm; angle 45.45 degrees; rim allocations TOP 4 mm BOTTOM 5 mm."
+      }
+    },
+    {
+      "id": "cup-sleeve",
+      "category": "packaging",
+      "subCategory": "food-service",
+      "code": "CSL",
+      "name": "Cup Sleeve",
+      "sub": "Sleeve cup kopi untuk branding dan insulasi panas.",
+      "tags": [
+        "coffee",
+        "sleeve",
+        "wrap"
+      ],
+      "stock": "Kraft / corrugated",
+      "difficulty": "Mudah",
+      "mode": "Dieline + Desain + 3D",
+      "productCategory": "packaging",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PROTOTYPE_REQUIRED",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "Frustum top OD 90 / bottom OD 79 / wall 55 mm; film/board stretch excluded",
+        "output": {
+          "svg": "structural-dielines/CSL_cup-sleeve.svg",
+          "dxf": "structural-dielines/CSL_cup-sleeve.dxf",
+          "pdf": "structural-dielines/CSL_cup-sleeve.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Unrolled conical frustum: top OD 90 mm; bottom OD 79 mm; height 55 mm; angle 35.82 degrees; rim allocations TOP 0 mm BOTTOM 0 mm."
+      }
+    },
+    {
+      "id": "burger-clamshell",
+      "category": "packaging",
+      "subCategory": "food-service",
+      "code": "BGR",
+      "name": "Burger Clamshell",
+      "sub": "Box burger lipat untuk takeaway.",
+      "tags": [
+        "burger",
+        "takeaway",
+        "food"
+      ],
+      "stock": "Food grade paper",
+      "difficulty": "Menengah",
+      "mode": "Dieline + Desain + 3D",
+      "productCategory": "packaging",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PROTOTYPE_REQUIRED",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "130 x 130 x 70 mm nominal (corrugated; tab/slot closure requires fit test)",
+        "output": {
+          "svg": "structural-dielines/BGR_burger-clamshell.svg",
+          "dxf": "structural-dielines/BGR_burger-clamshell.dxf",
+          "pdf": "structural-dielines/BGR_burger-clamshell.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Clamshell locking tab hinges are provisional."
+      }
+    },
+    {
+      "id": "fries-box",
+      "category": "packaging",
+      "subCategory": "food-service",
+      "code": "FRY",
+      "name": "Fries Box",
+      "sub": "Box kentang goreng terbuka.",
+      "tags": [
+        "fries",
+        "takeaway",
+        "food"
+      ],
+      "stock": "Food grade paper",
+      "difficulty": "Mudah",
+      "mode": "Dieline + Desain + 3D",
+      "productCategory": "packaging",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PROTOTYPE_REQUIRED",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "standard reference size",
+        "output": {
+          "svg": "structural-dielines/FRY_fries-box.svg",
+          "dxf": "structural-dielines/FRY_fries-box.dxf",
+          "pdf": "structural-dielines/FRY_fries-box.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Open-top fries pouch with side gussets; seam and die tolerance supplier-dependent."
+      }
+    },
+    {
+      "id": "bottle-label-packaging",
+      "category": "packaging",
+      "subCategory": "label-wrap",
+      "code": "LBL",
+      "name": "Bottle Label",
+      "sub": "Label wrap untuk botol minuman, saus, atau kosmetik.",
+      "tags": [
+        "label",
+        "bottle",
+        "wrap"
+      ],
+      "stock": "Vinyl / PP / paper label",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "productCategory": "packaging",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NOMINAL_REFERENCE_VERIFY_VENDOR",
+        "dielineKind": "FLAT_CUT_TEMPLATES",
+        "nominalDimensions": "Wrap label 222 x 90 mm (nominal for bottle OD approx 70 mm; 2 mm overlap)",
+        "output": {
+          "svg": "flat-cut-templates/LBL_bottle-label-packaging.svg",
+          "dxf": "flat-cut-templates/LBL_bottle-label-packaging.dxf",
+          "pdf": "flat-cut-templates/LBL_bottle-label-packaging.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off.",
+        "cutFoldAuditV4": {
+          "id": "bottle-label-packaging",
+          "code": "LBL",
+          "model": "Bottle Label",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "flat-cut-templates",
+          "class": "FLAT-CUT",
+          "outerCutRectangle": false,
+          "cutContourCount": 1,
+          "creaseLineCount": 0,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 0,
+          "sealZones": 0,
+          "review": "CLASSIFIED_EXISTING_TEMPLATE",
+          "status": "NOMINAL_REFERENCE_VERIFY_VENDOR",
+          "notes": "Rounded rectangle is a valid sticker die; exact bottle dimensions and adhesive overlap missing.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "belly-band",
+      "category": "packaging",
+      "subCategory": "label-wrap",
+      "code": "BND",
+      "name": "Belly Band",
+      "sub": "Band kertas untuk mengikat produk atau box.",
+      "tags": [
+        "band",
+        "sleeve",
+        "label"
+      ],
+      "stock": "Art paper / kraft",
+      "difficulty": "Mudah",
+      "mode": "Dieline + Desain + 3D",
+      "productCategory": "packaging",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NEEDS_PHYSICAL_TEST",
+        "dielineKind": "CUT_AND_FOLD_TEMPLATES",
+        "nominalDimensions": "Belly band: 110 + 20 + 110 + 30 mm glue flap x 60 mm",
+        "output": {
+          "svg": "cut-and-fold-templates/BND_belly-band.svg",
+          "dxf": "cut-and-fold-templates/BND_belly-band.dxf",
+          "pdf": "cut-and-fold-templates/BND_belly-band.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off.",
+        "cutFoldAuditV4": {
+          "id": "belly-band",
+          "code": "BND",
+          "model": "Belly Band",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "cut-and-fold-templates",
+          "class": "CUT-AND-FOLD",
+          "outerCutRectangle": true,
+          "cutContourCount": 1,
+          "creaseLineCount": 4,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 1,
+          "sealZones": 0,
+          "review": "REVISED_ENGINEERING_SAMPLE",
+          "status": "NEEDS_PHYSICAL_TEST",
+          "notes": "Four scored body walls and 15 mm join tab revised; fit depends on wrapped object clearance.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "hangtag",
+      "category": "packaging",
+      "subCategory": "label-wrap",
+      "code": "HTG",
+      "name": "Hangtag",
+      "sub": "Tag gantung untuk apparel, gift, dan produk retail.",
+      "tags": [
+        "tag",
+        "retail",
+        "branding"
+      ],
+      "stock": "Art carton / kraft",
+      "difficulty": "Mudah",
+      "mode": "Desain + PDF",
+      "productCategory": "packaging",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "DIE_TOOLING_CHECK_REQUIRED",
+        "dielineKind": "DIE_CUT_TEMPLATES",
+        "nominalDimensions": "60 x 90 mm with 6 mm hanging hole",
+        "output": {
+          "svg": "die-cut-templates/HTG_hangtag.svg",
+          "dxf": "die-cut-templates/HTG_hangtag.dxf",
+          "pdf": "die-cut-templates/HTG_hangtag.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off.",
+        "cutFoldAuditV4": {
+          "id": "hangtag",
+          "code": "HTG",
+          "model": "Hangtag",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "die-cut-templates",
+          "class": "DIE-CUT",
+          "outerCutRectangle": false,
+          "cutContourCount": 2,
+          "creaseLineCount": 0,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 0,
+          "sealZones": 0,
+          "review": "CLASSIFIED_EXISTING_TEMPLATE",
+          "status": "DIE_TOOLING_CHECK_REQUIRED",
+          "notes": "Rounded corner tag plus drilled punch; genuine two-loop cut contour.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "sticker-label-roll",
+      "category": "packaging",
+      "subCategory": "label-wrap",
+      "code": "STL",
+      "name": "Sticker Label Roll",
+      "sub": "Label roll untuk produksi stiker produk.",
+      "tags": [
+        "sticker",
+        "label",
+        "roll"
+      ],
+      "stock": "Chromo / vinyl / PP",
+      "difficulty": "Mudah",
+      "mode": "Desain + PDF",
+      "productCategory": "packaging",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "KISS_DEPTH_AND_REPEAT_CHECK_REQUIRED",
+        "dielineKind": "KISS_CUT_TEMPLATES",
+        "nominalDimensions": "Label roll backing 240 x 65 mm with three 70 x 45 mm KISS-CUT repeat labels, pitch 80 mm; unwind vendor-dependent",
+        "output": {
+          "svg": "kiss-cut-templates/STL_sticker-label-roll.svg",
+          "dxf": "kiss-cut-templates/STL_sticker-label-roll.dxf",
+          "pdf": "kiss-cut-templates/STL_sticker-label-roll.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off.",
+        "cutFoldAuditV4": {
+          "id": "sticker-label-roll",
+          "code": "STL",
+          "model": "Sticker Label Roll",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "kiss-cut-templates",
+          "class": "KISS-CUT",
+          "outerCutRectangle": true,
+          "cutContourCount": 1,
+          "creaseLineCount": 0,
+          "kissCutCount": 3,
+          "perforationCount": 0,
+          "glueZones": 0,
+          "sealZones": 0,
+          "review": "CLASSIFIED_EXISTING_TEMPLATE",
+          "status": "KISS_DEPTH_AND_REPEAT_CHECK_REQUIRED",
+          "notes": "Backing web rectangular correctly; three internal repeat label kiss cuts, core/unwind setting omitted.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "phone-mockup",
+      "category": "device-gadget",
+      "code": "PHN",
+      "name": "Smartphone Mockup",
+      "sub": "Upload screenshot, preview layar, export mockup.",
+      "tags": [
+        "screen",
+        "app",
+        "ui"
+      ],
+      "stock": "Digital mockup",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "screen": "phone",
+      "productCategory": "device-gadget",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "OEM_DIMENSIONS_REQUIRED",
+        "dielineKind": null,
+        "nominalDimensions": null,
+        "output": null,
+        "notes": "No standard structural dieline; hardware/screen print mask requires specific product/device CAD."
+      }
+    },
+    {
+      "id": "laptop-mockup",
+      "category": "device-gadget",
+      "code": "LTP",
+      "name": "Laptop Mockup",
+      "sub": "Tampilan website atau dashboard pada laptop.",
+      "tags": [
+        "website",
+        "dashboard",
+        "presentation"
+      ],
+      "stock": "Digital mockup",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "screen": "laptop",
+      "productCategory": "device-gadget",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "OEM_DIMENSIONS_REQUIRED",
+        "dielineKind": null,
+        "nominalDimensions": null,
+        "output": null,
+        "notes": "No standard structural dieline; hardware/screen print mask requires specific product/device CAD."
+      }
+    },
+    {
+      "id": "tablet-mockup",
+      "category": "device-gadget",
+      "code": "TBL",
+      "name": "Tablet Mockup",
+      "sub": "Mockup tablet untuk katalog, UI, dan edukasi.",
+      "tags": [
+        "tablet",
+        "app",
+        "portfolio"
+      ],
+      "stock": "Digital mockup",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "screen": "tablet",
+      "productCategory": "device-gadget",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "OEM_DIMENSIONS_REQUIRED",
+        "dielineKind": null,
+        "nominalDimensions": null,
+        "output": null,
+        "notes": "No standard structural dieline; hardware/screen print mask requires specific product/device CAD."
+      }
+    },
+    {
+      "id": "desktop-monitor",
+      "category": "device-gadget",
+      "code": "MON",
+      "name": "Desktop Monitor",
+      "sub": "Mockup monitor untuk website, dashboard, dan presentasi.",
+      "tags": [
+        "monitor",
+        "website",
+        "dashboard"
+      ],
+      "stock": "Digital mockup",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "screen": "monitor",
+      "productCategory": "device-gadget",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "OEM_DIMENSIONS_REQUIRED",
+        "dielineKind": null,
+        "nominalDimensions": null,
+        "output": null,
+        "notes": "No standard structural dieline; hardware/screen print mask requires specific product/device CAD."
+      }
+    },
+    {
+      "id": "smartwatch-mockup",
+      "category": "device-gadget",
+      "code": "WTC",
+      "name": "Smartwatch",
+      "sub": "Mockup layar jam pintar untuk app dan fitness UI.",
+      "tags": [
+        "watch",
+        "app",
+        "wearable"
+      ],
+      "stock": "Digital mockup",
+      "difficulty": "Menengah",
+      "mode": "Desain + 3D",
+      "screen": "watch",
+      "productCategory": "device-gadget",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "OEM_DIMENSIONS_REQUIRED",
+        "dielineKind": null,
+        "nominalDimensions": null,
+        "output": null,
+        "notes": "No standard structural dieline; hardware/screen print mask requires specific product/device CAD."
+      }
+    },
+    {
+      "id": "phone-case",
+      "category": "device-gadget",
+      "code": "CAS",
+      "name": "Phone Case",
+      "sub": "Mockup casing ponsel untuk artwork full back.",
+      "tags": [
+        "case",
+        "accessory",
+        "print"
+      ],
+      "stock": "Plastic / silicone",
+      "difficulty": "Menengah",
+      "mode": "Desain + 3D",
+      "screen": "case",
+      "productCategory": "device-gadget",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "OEM_DIMENSIONS_REQUIRED",
+        "dielineKind": null,
+        "nominalDimensions": null,
+        "output": null,
+        "notes": "No standard structural dieline; hardware/screen print mask requires specific product/device CAD."
+      }
+    },
+    {
+      "id": "earbuds-case",
+      "category": "device-gadget",
+      "code": "EBD",
+      "name": "Earbuds Case",
+      "sub": "Mockup case earbuds dengan area logo kecil.",
+      "tags": [
+        "earbuds",
+        "case",
+        "logo"
+      ],
+      "stock": "Plastic",
+      "difficulty": "Menengah",
+      "mode": "Desain + 3D",
+      "screen": "earbuds",
+      "productCategory": "device-gadget",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "OEM_DIMENSIONS_REQUIRED",
+        "dielineKind": null,
+        "nominalDimensions": null,
+        "output": null,
+        "notes": "No standard structural dieline; hardware/screen print mask requires specific product/device CAD."
+      }
+    },
+    {
+      "id": "powerbank-mockup",
+      "category": "device-gadget",
+      "code": "PWB",
+      "name": "Powerbank",
+      "sub": "Mockup powerbank untuk branding merchandise gadget.",
+      "tags": [
+        "powerbank",
+        "merch",
+        "tech"
+      ],
+      "stock": "Plastic / metal",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "screen": "powerbank",
+      "productCategory": "device-gadget",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "OEM_DIMENSIONS_REQUIRED",
+        "dielineKind": null,
+        "nominalDimensions": null,
+        "output": null,
+        "notes": "No standard structural dieline; hardware/screen print mask requires specific product/device CAD."
+      }
+    },
+    {
+      "id": "usb-drive",
+      "category": "device-gadget",
+      "code": "USB",
+      "name": "USB Drive",
+      "sub": "Mockup USB flash drive dengan area logo.",
+      "tags": [
+        "usb",
+        "merch",
+        "logo"
+      ],
+      "stock": "Plastic / metal",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "screen": "usb",
+      "productCategory": "device-gadget",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "OEM_DIMENSIONS_REQUIRED",
+        "dielineKind": null,
+        "nominalDimensions": null,
+        "output": null,
+        "notes": "No standard structural dieline; hardware/screen print mask requires specific product/device CAD."
+      }
+    },
+    {
+      "id": "tshirt-front",
+      "category": "apparel",
+      "code": "TSH",
+      "name": "T-shirt Front",
+      "sub": "Mockup kaos depan untuk logo dan artwork.",
+      "tags": [
+        "shirt",
+        "fashion",
+        "dtf"
+      ],
+      "stock": "Cotton / polyester",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "productCategory": "apparel",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "Apparel front artwork area 280 x 360 mm; garment size, fabric and stitch pattern unspecified",
+        "output": {
+          "svg": "artwork-print-guides/TSH_tshirt-front.svg",
+          "dxf": "artwork-print-guides/TSH_tshirt-front.dxf",
+          "pdf": "artwork-print-guides/TSH_tshirt-front.pdf"
+        },
+        "notes": "Artwork zone exact 280 x 360 mm. Front artwork over sample T-shirt silhouette; garment cutting pattern requires size chart and panel pattern. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "INCORRECT_AS_PRODUCT_SHAPE",
+          "guideGeometry": "PRODUCT_SILHOUETTE_AND_PRINT_REGION",
+          "actualPrintableDimensionsMM": [
+            280,
+            360
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": true,
+          "warnings": [
+            "Front artwork over sample T-shirt silhouette; garment cutting pattern requires size chart and panel pattern."
+          ]
+        }
+      }
+    },
+    {
+      "id": "hoodie-mockup",
+      "category": "apparel",
+      "code": "HDY",
+      "name": "Hoodie",
+      "sub": "Mockup hoodie depan dengan area print besar.",
+      "tags": [
+        "hoodie",
+        "fashion",
+        "merch"
+      ],
+      "stock": "Fleece / cotton",
+      "difficulty": "Menengah",
+      "mode": "Desain + 3D",
+      "productCategory": "apparel",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "Apparel front artwork area 280 x 360 mm; garment size, fabric and stitch pattern unspecified",
+        "output": {
+          "svg": "artwork-print-guides/HDY_hoodie-mockup.svg",
+          "dxf": "artwork-print-guides/HDY_hoodie-mockup.dxf",
+          "pdf": "artwork-print-guides/HDY_hoodie-mockup.pdf"
+        },
+        "notes": "Artwork zone exact 280 x 360 mm. Sample hoodie silhouette and kangaroo pocket; artwork must avoid seams and pocket overlap. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "INCORRECT_AS_PRODUCT_SHAPE",
+          "guideGeometry": "PRODUCT_SILHOUETTE_AND_PRINT_REGION",
+          "actualPrintableDimensionsMM": [
+            280,
+            360
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": true,
+          "warnings": [
+            "Sample hoodie silhouette and kangaroo pocket; artwork must avoid seams and pocket overlap."
+          ]
+        }
+      }
+    },
+    {
+      "id": "tote-bag",
+      "category": "apparel",
+      "code": "TOT",
+      "name": "Tote Bag",
+      "sub": "Mockup tas kain untuk brand dan event.",
+      "tags": [
+        "bag",
+        "canvas",
+        "event"
+      ],
+      "stock": "Canvas / blacu",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "productCategory": "apparel",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "Tote bag front print zone 300 x 320 mm; not sewn bag pattern",
+        "output": {
+          "svg": "artwork-print-guides/TOT_tote-bag.svg",
+          "dxf": "artwork-print-guides/TOT_tote-bag.dxf",
+          "pdf": "artwork-print-guides/TOT_tote-bag.pdf"
+        },
+        "notes": "Artwork zone exact 300 x 320 mm. Sample stitched bag and handles; printed rectangle is NOT fabric cutting template. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "INCORRECT_AS_PRODUCT_SHAPE",
+          "guideGeometry": "PRODUCT_SILHOUETTE_AND_PRINT_REGION",
+          "actualPrintableDimensionsMM": [
+            300,
+            320
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": true,
+          "warnings": [
+            "Sample stitched bag and handles; printed rectangle is NOT fabric cutting template."
+          ]
+        }
+      }
+    },
+    {
+      "id": "mug-wrap",
+      "category": "merchandise",
+      "code": "MUG",
+      "name": "Mug Wrap",
+      "sub": "Artwork wrap melengkung untuk mug promosi.",
+      "tags": [
+        "mug",
+        "souvenir",
+        "wrap"
+      ],
+      "stock": "Ceramic",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "productCategory": "merchandise",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "Sublimation artwork 200 x 95 mm for standard mug; not ceramic die-cut",
+        "output": {
+          "svg": "artwork-print-guides/MUG_mug-wrap.svg",
+          "dxf": "artwork-print-guides/MUG_mug-wrap.dxf",
+          "pdf": "artwork-print-guides/MUG_mug-wrap.pdf"
+        },
+        "notes": "Artwork zone exact 200 x 95 mm. True flat printable band is rectangular on a straight cylindrical mug. Check handle clearance. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "RECTANGULAR_ARTWORK_VALID_BUT_INCOMPLETE_VISUAL_GUIDANCE",
+          "guideGeometry": "ARTWORK_AND_REFERENCE_PANELS",
+          "actualPrintableDimensionsMM": [
+            200,
+            95
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": false,
+          "warnings": [
+            "True flat printable band is rectangular on a straight cylindrical mug. Check handle clearance."
+          ]
+        }
+      }
+    },
+    {
+      "id": "tumbler-wrap",
+      "category": "merchandise",
+      "code": "TMB",
+      "name": "Tumbler",
+      "sub": "Mockup tumbler dan botol minum.",
+      "tags": [
+        "bottle",
+        "drinkware",
+        "wrap"
+      ],
+      "stock": "Stainless / plastic",
+      "difficulty": "Menengah",
+      "mode": "Desain + 3D",
+      "productCategory": "merchandise",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "Artwork wrap 234 x 180 mm (example OD 75 mm); tapered vessels require conical template",
+        "output": {
+          "svg": "artwork-print-guides/TMB_tumbler-wrap.svg",
+          "dxf": "artwork-print-guides/TMB_tumbler-wrap.dxf",
+          "pdf": "artwork-print-guides/TMB_tumbler-wrap.pdf"
+        },
+        "notes": "Artwork zone exact 234 x 180 mm. Rectangular wrap correct ONLY for uniform cylinder (nominal OD = 234/pi mm). Tapered tumblers require arc-sector template. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "RECTANGULAR_ARTWORK_VALID_BUT_INCOMPLETE_VISUAL_GUIDANCE",
+          "guideGeometry": "ARTWORK_AND_REFERENCE_PANELS",
+          "actualPrintableDimensionsMM": [
+            234,
+            180
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": false,
+          "warnings": [
+            "Rectangular wrap correct ONLY for uniform cylinder (nominal OD = 234/pi mm). Tapered tumblers require arc-sector template."
+          ]
+        }
+      }
+    },
+    {
+      "id": "sticker-sheet",
+      "category": "merchandise",
+      "code": "STK",
+      "name": "Sticker Sheet",
+      "sub": "Sheet stiker custom untuk merchandise.",
+      "tags": [
+        "sticker",
+        "kiss cut",
+        "merch"
+      ],
+      "stock": "Vinyl / chromo",
+      "difficulty": "Mudah",
+      "mode": "Desain",
+      "productCategory": "merchandise",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "KISS_DEPTH_AND_REPEAT_CHECK_REQUIRED",
+        "dielineKind": "KISS_CUT_TEMPLATES",
+        "nominalDimensions": "A5 backing sheet 148 x 210 mm with six kiss-cut label shapes",
+        "output": {
+          "svg": "kiss-cut-templates/STK_sticker-sheet.svg",
+          "dxf": "kiss-cut-templates/STK_sticker-sheet.dxf",
+          "pdf": "kiss-cut-templates/STK_sticker-sheet.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off.",
+        "cutFoldAuditV4": {
+          "id": "sticker-sheet",
+          "code": "STK",
+          "model": "Sticker Sheet",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "kiss-cut-templates",
+          "class": "KISS-CUT",
+          "outerCutRectangle": true,
+          "cutContourCount": 1,
+          "creaseLineCount": 0,
+          "kissCutCount": 6,
+          "perforationCount": 0,
+          "glueZones": 0,
+          "sealZones": 0,
+          "review": "CLASSIFIED_EXISTING_TEMPLATE",
+          "status": "KISS_DEPTH_AND_REPEAT_CHECK_REQUIRED",
+          "notes": "Outer sheet rectangular correctly; six internal kiss cut shapes are present.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "cap-mockup",
+      "category": "apparel",
+      "code": "CAP",
+      "name": "Cap / Topi",
+      "sub": "Mockup topi panel depan untuk bordir dan patch.",
+      "tags": [
+        "cap",
+        "embroidery",
+        "patch"
+      ],
+      "stock": "Canvas / twill",
+      "difficulty": "Menengah",
+      "mode": "Desain + 3D",
+      "surface": "cap",
+      "productCategory": "apparel",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "Cap embroidery patch artwork 110 x 55 mm; curved panel cannot be flat-patterned without manufacturer shape",
+        "output": {
+          "svg": "artwork-print-guides/CAP_cap-mockup.svg",
+          "dxf": "artwork-print-guides/CAP_cap-mockup.dxf",
+          "pdf": "artwork-print-guides/CAP_cap-mockup.pdf"
+        },
+        "notes": "Artwork zone exact 110 x 55 mm. Curved-cap front patch/embroidery placement reference, NOT crown panel sewing pattern. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "INCORRECT_AS_PRODUCT_SHAPE",
+          "guideGeometry": "PRODUCT_SILHOUETTE_AND_PRINT_REGION",
+          "actualPrintableDimensionsMM": [
+            110,
+            55
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": true,
+          "warnings": [
+            "Curved-cap front patch/embroidery placement reference, NOT crown panel sewing pattern."
+          ]
+        }
+      }
+    },
+    {
+      "id": "jersey-mockup",
+      "category": "apparel",
+      "code": "JRS",
+      "name": "Jersey",
+      "sub": "Mockup jersey olahraga full front.",
+      "tags": [
+        "jersey",
+        "sports",
+        "sublimation"
+      ],
+      "stock": "Polyester",
+      "difficulty": "Menengah",
+      "mode": "Desain + 3D",
+      "surface": "jersey",
+      "productCategory": "apparel",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "Apparel front artwork area 280 x 360 mm; garment size, fabric and stitch pattern unspecified",
+        "output": {
+          "svg": "artwork-print-guides/JRS_jersey-mockup.svg",
+          "dxf": "artwork-print-guides/JRS_jersey-mockup.dxf",
+          "pdf": "artwork-print-guides/JRS_jersey-mockup.pdf"
+        },
+        "notes": "Artwork zone exact 280 x 360 mm. Placement-zone example, NOT full-bleed sublimation garment panel. OEM size patterns needed. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "INCORRECT_AS_PRODUCT_SHAPE",
+          "guideGeometry": "PRODUCT_SILHOUETTE_AND_PRINT_REGION",
+          "actualPrintableDimensionsMM": [
+            280,
+            360
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": true,
+          "warnings": [
+            "Placement-zone example, NOT full-bleed sublimation garment panel. OEM size patterns needed."
+          ]
+        }
+      }
+    },
+    {
+      "id": "apron-mockup",
+      "category": "apparel",
+      "code": "APN",
+      "name": "Apron",
+      "sub": "Mockup apron cafe/resto untuk logo.",
+      "tags": [
+        "apron",
+        "cafe",
+        "uniform"
+      ],
+      "stock": "Canvas / drill",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "surface": "apron",
+      "productCategory": "apparel",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "Apron centered print zone 260 x 340 mm; not garment pattern",
+        "output": {
+          "svg": "artwork-print-guides/APN_apron-mockup.svg",
+          "dxf": "artwork-print-guides/APN_apron-mockup.dxf",
+          "pdf": "artwork-print-guides/APN_apron-mockup.pdf"
+        },
+        "notes": "Artwork zone exact 260 x 340 mm. Placement over apron shape including neck loop / ties, NOT fabric cut pattern. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "INCORRECT_AS_PRODUCT_SHAPE",
+          "guideGeometry": "PRODUCT_SILHOUETTE_AND_PRINT_REGION",
+          "actualPrintableDimensionsMM": [
+            260,
+            340
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": true,
+          "warnings": [
+            "Placement over apron shape including neck loop / ties, NOT fabric cut pattern."
+          ]
+        }
+      }
+    },
+    {
+      "id": "polo-shirt",
+      "category": "apparel",
+      "code": "POL",
+      "name": "Polo Shirt",
+      "sub": "Mockup polo untuk seragam dan komunitas.",
+      "tags": [
+        "polo",
+        "uniform",
+        "embroidery"
+      ],
+      "stock": "Lacoste / cotton",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "surface": "polo",
+      "productCategory": "apparel",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "Apparel front artwork area 280 x 360 mm; garment size, fabric and stitch pattern unspecified",
+        "output": {
+          "svg": "artwork-print-guides/POL_polo-shirt.svg",
+          "dxf": "artwork-print-guides/POL_polo-shirt.dxf",
+          "pdf": "artwork-print-guides/POL_polo-shirt.pdf"
+        },
+        "notes": "Artwork zone exact 280 x 360 mm. Center placement must avoid placket, buttons, collar and seams. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "INCORRECT_AS_PRODUCT_SHAPE",
+          "guideGeometry": "PRODUCT_SILHOUETTE_AND_PRINT_REGION",
+          "actualPrintableDimensionsMM": [
+            280,
+            360
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": true,
+          "warnings": [
+            "Center placement must avoid placket, buttons, collar and seams."
+          ]
+        }
+      }
+    },
+    {
+      "id": "crewneck-sweater",
+      "category": "apparel",
+      "code": "CRW",
+      "name": "Crewneck Sweater",
+      "sub": "Mockup sweater depan untuk merch.",
+      "tags": [
+        "sweater",
+        "merch",
+        "dtf"
+      ],
+      "stock": "Fleece / cotton",
+      "difficulty": "Menengah",
+      "mode": "Desain + 3D",
+      "surface": "crewneck",
+      "productCategory": "apparel",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "Apparel front artwork area 280 x 360 mm; garment size, fabric and stitch pattern unspecified",
+        "output": {
+          "svg": "artwork-print-guides/CRW_crewneck-sweater.svg",
+          "dxf": "artwork-print-guides/CRW_crewneck-sweater.dxf",
+          "pdf": "artwork-print-guides/CRW_crewneck-sweater.pdf"
+        },
+        "notes": "Artwork zone exact 280 x 360 mm. Placement over crewneck silhouette; print excludes cuffs/neck seams. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "INCORRECT_AS_PRODUCT_SHAPE",
+          "guideGeometry": "PRODUCT_SILHOUETTE_AND_PRINT_REGION",
+          "actualPrintableDimensionsMM": [
+            280,
+            360
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": true,
+          "warnings": [
+            "Placement over crewneck silhouette; print excludes cuffs/neck seams."
+          ]
+        }
+      }
+    },
+    {
+      "id": "lanyard-mockup",
+      "category": "apparel",
+      "code": "LNY",
+      "name": "Lanyard",
+      "sub": "Mockup tali lanyard full repeat pattern.",
+      "tags": [
+        "lanyard",
+        "event",
+        "sublimation"
+      ],
+      "stock": "Polyester webbing",
+      "difficulty": "Menengah",
+      "mode": "Desain + 3D",
+      "surface": "lanyard",
+      "productCategory": "apparel",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "Lanyard artwork 900 x 20 mm one-side repeat before sewing/hardware",
+        "output": {
+          "svg": "artwork-print-guides/LNY_lanyard-mockup.svg",
+          "dxf": "artwork-print-guides/LNY_lanyard-mockup.dxf",
+          "pdf": "artwork-print-guides/LNY_lanyard-mockup.pdf"
+        },
+        "notes": "Artwork zone exact 900 x 20 mm. True printable repeat strip is rectangular 900 x 20 mm before sewing/hardware. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "RECTANGULAR_ARTWORK_VALID_BUT_INCOMPLETE_VISUAL_GUIDANCE",
+          "guideGeometry": "ARTWORK_AND_REFERENCE_PANELS",
+          "actualPrintableDimensionsMM": [
+            900,
+            20
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": false,
+          "warnings": [
+            "True printable repeat strip is rectangular 900 x 20 mm before sewing/hardware."
+          ]
+        }
+      }
+    },
+    {
+      "id": "bottle-mockup",
+      "category": "merchandise",
+      "code": "BTL",
+      "name": "Bottle",
+      "sub": "Mockup botol minum dengan label/logo.",
+      "tags": [
+        "bottle",
+        "drinkware",
+        "logo"
+      ],
+      "stock": "Plastic / stainless",
+      "difficulty": "Menengah",
+      "mode": "Desain + 3D",
+      "surface": "bottle",
+      "productCategory": "merchandise",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "Bottle wrap branding 214 x 105 mm (OD approx 68 mm), not physical bottle dieline",
+        "output": {
+          "svg": "artwork-print-guides/BTL_bottle-mockup.svg",
+          "dxf": "artwork-print-guides/BTL_bottle-mockup.dxf",
+          "pdf": "artwork-print-guides/BTL_bottle-mockup.pdf"
+        },
+        "notes": "Artwork zone exact 214 x 105 mm. Flat rectangle valid for straight cylindrical OD about 68.1 mm; tapered bottles require conical-sector dieline. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "RECTANGULAR_ARTWORK_VALID_BUT_INCOMPLETE_VISUAL_GUIDANCE",
+          "guideGeometry": "ARTWORK_AND_REFERENCE_PANELS",
+          "actualPrintableDimensionsMM": [
+            214,
+            105
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": false,
+          "warnings": [
+            "Flat rectangle valid for straight cylindrical OD about 68.1 mm; tapered bottles require conical-sector dieline."
+          ]
+        }
+      }
+    },
+    {
+      "id": "keychain-mockup",
+      "category": "merchandise",
+      "code": "KEY",
+      "name": "Keychain",
+      "sub": "Mockup gantungan kunci akrilik.",
+      "tags": [
+        "keychain",
+        "acrylic",
+        "souvenir"
+      ],
+      "stock": "Acrylic / metal",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "surface": "keychain",
+      "productCategory": "merchandise",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "DIE_TOOLING_CHECK_REQUIRED",
+        "dielineKind": "DIE_CUT_TEMPLATES",
+        "nominalDimensions": "Acrylic keychain contour 48 x 68 mm, 6 mm drilled loop",
+        "output": {
+          "svg": "die-cut-templates/KEY_keychain-mockup.svg",
+          "dxf": "die-cut-templates/KEY_keychain-mockup.dxf",
+          "pdf": "die-cut-templates/KEY_keychain-mockup.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off.",
+        "cutFoldAuditV4": {
+          "id": "keychain-mockup",
+          "code": "KEY",
+          "model": "Keychain",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "die-cut-templates",
+          "class": "DIE-CUT",
+          "outerCutRectangle": false,
+          "cutContourCount": 2,
+          "creaseLineCount": 0,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 0,
+          "sealZones": 0,
+          "review": "CLASSIFIED_EXISTING_TEMPLATE",
+          "status": "DIE_TOOLING_CHECK_REQUIRED",
+          "notes": "Acrylic outline plus small suspension hole; kerf and machining method undefined.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "notebook-cover",
+      "category": "merchandise",
+      "code": "NTB",
+      "name": "Notebook Cover",
+      "sub": "Mockup buku catatan cover depan.",
+      "tags": [
+        "notebook",
+        "cover",
+        "stationery"
+      ],
+      "stock": "Hardcover / softcover",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "surface": "notebook",
+      "productCategory": "merchandise",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NEEDS_PHYSICAL_TEST",
+        "dielineKind": "CUT_AND_FOLD_TEMPLATES",
+        "nominalDimensions": "A5 wrap front/back 148 + 12 mm spine + 148 mm; confirm board turn-in",
+        "output": {
+          "svg": "cut-and-fold-templates/NTB_notebook-cover.svg",
+          "dxf": "cut-and-fold-templates/NTB_notebook-cover.dxf",
+          "pdf": "cut-and-fold-templates/NTB_notebook-cover.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off.",
+        "cutFoldAuditV4": {
+          "id": "notebook-cover",
+          "code": "NTB",
+          "model": "Notebook Cover",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "cut-and-fold-templates",
+          "class": "CUT-AND-FOLD",
+          "outerCutRectangle": true,
+          "cutContourCount": 1,
+          "creaseLineCount": 2,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 0,
+          "sealZones": 0,
+          "review": "CLASSIFIED_EXISTING_TEMPLATE",
+          "status": "NEEDS_PHYSICAL_TEST",
+          "notes": "Existing sheet models softcover with two spine guides; NOT a hardcover greyboard case or sewn block.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "mousepad-mockup",
+      "category": "merchandise",
+      "code": "MSP",
+      "name": "Mousepad",
+      "sub": "Mockup mousepad untuk artwork promosi.",
+      "tags": [
+        "mousepad",
+        "desk",
+        "merch"
+      ],
+      "stock": "Rubber + fabric",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "surface": "mousepad",
+      "productCategory": "merchandise",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NOMINAL_REFERENCE_VERIFY_VENDOR",
+        "dielineKind": "FLAT_CUT_TEMPLATES",
+        "nominalDimensions": "230 x 200 mm mousepad die-cut rounded corners",
+        "output": {
+          "svg": "flat-cut-templates/MSP_mousepad-mockup.svg",
+          "dxf": "flat-cut-templates/MSP_mousepad-mockup.dxf",
+          "pdf": "flat-cut-templates/MSP_mousepad-mockup.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Size is a configurable catalogue default; verify before production.",
+        "cutFoldAuditV4": {
+          "id": "mousepad-mockup",
+          "code": "MSP",
+          "model": "Mousepad",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "flat-cut-templates",
+          "class": "FLAT-CUT",
+          "outerCutRectangle": false,
+          "cutContourCount": 1,
+          "creaseLineCount": 0,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 0,
+          "sealZones": 0,
+          "review": "CLASSIFIED_EXISTING_TEMPLATE",
+          "status": "NOMINAL_REFERENCE_VERIFY_VENDOR",
+          "notes": "Rounded rectangle is an acceptable mousepad perimeter, not folding box geometry.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "pin-button",
+      "category": "merchandise",
+      "code": "PIN",
+      "name": "Pin Button",
+      "sub": "Mockup pin bulat untuk campaign.",
+      "tags": [
+        "pin",
+        "badge",
+        "campaign"
+      ],
+      "stock": "Metal button",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "surface": "pin",
+      "productCategory": "merchandise",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "DIE_TOOLING_CHECK_REQUIRED",
+        "dielineKind": "DIE_CUT_TEMPLATES",
+        "nominalDimensions": "76 mm artwork wrap cut for 58 mm button-face fold line; production button matrix check required",
+        "output": {
+          "svg": "die-cut-templates/PIN_pin-button.svg",
+          "dxf": "die-cut-templates/PIN_pin-button.dxf",
+          "pdf": "die-cut-templates/PIN_pin-button.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off.",
+        "cutFoldAuditV4": {
+          "id": "pin-button",
+          "code": "PIN",
+          "model": "Pin Button",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "die-cut-templates",
+          "class": "DIE-CUT",
+          "outerCutRectangle": false,
+          "cutContourCount": 1,
+          "creaseLineCount": 1,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 0,
+          "sealZones": 0,
+          "review": "CLASSIFIED_EXISTING_TEMPLATE",
+          "status": "DIE_TOOLING_CHECK_REQUIRED",
+          "notes": "Circular button wrap contour; tooling diameter and wrapping stock need button-machine matching.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "lanyard-card",
+      "category": "merchandise",
+      "code": "IDC",
+      "name": "ID Card Holder",
+      "sub": "Mockup ID card holder event.",
+      "tags": [
+        "id card",
+        "event",
+        "holder"
+      ],
+      "stock": "PVC / acrylic",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "surface": "idcard",
+      "productCategory": "merchandise",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "85.6 x 53.98 mm ID card print template; HOLDER requires OEM tooling",
+        "output": {
+          "svg": "artwork-print-guides/IDC_lanyard-card.svg",
+          "dxf": "artwork-print-guides/IDC_lanyard-card.dxf",
+          "pdf": "artwork-print-guides/IDC_lanyard-card.pdf"
+        },
+        "notes": "Artwork zone exact 85.6 x 53.98 mm. ISO ID-1 card print shape with sample corner radius; HOLDER geometry depends on OEM mold. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "RECTANGULAR_ARTWORK_VALID_BUT_INCOMPLETE_VISUAL_GUIDANCE",
+          "guideGeometry": "ARTWORK_AND_REFERENCE_PANELS",
+          "actualPrintableDimensionsMM": [
+            85.6,
+            53.98
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": false,
+          "warnings": [
+            "ISO ID-1 card print shape with sample corner radius; HOLDER geometry depends on OEM mold."
+          ]
+        }
+      }
+    },
+    {
+      "id": "business-card",
+      "category": "print-stationery",
+      "code": "BIZ",
+      "name": "Business Card",
+      "sub": "Kartu nama dengan bleed dan safe area.",
+      "tags": [
+        "print",
+        "identity",
+        "cmyk"
+      ],
+      "stock": "Art carton",
+      "difficulty": "Mudah",
+      "mode": "Desain + PDF",
+      "productCategory": "print-stationery",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NOMINAL_REFERENCE_VERIFY_VENDOR",
+        "dielineKind": "FLAT_CUT_TEMPLATES",
+        "nominalDimensions": "Standard business card 90 x 55 mm (+3 mm bleed shown)",
+        "output": {
+          "svg": "flat-cut-templates/BIZ_business-card.svg",
+          "dxf": "flat-cut-templates/BIZ_business-card.dxf",
+          "pdf": "flat-cut-templates/BIZ_business-card.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Size is a configurable catalogue default; verify before production.",
+        "cutFoldAuditV4": {
+          "id": "business-card",
+          "code": "BIZ",
+          "model": "Business Card",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "flat-cut-templates",
+          "class": "FLAT-CUT",
+          "outerCutRectangle": true,
+          "cutContourCount": 1,
+          "creaseLineCount": 0,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 0,
+          "sealZones": 0,
+          "review": "CLASSIFIED_EXISTING_TEMPLATE",
+          "status": "NOMINAL_REFERENCE_VERIFY_VENDOR",
+          "notes": "A flat perimeter or printed sheet may be a correct 2D manufacturing outline; real material, tolerance and hardware specs not supplied.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "trifold-brochure",
+      "category": "print-stationery",
+      "code": "TRI",
+      "name": "Tri-fold Brochure",
+      "sub": "Brosur lipat tiga untuk promosi.",
+      "tags": [
+        "brochure",
+        "print",
+        "fold"
+      ],
+      "stock": "Art paper",
+      "difficulty": "Menengah",
+      "mode": "Desain + PDF",
+      "productCategory": "print-stationery",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NEEDS_PHYSICAL_TEST",
+        "dielineKind": "CUT_AND_FOLD_TEMPLATES",
+        "nominalDimensions": "A4 297 x 210 mm tri-fold, panel widths 100 / 100 / 97 mm (97 mm fold-in)",
+        "output": {
+          "svg": "cut-and-fold-templates/TRI_trifold-brochure.svg",
+          "dxf": "cut-and-fold-templates/TRI_trifold-brochure.dxf",
+          "pdf": "cut-and-fold-templates/TRI_trifold-brochure.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off.",
+        "cutFoldAuditV4": {
+          "id": "trifold-brochure",
+          "code": "TRI",
+          "model": "Tri-fold Brochure",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "cut-and-fold-templates",
+          "class": "CUT-AND-FOLD",
+          "outerCutRectangle": true,
+          "cutContourCount": 1,
+          "creaseLineCount": 2,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 0,
+          "sealZones": 0,
+          "review": "CLASSIFIED_EXISTING_TEMPLATE",
+          "status": "NEEDS_PHYSICAL_TEST",
+          "notes": "Rectangular A4 blank is correct; two crease positions present; 97mm inward panel needs fold order confirmation.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "poster-a3",
+      "category": "print-stationery",
+      "code": "PST",
+      "name": "Poster A3",
+      "sub": "Poster promosi siap cetak.",
+      "tags": [
+        "poster",
+        "print",
+        "campaign"
+      ],
+      "stock": "Art paper",
+      "difficulty": "Mudah",
+      "mode": "Desain + PDF",
+      "productCategory": "print-stationery",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NOMINAL_REFERENCE_VERIFY_VENDOR",
+        "dielineKind": "FLAT_CUT_TEMPLATES",
+        "nominalDimensions": "ISO A3 297 x 420 mm",
+        "output": {
+          "svg": "flat-cut-templates/PST_poster-a3.svg",
+          "dxf": "flat-cut-templates/PST_poster-a3.dxf",
+          "pdf": "flat-cut-templates/PST_poster-a3.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Size is a configurable catalogue default; verify before production.",
+        "cutFoldAuditV4": {
+          "id": "poster-a3",
+          "code": "PST",
+          "model": "Poster A3",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "flat-cut-templates",
+          "class": "FLAT-CUT",
+          "outerCutRectangle": true,
+          "cutContourCount": 1,
+          "creaseLineCount": 0,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 0,
+          "sealZones": 0,
+          "review": "CLASSIFIED_EXISTING_TEMPLATE",
+          "status": "NOMINAL_REFERENCE_VERIFY_VENDOR",
+          "notes": "A flat perimeter or printed sheet may be a correct 2D manufacturing outline; real material, tolerance and hardware specs not supplied.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "flyer-a5",
+      "category": "print-stationery",
+      "code": "FLY",
+      "name": "Flyer A5",
+      "sub": "Flyer promosi satu muka/dua muka.",
+      "tags": [
+        "flyer",
+        "print",
+        "promo"
+      ],
+      "stock": "Art paper",
+      "difficulty": "Mudah",
+      "mode": "Desain + PDF",
+      "surface": "flyer",
+      "productCategory": "print-stationery",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NOMINAL_REFERENCE_VERIFY_VENDOR",
+        "dielineKind": "FLAT_CUT_TEMPLATES",
+        "nominalDimensions": "ISO A5 148 x 210 mm",
+        "output": {
+          "svg": "flat-cut-templates/FLY_flyer-a5.svg",
+          "dxf": "flat-cut-templates/FLY_flyer-a5.dxf",
+          "pdf": "flat-cut-templates/FLY_flyer-a5.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Size is a configurable catalogue default; verify before production.",
+        "cutFoldAuditV4": {
+          "id": "flyer-a5",
+          "code": "FLY",
+          "model": "Flyer A5",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "flat-cut-templates",
+          "class": "FLAT-CUT",
+          "outerCutRectangle": true,
+          "cutContourCount": 1,
+          "creaseLineCount": 0,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 0,
+          "sealZones": 0,
+          "review": "CLASSIFIED_EXISTING_TEMPLATE",
+          "status": "NOMINAL_REFERENCE_VERIFY_VENDOR",
+          "notes": "A flat perimeter or printed sheet may be a correct 2D manufacturing outline; real material, tolerance and hardware specs not supplied.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "letterhead",
+      "category": "print-stationery",
+      "code": "LTH",
+      "name": "Letterhead",
+      "sub": "Kop surat brand siap cetak.",
+      "tags": [
+        "stationery",
+        "brand",
+        "office"
+      ],
+      "stock": "HVS / linen",
+      "difficulty": "Mudah",
+      "mode": "Desain + PDF",
+      "surface": "letterhead",
+      "productCategory": "print-stationery",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NOMINAL_REFERENCE_VERIFY_VENDOR",
+        "dielineKind": "FLAT_CUT_TEMPLATES",
+        "nominalDimensions": "ISO A4 letterhead 210 x 297 mm",
+        "output": {
+          "svg": "flat-cut-templates/LTH_letterhead.svg",
+          "dxf": "flat-cut-templates/LTH_letterhead.dxf",
+          "pdf": "flat-cut-templates/LTH_letterhead.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Size is a configurable catalogue default; verify before production.",
+        "cutFoldAuditV4": {
+          "id": "letterhead",
+          "code": "LTH",
+          "model": "Letterhead",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "flat-cut-templates",
+          "class": "FLAT-CUT",
+          "outerCutRectangle": true,
+          "cutContourCount": 1,
+          "creaseLineCount": 0,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 0,
+          "sealZones": 0,
+          "review": "CLASSIFIED_EXISTING_TEMPLATE",
+          "status": "NOMINAL_REFERENCE_VERIFY_VENDOR",
+          "notes": "A flat perimeter or printed sheet may be a correct 2D manufacturing outline; real material, tolerance and hardware specs not supplied.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "envelope-mockup",
+      "category": "print-stationery",
+      "code": "ENV",
+      "name": "Envelope",
+      "sub": "Amplop brand dengan area logo.",
+      "tags": [
+        "envelope",
+        "stationery",
+        "print"
+      ],
+      "stock": "HVS / kraft",
+      "difficulty": "Mudah",
+      "mode": "Desain + PDF",
+      "surface": "envelope",
+      "productCategory": "print-stationery",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NEEDS_PHYSICAL_TEST",
+        "dielineKind": "CUT_AND_FOLD_TEMPLATES",
+        "nominalDimensions": "DL-style envelope body 220 x 110 mm, triangular fold-over blank",
+        "output": {
+          "svg": "cut-and-fold-templates/ENV_envelope-mockup.svg",
+          "dxf": "cut-and-fold-templates/ENV_envelope-mockup.dxf",
+          "pdf": "cut-and-fold-templates/ENV_envelope-mockup.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off.",
+        "cutFoldAuditV4": {
+          "id": "envelope-mockup",
+          "code": "ENV",
+          "model": "Envelope",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "cut-and-fold-templates",
+          "class": "CUT-AND-FOLD",
+          "outerCutRectangle": false,
+          "cutContourCount": 1,
+          "creaseLineCount": 4,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 2,
+          "sealZones": 0,
+          "review": "REVISED_ENGINEERING_SAMPLE",
+          "status": "NEEDS_PHYSICAL_TEST",
+          "notes": "Nonrectangular overlapping flaps and glue guides revised; flap clearance and adhesive trial pending.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "calendar-desk",
+      "category": "print-stationery",
+      "code": "CAL",
+      "name": "Desk Calendar",
+      "sub": "Kalender meja segitiga untuk promosi.",
+      "tags": [
+        "calendar",
+        "desk",
+        "print"
+      ],
+      "stock": "Art carton + spiral",
+      "difficulty": "Menengah",
+      "mode": "Desain + 3D",
+      "surface": "calendar",
+      "productCategory": "print-stationery",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NEEDS_PHYSICAL_TEST",
+        "dielineKind": "CUT_AND_FOLD_TEMPLATES",
+        "nominalDimensions": "Desk calendar tent base 210 x 370 mm; fold 140 / 140 / 90 mm; spiral holes hardware pending",
+        "output": {
+          "svg": "cut-and-fold-templates/CAL_calendar-desk.svg",
+          "dxf": "cut-and-fold-templates/CAL_calendar-desk.dxf",
+          "pdf": "cut-and-fold-templates/CAL_calendar-desk.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off.",
+        "cutFoldAuditV4": {
+          "id": "calendar-desk",
+          "code": "CAL",
+          "model": "Desk Calendar",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "cut-and-fold-templates",
+          "class": "CUT-AND-FOLD",
+          "outerCutRectangle": true,
+          "cutContourCount": 1,
+          "creaseLineCount": 3,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 1,
+          "sealZones": 0,
+          "review": "REVISED_ENGINEERING_SAMPLE",
+          "status": "NEEDS_PHYSICAL_TEST",
+          "notes": "Tent support base redrawn with 4 distinct panels and glue flap; spiral, binding and loose calendar pages NOT supplied.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "folder-map",
+      "category": "print-stationery",
+      "code": "FLD",
+      "name": "Presentation Folder",
+      "sub": "Map folder brand untuk proposal.",
+      "tags": [
+        "folder",
+        "office",
+        "print"
+      ],
+      "stock": "Art carton",
+      "difficulty": "Menengah",
+      "mode": "Desain + PDF",
+      "surface": "folder",
+      "productCategory": "print-stationery",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NEEDS_PHYSICAL_TEST",
+        "dielineKind": "CUT_AND_FOLD_TEMPLATES",
+        "nominalDimensions": "Two 225 x 310 mm panels + 6 mm spine + 65 mm internal pocket",
+        "output": {
+          "svg": "cut-and-fold-templates/FLD_folder-map.svg",
+          "dxf": "cut-and-fold-templates/FLD_folder-map.dxf",
+          "pdf": "cut-and-fold-templates/FLD_folder-map.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off.",
+        "cutFoldAuditV4": {
+          "id": "folder-map",
+          "code": "FLD",
+          "model": "Presentation Folder",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "cut-and-fold-templates",
+          "class": "CUT-AND-FOLD",
+          "outerCutRectangle": false,
+          "cutContourCount": 1,
+          "creaseLineCount": 5,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 2,
+          "sealZones": 0,
+          "review": "REVISED_ENGINEERING_SAMPLE",
+          "status": "NEEDS_PHYSICAL_TEST",
+          "notes": "Inner pocket and left/right glue ears added; pocket assembly requires prototype.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "certificate-a4",
+      "category": "print-stationery",
+      "code": "CRT",
+      "name": "Certificate A4",
+      "sub": "Sertifikat dengan layout formal.",
+      "tags": [
+        "certificate",
+        "event",
+        "print"
+      ],
+      "stock": "Linen / art paper",
+      "difficulty": "Mudah",
+      "mode": "Desain + PDF",
+      "surface": "certificate",
+      "productCategory": "print-stationery",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NOMINAL_REFERENCE_VERIFY_VENDOR",
+        "dielineKind": "FLAT_CUT_TEMPLATES",
+        "nominalDimensions": "Certificate A4 landscape 297 x 210 mm",
+        "output": {
+          "svg": "flat-cut-templates/CRT_certificate-a4.svg",
+          "dxf": "flat-cut-templates/CRT_certificate-a4.dxf",
+          "pdf": "flat-cut-templates/CRT_certificate-a4.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Size is a configurable catalogue default; verify before production.",
+        "cutFoldAuditV4": {
+          "id": "certificate-a4",
+          "code": "CRT",
+          "model": "Certificate A4",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "flat-cut-templates",
+          "class": "FLAT-CUT",
+          "outerCutRectangle": true,
+          "cutContourCount": 1,
+          "creaseLineCount": 0,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 0,
+          "sealZones": 0,
+          "review": "CLASSIFIED_EXISTING_TEMPLATE",
+          "status": "NOMINAL_REFERENCE_VERIFY_VENDOR",
+          "notes": "A flat perimeter or printed sheet may be a correct 2D manufacturing outline; real material, tolerance and hardware specs not supplied.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "postcard-a6",
+      "category": "print-stationery",
+      "code": "PCD",
+      "name": "Postcard A6",
+      "sub": "Kartu pos promosi satu atau dua sisi.",
+      "tags": [
+        "postcard",
+        "promo",
+        "print"
+      ],
+      "stock": "Art carton / linen",
+      "difficulty": "Mudah",
+      "mode": "Desain + PDF",
+      "surface": "postcard",
+      "productCategory": "print-stationery",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NOMINAL_REFERENCE_VERIFY_VENDOR",
+        "dielineKind": "FLAT_CUT_TEMPLATES",
+        "nominalDimensions": "A6 postcard 148 x 105 mm",
+        "output": {
+          "svg": "flat-cut-templates/PCD_postcard-a6.svg",
+          "dxf": "flat-cut-templates/PCD_postcard-a6.dxf",
+          "pdf": "flat-cut-templates/PCD_postcard-a6.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Size is a configurable catalogue default; verify before production.",
+        "cutFoldAuditV4": {
+          "id": "postcard-a6",
+          "code": "PCD",
+          "model": "Postcard A6",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "flat-cut-templates",
+          "class": "FLAT-CUT",
+          "outerCutRectangle": true,
+          "cutContourCount": 1,
+          "creaseLineCount": 0,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 0,
+          "sealZones": 0,
+          "review": "CLASSIFIED_EXISTING_TEMPLATE",
+          "status": "NOMINAL_REFERENCE_VERIFY_VENDOR",
+          "notes": "A flat perimeter or printed sheet may be a correct 2D manufacturing outline; real material, tolerance and hardware specs not supplied.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "sticker-roll",
+      "category": "print-stationery",
+      "code": "SRL",
+      "name": "Sticker Roll",
+      "sub": "Mockup roll label/stiker untuk produksi.",
+      "tags": [
+        "sticker",
+        "roll",
+        "label"
+      ],
+      "stock": "Chromo / vinyl / PP",
+      "difficulty": "Menengah",
+      "mode": "Desain + 3D",
+      "surface": "stickerroll",
+      "productCategory": "print-stationery",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "KISS_DEPTH_AND_REPEAT_CHECK_REQUIRED",
+        "dielineKind": "KISS_CUT_TEMPLATES",
+        "nominalDimensions": "Label roll backing 240 x 65 mm with three 70 x 45 mm KISS-CUT repeat labels, pitch 80 mm; unwind vendor-dependent",
+        "output": {
+          "svg": "kiss-cut-templates/SRL_sticker-roll.svg",
+          "dxf": "kiss-cut-templates/SRL_sticker-roll.dxf",
+          "pdf": "kiss-cut-templates/SRL_sticker-roll.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off.",
+        "cutFoldAuditV4": {
+          "id": "sticker-roll",
+          "code": "SRL",
+          "model": "Sticker Roll",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "kiss-cut-templates",
+          "class": "KISS-CUT",
+          "outerCutRectangle": true,
+          "cutContourCount": 1,
+          "creaseLineCount": 0,
+          "kissCutCount": 3,
+          "perforationCount": 0,
+          "glueZones": 0,
+          "sealZones": 0,
+          "review": "CLASSIFIED_EXISTING_TEMPLATE",
+          "status": "KISS_DEPTH_AND_REPEAT_CHECK_REQUIRED",
+          "notes": "Backing web rectangular correctly; three internal repeat label kiss cuts, core/unwind setting omitted.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "wedding-invitation",
+      "category": "print-stationery",
+      "code": "INV",
+      "name": "Invitation Card",
+      "sub": "Undangan atau invitation premium.",
+      "tags": [
+        "invitation",
+        "premium",
+        "print"
+      ],
+      "stock": "Linen / jasmine / art carton",
+      "difficulty": "Menengah",
+      "mode": "Desain + PDF",
+      "surface": "invitation",
+      "productCategory": "print-stationery",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NEEDS_PHYSICAL_TEST",
+        "dielineKind": "CUT_AND_FOLD_TEMPLATES",
+        "nominalDimensions": "Folded invitation finished 150 x 210 mm",
+        "output": {
+          "svg": "cut-and-fold-templates/INV_wedding-invitation.svg",
+          "dxf": "cut-and-fold-templates/INV_wedding-invitation.dxf",
+          "pdf": "cut-and-fold-templates/INV_wedding-invitation.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off.",
+        "cutFoldAuditV4": {
+          "id": "wedding-invitation",
+          "code": "INV",
+          "model": "Invitation Card",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "cut-and-fold-templates",
+          "class": "CUT-AND-FOLD",
+          "outerCutRectangle": true,
+          "cutContourCount": 1,
+          "creaseLineCount": 1,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 0,
+          "sealZones": 0,
+          "review": "CLASSIFIED_EXISTING_TEMPLATE",
+          "status": "NEEDS_PHYSICAL_TEST",
+          "notes": "Bi-fold invitation outer trim stays rectangular, which is correct.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "voucher-card",
+      "category": "print-stationery",
+      "code": "VCH",
+      "name": "Voucher Card",
+      "sub": "Voucher atau kupon promosi siap cetak.",
+      "tags": [
+        "voucher",
+        "coupon",
+        "promo"
+      ],
+      "stock": "Art carton",
+      "difficulty": "Mudah",
+      "mode": "Desain + PDF",
+      "surface": "voucher",
+      "productCategory": "print-stationery",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NEEDS_PHYSICAL_TEST",
+        "dielineKind": "PERFORATION_TEMPLATES",
+        "nominalDimensions": "Voucher 180 x 80 mm with 35 mm perforated stub",
+        "output": {
+          "svg": "perforation-templates/VCH_voucher-card.svg",
+          "dxf": "perforation-templates/VCH_voucher-card.dxf",
+          "pdf": "perforation-templates/VCH_voucher-card.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off.",
+        "cutFoldAuditV4": {
+          "id": "voucher-card",
+          "code": "VCH",
+          "model": "Voucher Card",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "perforation-templates",
+          "class": "PERFORATION",
+          "outerCutRectangle": true,
+          "cutContourCount": 1,
+          "creaseLineCount": 0,
+          "kissCutCount": 0,
+          "perforationCount": 1,
+          "glueZones": 0,
+          "sealZones": 0,
+          "review": "CLASSIFIED_EXISTING_TEMPLATE",
+          "status": "NEEDS_PHYSICAL_TEST",
+          "notes": "Rectangular coupon correct; internal perforation separating 35mm stub, not a folded box.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "roll-banner",
+      "category": "display-booth",
+      "code": "RLB",
+      "name": "Roll Up Banner",
+      "sub": "Banner vertikal untuk event dan toko.",
+      "tags": [
+        "banner",
+        "event",
+        "display"
+      ],
+      "stock": "Albatros / flexi",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "productCategory": "display-booth",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "Roll-up banner artwork 800 x 2000 mm; supplier cassette bottom tail extra required",
+        "output": {
+          "svg": "artwork-print-guides/RLB_roll-banner.svg",
+          "dxf": "artwork-print-guides/RLB_roll-banner.dxf",
+          "pdf": "artwork-print-guides/RLB_roll-banner.pdf"
+        },
+        "notes": "Artwork zone exact 800 x 2000 mm. Flat art rectangle is correct. Bottom insert allowance must be obtained from cassette supplier. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "RECTANGULAR_ARTWORK_VALID_BUT_INCOMPLETE_VISUAL_GUIDANCE",
+          "guideGeometry": "ARTWORK_AND_REFERENCE_PANELS",
+          "actualPrintableDimensionsMM": [
+            800,
+            2000
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": true,
+          "warnings": [
+            "Flat art rectangle is correct. Bottom insert allowance must be obtained from cassette supplier."
+          ]
+        }
+      }
+    },
+    {
+      "id": "booth-counter",
+      "category": "display-booth",
+      "code": "BTC",
+      "name": "Booth Counter",
+      "sub": "Counter booth branding untuk pameran.",
+      "tags": [
+        "booth",
+        "event",
+        "stand"
+      ],
+      "stock": "PVC / board",
+      "difficulty": "Menengah",
+      "mode": "Desain + 3D",
+      "productCategory": "display-booth",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "Curved booth counter front printable vinyl 1800 x 900 mm; NOT a structural counter dieline",
+        "output": {
+          "svg": "artwork-print-guides/BTC_booth-counter.svg",
+          "dxf": "artwork-print-guides/BTC_booth-counter.dxf",
+          "pdf": "artwork-print-guides/BTC_booth-counter.pdf"
+        },
+        "notes": "Artwork zone exact 1800 x 900 mm. Surface artwork strip only, draft panel/seam divisions; not the counter structure or manufacturer wrap map. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "INCORRECT_AS_PRODUCT_SHAPE",
+          "guideGeometry": "ARTWORK_AND_REFERENCE_PANELS",
+          "actualPrintableDimensionsMM": [
+            1800,
+            900
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": true,
+          "warnings": [
+            "Surface artwork strip only, draft panel/seam divisions; not the counter structure or manufacturer wrap map."
+          ]
+        }
+      }
+    },
+    {
+      "id": "signage-board",
+      "category": "display-booth",
+      "code": "SGN",
+      "name": "Signage Board",
+      "sub": "Papan signage untuk toko dan event.",
+      "tags": [
+        "signage",
+        "store",
+        "display"
+      ],
+      "stock": "Acrylic / board",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "productCategory": "display-booth",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "Signboard substrate cut 600 x 400 mm; fabrication mounts omitted",
+        "output": {
+          "svg": "artwork-print-guides/SGN_signage-board.svg",
+          "dxf": "artwork-print-guides/SGN_signage-board.dxf",
+          "pdf": "artwork-print-guides/SGN_signage-board.pdf"
+        },
+        "notes": "Artwork zone exact 600 x 400 mm. Rectangular front panel is correct if ordered shape is rectangle; mounting/holes depend on vendor. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "RECTANGULAR_ARTWORK_VALID_BUT_INCOMPLETE_VISUAL_GUIDANCE",
+          "guideGeometry": "ARTWORK_AND_REFERENCE_PANELS",
+          "actualPrintableDimensionsMM": [
+            600,
+            400
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": false,
+          "warnings": [
+            "Rectangular front panel is correct if ordered shape is rectangle; mounting/holes depend on vendor."
+          ]
+        }
+      }
+    },
+    {
+      "id": "backdrop-wall",
+      "category": "display-booth",
+      "code": "BDP",
+      "name": "Backdrop Wall",
+      "sub": "Backdrop event untuk photo wall.",
+      "tags": [
+        "backdrop",
+        "event",
+        "photo wall"
+      ],
+      "stock": "Flexi / fabric",
+      "difficulty": "Menengah",
+      "mode": "Desain + 3D",
+      "surface": "backdrop",
+      "productCategory": "display-booth",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "Event backdrop print substrate 3000 x 2300 mm (hem/eyelets pending)",
+        "output": {
+          "svg": "artwork-print-guides/BDP_backdrop-wall.svg",
+          "dxf": "artwork-print-guides/BDP_backdrop-wall.dxf",
+          "pdf": "artwork-print-guides/BDP_backdrop-wall.pdf"
+        },
+        "notes": "Artwork zone exact 3000 x 2300 mm. Flat substrate is rectangular; hems/eyelets / bleed require supplier confirmation. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "RECTANGULAR_ARTWORK_VALID_BUT_INCOMPLETE_VISUAL_GUIDANCE",
+          "guideGeometry": "ARTWORK_AND_REFERENCE_PANELS",
+          "actualPrintableDimensionsMM": [
+            3000,
+            2300
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": true,
+          "warnings": [
+            "Flat substrate is rectangular; hems/eyelets / bleed require supplier confirmation."
+          ]
+        }
+      }
+    },
+    {
+      "id": "x-banner",
+      "category": "display-booth",
+      "code": "XBN",
+      "name": "X Banner",
+      "sub": "Banner X stand untuk promosi cepat.",
+      "tags": [
+        "banner",
+        "stand",
+        "event"
+      ],
+      "stock": "Albatros / flexi",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "surface": "xbanner",
+      "productCategory": "display-booth",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "X-banner artwork 600 x 1600 mm; eyelet pattern vendor-dependent",
+        "output": {
+          "svg": "artwork-print-guides/XBN_x-banner.svg",
+          "dxf": "artwork-print-guides/XBN_x-banner.dxf",
+          "pdf": "artwork-print-guides/XBN_x-banner.pdf"
+        },
+        "notes": "Artwork zone exact 600 x 1600 mm. Rectangle is correct; marked eyelet positions are illustrative and require frame specs. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "RECTANGULAR_ARTWORK_VALID_BUT_INCOMPLETE_VISUAL_GUIDANCE",
+          "guideGeometry": "ARTWORK_AND_REFERENCE_PANELS",
+          "actualPrintableDimensionsMM": [
+            600,
+            1600
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": true,
+          "warnings": [
+            "Rectangle is correct; marked eyelet positions are illustrative and require frame specs."
+          ]
+        }
+      }
+    },
+    {
+      "id": "table-throw",
+      "category": "display-booth",
+      "code": "TBL",
+      "name": "Table Throw",
+      "sub": "Taplak meja booth dengan logo depan.",
+      "tags": [
+        "table",
+        "booth",
+        "fabric"
+      ],
+      "stock": "Fabric print",
+      "difficulty": "Menengah",
+      "mode": "Desain + 3D",
+      "surface": "tablethrow",
+      "productCategory": "display-booth",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "Tablecloth cut 2700 x 1600 mm before stitched hem allowances",
+        "output": {
+          "svg": "artwork-print-guides/TBL_table-throw.svg",
+          "dxf": "artwork-print-guides/TBL_table-throw.dxf",
+          "pdf": "artwork-print-guides/TBL_table-throw.pdf"
+        },
+        "notes": "Artwork zone exact 2700 x 1600 mm. Full sheet is rectangular. Panel-map creases/drape placement are guide-only, NOT cutting/sewing lines. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "INCORRECT_AS_PRODUCT_SHAPE",
+          "guideGeometry": "ARTWORK_AND_REFERENCE_PANELS",
+          "actualPrintableDimensionsMM": [
+            2700,
+            1600
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": true,
+          "warnings": [
+            "Full sheet is rectangular. Panel-map creases/drape placement are guide-only, NOT cutting/sewing lines."
+          ]
+        }
+      }
+    },
+    {
+      "id": "display-rack",
+      "category": "display-booth",
+      "code": "RCK",
+      "name": "Display Rack",
+      "sub": "Rak display produk untuk retail.",
+      "tags": [
+        "rack",
+        "retail",
+        "display"
+      ],
+      "stock": "Cardboard / acrylic",
+      "difficulty": "Lanjut",
+      "mode": "Desain + 3D",
+      "surface": "rack",
+      "productCategory": "display-booth",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "Display rack side/front graphic print panel 500 x 1300 mm, NOT rack fabrication structure",
+        "output": {
+          "svg": "artwork-print-guides/RCK_display-rack.svg",
+          "dxf": "artwork-print-guides/RCK_display-rack.dxf",
+          "pdf": "artwork-print-guides/RCK_display-rack.pdf"
+        },
+        "notes": "Artwork zone exact 500 x 1300 mm. Front promotional face only. Structural rack panels/shelves require dimensions and fabrication CAD. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "INCORRECT_AS_PRODUCT_SHAPE",
+          "guideGeometry": "ARTWORK_AND_REFERENCE_PANELS",
+          "actualPrintableDimensionsMM": [
+            500,
+            1300
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": true,
+          "warnings": [
+            "Front promotional face only. Structural rack panels/shelves require dimensions and fabrication CAD."
+          ]
+        }
+      }
+    },
+    {
+      "id": "hanging-banner",
+      "category": "display-booth",
+      "code": "HBN",
+      "name": "Hanging Banner",
+      "sub": "Banner gantung overhead event.",
+      "tags": [
+        "banner",
+        "hanging",
+        "event"
+      ],
+      "stock": "Fabric / flexi",
+      "difficulty": "Menengah",
+      "mode": "Desain + 3D",
+      "surface": "hanging",
+      "productCategory": "display-booth",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "Hanging banner printed substrate 1000 x 2000 mm, seam/rigging pending",
+        "output": {
+          "svg": "artwork-print-guides/HBN_hanging-banner.svg",
+          "dxf": "artwork-print-guides/HBN_hanging-banner.dxf",
+          "pdf": "artwork-print-guides/HBN_hanging-banner.pdf"
+        },
+        "notes": "Artwork zone exact 1000 x 2000 mm. Flat textile panel print with provisional rod pocket markers; stitching allowance unconfirmed. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "RECTANGULAR_ARTWORK_VALID_BUT_INCOMPLETE_VISUAL_GUIDANCE",
+          "guideGeometry": "ARTWORK_AND_REFERENCE_PANELS",
+          "actualPrintableDimensionsMM": [
+            1000,
+            2000
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": true,
+          "warnings": [
+            "Flat textile panel print with provisional rod pocket markers; stitching allowance unconfirmed."
+          ]
+        }
+      }
+    },
+    {
+      "id": "menu-board",
+      "category": "display-booth",
+      "code": "MNB",
+      "name": "Menu Board",
+      "sub": "Papan menu toko, cafe, atau booth.",
+      "tags": [
+        "menu",
+        "signage",
+        "food"
+      ],
+      "stock": "Foamboard / acrylic",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "surface": "menuboard",
+      "productCategory": "display-booth",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "Menu board substrate trim 800 x 500 mm, brackets/hardware excluded",
+        "output": {
+          "svg": "artwork-print-guides/MNB_menu-board.svg",
+          "dxf": "artwork-print-guides/MNB_menu-board.dxf",
+          "pdf": "artwork-print-guides/MNB_menu-board.pdf"
+        },
+        "notes": "Artwork zone exact 800 x 500 mm. Rectangle is correct for flat menu board; supports/brackets are not cutting paths. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "RECTANGULAR_ARTWORK_VALID_BUT_INCOMPLETE_VISUAL_GUIDANCE",
+          "guideGeometry": "ARTWORK_AND_REFERENCE_PANELS",
+          "actualPrintableDimensionsMM": [
+            800,
+            500
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": false,
+          "warnings": [
+            "Rectangle is correct for flat menu board; supports/brackets are not cutting paths."
+          ]
+        }
+      }
+    },
+    {
+      "id": "paper-cup",
+      "category": "food-beverage",
+      "code": "CUP",
+      "name": "Paper Cup",
+      "sub": "Cup kopi dengan artwork wrap.",
+      "tags": [
+        "coffee",
+        "cup",
+        "wrap"
+      ],
+      "stock": "PE coated paper",
+      "difficulty": "Menengah",
+      "mode": "Dieline + Desain + 3D",
+      "productCategory": "food-beverage",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PROTOTYPE_REQUIRED",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "Frustum top OD 90 / bottom OD 62 / wall 110 mm; film/board stretch excluded",
+        "output": {
+          "svg": "structural-dielines/CUP_paper-cup.svg",
+          "dxf": "structural-dielines/CUP_paper-cup.dxf",
+          "pdf": "structural-dielines/CUP_paper-cup.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Unrolled conical frustum: top OD 90 mm; bottom OD 62 mm; height 110 mm; angle 45.45 degrees; rim allocations TOP 4 mm BOTTOM 5 mm."
+      }
+    },
+    {
+      "id": "burger-box",
+      "category": "food-beverage",
+      "code": "BRG",
+      "name": "Burger Box",
+      "sub": "Kemasan makanan cepat saji.",
+      "tags": [
+        "food",
+        "takeaway",
+        "box"
+      ],
+      "stock": "Food grade paper",
+      "difficulty": "Menengah",
+      "mode": "Dieline + Desain + 3D",
+      "productCategory": "food-beverage",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PROTOTYPE_REQUIRED",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "130 x 130 x 70 mm nominal (corrugated; tab/slot closure requires fit test)",
+        "output": {
+          "svg": "structural-dielines/BRG_burger-box.svg",
+          "dxf": "structural-dielines/BRG_burger-box.dxf",
+          "pdf": "structural-dielines/BRG_burger-box.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Clamshell locking tab hinges are provisional."
+      }
+    },
+    {
+      "id": "bottle-label",
+      "category": "food-beverage",
+      "code": "LBL",
+      "name": "Bottle Label",
+      "sub": "Label botol minuman atau saus.",
+      "tags": [
+        "label",
+        "bottle",
+        "wrap"
+      ],
+      "stock": "Vinyl / PP",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "productCategory": "food-beverage",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NOMINAL_REFERENCE_VERIFY_VENDOR",
+        "dielineKind": "FLAT_CUT_TEMPLATES",
+        "nominalDimensions": "Wrap label 222 x 90 mm (nominal for bottle OD approx 70 mm; 2 mm overlap)",
+        "output": {
+          "svg": "flat-cut-templates/LBL_bottle-label.svg",
+          "dxf": "flat-cut-templates/LBL_bottle-label.dxf",
+          "pdf": "flat-cut-templates/LBL_bottle-label.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off.",
+        "cutFoldAuditV4": {
+          "id": "bottle-label",
+          "code": "LBL",
+          "model": "Bottle Label",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "flat-cut-templates",
+          "class": "FLAT-CUT",
+          "outerCutRectangle": false,
+          "cutContourCount": 1,
+          "creaseLineCount": 0,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 0,
+          "sealZones": 0,
+          "review": "CLASSIFIED_EXISTING_TEMPLATE",
+          "status": "NOMINAL_REFERENCE_VERIFY_VENDOR",
+          "notes": "Rounded rectangle is a valid sticker die; exact bottle dimensions and adhesive overlap missing.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "coffee-bag",
+      "category": "food-beverage",
+      "code": "COF",
+      "name": "Coffee Bag",
+      "sub": "Mockup bag kopi dengan label depan.",
+      "tags": [
+        "coffee",
+        "bag",
+        "label"
+      ],
+      "stock": "Kraft / foil pouch",
+      "difficulty": "Menengah",
+      "mode": "Desain + 3D",
+      "surface": "coffeebag",
+      "productCategory": "food-beverage",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PROTOTYPE_REQUIRED",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "130 mm body x 200 mm height; 45 mm bottom gusset; seal width 9-12 mm nominal",
+        "output": {
+          "svg": "structural-dielines/COF_coffee-bag.svg",
+          "dxf": "structural-dielines/COF_coffee-bag.dxf",
+          "pdf": "structural-dielines/COF_coffee-bag.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off."
+      }
+    },
+    {
+      "id": "menu-card",
+      "category": "food-beverage",
+      "code": "MNC",
+      "name": "Menu Card",
+      "sub": "Kartu menu cafe/resto siap cetak.",
+      "tags": [
+        "menu",
+        "restaurant",
+        "print"
+      ],
+      "stock": "Art carton / synthetic",
+      "difficulty": "Mudah",
+      "mode": "Desain + PDF",
+      "surface": "menucard",
+      "productCategory": "food-beverage",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PRINT_REFERENCE_ONLY",
+        "dielineKind": "ARTWORK_GUIDE",
+        "nominalDimensions": "Restaurant menu artwork A4 210 x 297 mm",
+        "output": {
+          "svg": "artwork-print-guides/MNC_menu-card.svg",
+          "dxf": "artwork-print-guides/MNC_menu-card.dxf",
+          "pdf": "artwork-print-guides/MNC_menu-card.pdf"
+        },
+        "notes": "Artwork zone exact 210 x 297 mm. A4 rectangular print/trim (paper). Not a folding carton dieline. File layers contain NO machine CUT toolpath.",
+        "artworkAuditV3": {
+          "priorGuide": "RECTANGULAR_ARTWORK_VALID_BUT_INCOMPLETE_VISUAL_GUIDANCE",
+          "guideGeometry": "ARTWORK_AND_REFERENCE_PANELS",
+          "actualPrintableDimensionsMM": [
+            210,
+            297
+          ],
+          "manufacturingCutlineIncluded": false,
+          "supplierDimensionsRequired": false,
+          "warnings": [
+            "A4 rectangular print/trim (paper). Not a folding carton dieline."
+          ]
+        }
+      }
+    },
+    {
+      "id": "jar-label",
+      "category": "food-beverage",
+      "code": "JAR",
+      "name": "Jar Label",
+      "sub": "Label jar untuk selai, sambal, dan dessert.",
+      "tags": [
+        "jar",
+        "label",
+        "food"
+      ],
+      "stock": "Vinyl / PP label",
+      "difficulty": "Mudah",
+      "mode": "Desain + 3D",
+      "surface": "jar",
+      "productCategory": "food-beverage",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NOMINAL_REFERENCE_VERIFY_VENDOR",
+        "dielineKind": "FLAT_CUT_TEMPLATES",
+        "nominalDimensions": "Jar wrap 207 x 65 mm for approx OD 65 mm with seam overlap",
+        "output": {
+          "svg": "flat-cut-templates/JAR_jar-label.svg",
+          "dxf": "flat-cut-templates/JAR_jar-label.dxf",
+          "pdf": "flat-cut-templates/JAR_jar-label.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off.",
+        "cutFoldAuditV4": {
+          "id": "jar-label",
+          "code": "JAR",
+          "model": "Jar Label",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "flat-cut-templates",
+          "class": "FLAT-CUT",
+          "outerCutRectangle": false,
+          "cutContourCount": 1,
+          "creaseLineCount": 0,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 0,
+          "sealZones": 0,
+          "review": "CLASSIFIED_EXISTING_TEMPLATE",
+          "status": "NOMINAL_REFERENCE_VERIFY_VENDOR",
+          "notes": "Rounded rectangle is a valid sticker die; exact jar dimensions and adhesive overlap missing.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "can-label",
+      "category": "food-beverage",
+      "code": "CAN",
+      "name": "Can Label",
+      "sub": "Label kaleng minuman wrap 360.",
+      "tags": [
+        "can",
+        "label",
+        "beverage"
+      ],
+      "stock": "PP label / shrink sleeve",
+      "difficulty": "Menengah",
+      "mode": "Desain + 3D",
+      "surface": "can",
+      "productCategory": "food-beverage",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NOMINAL_REFERENCE_VERIFY_VENDOR",
+        "dielineKind": "FLAT_CUT_TEMPLATES",
+        "nominalDimensions": "Can wrap 210 x 115 mm; aluminum body/chime clearance subject to can supplier",
+        "output": {
+          "svg": "flat-cut-templates/CAN_can-label.svg",
+          "dxf": "flat-cut-templates/CAN_can-label.dxf",
+          "pdf": "flat-cut-templates/CAN_can-label.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off.",
+        "cutFoldAuditV4": {
+          "id": "can-label",
+          "code": "CAN",
+          "model": "Can Label",
+          "v3Folder": "cut-and-fold-templates",
+          "v4Folder": "flat-cut-templates",
+          "class": "FLAT-CUT",
+          "outerCutRectangle": true,
+          "cutContourCount": 1,
+          "creaseLineCount": 0,
+          "kissCutCount": 0,
+          "perforationCount": 0,
+          "glueZones": 0,
+          "sealZones": 0,
+          "review": "CLASSIFIED_EXISTING_TEMPLATE",
+          "status": "NOMINAL_REFERENCE_VERIFY_VENDOR",
+          "notes": "Flat cylindrical label is an appropriate template only for the specified cylindrical target dimensions.",
+          "manufacturerApproved": false,
+          "physicalPrototypeValidated": false
+        }
+      }
+    },
+    {
+      "id": "food-tray",
+      "category": "food-beverage",
+      "code": "TRY",
+      "name": "Food Tray",
+      "sub": "Tray makanan untuk snack dan fries.",
+      "tags": [
+        "tray",
+        "takeaway",
+        "food"
+      ],
+      "stock": "Food grade paper",
+      "difficulty": "Mudah",
+      "mode": "Dieline + Desain + 3D",
+      "surface": "foodtray",
+      "productCategory": "food-beverage",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "GEOMETRY_DRAFT",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "standard reference size",
+        "output": {
+          "svg": "structural-dielines/TRY_food-tray.svg",
+          "dxf": "structural-dielines/TRY_food-tray.dxf",
+          "pdf": "structural-dielines/TRY_food-tray.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Size is a configurable catalogue default; verify before production."
+      }
+    },
+    {
+      "id": "ice-cream-tub",
+      "category": "food-beverage",
+      "code": "TUB",
+      "name": "Ice Cream Tub",
+      "sub": "Tub es krim dengan label cup.",
+      "tags": [
+        "tub",
+        "dessert",
+        "label"
+      ],
+      "stock": "PE coated paper",
+      "difficulty": "Menengah",
+      "mode": "Desain + 3D",
+      "surface": "tub",
+      "productCategory": "food-beverage",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "PROTOTYPE_REQUIRED",
+        "dielineKind": "STRUCTURAL_DIELINE",
+        "nominalDimensions": "Frustum top OD 105 / bottom OD 88 / wall 75 mm; film/board stretch excluded",
+        "output": {
+          "svg": "structural-dielines/TUB_ice-cream-tub.svg",
+          "dxf": "structural-dielines/TUB_ice-cream-tub.dxf",
+          "pdf": "structural-dielines/TUB_ice-cream-tub.pdf"
+        },
+        "notes": "Millimetres (1:1 vector). Final die requires physical prototype and production supplier sign-off. Unrolled conical frustum: top OD 105 mm; bottom OD 88 mm; height 75 mm; angle 40.54 degrees; rim allocations TOP 4 mm BOTTOM 5 mm."
+      }
+    },
+    {
+      "id": "upload-glb",
+      "category": "custom-model",
+      "code": "GLB",
+      "name": "Upload GLB Model",
+      "sub": "Tempat untuk model custom antum nanti.",
+      "tags": [
+        "custom",
+        "3d",
+        "upload"
+      ],
+      "stock": "GLB / OBJ",
+      "difficulty": "Lanjut",
+      "mode": "Custom",
+      "surface": "upload3d",
+      "productCategory": "custom-model",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NO_GEOMETRY",
+        "dielineKind": null,
+        "nominalDimensions": null,
+        "output": null,
+        "notes": "Upload/brief workflow: needs user-supplied reference geometry."
+      }
+    },
+    {
+      "id": "upload-obj",
+      "category": "custom-model",
+      "code": "OBJ",
+      "name": "Upload OBJ Model",
+      "sub": "Slot model OBJ/MTL untuk mockup custom.",
+      "tags": [
+        "custom",
+        "obj",
+        "upload"
+      ],
+      "stock": "OBJ / MTL",
+      "difficulty": "Lanjut",
+      "mode": "Custom",
+      "surface": "upload3d",
+      "productCategory": "custom-model",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NO_GEOMETRY",
+        "dielineKind": null,
+        "nominalDimensions": null,
+        "output": null,
+        "notes": "Upload/brief workflow: needs user-supplied reference geometry."
+      }
+    },
+    {
+      "id": "upload-svg-dieline",
+      "category": "custom-model",
+      "code": "SVG",
+      "name": "Upload SVG Dieline",
+      "sub": "Upload dieline SVG/PDF untuk jadi model custom.",
+      "tags": [
+        "svg",
+        "dieline",
+        "convert"
+      ],
+      "stock": "SVG / PDF",
+      "difficulty": "Menengah",
+      "mode": "Custom",
+      "surface": "upload2d",
+      "productCategory": "custom-model",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NO_GEOMETRY",
+        "dielineKind": null,
+        "nominalDimensions": null,
+        "output": null,
+        "notes": "Upload/brief workflow: needs user-supplied reference geometry."
+      }
+    },
+    {
+      "id": "custom-brief-board",
+      "category": "custom-model",
+      "code": "BRF",
+      "name": "Custom Brief Board",
+      "sub": "Form brief ukuran, bahan, referensi, dan output.",
+      "tags": [
+        "brief",
+        "spec",
+        "request"
+      ],
+      "stock": "Brief + reference",
+      "difficulty": "Custom",
+      "mode": "Brief",
+      "surface": "brief",
+      "productCategory": "custom-model",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NO_GEOMETRY",
+        "dielineKind": null,
+        "nominalDimensions": null,
+        "output": null,
+        "notes": "Upload/brief workflow: needs user-supplied reference geometry."
+      }
+    },
+    {
+      "id": "brand-kit-mockup",
+      "category": "custom-model",
+      "code": "KIT",
+      "name": "Brand Kit Mockup",
+      "sub": "Kumpulkan logo, warna, font, dan aset brand.",
+      "tags": [
+        "brand",
+        "kit",
+        "asset"
+      ],
+      "stock": "Logo / palette / font",
+      "difficulty": "Mudah",
+      "mode": "Custom",
+      "surface": "brandkit",
+      "productCategory": "custom-model",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NO_GEOMETRY",
+        "dielineKind": null,
+        "nominalDimensions": null,
+        "output": null,
+        "notes": "Upload/brief workflow: needs user-supplied reference geometry."
+      }
+    },
+    {
+      "id": "request-model",
+      "category": "custom-model",
+      "code": "REQ",
+      "name": "Request Model Baru",
+      "sub": "Daftar ide model yang belum ada di katalog.",
+      "tags": [
+        "request",
+        "brief",
+        "custom"
+      ],
+      "stock": "Brief + reference",
+      "difficulty": "Custom",
+      "mode": "Brief",
+      "surface": "request",
+      "productCategory": "custom-model",
+      "mockup": true,
+      "dielineAudit": {
+        "sourceDielinePresent": false,
+        "sourceDielineValidation": "NOT_VERIFIABLE_NO_ARTIFACT",
+        "manufacturerApproved": false,
+        "physicalPrototypeValidated": false,
+        "reviewStatus": "NO_GEOMETRY",
+        "dielineKind": null,
+        "nominalDimensions": null,
+        "output": null,
+        "notes": "Upload/brief workflow: needs user-supplied reference geometry."
+      }
+    }
+  ],
+  "dielineLibrary": {
+    "version": "2.0",
+    "generatedAt": "2026-10-12",
+    "units": "mm",
+    "scale": "1:1",
+    "basis": "Reference size assumptions, NOT manufacturer approved",
+    "note": "Original aggregate source stats preserved as originally supplied. Do not interpret source productionReady=10 as independently validated die files.",
+    "auditRecordCount": 92,
+    "geometryGenerated": 77,
+    "statusCountsGenerated": {
+      "GEOMETRY_DRAFT": 16,
+      "PROTOTYPE_REQUIRED": 38,
+      "OEM_DIMENSIONS_REQUIRED": 9,
+      "PRINT_REFERENCE_ONLY": 23,
+      "NO_GEOMETRY": 6
+    }
+  }
+}

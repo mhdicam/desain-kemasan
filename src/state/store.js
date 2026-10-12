@@ -1,4 +1,4 @@
-// 全局状态：单一 store（setState 式更新 + 订阅），字段与原型一致
+// 全局状态：单一 store (setState 式更新 + 订阅)，字段与lama型sama
 import { useSyncExternalStore } from 'react';
 import { MATS } from '../dieline/templates.js';
 import { geomOf } from '../dieline/geom.js';
@@ -10,9 +10,9 @@ const qp = new URLSearchParams(location.search);
 const legacy3d = legacyAppearance(qp.get('mat3d') || 'sbs');
 const initialPaper = qp.get('paper') || legacy3d[0], initialFilm = qp.get('film') || legacy3d[1];
 const paper0 = paperPreset(initialPaper), film0 = filmPreset(initialFilm);
-const rig0 = scenePreset(qp.get('studio') || 'lab-default'); // 默认场景即内置 lab-default（原「候选21」红棚参数固化）；旧 id neutral/high-key/dark-craft 仍兼容
+const rig0 = scenePreset(qp.get('studio') || 'lab-default'); // Scene default即Bawaan lab-default (lama「候选21」红studioparameter固化)；lama id neutral/high-key/dark-craft tetapkompatibel
 const initial = {
-  view: qp.get('view') || 'structure', tpl: qp.get('tpl') || 'rte', L: 80, W: 40, H: 120, matId: 'sbs350', bleed: 3, glue: 14,
+  view: 'home', tpl: qp.get('tpl') || 'rte', selectedCategory: qp.get('category') || '', categoryThumbnails: {}, L: 80, W: 40, H: 120, matId: 'sbs350', bleed: 3, glue: 14,
   show: { bleed: true, safe: true, dims: true, labels: true },
   k: 2.2, tx: 160, ty: 200,
   fold: qp.has('fold') ? +qp.get('fold') : 24, foldFromQuery: qp.has('fold'), mat3d: qp.get('mat3d') || 'sbs', paper3d: initialPaper, film3d: initialFilm,
@@ -29,11 +29,14 @@ const initial = {
   editMode: false, ovr: {}, typeOvr: {}, selSeg: null,
   pdfMode: 'cmyk',
   projectThumbnail: '',
+  selectedMockup: qp.get('mockup') || 'phone-mockup', selectedPackagingModel: '', selectedPackagingName: '', packagingFallbackNote: '', deviceScreenImage: '', deviceFrameColor: '#1c1d22', deviceScale: 1,
+  catalogSearch: '', mockupArtworkImage: '', mockupBaseColor: '#9a5aa6', mockupScale: 1, mockupFit: 'cover', mockupRotate: 0, mockupOpacity: 1, mockupShadow: true, mockupTransparent: false, mockupBackground: '#f3eadb',
+  brief: { projectName: '', category: 'packaging', productType: '', size: '', material: '', finish: '', quantity: '', deadline: '', budget: '', brandName: '', audience: '', style: '', colors: '', references: '', outputs: ['Dieline PDF', 'Mockup PNG'], notes: '' },
   fitNonce: 0,
   embDepth: 0.3, embDir: 'up', embBoost: qp.get('embBoost') === '1',
   uiCrop: false,
   sel: null, seq: 1,
-  layers: [] // 默认不带预设图层，设计页从空白开始（?heroTest/?embTest/?surfaceTest 调试场景仍注入测试图层）
+  layers: [] // defaulttanpapresetLayer，Desainpage从空白mulai (?heroTest/?embTest/?surfaceTest debugscenetetapinject测试Layer)
 };
 
 if (qp.get('heroTest') === '1') initial.layers = [
@@ -44,35 +47,35 @@ if (qp.get('heroTest') === '1') initial.layers = [
 ];
 if (qp.get('embTest') === '1') {
   initial.layers = [
-    { id: 1, kind: 'shape', x: 0, y: 0, w: 1, h: 1, content: '击凸底层', finish: 'emboss', embDir: 'up', visible: true, heroPreset: { x: 0.18, y: 0.25, w: 0.52, h: 0.44 } },
-    { id: 2, kind: 'shape', x: 0, y: 0, w: 1, h: 1, content: '击凹顶层', finish: 'emboss', embDir: 'down', visible: true, heroPreset: { x: 0.46, y: 0.43, w: 0.36, h: 0.36 } }
+    { id: 1, kind: 'shape', x: 0, y: 0, w: 1, h: 1, content: 'Emboss naik layer bawah', finish: 'emboss', embDir: 'up', visible: true, heroPreset: { x: 0.18, y: 0.25, w: 0.52, h: 0.44 } },
+    { id: 2, kind: 'shape', x: 0, y: 0, w: 1, h: 1, content: 'Deboss turun layer atas', finish: 'emboss', embDir: 'down', visible: true, heroPreset: { x: 0.46, y: 0.43, w: 0.36, h: 0.36 } }
   ];
   initial.fx = { ...initial.fx, emb: true }; initial.sel = 2; initial.seq = 3;
 }
 if (qp.get('surfaceTest') === 'uv') {
   initial.layers = [
     { id: 1, kind: 'text', x: 0, y: 0, content: 'LOCAL UV', font: 'JetBrains Mono', size: 7, weight: 700, color: '#403b36', finish: 'none', visible: true, heroPreset: { cx: 0.5, cy: 0.25, size: 7, fitChars: 10 } },
-    { id: 2, kind: 'shape', x: 0, y: 0, w: 1, h: 1, content: '普通印刷对照', color: '#8c8378', finish: 'none', visible: true, heroPreset: { x: 0.16, y: 0.43, w: 0.28, h: 0.24 } },
-    { id: 3, kind: 'shape', x: 0, y: 0, w: 1, h: 1, content: '局部UV', color: '#8c8378', finish: 'uv', visible: true, heroPreset: { x: 0.56, y: 0.43, w: 0.28, h: 0.24 } }
+    { id: 2, kind: 'shape', x: 0, y: 0, w: 1, h: 1, content: 'Pembanding cetak biasa', color: '#8c8378', finish: 'none', visible: true, heroPreset: { x: 0.16, y: 0.43, w: 0.28, h: 0.24 } },
+    { id: 3, kind: 'shape', x: 0, y: 0, w: 1, h: 1, content: 'Spot UV', color: '#8c8378', finish: 'uv', visible: true, heroPreset: { x: 0.56, y: 0.43, w: 0.28, h: 0.24 } }
   ];
   initial.fx = { ...initial.fx, foil: false, suv: true }; initial.sel = 3; initial.seq = 4;
 }
-// ?holoTest=1：正面大半版镭射 + 局部镭射块，回归幻彩色谱用
+// ?holoTest=1：Depan大半 platHolografik + 局部HolografikB，回归幻彩色谱用
 if (qp.get('holoTest') === '1') {
   initial.layers = [
-    { id: 1, kind: 'shape', x: 0, y: 0, w: 1, h: 1, content: '镭射整版', color: '#c8c2b8', finish: 'holo', visible: true, heroPreset: { x: 0.08, y: 0.08, w: 0.84, h: 0.6 } },
-    { id: 2, kind: 'shape', x: 0, y: 0, w: 1, h: 1, content: '镭射局部', color: '#c8c2b8', finish: 'holo', visible: true, heroPreset: { x: 0.3, y: 0.74, w: 0.4, h: 0.18 } }
+    { id: 1, kind: 'shape', x: 0, y: 0, w: 1, h: 1, content: 'Holografik full plate', color: '#c8c2b8', finish: 'holo', visible: true, heroPreset: { x: 0.08, y: 0.08, w: 0.84, h: 0.6 } },
+    { id: 2, kind: 'shape', x: 0, y: 0, w: 1, h: 1, content: 'Holografik spot', color: '#c8c2b8', finish: 'holo', visible: true, heroPreset: { x: 0.3, y: 0.74, w: 0.4, h: 0.18 } }
   ];
   initial.iridescence3d = 0.85; initial.sel = 1; initial.seq = 3;
 }
-// ?key= 兼容：旧链接用扁平 keyAngle 指定主光方位，v2 改写 lightsSpec3d 中 key 灯的 azimuth
+// ?key= kompatibel：lama链接用扁平 keyAngle 指定Key light方位，v2 改写 lightsSpec3d 中 key 灯的 azimuth
 if (qp.has('key')) {
   const kv = +qp.get('key');
   try {
     const ls = JSON.parse(initial.lightsSpec3d);
     const key = ls.find(x => x.id === 'key') || ls.find(x => x.shadow) || ls.find(x => x.type === 'directional');
     if (Number.isFinite(kv) && key) { key.azimuth = kv; initial.lightsSpec3d = JSON.stringify(ls); }
-  } catch (_) { /* lightsSpec3d 损坏则忽略兼容参数 */ }
+  } catch (_) { /* lightsSpec3d rusak则abaikankompatibelparameter */ }
 }
 initial.layers = placeHeroPresets(initial.layers, heroPanelOf(geomOf(initial, MATS[0].t)));
 
@@ -80,9 +83,9 @@ let state = initial;
 const listeners = new Set();
 const cloneInitial = () => structuredClone(initial);
 
-// 设计图层撤销/重做：仅跟踪 layers/seq 引用快照（图层对象一律不可变更新，快照零拷贝）。
-// 连续编辑（拖拽/滑杆）按「距上次入栈 >400ms 才新入一帧」节流，入栈内容 = 变更前快照；
-// reset（导入工程/重置示例盒）清空历史。
+// Layer desainundo/redo：仅跟踪 layers/seq referensi快照 (Layerobjek一律不可perubahan新，快照零拷贝)。
+// 连续edit (拖拽/滑杆)berdasarkan「距上次入栈 >400ms 才新入一帧」节流，入栈Konten = perubahan前快照；
+// reset (Impor Proyek/Reset Contoh Box)清空历史。
 const HIST_MAX = 60, HIST_GAP = 400;
 let histPast = [], histFuture = [], histLast = 0;
 const frame = () => ({ layers: state.layers, seq: state.seq });
@@ -105,7 +108,7 @@ export const store = {
     if (!histPast.length) return;
     histFuture.push(frame());
     const f = histPast.pop();
-    histLast = 0; // 撤销后的再次编辑强制新入一帧
+    histLast = 0; // undo后的再次edit强制新入一帧
     state = { ...state, layers: f.layers, seq: f.seq, sel: f.layers.some(l => l.id === state.sel) ? state.sel : null };
     listeners.forEach(l => l());
   },

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="147.0000mm" version="1.1" viewBox="0 0 327.0000 147.0000" width="327.0000mm">
+  <defs/>
+  <rect fill="white" height="147.0" width="327.0" x="0" y="0"/>
+  <g fill="#334155" id="INFO">
+    <text font-family="DejaVu Sans,Arial" font-size="6.8" font-weight="bold" x="20" y="15">Belly Band - 4 walls + glue tab</text>
+    <text font-family="Arial" font-size="3.1" x="20" y="23">Finished around 110 x 20 mm; band height 60 mm</text>
+    <text font-family="Arial" font-size="2.9" x="20" y="30">FOLD_WITH_GLUE | ENGINEERING SAMPLE | UNIT: mm | SCALE 1:1</text>
+    <text fill="#52647b" font-family="Arial" font-size="2.7" x="61.0" y="79.0">FRONT</text>
+    <text fill="#52647b" font-family="Arial" font-size="2.7" x="141.0" y="79.0">SIDE</text>
+    <text fill="#52647b" font-family="Arial" font-size="2.7" x="190.0" y="79.0">BACK</text>
+    <text fill="#52647b" font-family="Arial" font-size="2.7" x="269.0" y="79.0">SIDE</text>
+    <text fill="#52647b" font-family="Arial" font-size="2.7" x="288.0" y="79.0">GLUE</text>
+  </g>
+  <g id="CUT">
+    <polyline fill="none" points="301.0,48.0 301.0,108.0 26.0,108.0 26.0,48.0 301.0,48.0" stroke="#d52f37" stroke-width="0.34"/>
+  </g>
+  <g id="GLUE">
+    <polyline fill="none" points="300.0,53.0 300.0,103.0 287.0,103.0 287.0,53.0 300.0,53.0" stroke="#9c9da4" stroke-dasharray="1.5,1.2" stroke-width="0.21"/>
+  </g>
+  <g id="SEAL"/>
+  <g id="SAFE">
+    <polyline fill="none" points="129.0,55.0 129.0,101.0 33.0,101.0 33.0,55.0 129.0,55.0" stroke="#138a5e" stroke-dasharray="1.5,1.2" stroke-width="0.21"/>
+    <polyline fill="none" points="259.0,55.0 259.0,101.0 163.0,101.0 163.0,55.0 259.0,55.0" stroke="#138a5e" stroke-dasharray="1.5,1.2" stroke-width="0.21"/>
+  </g>
+  <g id="CREASE">
+    <polyline fill="none" points="136.0,48.0 136.0,108.0" stroke="#2267c5" stroke-dasharray="3,1.4" stroke-width="0.32"/>
+    <polyline fill="none" points="156.0,48.0 156.0,108.0" stroke="#2267c5" stroke-dasharray="3,1.4" stroke-width="0.32"/>
+    <polyline fill="none" points="266.0,48.0 266.0,108.0" stroke="#2267c5" stroke-dasharray="3,1.4" stroke-width="0.32"/>
+    <polyline fill="none" points="286.0,48.0 286.0,108.0" stroke="#2267c5" stroke-dasharray="3,1.4" stroke-width="0.32"/>
+  </g>
+  <g id="INFO">
+    <text fill="#475569" font-family="Arial" font-size="2.9" x="20" y="124.0">RED cut | BLUE fold | PURPLE film seal | GREY glue | GREEN safe printing</text>
+    <text fill="#475569" font-family="Arial" font-size="2.6" x="20" y="131.0">Score panels: 110 + 20 + 110 + 20 + 15 mm glue. Glue tab on INSIDE; board caliper clearance not modeled.</text>
+  </g>
+</svg>
