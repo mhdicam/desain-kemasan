@@ -10,12 +10,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "npm run check:template-sync",
+    "prebuild": "npm run check:template-sync && npm run check:model-foundation",
     "build": "vite build",
     "build:pages": "npm run check:template-sync && vite build --base=/",
     "check:template-sync": "node scripts/check-template-sync.mjs",
     "preset:from": "node scripts/boxproj-to-preset.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check:model-foundation": "node --test tests/model-foundation.test.mjs"
   },
   "dependencies": {
     "react": "18.3.1",

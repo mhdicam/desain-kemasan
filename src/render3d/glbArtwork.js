@@ -3,6 +3,7 @@ import * as THREE from 'three';
 import { bakeAtlas } from './bake.js';
 export function bakeArtworkTexture(s,context){
   if(!context?.g?.panels?.length || !s?.layers) throw Error('Missing 2D artwork geometry');
+  if(context.g.geometryKind==='missing')throw Error('Model has no authoritative dieline');
   const out=bakeAtlas({layers:s.layers,panels:context.g.panels,sbb:context.g.sbb,bleed:s.bleed||0,
     paperId:s.paper3d||'coated-white',filmId:s.film3d||'none',
     grainStrength:s.grainStrength,grainScale:s.grainScale,paperTint:s.paperTint3d||'',
