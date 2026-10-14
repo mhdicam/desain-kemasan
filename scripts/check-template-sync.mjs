@@ -7,8 +7,8 @@ import { makePieces } from '../src/render3d/fold.js';
 // Strukturpage是satu生产dieline，3D 会把flap gabungandipecah, 把卷筒Segmen，并bisa diabaikanproduk jaditersembunyiFlap lem；
 // makadi sinicekinventori semantik，bukan把 2D fill jumlah与 3D mesh jumlahdisamakan sederhana。
 const CONTRACTS = {
-  rte: { pieces: 1, main: 6, accessory: 6, glue: 1, panels: 2, asm: [] },
-  ste: { pieces: 1, main: 6, accessory: 6, glue: 1, panels: 2, asm: [] },
+  rte: { pieces: 1, main: 6, accessory: 6, glue: 1, panels: 6, asm: [] },
+  ste: { pieces: 1, main: 6, accessory: 6, glue: 1, panels: 6, asm: [] },
   'gable-box': { pieces: 1, main: 6, accessory: 6, glue: 1, panels: 3, asm: [] },
   'window-carton': { pieces: 1, main: 6, accessory: 6, glue: 1, panels: 2, asm: [] },
   'auto-lock-bottom': { pieces: 1, main: 6, accessory: 6, glue: 1, panels: 2, asm: [] },
