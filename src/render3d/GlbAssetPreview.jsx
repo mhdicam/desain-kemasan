@@ -39,7 +39,7 @@ export function GlbAssetPreview({asset,designState,context,bakeKey}){
     return()=>{cancelled=true;cancelAnimationFrame(raf);resize.disconnect();controls.dispose();loaded.current=null;
       if(model){if(model.userData.__artTexture)model.userData.__artTexture.dispose();model.traverse(o=>{if(o.isMesh){if(o.userData.__artMat){if(Array.isArray(o.material))o.material.forEach(m=>m.dispose());else o.material.dispose();}o.geometry.dispose();}});}
       renderer.dispose();renderer.domElement.remove();};
-  },[asset.glb,asset.surfaces,context?.g?.panels]);
+  },[asset.glb,asset.surfaces]);
   useEffect(()=>{
     const model=loaded.current;if(!model)return;
     let output;

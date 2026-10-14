@@ -32,3 +32,17 @@ test('real Three.js GLTFLoader parses and reconstructs Can Label reference', asy
   assert.ok(label.geometry.index.count>200);
   assert.ok(meshes.every(o=>o.geometry.boundingSphere===null || Number.isFinite(o.geometry.boundingSphere.radius)));
 });
+
+test('UV seam is continuous on the 360 degree cylinder and orientation is consistent',async()=>{
+  const view=glb.buffer.slice(glb.byteOffset,glb.byteOffset+glb.byteLength);
+  const scene=(await new Promise((resolve,reject)=>new GLTFLoader().parse(view,'',resolve,reject))).scene;
+  let label;scene.traverse(o=>{if(o.isMesh&&o.name==='label-wrap')label=o});
+  assert.ok(label);const p=label.geometry.getAttribute('position'),uv=label.geometry.getAttribute('uv');
+  const rows=p.count/2;assert.equal(rows,49);
+  const ne=(a,b,tol=1e-5)=>assert.ok(Math.abs(a-b)<tol,`got ${a} expected ${b}`);
+  // Vertex pair 0 and 48 touch in geometry but map to opposite print edges.
+  for(const y of [0,1]){ne(p.getX(y),p.getX((rows-1)*2+y));ne(p.getZ(y),p.getZ((rows-1)*2+y));ne(p.getY(y),p.getY((rows-1)*2+y));}
+  const u0=uv.getX(0),u1=uv.getX((rows-1)*2);ne(u0,6/222);ne(u1,216/222);
+  for(let i=0;i<rows-1;i++){ne(uv.getX(i*2),uv.getX(i*2+1));assert.ok(uv.getX(i*2)<uv.getX((i+1)*2),'u must increase around perimeter');ne(uv.getY(i*2),1-121/127);ne(uv.getY(i*2+1),1-6/127);}
+  const geometry=label.geometry;const indices=geometry.index;for(let i=0;i<indices.count;i+=3){const a=indices.getX(i),b=indices.getX(i+1),c=indices.getX(i+2);const area=(p.getX(b)-p.getX(a))*(p.getZ(c)-p.getZ(a))-(p.getZ(b)-p.getZ(a))*(p.getX(c)-p.getX(a));assert.ok(Number.isFinite(area));}
+});
