@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import {ModelPreview} from '../render3d/ModelPreview.jsx';
+import {boxPreviewContextOf} from '../render3d/BoxPreview.jsx';
 import { store, useStore } from '../state/store.js';
 import { mockupModelById } from '../dieline/templateCatalog.js';
 import { mockupExportSpec, mockupChecklist, downloadMockupPNG } from '../mockup/mockupExport.js';
@@ -122,7 +123,7 @@ export function MultiMockupView() {
     </div>
     <div style={{ flex: 1, position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', background: s.mockupTransparent ? 'linear-gradient(45deg,#ddd 25%,transparent 25%),linear-gradient(-45deg,#ddd 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#ddd 75%),linear-gradient(-45deg,transparent 75%,#ddd 75%)' : `radial-gradient(ellipse at 50% 38%, ${s.mockupBackground || '#f7f3ea'} 0%, #e5dbcb 62%, #c8bba8 100%)`, backgroundSize: s.mockupTransparent ? '24px 24px' : undefined, backgroundPosition: s.mockupTransparent ? '0 0,0 12px,12px -12px,-12px 0' : undefined }}>
       <div style={{position:'absolute',top:12,right:12,zIndex:10,display:'flex',gap:8}}><button style={btn} onClick={()=>setPreviewMode('3d')}>3D asset</button><button style={btn} onClick={()=>setPreviewMode('2d')}>2D legacy</button></div>
-      {previewMode==='3d'?<ModelPreview modelId={model.id} s={s} m={store.mat()}/>:<div style={{ width: `${Math.round((s.mockupScale || 1) * 86)}%`, maxWidth: 720, filter: s.mockupShadow === false ? 'none' : 'drop-shadow(0 28px 24px rgba(0,0,0,.16))' }}><Shape model={model} color={color} /></div>}
+      {previewMode==='3d'?<ModelPreview modelId={model.id} s={s} m={store.mat()} context={boxPreviewContextOf(s,store.mat())}/>:<div style={{ width: `${Math.round((s.mockupScale || 1) * 86)}%`, maxWidth: 720, filter: s.mockupShadow === false ? 'none' : 'drop-shadow(0 28px 24px rgba(0,0,0,.16))' }}><Shape model={model} color={color} /></div>}
       <div style={{ position: 'absolute', left: 16, bottom: 14, background: 'rgba(255,255,255,.82)', border: '1px solid #ded3c1', borderRadius: 8, padding: '7px 11px', fontSize: 12, color: '#594b3b' }}>{model.name} · {model.stock} · {model.difficulty}</div>
     </div>
   </>;

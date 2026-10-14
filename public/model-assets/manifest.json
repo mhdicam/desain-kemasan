@@ -1,1 +1,48 @@
-{"schemaVersion":1,"models":{}}
+{
+  "schemaVersion": 1,
+  "models": {
+    "can-label": {
+      "modelId": "can-label",
+      "glb": "/model-assets/can-label/assembled.glb",
+      "status": "preview",
+      "surfaces": [
+        {
+          "surfaceId": "label-360",
+          "nodeName": "label-wrap",
+          "panelId": "front",
+          "kind": "artwork",
+          "uvMode": "atlas"
+        },
+        {
+          "surfaceId": "metal-body",
+          "nodeName": "can-body",
+          "kind": "material"
+        },
+        {
+          "surfaceId": "metal-top",
+          "nodeName": "can-top",
+          "kind": "material"
+        },
+        {
+          "surfaceId": "metal-bottom",
+          "nodeName": "can-bottom",
+          "kind": "material"
+        }
+      ],
+      "geometry": {
+        "reference": "imported-svg",
+        "source": "/dielines-v2/CAN_can-label.svg",
+        "cutAreaMm": [
+          18,
+          37,
+          228,
+          152
+        ],
+        "labelCircumferenceMm": 210,
+        "labelHeightMm": 115,
+        "diameterMm": 66.84507609859604,
+        "nonParametric": true
+      }
+    }
+  }
+}
