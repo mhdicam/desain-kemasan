@@ -23,7 +23,8 @@ export function GlbAssetPreview({asset,designState,context,bakeKey}){
     controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;
     const fit=()=>{const w=Math.max(1,el.clientWidth),h=Math.max(1,el.clientHeight);renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();};
     const resize=new ResizeObserver(fit);resize.observe(el);fit();
-    new GLTFLoader().load(resolveAssetUrl(asset.glb),g=>{
+    const url=resolveAssetUrl(asset.glb);
+    new GLTFLoader().load(url,g=>{
       if(cancelled){g.scene.traverse(o=>{if(o.isMesh){o.geometry.dispose();}});return;}
       model=g.scene;
       const issues=verifySurfaceMappings(model,asset,context?.g?.panels||[]);
@@ -34,7 +35,7 @@ export function GlbAssetPreview({asset,designState,context,bakeKey}){
       controls.target.copy(center);const radius=Math.max(v.x,v.y,v.z,0.05);
       camera.position.copy(center).add(new THREE.Vector3(radius*1.5,radius*1.1,radius*1.6));
       camera.near=Math.max(radius/1000,0.0001);camera.far=Math.max(100,radius*100);camera.updateProjectionMatrix();
-    },undefined,err=>setError('Gagal memuat GLB: '+(err.message||err)));
+    },undefined,err=>setError('Gagal memuat GLB di '+url+': '+(err.message||err)+'. Periksa status 200, MIME, dan isi binary GLB (bukan HTML fallback).'));
     const animate=()=>{if(cancelled)return;controls.update();renderer.render(scene,camera);raf=requestAnimationFrame(animate);};animate();
     return()=>{cancelled=true;cancelAnimationFrame(raf);resize.disconnect();controls.dispose();loaded.current=null;
       if(model){if(model.userData.__artTexture)model.userData.__artTexture.dispose();model.traverse(o=>{if(o.isMesh){if(o.userData.__artMat){if(Array.isArray(o.material))o.material.forEach(m=>m.dispose());else o.material.dispose();}o.geometry.dispose();}});}
