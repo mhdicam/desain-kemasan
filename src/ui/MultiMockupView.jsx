@@ -25,15 +25,17 @@ function Artwork({ x, y, w, h, radius = 8, rotate = 0 }) {
 }
 
 
-function ArtworkGuidePreview({ guide }) {
-  if (!guide) return null;
-  return <div style={{ marginTop: 10, border: '1px solid #d8d0c2', borderRadius: 10, background: '#fffdf8', overflow: 'hidden' }}>
-    <div style={{ padding: '8px 10px', borderBottom: '1px solid #eadfce', fontSize: 11, color: '#5c554a', lineHeight: 1.45 }}><b>Artwork Guide V3</b><br />Area print: {guide.artworkSizeMM} mm<br />Bukan cutline manufaktur.</div>
-    <img src={guide.preview} alt="" style={{ width: '100%', display: 'block', background: '#f7f1e7' }} />
+function ArtworkGuidePreview({ guide, pattern }) {
+  const data = pattern || guide;
+  if (!data) return null;
+  return <div style={{ marginTop: 10, border: '1px solid #d8d0c2', borderRadius: 10, background: pattern ? '#f8f1ff' : '#fffdf8', overflow: 'hidden' }}>
+    <div style={{ padding: '8px 10px', borderBottom: '1px solid #eadfce', fontSize: 11, color: '#5c554a', lineHeight: 1.45 }}><b>{pattern ? 'Pola Jahit V6 — Draft' : 'Artwork Guide V3'}</b><br />{pattern ? `${pattern.actualCutPieces} cut pieces · ${pattern.pieceTypes} tipe komponen · ${pattern.sheetWidthMm} × ${pattern.sheetHeightMm} mm` : `Area print: ${guide.artworkSizeMM} mm`}<br />{pattern ? 'Belum production/fit validated.' : 'Bukan cutline manufaktur.'}</div>
+    <img src={data.preview} alt="" style={{ width: '100%', display: 'block', background: '#f7f1e7' }} />
     <div style={{ display: 'flex', gap: 8, padding: 8, flexWrap: 'wrap' }}>
-      <a href={guide.svg} target="_blank" style={{ fontSize: 11, fontWeight: 900, color: '#7a5430' }}>SVG</a>
-      <a href={guide.dxf} download style={{ fontSize: 11, fontWeight: 900, color: '#7a5430' }}>DXF</a>
-      <a href={guide.pdf} target="_blank" style={{ fontSize: 11, fontWeight: 900, color: '#7a5430' }}>PDF</a>
+      <a href={data.svg} target="_blank" style={{ fontSize: 11, fontWeight: 900, color: '#7a5430' }}>SVG</a>
+      <a href={data.dxf} download style={{ fontSize: 11, fontWeight: 900, color: '#7a5430' }}>DXF</a>
+      <a href={data.pdf} target="_blank" style={{ fontSize: 11, fontWeight: 900, color: '#7a5430' }}>PDF</a>
+      {pattern?.patternJson && <a href={pattern.patternJson} target="_blank" style={{ fontSize: 11, fontWeight: 900, color: '#7a5430' }}>JSON</a>}
     </div>
   </div>;
 }
@@ -87,6 +89,7 @@ export function MultiMockupView() {
   const model = mockupModelById(s.selectedMockup) || mockupModelById('tshirt-front');
   const color = s.mockupBaseColor || '#9a5aa6';
   const guide = model.artworkGuide;
+  const pattern = model.apparelPattern;
   const spec = mockupExportSpec(model, s);
   const checks = mockupChecklist(spec);
   return <>
@@ -110,9 +113,9 @@ export function MultiMockupView() {
         <label style={{ display: 'flex', gap: 8, alignItems: 'center', fontSize: 12, color: '#5c554a', marginTop: 6 }}><input type="checkbox" checked={!!s.mockupTransparent} onChange={e => store.set({ mockupTransparent: e.target.checked })}/> PNG transparan</label>
         {!s.mockupTransparent && <><div style={{ fontSize: 11, color: '#8a8071', margin: '10px 0 5px' }}>Background</div><input type="color" value={s.mockupBackground || '#f3eadb'} onChange={e => store.set({ mockupBackground: e.target.value })} style={{ ...input, height: 34, padding: 3 }} /></>}
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5, marginTop: 12 }}>{Object.entries(checks).map(([k, ok]) => <span key={k} style={{ borderRadius: 99, padding: '3px 6px', fontSize: 10, fontWeight: 800, background: ok ? '#e6f4ea' : '#f3eadb', color: ok ? '#2f7044' : '#9a6a2c', border: '1px solid ' + (ok ? '#b9dfc4' : '#e1c99f') }}>{ok ? '✓ ' : '○ '}{k}</span>)}</div>
-        <ArtworkGuidePreview guide={guide} />
+        <ArtworkGuidePreview guide={guide} pattern={pattern} />
         <button onClick={() => downloadMockupPNG(spec, color, s.mockupArtworkImage)} style={{ ...btn, width: '100%', marginTop: 12, background: '#9a5b1f', color: '#fff', border: 'none' }}>Export PNG</button>
-        <div style={{ marginTop: 14, background: guide ? '#eef5ff' : '#f0ebe0', borderRadius: 8, padding: 10, fontSize: 11.5, color: '#5c554a', lineHeight: 1.55 }}>{guide ? 'Artwork Guide V3: print-zone 1:1 dari SVG/DXF/PDF. Ini referensi artwork, bukan CAD potong/pola jahit.' : 'Phase 12: mockup visual valid dengan fit, rotate, opacity, shadow, background, dan PNG transparan.'}</div>
+        <div style={{ marginTop: 14, background: pattern ? '#f8f1ff' : guide ? '#eef5ff' : '#f0ebe0', borderRadius: 8, padding: 10, fontSize: 11.5, color: '#5c554a', lineHeight: 1.55 }}>{pattern ? 'Pola Jahit V6: sample draft component cutting pattern. Belum Production Valid: seam match, grading, shrinkage, fit, dan proses jahit fisik belum diverifikasi.' : guide ? 'Artwork Guide V3: print-zone 1:1 dari SVG/DXF/PDF. Ini referensi artwork, bukan CAD potong/pola jahit.' : 'Phase 12: mockup visual valid dengan fit, rotate, opacity, shadow, background, dan PNG transparan.'}</div>
       </div>
     </div>
     <div style={{ flex: 1, position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', background: s.mockupTransparent ? 'linear-gradient(45deg,#ddd 25%,transparent 25%),linear-gradient(-45deg,#ddd 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#ddd 75%),linear-gradient(-45deg,transparent 75%,#ddd 75%)' : `radial-gradient(ellipse at 50% 38%, ${s.mockupBackground || '#f7f3ea'} 0%, #e5dbcb 62%, #c8bba8 100%)`, backgroundSize: s.mockupTransparent ? '24px 24px' : undefined, backgroundPosition: s.mockupTransparent ? '0 0,0 12px,12px -12px,-12px 0' : undefined }}>

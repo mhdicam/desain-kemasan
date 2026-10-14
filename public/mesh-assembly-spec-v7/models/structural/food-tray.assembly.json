@@ -1,0 +1,1168 @@
+{
+  "schemaVersion": "7.0.0-draft",
+  "identity": {
+    "id": "food-tray",
+    "code": "TRY",
+    "name": "Food Tray",
+    "catalogCategory": "food-beverage",
+    "modelKey": "food-beverage:food-tray"
+  },
+  "pipeline": "unknown_requires_asset",
+  "geometrySource": {
+    "svgPathV6": "structural-dielines/TRY_food-tray.svg",
+    "patternJsonPathV6": null,
+    "fileType": "STRUCTURAL_DIELINE",
+    "coordinateFrame": {
+      "svg_mm": {
+        "x": "right",
+        "y": "down",
+        "units": "mm",
+        "origin": "svg_viewBox"
+      },
+      "engine_local_mm": {
+        "x": "right",
+        "y": "up",
+        "z": "toward_visible_print_side",
+        "transform": "[x,-y,0] from SVG"
+      },
+      "export_gltf": "[x/1000,-y/1000,z/1000] in metres; choose model origin separately",
+      "fold_sign": "right-hand rotation around directed hinge in engine_local_mm coordinates; fold degrees cannot be interpreted without directed endpoints",
+      "face_orientation": "printSide=+Z only when source artwork/front is explicitly assigned",
+      "mountain_valley": "classification relative to printSide; values in candidate assembly are PROPOSED and require engineer verification"
+    },
+    "sourcePresent": true
+  },
+  "validation": {
+    "manufacturerApproved": false,
+    "physicalPrototypeTested": false,
+    "assemblySemanticsVerified": false,
+    "semanticStatus": "PROPOSED_NOT_VALIDATED",
+    "blockingIssues": [
+      "Rim inclination and corner tab adhesive not validated",
+      "Food material specification needed",
+      "Panel semantics and attachment mates are engineering proposals inferred from prototype V5 dieline; review by CAD/converter required",
+      "Some special flaps deliberately have unresolved creaseRef rather than fabricated hinge IDs",
+      "All fold sides and signed hinge angles remain PROPOSED despite coordinate-matched crease geometry; no 3D mechanical proof",
+      "All tray corner tabs and sleeve wall mapping need 3D shape/collision verification",
+      "Nominal input dimensions are sourced from V5 audit description; verify actual erected internal and external dimensions, stock caliper, and supplier allowances"
+    ],
+    "missingRequired": [
+      "material_thickness",
+      "print_side",
+      "signed_hinge_calibration",
+      "glue_or_seal_mates",
+      "physical_fit"
+    ],
+    "creaseMapping": {
+      "totalSourceCreases": 8,
+      "candidateMapped": 8,
+      "candidateNonfold": 0,
+      "unassigned": 0,
+      "completeCandidate": true,
+      "verifiedFoldSide": false
+    }
+  },
+  "finalStates": {
+    "default": "open_top_assembled",
+    "available": [
+      "flat_2d",
+      "folding_partial",
+      "closed_assembled",
+      "exploded_view",
+      "half_open_mockup"
+    ],
+    "physicalAccuracy": "NOT_VALIDATED"
+  },
+  "parameterDefaults": {
+    "units": "mm",
+    "nominalSourceDescription": "Open tray 175 x 110 x 42 mm, corner tabs; grease barrier & food contact certification separate",
+    "thicknessMm": null,
+    "thicknessStatus": "REQUIRES_VENDOR_MATERIAL_SPEC",
+    "dimensionsMm": {
+      "L": 175,
+      "W": 110,
+      "H": 42,
+      "thickness": null
+    },
+    "dimensionStatus": "NOMINAL_REFERENCE_FROM_V5_AUDIT_NOT_MANUFACTURER_APPROVED"
+  },
+  "panels": [
+    {
+      "id": "floor",
+      "role": "bottom",
+      "svg_region_mm": {
+        "type": "rectangle",
+        "bbox": [
+          60.0,
+          79.0,
+          235.0,
+          189.0
+        ]
+      },
+      "geometryEvidence": "derived_from_visible_crease_coordinates",
+      "anchor": true,
+      "artworkSemantic": "food_contact_floor",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "wall_front",
+      "role": "tray_front",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Flange near floor along perimeter crease",
+      "anchor": false,
+      "artworkSemantic": "tray_wall",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "wall_back",
+      "role": "tray_back",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Flange near floor along perimeter crease",
+      "anchor": false,
+      "artworkSemantic": "tray_wall",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "wall_left",
+      "role": "tray_left",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Flange near floor along perimeter crease",
+      "anchor": false,
+      "artworkSemantic": "tray_wall",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "wall_right",
+      "role": "tray_right",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Flange near floor along perimeter crease",
+      "anchor": false,
+      "artworkSemantic": "tray_wall",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "glue_corner_1",
+      "role": "corner_glue_tab",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "GLUE:001 corner patch",
+      "anchor": false,
+      "artworkSemantic": "glue_tab",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "glue_corner_2",
+      "role": "corner_glue_tab",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "GLUE:002 corner patch",
+      "anchor": false,
+      "artworkSemantic": "glue_tab",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "glue_corner_3",
+      "role": "corner_glue_tab",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "GLUE:003 corner patch",
+      "anchor": false,
+      "artworkSemantic": "glue_tab",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "glue_corner_4",
+      "role": "corner_glue_tab",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "GLUE:004 corner patch",
+      "anchor": false,
+      "artworkSemantic": "glue_tab",
+      "printSide": "unresolved"
+    }
+  ],
+  "hinges": [
+    {
+      "id": "hinge_wall_back",
+      "childPanel": "wall_back",
+      "parentPanel": "floor",
+      "creaseRef": "CREASE:005",
+      "svgEndpointsMm": [
+        [
+          60.0,
+          79.0
+        ],
+        [
+          235.0,
+          79.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          60.0,
+          79.0
+        ],
+        "end_svg_mm": [
+          235.0,
+          79.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 1,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Simple wall hinge, signed angle remains proposal"
+    },
+    {
+      "id": "hinge_wall_front",
+      "childPanel": "wall_front",
+      "parentPanel": "floor",
+      "creaseRef": "CREASE:006",
+      "svgEndpointsMm": [
+        [
+          60.0,
+          189.0
+        ],
+        [
+          235.0,
+          189.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          60.0,
+          189.0
+        ],
+        "end_svg_mm": [
+          235.0,
+          189.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 1,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Simple wall hinge, signed angle remains proposal"
+    },
+    {
+      "id": "hinge_wall_left",
+      "childPanel": "wall_left",
+      "parentPanel": "floor",
+      "creaseRef": "CREASE:007",
+      "svgEndpointsMm": [
+        [
+          60.0,
+          79.0
+        ],
+        [
+          60.0,
+          189.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          60.0,
+          79.0
+        ],
+        "end_svg_mm": [
+          60.0,
+          189.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 1,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Simple wall hinge, signed angle remains proposal"
+    },
+    {
+      "id": "hinge_wall_right",
+      "childPanel": "wall_right",
+      "parentPanel": "floor",
+      "creaseRef": "CREASE:008",
+      "svgEndpointsMm": [
+        [
+          235.0,
+          79.0
+        ],
+        [
+          235.0,
+          189.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          235.0,
+          79.0
+        ],
+        "end_svg_mm": [
+          235.0,
+          189.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 1,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Simple wall hinge, signed angle remains proposal"
+    },
+    {
+      "id": "hinge_glue_corner_1",
+      "childPanel": "glue_corner_1",
+      "parentPanel": "wall_back",
+      "creaseRef": "CREASE:001",
+      "svgEndpointsMm": [
+        [
+          60.0,
+          41.0
+        ],
+        [
+          60.0,
+          75.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          60.0,
+          41.0
+        ],
+        "end_svg_mm": [
+          60.0,
+          75.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Corner tabs glue to adjacent side wall; exact mate unresolved"
+    },
+    {
+      "id": "hinge_glue_corner_2",
+      "childPanel": "glue_corner_2",
+      "parentPanel": "wall_back",
+      "creaseRef": "CREASE:002",
+      "svgEndpointsMm": [
+        [
+          235.0,
+          41.0
+        ],
+        [
+          235.0,
+          75.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          235.0,
+          41.0
+        ],
+        "end_svg_mm": [
+          235.0,
+          75.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Corner tabs glue to adjacent side wall; exact mate unresolved"
+    },
+    {
+      "id": "hinge_glue_corner_3",
+      "childPanel": "glue_corner_3",
+      "parentPanel": "wall_front",
+      "creaseRef": "CREASE:003",
+      "svgEndpointsMm": [
+        [
+          60.0,
+          193.0
+        ],
+        [
+          60.0,
+          227.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          60.0,
+          193.0
+        ],
+        "end_svg_mm": [
+          60.0,
+          227.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Corner tabs glue to adjacent side wall; exact mate unresolved"
+    },
+    {
+      "id": "hinge_glue_corner_4",
+      "childPanel": "glue_corner_4",
+      "parentPanel": "wall_front",
+      "creaseRef": "CREASE:004",
+      "svgEndpointsMm": [
+        [
+          235.0,
+          193.0
+        ],
+        [
+          235.0,
+          227.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          235.0,
+          193.0
+        ],
+        "end_svg_mm": [
+          235.0,
+          227.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Corner tabs glue to adjacent side wall; exact mate unresolved"
+    }
+  ],
+  "attachments": [
+    {
+      "id": "GLUE:001_attachment",
+      "sourceZoneRef": "GLUE:001",
+      "kind": "glue",
+      "fromPanel": "unresolved",
+      "toPanel": "unresolved",
+      "status": "unresolved_mate",
+      "note": "Glue polygon measured, mate must be confirmed manually"
+    },
+    {
+      "id": "GLUE:002_attachment",
+      "sourceZoneRef": "GLUE:002",
+      "kind": "glue",
+      "fromPanel": "unresolved",
+      "toPanel": "unresolved",
+      "status": "unresolved_mate",
+      "note": "Glue polygon measured, mate must be confirmed manually"
+    },
+    {
+      "id": "GLUE:003_attachment",
+      "sourceZoneRef": "GLUE:003",
+      "kind": "glue",
+      "fromPanel": "unresolved",
+      "toPanel": "unresolved",
+      "status": "unresolved_mate",
+      "note": "Glue polygon measured, mate must be confirmed manually"
+    },
+    {
+      "id": "GLUE:004_attachment",
+      "sourceZoneRef": "GLUE:004",
+      "kind": "glue",
+      "fromPanel": "unresolved",
+      "toPanel": "unresolved",
+      "status": "unresolved_mate",
+      "note": "Glue polygon measured, mate must be confirmed manually"
+    }
+  ],
+  "specialMechanics": [],
+  "foldSequence": [
+    {
+      "stage": 1,
+      "actions": [
+        "Fold four walls up from base"
+      ],
+      "requiresApproval": true,
+      "validationTasks": [
+        "Check handedness and taper angle"
+      ]
+    },
+    {
+      "stage": 2,
+      "actions": [
+        "Glue four corners to adjacent walls"
+      ],
+      "requiresApproval": true,
+      "validationTasks": [
+        "Each corner glue zone needs definite mate"
+      ]
+    }
+  ],
+  "sourceEvidence": {
+    "viewBoxMm": [
+      0.0,
+      0.0,
+      295.0,
+      254.0
+    ],
+    "sourceCounts": {
+      "INFO": 0,
+      "BLEED": 1,
+      "GLUE": 4,
+      "SEAL": 0,
+      "SAFE": 1,
+      "ARTWORK_AREA": 0,
+      "CREASE": 8,
+      "PERF": 0,
+      "KISS_CUT": 0,
+      "CUT": 1
+    },
+    "svgLayerPrimitives": {
+      "GLUE": [
+        {
+          "id": "GLUE:001",
+          "points_mm": [
+            [
+              57.0,
+              48.0
+            ],
+            [
+              57.0,
+              68.0
+            ],
+            [
+              48.0,
+              68.0
+            ],
+            [
+              48.0,
+              48.0
+            ],
+            [
+              57.0,
+              48.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            48.0,
+            48.0,
+            57.0,
+            68.0
+          ]
+        },
+        {
+          "id": "GLUE:002",
+          "points_mm": [
+            [
+              247.0,
+              48.0
+            ],
+            [
+              247.0,
+              68.0
+            ],
+            [
+              238.0,
+              68.0
+            ],
+            [
+              238.0,
+              48.0
+            ],
+            [
+              247.0,
+              48.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            238.0,
+            48.0,
+            247.0,
+            68.0
+          ]
+        },
+        {
+          "id": "GLUE:003",
+          "points_mm": [
+            [
+              57.0,
+              200.0
+            ],
+            [
+              57.0,
+              220.0
+            ],
+            [
+              48.0,
+              220.0
+            ],
+            [
+              48.0,
+              200.0
+            ],
+            [
+              57.0,
+              200.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            48.0,
+            200.0,
+            57.0,
+            220.0
+          ]
+        },
+        {
+          "id": "GLUE:004",
+          "points_mm": [
+            [
+              247.0,
+              200.0
+            ],
+            [
+              247.0,
+              220.0
+            ],
+            [
+              238.0,
+              220.0
+            ],
+            [
+              238.0,
+              200.0
+            ],
+            [
+              247.0,
+              200.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            238.0,
+            200.0,
+            247.0,
+            220.0
+          ]
+        }
+      ],
+      "SEAL": [],
+      "CREASE": [
+        {
+          "id": "CREASE:001",
+          "points_mm": [
+            [
+              60.0,
+              41.0
+            ],
+            [
+              60.0,
+              75.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            60.0,
+            41.0,
+            60.0,
+            75.0
+          ]
+        },
+        {
+          "id": "CREASE:002",
+          "points_mm": [
+            [
+              235.0,
+              41.0
+            ],
+            [
+              235.0,
+              75.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            235.0,
+            41.0,
+            235.0,
+            75.0
+          ]
+        },
+        {
+          "id": "CREASE:003",
+          "points_mm": [
+            [
+              60.0,
+              193.0
+            ],
+            [
+              60.0,
+              227.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            60.0,
+            193.0,
+            60.0,
+            227.0
+          ]
+        },
+        {
+          "id": "CREASE:004",
+          "points_mm": [
+            [
+              235.0,
+              193.0
+            ],
+            [
+              235.0,
+              227.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            235.0,
+            193.0,
+            235.0,
+            227.0
+          ]
+        },
+        {
+          "id": "CREASE:005",
+          "points_mm": [
+            [
+              60.0,
+              79.0
+            ],
+            [
+              235.0,
+              79.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            60.0,
+            79.0,
+            235.0,
+            79.0
+          ]
+        },
+        {
+          "id": "CREASE:006",
+          "points_mm": [
+            [
+              60.0,
+              189.0
+            ],
+            [
+              235.0,
+              189.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            60.0,
+            189.0,
+            235.0,
+            189.0
+          ]
+        },
+        {
+          "id": "CREASE:007",
+          "points_mm": [
+            [
+              60.0,
+              79.0
+            ],
+            [
+              60.0,
+              189.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            60.0,
+            79.0,
+            60.0,
+            189.0
+          ]
+        },
+        {
+          "id": "CREASE:008",
+          "points_mm": [
+            [
+              235.0,
+              79.0
+            ],
+            [
+              235.0,
+              189.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            235.0,
+            79.0,
+            235.0,
+            189.0
+          ]
+        }
+      ],
+      "PERF": [],
+      "KISS_CUT": [],
+      "CUT": [
+        {
+          "id": "CUT:001",
+          "points_mm": [
+            [
+              60.0,
+              76.0
+            ],
+            [
+              60.0,
+              79.0
+            ],
+            [
+              18.0,
+              79.0
+            ],
+            [
+              18.0,
+              189.0
+            ],
+            [
+              60.0,
+              189.0
+            ],
+            [
+              60.0,
+              192.0
+            ],
+            [
+              45.0,
+              196.0
+            ],
+            [
+              45.0,
+              224.0
+            ],
+            [
+              60.0,
+              228.0
+            ],
+            [
+              60.0,
+              231.0
+            ],
+            [
+              235.0,
+              231.0
+            ],
+            [
+              235.0,
+              228.0
+            ],
+            [
+              250.0,
+              224.0
+            ],
+            [
+              250.0,
+              196.0
+            ],
+            [
+              235.0,
+              192.0
+            ],
+            [
+              235.0,
+              189.0
+            ],
+            [
+              277.0,
+              189.0
+            ],
+            [
+              277.0,
+              79.0
+            ],
+            [
+              235.0,
+              79.0
+            ],
+            [
+              235.0,
+              76.0
+            ],
+            [
+              250.0,
+              72.0
+            ],
+            [
+              250.0,
+              44.0
+            ],
+            [
+              235.0,
+              40.0
+            ],
+            [
+              235.0,
+              37.0
+            ],
+            [
+              60.0,
+              37.0
+            ],
+            [
+              60.0,
+              40.0
+            ],
+            [
+              45.0,
+              44.0
+            ],
+            [
+              45.0,
+              72.0
+            ],
+            [
+              60.0,
+              76.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            18.0,
+            37.0,
+            277.0,
+            231.0
+          ]
+        }
+      ]
+    },
+    "structuralStatusV5": "REVISED_SAMPLE_REQUIRED"
+  },
+  "meshFamily": "open_tray",
+  "assemblyMechanism": "four_rim_walls_and_corner_glue_tabs",
+  "outputRelativePath": "models/structural/food-tray.assembly.json",
+  "creaseSemanticRegistry": [
+    {
+      "sourceRef": "CREASE:001",
+      "polylineMm": [
+        [
+          60.0,
+          41.0
+        ],
+        [
+          60.0,
+          75.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_glue_corner_1",
+          "panel": "glue_corner_1",
+          "parent": "wall_back",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:002",
+      "polylineMm": [
+        [
+          235.0,
+          41.0
+        ],
+        [
+          235.0,
+          75.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_glue_corner_2",
+          "panel": "glue_corner_2",
+          "parent": "wall_back",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:003",
+      "polylineMm": [
+        [
+          60.0,
+          193.0
+        ],
+        [
+          60.0,
+          227.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_glue_corner_3",
+          "panel": "glue_corner_3",
+          "parent": "wall_front",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:004",
+      "polylineMm": [
+        [
+          235.0,
+          193.0
+        ],
+        [
+          235.0,
+          227.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_glue_corner_4",
+          "panel": "glue_corner_4",
+          "parent": "wall_front",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:005",
+      "polylineMm": [
+        [
+          60.0,
+          79.0
+        ],
+        [
+          235.0,
+          79.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_wall_back",
+          "panel": "wall_back",
+          "parent": "floor",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:006",
+      "polylineMm": [
+        [
+          60.0,
+          189.0
+        ],
+        [
+          235.0,
+          189.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_wall_front",
+          "panel": "wall_front",
+          "parent": "floor",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:007",
+      "polylineMm": [
+        [
+          60.0,
+          79.0
+        ],
+        [
+          60.0,
+          189.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_wall_left",
+          "panel": "wall_left",
+          "parent": "floor",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:008",
+      "polylineMm": [
+        [
+          235.0,
+          79.0
+        ],
+        [
+          235.0,
+          189.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_wall_right",
+          "panel": "wall_right",
+          "parent": "floor",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    }
+  ]
+}

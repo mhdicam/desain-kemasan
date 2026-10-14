@@ -3,6 +3,7 @@
 // buildNode 累计 rotZ (0/90/180/270)，berdasarkan规则自动求 flip——主体板零手工arah标定
 import * as THREE from 'three';
 import { discBbox } from '../dieline/templates.js';
+import { IMPORTED_DIELINES } from '../dieline/importedDielines.js';
 
 const deg = d => d * Math.PI / 180;
 export const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
@@ -235,25 +236,40 @@ export class Folder {
 }
 
 // —— Tipe box折叠树 (与 2D gen* reuseUkuran公式；uv = 2D dieline坐标矩形，attach = 2D 中挂于母板哪侧) ——
-export function makePieces(tpl, L, W, H, t, glue) {
-  const FLAT_TPL = new Set(['paper-cup-packaging','cup-sleeve','bottle-label-packaging','belly-band','hangtag','sticker-label-roll','standup-pouch','flat-sachet','pillow-pack','spout-pouch']);
-  if (FLAT_TPL.has(tpl)) {
-    const flatDims = {
-      'paper-cup-packaging': [ (L + Math.max(30, W)) / 2, H ],
-      'cup-sleeve': [ (L + Math.max(30, W)) / 2, Math.max(38, Math.min(H, 75)) ],
-      'bottle-label-packaging': [ Math.max(40, Math.PI * L), Math.max(20, Math.min(H, 120)) ],
-      'belly-band': [ 2 * (L + W) + glue, Math.max(18, Math.min(H * 0.38, 70)) ],
-      'hangtag': [ Math.max(35, Math.min(L, 90)), Math.max(55, Math.min(H, 140)) ],
-      'sticker-label-roll': [ 3 * Math.max(30, Math.min(L, 120)) + 8, Math.max(20, Math.min(H, 90)) ],
-      'standup-pouch': [ L, H + Math.min(45, Math.max(18, W)) ],
-      'flat-sachet': [ L, H ],
-      'pillow-pack': [ L, H ],
-      'spout-pouch': [ L, H + Math.min(36, Math.max(18, W)) ],
+export function importedSvgPieces(tpl) {
+  const imp = IMPORTED_DIELINES[tpl];
+  if (!imp) return null;
+  const vb = imp.viewBox || [0, 0, 120, 120];
+  const w = Math.max(20, vb[2] || 120), h = Math.max(20, vb[3] || 120);
+  const panels = (imp.panels?.length ? imp.panels : (imp.fills || []).map((pts, i) => ({ pts, panelId: i === 0 ? 'front' : `svg-panel-${i + 1}`, role: i === 0 ? 'hero' : 'design' }))).filter(p => p.pts?.length >= 3);
+  if (!panels.length) return [{ tree: { lx: w, ly: h, uv: [vb[0], vb[1], w, h], panelId: tpl, role: 'hero', surface: 'outside', up: 'top' }, sign: -1, lift: 0, off: [0, 0], source: 'imported-svg' }];
+  
+  const bboxOf = pts => pts.reduce((b, p) => [Math.min(b[0], p[0]), Math.min(b[1], p[1]), Math.max(b[2], p[0]), Math.max(b[3], p[1])], [Infinity, Infinity, -Infinity, -Infinity]);
+  
+  // Wrap each panel into tree structure for Folder.build()
+  return panels.map((p, i) => {
+    const b = bboxOf(p.pts);
+    const lx = Math.max(8, b[2] - b[0]), ly = Math.max(8, b[3] - b[1]);
+    return {
+      tree: {
+        lx, ly,
+        uv: [b[0], b[1], lx, ly],
+        panelId: p.panelId || (i === 0 ? 'front' : `svg-panel-${i + 1}`),
+        role: p.role || (i === 0 ? 'hero' : 'design'),
+        surface: p.surface || 'outside',
+        up: p.up || 'top'
+      },
+      sign: -1,
+      lift: 0,
+      off: [i * (lx + 18), 0],
+      source: 'imported-svg'
     };
-    const [lx, ly] = flatDims[tpl] || [L, H];
-    const panelMap = { 'paper-cup-packaging':'cup-wrap','cup-sleeve':'cup-sleeve-wrap','bottle-label-packaging':'bottle-label','belly-band':'belly-band','hangtag':'hangtag-front','sticker-label-roll':'sticker-label','standup-pouch':'pouch-front','flat-sachet':'sachet-front','pillow-pack':'pillow-front','spout-pouch':'spout-pouch-front' };
-    return [{ tree: { lx, ly, uv: [0, 0, lx, ly], panelId: panelMap[tpl] || tpl, role: 'hero', surface: 'outside', up: 'top' }, sign: -1, lift: 0, off: [0, 0] }];
-  }
+  });
+}
+
+export function makePieces(tpl, L, W, H, t, glue) {
+  const nativeTpl = ['rte','ste','gable-box','window-carton','auto-lock-bottom','pillow-box','pizza-box','shipping-box','sleeve-tray','fries-box','hanger-box','book-box','burger-clamshell','mailer','cyl','hex','lidbase','drawer'];
+  if (IMPORTED_DIELINES[tpl] && !nativeTpl.includes(tpl)) return importedSvgPieces(tpl);
   if (tpl === 'pillow-box') {
     const bodyH = H + t;
     return [

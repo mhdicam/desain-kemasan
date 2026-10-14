@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="454.000mm" version="1.1" viewBox="0 0 161.000 454.000" width="161.000mm">
+  <defs/>
+  <rect fill="white" height="454.0" width="161.0" x="0" y="0"/>
+  <g fill="#334155" id="INFO">
+    <text font-family="DejaVu Sans,Arial,sans-serif" font-size="7" font-weight="bold" x="18" y="13">Spout Pouch</text>
+    <text font-family="Arial,sans-serif" font-size="3.6" x="18" y="21">Film web width 125 mm x repeat 394 mm; panel H 180 mm; W-gusset 34 mm</text>
+    <text font-family="Arial,sans-serif" font-size="3" x="18" y="27">FLEXIBLE_CONVERTER_REQUIRED | STRUCTURAL_DIELINE</text>
+    <text font-family="Arial,sans-serif" font-size="2.6" x="18" y="438.0">Revision V5 - web layout for connected front, W-bottom gusset and back; side heat-seal + top seal + zipper placemen</text>
+    <text font-family="Arial,sans-serif" font-size="2.6" x="18" y="442.0">t zones | VECTOR PROTOTYPE ONLY; verify material caliper, fold allowance, tooling and assembly with converter. | No</text>
+  </g>
+  <g color="#dc4eb8" id="BLEED">
+    <polyline fill="none" points="143.0,34.0 18.0,34.0 15.8787,34.8787 15.0,37.0 15.0,431.0 15.8787,433.1213 18.0,434.0 143.0,434.0 145.1213,433.1213 146.0,431.0 146.0,37.0 145.1213,34.8787 143.0,34.0" stroke="#dc4eb8" stroke-dasharray="1.3,1.1" stroke-width="0.16"/>
+  </g>
+  <g fill="none" id="GLUE" stroke="#9199a4"/>
+  <g fill="none" id="SEAL" stroke="#9c62be">
+    <polyline fill="none" points="28.0,37.0 28.0,431.0 18.0,431.0 18.0,37.0 28.0,37.0" stroke="#9c62be" stroke-dasharray="1.2,1.0" stroke-width="0.2"/>
+    <polyline fill="none" points="143.0,37.0 143.0,431.0 133.0,431.0 133.0,37.0 143.0,37.0" stroke="#9c62be" stroke-dasharray="1.2,1.0" stroke-width="0.2"/>
+    <polyline fill="none" points="143.0,37.0 143.0,49.0 18.0,49.0 18.0,37.0 143.0,37.0" stroke="#9c62be" stroke-dasharray="1.2,1.0" stroke-width="0.2"/>
+    <polyline fill="none" points="143.0,419.0 143.0,431.0 18.0,431.0 18.0,419.0 143.0,419.0" stroke="#9c62be" stroke-dasharray="1.2,1.0" stroke-width="0.2"/>
+    <polyline fill="none" points="29.0,212.0 29.0,222.0 19.0,222.0 19.0,212.0 29.0,212.0" stroke="#9c62be" stroke-dasharray="1.2,1.0" stroke-width="0.2"/>
+    <polyline fill="none" points="142.0,212.0 142.0,222.0 132.0,222.0 132.0,212.0 142.0,212.0" stroke="#9c62be" stroke-dasharray="1.2,1.0" stroke-width="0.2"/>
+    <polyline fill="none" points="29.0,246.0 29.0,256.0 19.0,256.0 19.0,246.0 29.0,246.0" stroke="#9c62be" stroke-dasharray="1.2,1.0" stroke-width="0.2"/>
+    <polyline fill="none" points="142.0,246.0 142.0,256.0 132.0,256.0 132.0,246.0 142.0,246.0" stroke="#9c62be" stroke-dasharray="1.2,1.0" stroke-width="0.2"/>
+  </g>
+  <g fill="none" id="SAFE" stroke="#21a068">
+    <polyline fill="none" points="127.0,76.0 127.0,201.0 34.0,201.0 34.0,76.0 127.0,76.0" stroke="#21a068" stroke-dasharray="1.4,1.4" stroke-width="0.18"/>
+    <polyline fill="none" points="127.0,290.0 127.0,415.0 34.0,415.0 34.0,290.0 127.0,290.0" stroke="#21a068" stroke-dasharray="1.4,1.4" stroke-width="0.18"/>
+  </g>
+  <g fill="none" id="ARTWORK_AREA" stroke="#334155">
+    <polyline fill="none" points="88.5,52.0 88.489,51.5813 88.4562,51.1638 88.4015,50.7485 88.3252,50.3367 88.2274,49.9294 88.1085,49.5279 87.9686,49.1331 87.8084,48.7461 87.6281,48.3681 87.4282,48.0 87.2094,47.6429 86.9721,47.2977 86.7172,46.9654 86.4452,46.647 86.1569,46.3431 85.853,46.0548 85.5346,45.7828 85.2023,45.5279 84.8571,45.2906 84.5,45.0718 84.1319,44.8719 83.7539,44.6916 83.3669,44.5314 82.9721,44.3915 82.5706,44.2726 82.1633,44.1748 81.7515,44.0985 81.3362,44.0438 80.9187,44.011 80.5,44.0 80.0813,44.011 79.6638,44.0438 79.2485,44.0985 78.8367,44.1748 78.4294,44.2726 78.0279,44.3915 77.6331,44.5314 77.2461,44.6916 76.8681,44.8719 76.5,45.0718 76.1429,45.2906 75.7977,45.5279 75.4654,45.7828 75.147,46.0548 74.8431,46.3431 74.5548,46.647 74.2828,46.9654 74.0279,47.2977 73.7906,47.6429 73.5718,48.0 73.3719,48.3681 73.1916,48.7461 73.0314,49.1331 72.8915,49.5279 72.7726,49.9294 72.6748,50.3367 72.5985,50.7485 72.5438,51.1638 72.511,51.5813 72.5,52.0 72.511,52.4187 72.5438,52.8362 72.5985,53.2515 72.6748,53.6633 72.7726,54.0706 72.8915,54.4721 73.0314,54.8669 73.1916,55.2539 73.3719,55.6319 73.5718,56.0 73.7906,56.3571 74.0279,56.7023 74.2828,57.0346 74.5548,57.353 74.8431,57.6569 75.147,57.9452 75.4654,58.2172 75.7977,58.4721 76.1429,58.7094 76.5,58.9282 76.8681,59.1281 77.2461,59.3084 77.6331,59.4686 78.0279,59.6085 78.4294,59.7274 78.8367,59.8252 79.2485,59.9015 79.6638,59.9562 80.0813,59.989 80.5,60.0 80.9187,59.989 81.3362,59.9562 81.7515,59.9015 82.1633,59.8252 82.5706,59.7274 82.9721,59.6085 83.3669,59.4686 83.7539,59.3084 84.1319,59.1281 84.5,58.9282 84.8571,58.7094 85.2023,58.4721 85.5346,58.2172 85.853,57.9452 86.1569,57.6569 86.4452,57.353 86.7172,57.0346 86.9721,56.7023 87.2094,56.3571 87.4282,56.0 87.6281,55.6319 87.8084,55.2539 87.9686,54.8669 88.1085,54.4721 88.2274,54.0706 88.3252,53.6633 88.4015,53.2515 88.4562,52.8362 88.489,52.4187 88.5,52.0" stroke="#334155" stroke-dasharray="1.7,1.3" stroke-width="0.18"/>
+  </g>
+  <g fill="none" id="CREASE" stroke="#176ac8">
+    <polyline fill="none" points="18.0,217.0 143.0,217.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="18.0,234.0 143.0,234.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="18.0,251.0 143.0,251.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+  </g>
+  <g fill="none" id="PERF" stroke="#ed8d20"/>
+  <g fill="none" id="KISS_CUT" stroke="#cb7619"/>
+  <g fill="none" id="CUT" stroke="#d8313d">
+    <polyline fill="none" points="143.0,37.0 143.0,431.0 18.0,431.0 18.0,37.0 143.0,37.0" stroke="#d8313d" stroke-width="0.35"/>
+  </g>
+  <text fill="#475569" font-family="Arial,sans-serif" font-size="2.7" x="18" y="448.0">RED=cut  BLUE=crease  ORANGE=perforation/kiss  PURPLE=seal  GRAY=glue  MAGENTA=bleed</text>
+</svg>

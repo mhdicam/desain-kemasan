@@ -1,2 +1,77 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<svg baseProfile="full" height="940.000mm" version="1.1" viewBox="0 0 710.000 940.000" width="710.000mm" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink"><defs /><rect fill="#ffffff" height="940" width="710" x="0" y="0" /><g id="PRODUCT_REFERENCE"><polygon fill="#f1f5f9" points="268,195 443,195 518,755 196,755" stroke="#94a3b8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.13" /><polyline fill="none" points="288.0,190.0 288.52831501193,175.7120113736693 290.10492820438174,161.6493528632066 292.70497544548715,148.03380099394673 296.2874524370611,135.0800811524045 300.7958613768785,122.99248123865807 306.1591019627654,111.96162992412948 312.2925926868378,102.16149032356002 319.0996047364072,93.7466164927703 326.47278746514013,86.84971601887379 334.2958613768785,81.5795571423525 342.44545192275643,78.01925341692949 350.79303519153603,76.22495295917705 359.20696480846397,76.22495295917705 367.5545480772435,78.01925341692949 375.7041386231215,81.57955714235248 383.52721253485987,86.84971601887376 390.90039526359277,93.7466164927703 397.7074073131622,102.16149032355999 403.8408980372345,111.96162992412945 409.2041386231215,122.99248123865803 413.7125475629389,135.08008115240446 417.29502455451285,148.03380099394673 419.89507179561826,161.6493528632065 421.47168498807,175.71201137366927 422.0,189.99999999999997" stroke="#94a3b8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.13" /><polyline fill="none" points="235,430 68,442 66,468 230,466" stroke="#94a3b8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.13" /><polyline fill="none" points="473,430 637,442 637,468 480,466" stroke="#94a3b8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.13" /></g><g id="ARTWORK_PRINT"><polygon fill="#e2f5ff" points="225.0,370 485.0,370 485.0,710 225.0,710" stroke="#147dbe" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.195" /></g><g id="SAFE_REFERENCE"><polygon fill="none" points="237.0,382 473.0,382 473.0,698 237.0,698" stroke="#16975a" stroke-dasharray="6.39 4.26" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.13" /></g><g id="BLEED_REFERENCE" /><g id="SEAM_REFERENCE"><polyline fill="none" points="215,725 497,725" stroke="#8660c1" stroke-dasharray="8 5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5975" /></g><g id="HARDWARE_REFERENCE" /><g id="CENTER_REFERENCE"><polyline fill="none" points="355.0,370 355.0,710" stroke="#64748b" stroke-dasharray="4.26 6.39" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5975" /></g><g id="TRIM_REFERENCE" /><text fill="#106a9f" font-family="DejaVu Sans,Arial,sans-serif" font-size="11.928" font-weight="bold" text-anchor="middle" x="355.0" y="540.0">260.000 x 340.000 mm</text><text fill="#172b45" font-family="DejaVu Sans,Arial,sans-serif" font-size="20.128500000000003" font-weight="bold" x="24" y="35">APN  |  Apron front</text><text fill="#bd3947" font-family="DejaVu Sans,Arial,sans-serif" font-size="10.437" font-weight="bold" x="24" y="57">ARTWORK / PRINT PLACEMENT - ENGINEERING REFERENCE (NOT A CERTIFIED DIE)</text><text fill="#536579" font-family="DejaVu Sans,Arial,sans-serif" font-size="9.6915" font-weight="normal" x="24" y="916">BLUE: PRINT   GREEN: SAFE   GREY: PRODUCT REFERENCE   PURPLE: SEAM   AMBER: HARDWARE</text><text fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif" font-size="9.6915" font-weight="normal" x="24" y="931">Exact blue artwork size: 260.000 x 340.000 mm   |   NOT FOR GARMENT / FRAME / TOOLING CUTTING</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="1278mm" version="1.1" viewBox="0 0 2051 1278" width="2051mm">
+  <defs/>
+  <rect fill="#ffffff" height="1278" width="2051" x="0" y="0"/>
+  <g id="CUT">
+    <polygon fill="none" points="192.12711674278523,152.0 152.96424003885838,252.0829071322575 146.27194592239152,267.7930048540009 139.89247799348317,283.79992274812207 133.93337516494387,299.76083934763506 128.36294954543584,315.6598399299553 123.1495151704387,331.4811289754541 118.2614136285085,347.2090105088099 113.6670369709165,362.82786599337874 109.33484824460945,378.32213073371815 105.23340019122105,393.67626960024904 101.33135280884723,408.8747527618717 97.59749058786713,423.90203201803166 94.00074031670538,438.7425182796465 90.51019041540106,453.3805607749726 87.09511279659323,467.80042866953397 83.72498827023243,481.9862960075864 80.0,497.4569981791352 80.0,918.0 560.0,918.0 560.0,497.45699817913516 556.275011729766,481.98629600757977 552.9048872034142,467.8004286695653 549.4898095846057,453.380560775001 545.9992596832926,438.7425182796378 542.4025094121329,423.90203201803166 538.6686471911529,408.8747527618722 534.7665998087787,393.6762696002477 530.6651517553905,378.3221307337178 526.3329630290843,362.8278659933814 521.7385863714911,347.20901050880866 516.8504848295615,331.4811289754548 511.63705045456436,315.659839929956 506.06662483505556,299.76083934763346 500.1075220065172,283.7999227481229 493.7280540776086,267.7930048540012 487.0357599611416,252.0829071322575 447.87288325721477,152.0" stroke="#d83b55" stroke-linejoin="round" stroke-width="1.5"/>
+    <polygon fill="none" points="775.0,152.0 775.0,408.0 1101.0,408.0 1101.0,152.0" stroke="#d83b55" stroke-linejoin="round" stroke-width="1.5"/>
+    <polygon fill="none" points="1316.0,152.0 1316.0,228.0 1986.0,228.0 1986.0,152.0" stroke="#d83b55" stroke-linejoin="round" stroke-width="1.5"/>
+    <polygon fill="none" points="80.0,1078.0 80.0,1153.0 900.0,1153.0 900.0,1078.0" stroke="#d83b55" stroke-linejoin="round" stroke-width="1.5"/>
+    <polygon fill="none" points="1115.0,1078.0 1115.0,1146.0 1210.0,1146.0 1210.0,1078.0" stroke="#d83b55" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+  <g id="STITCH">
+    <polygon fill="none" points="201.0,165.0 439.0,165.0 475.0,257.0 481.708251953125,272.74755859375 487.978515625,288.48046875 493.841552734375,304.18408203125 499.328125,319.84375 504.468994140625,335.44482421875 509.294921875,350.97265625 513.836669921875,366.41259765625 518.125,381.75 522.190673828125,396.97021484375 526.064453125,412.05859375 529.777099609375,427.00048828125 533.359375,441.78125 536.842041015625,456.38623046875 540.255859375,470.80078125 543.631591796875,485.01025390625 547.0,499.0 547.0,905.0 93.0,905.0 93.0,499.0 96.368408203125,485.01025390625 99.744140625,470.80078125 103.157958984375,456.38623046875 106.640625,441.78125 110.222900390625,427.00048828125 113.935546875,412.05859375 117.809326171875,396.97021484375 121.875,381.75 126.163330078125,366.41259765625 130.705078125,350.97265625 135.531005859375,335.44482421875 140.671875,319.84375 146.158447265625,304.18408203125 152.021484375,288.48046875 158.291748046875,272.74755859375 165.0,257.0" stroke="#267bbd" stroke-dasharray="8,4" stroke-width="0.9"/>
+    <polygon fill="none" points="788.0,165.0 1088.0,165.0 1088.0,395.0 788.0,395.0" stroke="#267bbd" stroke-dasharray="8,4" stroke-width="0.9"/>
+    <polygon fill="none" points="1326.0,162.0 1976.0,162.0 1976.0,218.0 1326.0,218.0" stroke="#267bbd" stroke-dasharray="8,4" stroke-width="0.9"/>
+    <polygon fill="none" points="90.0,1088.0 890.0,1088.0 890.0,1143.0 90.0,1143.0" stroke="#267bbd" stroke-dasharray="8,4" stroke-width="0.9"/>
+    <polygon fill="none" points="1125.0,1088.0 1200.0,1088.0 1200.0,1136.0 1125.0,1136.0" stroke="#267bbd" stroke-dasharray="8,4" stroke-width="0.9"/>
+  </g>
+  <g id="GRAIN">
+    <line stroke="#2e9b74" stroke-dasharray="4,3" stroke-width="1.1" x1="320.0" x2="320.0" y1="260.0" y2="855.0"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="320.0" x2="324.5855788267213" y1="260.0" y2="269.99862324642373"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="320.0" x2="315.4144211732787" y1="260.0" y2="269.99862324642373"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="320.0" x2="315.4144211732787" y1="855.0" y2="845.0013767535762"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="320.0" x2="324.5855788267213" y1="855.0" y2="845.0013767535762"/>
+    <line stroke="#2e9b74" stroke-dasharray="4,3" stroke-width="1.1" x1="938.0" x2="938.0" y1="190.0" y2="365.0"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="938.0" x2="942.5855788267213" y1="190.0" y2="199.99862324642373"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="938.0" x2="933.4144211732787" y1="190.0" y2="199.99862324642373"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="938.0" x2="933.4144211732787" y1="365.0" y2="355.00137675357627"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="938.0" x2="942.5855788267213" y1="365.0" y2="355.00137675357627"/>
+    <line stroke="#2e9b74" stroke-dasharray="4,3" stroke-width="1.1" x1="1406.0" x2="1896.0" y1="190.0" y2="190.0"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="1406.0" x2="1415.9986232464237" y1="190.0" y2="185.41442117327867"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="1406.0" x2="1415.9986232464237" y1="190.0" y2="194.58557882672133"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="1896.0" x2="1886.0013767535763" y1="190.0" y2="194.58557882672133"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="1896.0" x2="1886.0013767535763" y1="190.0" y2="185.41442117327867"/>
+    <line stroke="#2e9b74" stroke-dasharray="4,3" stroke-width="1.1" x1="165.0" x2="820.0" y1="1116.0" y2="1116.0"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="165.0" x2="174.99862324642373" y1="1116.0" y2="1111.4144211732787"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="165.0" x2="174.99862324642373" y1="1116.0" y2="1120.5855788267213"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="820.0" x2="810.0013767535762" y1="1116.0" y2="1120.5855788267213"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="820.0" x2="810.0013767535762" y1="1116.0" y2="1111.4144211732787"/>
+  </g>
+  <g id="MARK">
+    <line stroke="#e1942e" stroke-width="1.25" x1="504.5090927860734" x2="515.9950825994972" y1="352.42035785308815" y2="348.9458740056766"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="97.99983919812236" x2="86.00022512262869" y1="499.0400997870208" y2="498.94386029817093"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="126.69801255419117" x2="115.12278242413235" y1="383.0685408230746" y2="379.9040428476955"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="1084.9578422817144" x2="1092.2590208056" y1="168.96803180645958" y2="159.44475547095658"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="1084.9578422817144" x2="1092.2590208056" y1="391.0319681935404" y2="400.5552445290434"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="791.0421577182857" x2="783.7409791944001" y1="391.0319681935404" y2="400.5552445290434"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="1975.5708206133606" x2="1976.6008511412952" y1="166.98154645206523" y2="155.02583496710866"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="1975.5708206133606" x2="1976.6008511412952" y1="213.01845354793477" y2="224.97416503289134"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="1326.4291793866394" x2="1325.3991488587048" y1="213.01845354793477" y2="224.97416503289134"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="889.6570595094097" x2="890.4801166868264" y1="1092.988225317677" y2="1081.0164845552522"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="889.6570595094097" x2="890.4801166868264" y1="1138.011774682323" y2="1149.9835154447478"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="90.3429404905903" x2="89.5198833131736" y1="1138.011774682323" y2="1149.9835154447478"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="1197.304731517883" x2="1203.7733758749637" y1="1092.2113570033075" y2="1082.1041001953695"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="1197.304731517883" x2="1203.7733758749637" y1="1131.7886429966925" y2="1141.8958998046305"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="1127.695268482117" x2="1121.2266241250363" y1="1131.7886429966925" y2="1141.8958998046305"/>
+    <line stroke="#202d4a" stroke-width="2" x1="1871" x2="1971" y1="85" y2="85"/>
+    <line stroke="#202d4a" stroke-width="2" x1="1871" x2="1871" y1="79" y2="91"/>
+    <line stroke="#202d4a" stroke-width="2" x1="1971" x2="1971" y1="79" y2="91"/>
+  </g>
+  <g id="PRINT">
+    <polygon fill="#8d6ad6" fill-opacity="0.065" points="179.0,660.0 459.0,660.0 459.0,340.0 179.0,340.0" stroke="#8d6ad6" stroke-dasharray="5,5" stroke-width="1.2"/>
+  </g>
+  <g id="LABEL">
+    <text fill="#21314c" font-family="DejaVu Sans, Arial" font-size="17" font-weight="bold" x="80.0" y="134.0">BIB  ×1  | SA 13 mm</text>
+    <text fill="#21314c" font-family="DejaVu Sans, Arial" font-size="17" font-weight="bold" x="775.0" y="134.0">POCKET  ×1  | SA 13 mm</text>
+    <text fill="#21314c" font-family="DejaVu Sans, Arial" font-size="17" font-weight="bold" x="1316.0" y="134.0">NECK_STRAP  ×1  | SA 10 mm</text>
+    <text fill="#21314c" font-family="DejaVu Sans, Arial" font-size="17" font-weight="bold" x="80.0" y="1060.0">WAIST_TIE  ×2  | SA 10 mm</text>
+    <text fill="#21314c" font-family="DejaVu Sans, Arial" font-size="17" font-weight="bold" x="1115.0" y="1060.0">NECK_LOOP  ×2  | SA 10 mm</text>
+    <text fill="#21314c" font-family="DejaVu Sans" font-size="30" font-weight="bold" x="55" y="49">APN  /  APRON — SEWING PATTERN V6</text>
+    <text fill="#af4d12" font-family="DejaVu Sans" font-size="16" x="55" y="82">ACTUAL 1:1 · mm ·  SAMPLE PATTERN ONLY (NOT MANUFACTURING APPROVED) · 5 UNIQUE PIECES</text>
+    <text fill="#21314c" font-family="DejaVu Sans" font-size="14" x="55" y="107">RED CUT   BLUE STITCH   GREEN GRAIN   ORANGE NOTCH/FEATURE   PURPLE PRINT AREA   |  Page may exceed standard paper sizes</text>
+    <text fill="#8f5036" font-family="DejaVu Sans" font-size="13" x="55" y="1228">One-size bib apron reference: total height 740 mm stitchline; straps and pocket vary with wearer.</text>
+    <text fill="#8f5036" font-family="DejaVu Sans" font-size="13" x="55" y="1254">Print at 100% scale; measure 100 mm scale bar before use.</text>
+    <text fill="#202d4a" font-family="DejaVu Sans" font-size="13" x="1881" y="72">100 mm</text>
+  </g>
+</svg>

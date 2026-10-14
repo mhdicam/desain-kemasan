@@ -1,0 +1,765 @@
+{
+  "schemaVersion": "7.0.0-draft",
+  "identity": {
+    "id": "cup-sleeve",
+    "code": "CSL",
+    "name": "Cup Sleeve",
+    "catalogCategory": "packaging",
+    "modelKey": "packaging:cup-sleeve"
+  },
+  "pipeline": "unknown_requires_asset",
+  "geometrySource": {
+    "svgPathV6": "structural-dielines/CSL_cup-sleeve.svg",
+    "patternJsonPathV6": null,
+    "fileType": "STRUCTURAL_DIELINE",
+    "coordinateFrame": {
+      "svg_mm": {
+        "x": "right",
+        "y": "down",
+        "units": "mm",
+        "origin": "svg_viewBox"
+      },
+      "engine_local_mm": {
+        "x": "right",
+        "y": "up",
+        "z": "toward_visible_print_side",
+        "transform": "[x,-y,0] from SVG"
+      },
+      "export_gltf": "[x/1000,-y/1000,z/1000] in metres; choose model origin separately",
+      "fold_sign": "right-hand rotation around directed hinge in engine_local_mm coordinates; fold degrees cannot be interpreted without directed endpoints",
+      "face_orientation": "printSide=+Z only when source artwork/front is explicitly assigned",
+      "mountain_valley": "classification relative to printSide; values in candidate assembly are PROPOSED and require engineer verification"
+    },
+    "sourcePresent": true
+  },
+  "validation": {
+    "manufacturerApproved": false,
+    "physicalPrototypeTested": false,
+    "assemblySemanticsVerified": false,
+    "semanticStatus": "PROPOSED_NOT_VALIDATED",
+    "blockingIssues": [
+      "Sleeve must conform to cup taper and clearance",
+      "Glue radial overlap not yet validated",
+      "Panel semantics and attachment mates are engineering proposals inferred from prototype V5 dieline; review by CAD/converter required",
+      "Some special flaps deliberately have unresolved creaseRef rather than fabricated hinge IDs",
+      "All fold sides and signed hinge angles remain PROPOSED despite coordinate-matched crease geometry; no 3D mechanical proof",
+      "Nominal input dimensions are sourced from V5 audit description; verify actual erected internal and external dimensions, stock caliper, and supplier allowances"
+    ],
+    "missingRequired": [
+      "material_thickness",
+      "print_side",
+      "signed_hinge_calibration",
+      "glue_or_seal_mates",
+      "physical_fit"
+    ],
+    "creaseMapping": {
+      "totalSourceCreases": 1,
+      "candidateMapped": 0,
+      "candidateNonfold": 1,
+      "unassigned": 0,
+      "completeCandidate": true,
+      "verifiedFoldSide": false
+    }
+  },
+  "finalStates": {
+    "default": "wrapped_around_cup",
+    "available": [
+      "flat_2d",
+      "folding_partial",
+      "closed_assembled",
+      "exploded_view",
+      "half_open_mockup"
+    ],
+    "physicalAccuracy": "NOT_VALIDATED"
+  },
+  "parameterDefaults": {
+    "units": "mm",
+    "nominalSourceDescription": "Frustum top OD 90 / bottom OD 79 / wall 55 mm; film/board stretch excluded",
+    "thicknessMm": null,
+    "thicknessStatus": "REQUIRES_VENDOR_MATERIAL_SPEC",
+    "dimensionsMm": {
+      "topOuterDiameter": 90,
+      "bottomOuterDiameter": 79,
+      "wallHeight": 55,
+      "thickness": null
+    },
+    "dimensionStatus": "NOMINAL_REFERENCE_FROM_V5_AUDIT_NOT_MANUFACTURER_APPROVED"
+  },
+  "panels": [
+    {
+      "id": "frustum_sector",
+      "role": "outside_wrap",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Curved annular-sector CUT outline, preserve exact arcs",
+      "anchor": true,
+      "artworkSemantic": "outside_wrap",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "lap_zone",
+      "role": "side_seam",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Radial overlap bounded by side edge, one crease may only be overlap witness",
+      "anchor": false,
+      "artworkSemantic": "side_seam",
+      "printSide": "unresolved"
+    }
+  ],
+  "hinges": [],
+  "attachments": [],
+  "specialMechanics": [
+    {
+      "id": "frustum_form",
+      "role": "surface_of_revolution",
+      "behavior": "roll_sector",
+      "status": "derived",
+      "notes": "Frustum dimensions must be computed from arc lengths; crease not a 90deg fold"
+    }
+  ],
+  "foldSequence": [
+    {
+      "stage": 1,
+      "actions": [
+        "Roll annular sector to truncated cone with correct top/bottom radius"
+      ],
+      "requiresApproval": true,
+      "validationTasks": [
+        "Derive sector arc parameters, compensate material caliper"
+      ]
+    },
+    {
+      "stage": 2,
+      "actions": [
+        "Join overlap seam and install bottom disc if present"
+      ],
+      "requiresApproval": true,
+      "validationTasks": [
+        "Rim rolled bead and bottom crimp tooling unavailable"
+      ]
+    }
+  ],
+  "sourceEvidence": {
+    "viewBoxMm": [
+      0.0,
+      0.0,
+      314.161,
+      134.513
+    ],
+    "sourceCounts": {
+      "INFO": 0,
+      "BLEED": 1,
+      "GLUE": 0,
+      "SEAL": 0,
+      "SAFE": 0,
+      "ARTWORK_AREA": 0,
+      "CREASE": 1,
+      "PERF": 0,
+      "KISS_CUT": 0,
+      "CUT": 1
+    },
+    "svgLayerPrimitives": {
+      "GLUE": [],
+      "SEAL": [],
+      "CREASE": [
+        {
+          "id": "CREASE:001",
+          "points_mm": [
+            [
+              296.1609,
+              89.5956
+            ],
+            [
+              279.1622,
+              37.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            279.1622,
+            37.0,
+            296.1609,
+            89.5956
+          ]
+        }
+      ],
+      "PERF": [],
+      "KISS_CUT": [],
+      "CUT": [
+        {
+          "id": "CUT:001",
+          "points_mm": [
+            [
+              279.1622,
+              37.0
+            ],
+            [
+              275.4664,
+              38.1745
+            ],
+            [
+              271.7594,
+              39.3129
+            ],
+            [
+              268.0414,
+              40.415
+            ],
+            [
+              264.3129,
+              41.4808
+            ],
+            [
+              260.5741,
+              42.5101
+            ],
+            [
+              256.8254,
+              43.5028
+            ],
+            [
+              253.0672,
+              44.4588
+            ],
+            [
+              249.2998,
+              45.3781
+            ],
+            [
+              245.5237,
+              46.2605
+            ],
+            [
+              241.7391,
+              47.106
+            ],
+            [
+              237.9464,
+              47.9145
+            ],
+            [
+              234.146,
+              48.6859
+            ],
+            [
+              230.3383,
+              49.4202
+            ],
+            [
+              226.5236,
+              50.1172
+            ],
+            [
+              222.7022,
+              50.7769
+            ],
+            [
+              218.8746,
+              51.3992
+            ],
+            [
+              215.0411,
+              51.9842
+            ],
+            [
+              211.202,
+              52.5316
+            ],
+            [
+              207.3578,
+              53.0415
+            ],
+            [
+              203.5088,
+              53.5139
+            ],
+            [
+              199.6553,
+              53.9486
+            ],
+            [
+              195.7978,
+              54.3457
+            ],
+            [
+              191.9366,
+              54.7051
+            ],
+            [
+              188.0721,
+              55.0267
+            ],
+            [
+              184.2046,
+              55.3105
+            ],
+            [
+              180.3345,
+              55.5566
+            ],
+            [
+              176.4623,
+              55.7649
+            ],
+            [
+              172.5881,
+              55.9353
+            ],
+            [
+              168.7125,
+              56.0678
+            ],
+            [
+              164.8358,
+              56.1625
+            ],
+            [
+              160.9583,
+              56.2194
+            ],
+            [
+              157.0804,
+              56.2383
+            ],
+            [
+              153.2026,
+              56.2194
+            ],
+            [
+              149.3251,
+              56.1625
+            ],
+            [
+              145.4484,
+              56.0678
+            ],
+            [
+              141.5728,
+              55.9353
+            ],
+            [
+              137.6986,
+              55.7649
+            ],
+            [
+              133.8263,
+              55.5566
+            ],
+            [
+              129.9563,
+              55.3105
+            ],
+            [
+              126.0888,
+              55.0267
+            ],
+            [
+              122.2243,
+              54.7051
+            ],
+            [
+              118.3631,
+              54.3457
+            ],
+            [
+              114.5056,
+              53.9486
+            ],
+            [
+              110.6521,
+              53.5139
+            ],
+            [
+              106.8031,
+              53.0415
+            ],
+            [
+              102.9589,
+              52.5316
+            ],
+            [
+              99.1198,
+              51.9842
+            ],
+            [
+              95.2863,
+              51.3992
+            ],
+            [
+              91.4587,
+              50.7769
+            ],
+            [
+              87.6373,
+              50.1172
+            ],
+            [
+              83.8226,
+              49.4202
+            ],
+            [
+              80.0149,
+              48.6859
+            ],
+            [
+              76.2145,
+              47.9145
+            ],
+            [
+              72.4218,
+              47.106
+            ],
+            [
+              68.6372,
+              46.2605
+            ],
+            [
+              64.861,
+              45.3781
+            ],
+            [
+              61.0937,
+              44.4588
+            ],
+            [
+              57.3355,
+              43.5028
+            ],
+            [
+              53.5868,
+              42.5101
+            ],
+            [
+              49.848,
+              41.4808
+            ],
+            [
+              46.1195,
+              40.415
+            ],
+            [
+              42.4015,
+              39.3129
+            ],
+            [
+              38.6945,
+              38.1745
+            ],
+            [
+              34.9987,
+              37.0
+            ],
+            [
+              18.0,
+              89.5956
+            ],
+            [
+              22.2103,
+              90.9337
+            ],
+            [
+              26.4335,
+              92.2305
+            ],
+            [
+              30.6692,
+              93.4861
+            ],
+            [
+              34.9169,
+              94.7003
+            ],
+            [
+              39.1763,
+              95.8729
+            ],
+            [
+              43.447,
+              97.0038
+            ],
+            [
+              47.7285,
+              98.0929
+            ],
+            [
+              52.0204,
+              99.1402
+            ],
+            [
+              56.3223,
+              100.1455
+            ],
+            [
+              60.6339,
+              101.1088
+            ],
+            [
+              64.9546,
+              102.0298
+            ],
+            [
+              69.2842,
+              102.9086
+            ],
+            [
+              73.6221,
+              103.7451
+            ],
+            [
+              77.968,
+              104.5392
+            ],
+            [
+              82.3215,
+              105.2907
+            ],
+            [
+              86.6821,
+              105.9998
+            ],
+            [
+              91.0494,
+              106.6661
+            ],
+            [
+              95.423,
+              107.2898
+            ],
+            [
+              99.8025,
+              107.8707
+            ],
+            [
+              104.1874,
+              108.4089
+            ],
+            [
+              108.5774,
+              108.9041
+            ],
+            [
+              112.972,
+              109.3565
+            ],
+            [
+              117.3709,
+              109.7659
+            ],
+            [
+              121.7735,
+              110.1323
+            ],
+            [
+              126.1795,
+              110.4557
+            ],
+            [
+              130.5884,
+              110.736
+            ],
+            [
+              134.9999,
+              110.9733
+            ],
+            [
+              139.4135,
+              111.1674
+            ],
+            [
+              143.8287,
+              111.3184
+            ],
+            [
+              148.2453,
+              111.4263
+            ],
+            [
+              152.6627,
+              111.491
+            ],
+            [
+              157.0804,
+              111.5126
+            ],
+            [
+              161.4982,
+              111.491
+            ],
+            [
+              165.9156,
+              111.4263
+            ],
+            [
+              170.3321,
+              111.3184
+            ],
+            [
+              174.7474,
+              111.1674
+            ],
+            [
+              179.161,
+              110.9733
+            ],
+            [
+              183.5725,
+              110.736
+            ],
+            [
+              187.9814,
+              110.4557
+            ],
+            [
+              192.3874,
+              110.1323
+            ],
+            [
+              196.79,
+              109.7659
+            ],
+            [
+              201.1889,
+              109.3565
+            ],
+            [
+              205.5835,
+              108.9041
+            ],
+            [
+              209.9735,
+              108.4089
+            ],
+            [
+              214.3584,
+              107.8707
+            ],
+            [
+              218.7379,
+              107.2898
+            ],
+            [
+              223.1115,
+              106.6661
+            ],
+            [
+              227.4788,
+              105.9998
+            ],
+            [
+              231.8394,
+              105.2907
+            ],
+            [
+              236.1929,
+              104.5392
+            ],
+            [
+              240.5388,
+              103.7451
+            ],
+            [
+              244.8767,
+              102.9086
+            ],
+            [
+              249.2062,
+              102.0298
+            ],
+            [
+              253.527,
+              101.1088
+            ],
+            [
+              257.8386,
+              100.1455
+            ],
+            [
+              262.1405,
+              99.1402
+            ],
+            [
+              266.4324,
+              98.0929
+            ],
+            [
+              270.7139,
+              97.0038
+            ],
+            [
+              274.9846,
+              95.8729
+            ],
+            [
+              279.244,
+              94.7003
+            ],
+            [
+              283.4917,
+              93.4861
+            ],
+            [
+              286.6102,
+              92.5617
+            ],
+            [
+              286.6455,
+              92.6709
+            ],
+            [
+              296.1609,
+              89.5956
+            ],
+            [
+              279.1622,
+              37.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            18.0,
+            37.0,
+            296.1609,
+            111.5126
+          ]
+        }
+      ]
+    },
+    "structuralStatusV5": "REVISED_SAMPLE_REQUIRED"
+  },
+  "meshFamily": "tapered_cup_sleeve",
+  "assemblyMechanism": "sector_wrap_seam",
+  "outputRelativePath": "models/structural/cup-sleeve.assembly.json",
+  "creaseSemanticRegistry": [
+    {
+      "sourceRef": "CREASE:001",
+      "polylineMm": [
+        [
+          296.1609,
+          89.5956
+        ],
+        [
+          279.1622,
+          37.0
+        ]
+      ],
+      "semanticAssignments": [],
+      "status": "candidate_nonfold_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": {
+        "sourceRef": "CREASE:001",
+        "role": "sleeve_side_seam",
+        "reason": "Frustum sleeve overlap not a rigid 90 degree crease",
+        "reviewStatus": "proposed_classification_needs_cad_review"
+      }
+    }
+  ],
+  "nonFoldingCreaseWitnesses": [
+    {
+      "sourceRef": "CREASE:001",
+      "role": "sleeve_side_seam",
+      "reason": "Frustum sleeve overlap not a rigid 90 degree crease",
+      "reviewStatus": "proposed_classification_needs_cad_review"
+    }
+  ]
+}

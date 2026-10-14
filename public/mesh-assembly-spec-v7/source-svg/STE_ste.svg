@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="298.000mm" version="1.1" viewBox="0 0 310.000 298.000" width="310.000mm">
+  <defs/>
+  <rect fill="white" height="298.0" width="310.0" x="0" y="0"/>
+  <g fill="#334155" id="INFO">
+    <text font-family="DejaVu Sans,Arial,sans-serif" font-size="7" font-weight="bold" x="18" y="13">Straight tuck end</text>
+    <text font-family="Arial,sans-serif" font-size="3.6" x="18" y="21">90 x 40 x 140 mm nominal carton; interior closure tongue depth 49mm</text>
+    <text font-family="Arial,sans-serif" font-size="3" x="18" y="27">REVISED_SAMPLE_REQUIRED | STRUCTURAL_DIELINE</text>
+    <text font-family="Arial,sans-serif" font-size="2.6" x="18" y="282.0">Revision V5 - carton tuck flaps, dust flaps and adhesive seam reworked | VECTOR PROTOTYPE ONLY; verify material cal</text>
+    <text font-family="Arial,sans-serif" font-size="2.6" x="18" y="286.0">iper, fold allowance, tooling and assembly with converter.</text>
+  </g>
+  <g color="#dc4eb8" id="BLEED">
+    <polyline fill="none" points="17.0,83.4142 15.8787,83.8787 15.0,86.0 15.0,226.0 15.8787,228.1213 17.0,228.5858 17.0,261.0 17.1748,262.009 22.1748,276.009 23.2719,277.4522 25.0,278.0 101.0,278.0 102.7281,277.4522 103.8252,276.009 108.8252,262.009 109.0,261.0 109.0,243.3605 110.0314,250.4329 111.0377,252.2692 113.0,253.0 143.0,253.0 144.9623,252.2692 145.9686,250.4329 148.6356,232.1448 151.1154,240.8242 152.1934,242.395 154.0,243.0 232.0,243.0 233.8066,242.395 234.8846,240.8242 237.3644,232.1448 240.0314,250.4329 241.0377,252.2692 243.0,253.0 273.0,253.0 274.9623,252.2692 275.9686,250.4329 279.1646,228.5176 280.1213,228.1213 281.0,226.0 281.0,221.1142 293.009,216.8252 294.4522,215.7281 295.0,214.0 295.0,98.0 294.4522,96.2719 293.009,95.1748 281.0,90.8858 281.0,86.0 280.1213,83.8787 279.1646,83.4824 275.9686,61.5671 274.9623,59.7308 273.0,59.0 243.0,59.0 241.0377,59.7308 240.0314,61.5671 237.3644,79.8552 234.8846,71.1758 233.8066,69.605 232.0,69.0 154.0,69.0 152.1934,69.605 151.1154,71.1758 148.6356,79.8552 145.9686,61.5671 144.9623,59.7308 143.0,59.0 113.0,59.0 111.0377,59.7308 110.0314,61.5671 109.0,68.6395 109.0,51.0 108.8252,49.991 103.8252,35.991 102.7281,34.5478 101.0,34.0 25.0,34.0 23.2719,34.5478 22.1748,35.991 17.1748,49.991 17.0,51.0 17.0,83.4142" stroke="#dc4eb8" stroke-dasharray="1.3,1.1" stroke-width="0.16"/>
+  </g>
+  <g fill="none" id="GLUE" stroke="#9199a4">
+    <polyline fill="none" points="290.0,99.0 290.0,213.0 280.0,213.0 280.0,99.0 290.0,99.0" stroke="#9199a4" stroke-dasharray="2,1" stroke-width="0.22"/>
+  </g>
+  <g fill="none" id="SEAL" stroke="#9c62be"/>
+  <g fill="none" id="SAFE" stroke="#21a068">
+    <polyline fill="none" points="102.0,92.0 102.0,220.0 24.0,220.0 24.0,92.0 102.0,92.0" stroke="#21a068" stroke-dasharray="1.4,1.4" stroke-width="0.18"/>
+    <polyline fill="none" points="232.0,92.0 232.0,220.0 154.0,220.0 154.0,92.0 232.0,92.0" stroke="#21a068" stroke-dasharray="1.4,1.4" stroke-width="0.18"/>
+  </g>
+  <g fill="none" id="ARTWORK_AREA" stroke="#334155"/>
+  <g fill="none" id="CREASE" stroke="#176ac8">
+    <polyline fill="none" points="108.0,86.0 108.0,226.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="148.0,86.0 148.0,226.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="238.0,86.0 238.0,226.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="278.0,86.0 278.0,226.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="20.0,86.0 106.0,86.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="25.0,49.0 101.0,49.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="20.0,226.0 106.0,226.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="25.0,263.0 101.0,263.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="109.5,86.0 146.5,86.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="109.5,226.0 146.5,226.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="150.0,86.0 236.0,86.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="150.0,226.0 236.0,226.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="239.5,86.0 276.5,86.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="239.5,226.0 276.5,226.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+  </g>
+  <g fill="none" id="PERF" stroke="#ed8d20"/>
+  <g fill="none" id="KISS_CUT" stroke="#cb7619"/>
+  <g fill="none" id="CUT" stroke="#d8313d">
+    <polyline fill="none" points="101.0,37.0 25.0,37.0 20.0,51.0 20.0,86.0 18.0,86.0 18.0,226.0 20.0,226.0 20.0,261.0 25.0,275.0 101.0,275.0 106.0,261.0 106.0,226.0 109.5,226.0 113.0,250.0 143.0,250.0 146.5,226.0 150.0,226.0 154.0,240.0 232.0,240.0 236.0,226.0 239.5,226.0 243.0,250.0 273.0,250.0 276.5,226.0 278.0,226.0 278.0,219.0 292.0,214.0 292.0,98.0 278.0,93.0 278.0,86.0 276.5,86.0 273.0,62.0 243.0,62.0 239.5,86.0 236.0,86.0 232.0,72.0 154.0,72.0 150.0,86.0 146.5,86.0 143.0,62.0 113.0,62.0 109.5,86.0 106.0,86.0 106.0,51.0 101.0,37.0" stroke="#d8313d" stroke-width="0.35"/>
+  </g>
+  <text fill="#475569" font-family="Arial,sans-serif" font-size="2.7" x="18" y="292.0">RED=cut  BLUE=crease  ORANGE=perforation/kiss  PURPLE=seal  GRAY=glue  MAGENTA=bleed</text>
+</svg>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="513.000mm" version="1.1" viewBox="0 0 486.000 513.000" width="486.000mm">
+  <defs/>
+  <rect fill="white" height="513.0" width="486.0" x="0" y="0"/>
+  <g fill="#334155" id="INFO">
+    <text font-family="DejaVu Sans,Arial,sans-serif" font-size="7" font-weight="bold" x="18" y="13">Mailer box</text>
+    <text font-family="Arial,sans-serif" font-size="3.6" x="18" y="21">220 x 150 x 55 mm nominal, E flute 1.5mm reference; actual rolled clearance TBD</text>
+    <text font-family="Arial,sans-serif" font-size="3" x="18" y="27">REVISED_SAMPLE_REQUIRED | STRUCTURAL_DIELINE</text>
+    <text font-family="Arial,sans-serif" font-size="2.6" x="18" y="497.0">Revision V5 - one-piece double roll side-wall mailer, front/back ears, side lock tabs/slots and lid tuck | VECTOR P</text>
+    <text font-family="Arial,sans-serif" font-size="2.6" x="18" y="501.0">ROTOTYPE ONLY; verify material caliper, fold allowance, tooling and assembly with converter. | Roll sidewalls, ears</text>
+  </g>
+  <g color="#dc4eb8" id="BLEED">
+    <polyline fill="none" points="133.0,77.0 130.8787,77.8787 130.0,80.0 130.0,84.3149 87.6687,89.0183 85.7646,89.9992 85.0,92.0 85.0,218.0 85.7646,220.0008 87.6687,220.9817 130.0,225.6851 130.0,233.2396 84.7509,237.0104 82.7924,237.9687 82.0,240.0 82.0,275.0 82.7924,277.0313 84.7509,277.9896 130.0,281.7604 130.0,282.0 27.0,282.0 24.8787,282.8787 24.0,285.0 24.0,308.5935 17.3492,310.0714 15.6599,311.1228 15.0,313.0 15.0,323.0 15.6599,324.8772 17.3492,325.9286 24.0,327.4065 24.0,389.5935 17.3492,391.0714 15.6599,392.1228 15.0,394.0 15.0,404.0 15.6599,405.8772 17.3492,406.9286 24.0,408.4065 24.0,435.0 24.8787,437.1213 27.0,438.0 130.0,438.0 130.0,438.2396 84.7509,442.0104 82.7924,442.9687 82.0,445.0 82.0,480.0 82.7924,482.0313 84.7509,482.9896 130.0,486.7604 130.0,490.0 130.8787,492.1213 133.0,493.0 353.0,493.0 355.1213,492.1213 356.0,490.0 356.0,486.7604 401.2491,482.9896 403.2076,482.0313 404.0,480.0 404.0,445.0 403.2076,442.9687 401.2491,442.0104 356.0,438.2396 356.0,438.0 459.0,438.0 461.1213,437.1213 462.0,435.0 462.0,408.4065 468.6508,406.9286 470.3401,405.8772 471.0,404.0 471.0,394.0 470.3401,392.1228 468.6508,391.0714 462.0,389.5935 462.0,327.4065 468.6508,325.9286 470.3401,324.8772 471.0,323.0 471.0,313.0 470.3401,311.1228 468.6508,310.0714 462.0,308.5935 462.0,285.0 461.1213,282.8787 459.0,282.0 356.0,282.0 356.0,281.7604 401.2491,277.9896 403.2076,277.0313 404.0,275.0 404.0,240.0 403.2076,237.9687 401.2491,237.0104 356.0,233.2396 356.0,225.6851 398.3313,220.9817 400.2354,220.0008 401.0,218.0 401.0,92.0 400.2354,89.9992 398.3313,89.0183 356.0,84.3149 356.0,80.0 355.1213,77.8787 353.0,77.0 349.7339,77.0 345.9871,36.7221 345.0207,34.7826 343.0,34.0 143.0,34.0 140.9793,34.7826 140.0129,36.7221 136.2661,77.0 133.0,77.0" stroke="#dc4eb8" stroke-dasharray="1.3,1.1" stroke-width="0.16"/>
+  </g>
+  <g fill="none" id="GLUE" stroke="#9199a4"/>
+  <g fill="none" id="SEAL" stroke="#9c62be"/>
+  <g fill="none" id="SAFE" stroke="#21a068">
+    <polyline fill="none" points="347.0,291.0 347.0,429.0 139.0,429.0 139.0,291.0 347.0,291.0" stroke="#21a068" stroke-dasharray="1.4,1.4" stroke-width="0.18"/>
+  </g>
+  <g fill="none" id="ARTWORK_AREA" stroke="#334155"/>
+  <g fill="none" id="CREASE" stroke="#176ac8">
+    <polyline fill="none" points="133.0,285.0 353.0,285.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="133.0,230.0 353.0,230.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="133.0,435.0 353.0,435.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="139.0,80.0 347.0,80.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="133.0,88.0 133.0,222.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="353.0,88.0 353.0,222.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="133.0,285.0 133.0,435.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="78.0,285.0 78.0,435.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="74.0,285.0 74.0,435.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="133.0,237.0 133.0,278.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="133.0,442.0 133.0,483.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="353.0,285.0 353.0,435.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="408.0,285.0 408.0,435.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="412.0,285.0 412.0,435.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="353.0,237.0 353.0,278.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="353.0,442.0 353.0,483.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+  </g>
+  <g fill="none" id="PERF" stroke="#ed8d20"/>
+  <g fill="none" id="KISS_CUT" stroke="#cb7619"/>
+  <g fill="none" id="CUT" stroke="#d8313d">
+    <polyline fill="none" points="133.0,80.0 133.0,87.0 88.0,92.0 88.0,218.0 133.0,223.0 133.0,230.0 133.0,236.0 85.0,240.0 85.0,275.0 133.0,279.0 133.0,285.0 78.0,285.0 74.0,285.0 27.0,285.0 27.0,311.0 18.0,313.0 18.0,323.0 27.0,325.0 27.0,392.0 18.0,394.0 18.0,404.0 27.0,406.0 27.0,435.0 74.0,435.0 78.0,435.0 133.0,435.0 133.0,441.0 85.0,445.0 85.0,480.0 133.0,484.0 133.0,490.0 353.0,490.0 353.0,484.0 401.0,480.0 401.0,445.0 353.0,441.0 353.0,435.0 408.0,435.0 412.0,435.0 459.0,435.0 459.0,406.0 468.0,404.0 468.0,394.0 459.0,392.0 459.0,325.0 468.0,323.0 468.0,313.0 459.0,311.0 459.0,285.0 412.0,285.0 408.0,285.0 353.0,285.0 353.0,279.0 401.0,275.0 401.0,240.0 353.0,236.0 353.0,230.0 353.0,223.0 398.0,218.0 398.0,92.0 353.0,87.0 353.0,80.0 347.0,80.0 343.0,37.0 143.0,37.0 139.0,80.0 133.0,80.0" stroke="#d8313d" stroke-width="0.35"/>
+    <polyline fill="none" points="141.7,315.0 144.3,315.0 144.3,325.0 141.7,325.0 141.7,315.0" stroke="#d8313d" stroke-width="0.35"/>
+    <polyline fill="none" points="341.7,315.0 344.3,315.0 344.3,325.0 341.7,325.0 341.7,315.0" stroke="#d8313d" stroke-width="0.35"/>
+    <polyline fill="none" points="141.7,396.0 144.3,396.0 144.3,406.0 141.7,406.0 141.7,396.0" stroke="#d8313d" stroke-width="0.35"/>
+    <polyline fill="none" points="341.7,406.0 341.7,396.0 344.3,396.0 344.3,406.0 341.7,406.0" stroke="#d8313d" stroke-width="0.35"/>
+    <polyline fill="none" points="225.4,481.5 225.4,479.0 260.6,479.0 260.6,481.5 225.4,481.5" stroke="#d8313d" stroke-width="0.35"/>
+  </g>
+  <text fill="#475569" font-family="Arial,sans-serif" font-size="2.7" x="18" y="507.0">RED=cut  BLUE=crease  ORANGE=perforation/kiss  PURPLE=seal  GRAY=glue  MAGENTA=bleed</text>
+</svg>

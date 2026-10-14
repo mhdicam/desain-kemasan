@@ -1,7 +1,7 @@
 {
   "name": "openbox3d",
   "version": "0.1.0",
-  "description": "OpenBox3D Studio Kemasan — Studio desain kemasan berbasis browser: dieline parametrik, desain berlapis, pratinjau lipat 3D PBR, dan ekspor PDF cetak",
+  "description": "AstaKraf Studio Kemasan — Studio desain kemasan berbasis browser: dieline parametrik, desain berlapis, pratinjau lipat 3D PBR, dan ekspor PDF cetak",
   "license": "MIT",
   "repository": {
     "type": "git",

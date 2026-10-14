@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="docs/screenshots/three.jpg" alt="OpenBox3D Studio Kemasan — pratinjau lipat 3D PBR" width="720">
+<img src="docs/screenshots/three.jpg" alt="AstaKraf Studio Kemasan — pratinjau lipat 3D PBR" width="720">
 
-# OpenBox3D · Studio Kemasan
+# AstaKraf · Studio Kemasan
 
 **Workbench desain kemasan berbasis browser — dieline parametrik, desain artwork berlapis, pratinjau lipat 3D PBR, dan ekspor PDF siap cetak.**
 

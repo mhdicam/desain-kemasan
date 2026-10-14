@@ -321,7 +321,7 @@ export class BoxEngine {
       this.boxRoot.traverse(o => { if (o.geometry) o.geometry.dispose(); });
     }
     const L = this.num('l', 80), W = this.num('w', 40), H = this.num('h', 120);
-    const t = Math.max(0.2, this.num('t', 0.45)); // batas bawah 0.2：art200(t=0.22) 薄纸在 3D 里tetapaktual厚度
+    const t = Math.max(0.2, this.num('t', 0.45));
     this._dims = { L, W, H, t };
     const sbb = (this.baked && this.baked.atlasSbb) || this.props.sbb || [0, 0, 100, 100];
     this.folder = new Folder(T, sbb, (this.baked || {}).innerUV);
@@ -331,8 +331,8 @@ export class BoxEngine {
     this.boxRoot = this.folder.build(this.pieces, t, this.faceMat, this.coreMat);
     this.scene.add(this.boxRoot);
     if (this.studio) {
-      this.studio.setHelperTarget(0, H * 0.35, 0); // 灯位 helper 的指向/拖拽球心跟mengikuti盒Tinggi
-      this.studio.setShadowBounds(L, W, H); // berdasarkan盒体Ukuran收紧阴影相机，tetap接触处解析度
+      this.studio.setHelperTarget(0, H * 0.35, 0);
+      this.studio.setShadowBounds(L, W, H);
     }
   }
 

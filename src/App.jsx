@@ -15,6 +15,7 @@ import { OutputView } from './ui/OutputView.jsx';
 import { BriefWorkflowView } from './ui/BriefWorkflowView.jsx';
 import { ProductionQAView } from './ui/ProductionQAView.jsx';
 import { ProductionHandoffView } from './ui/ProductionHandoffView.jsx';
+import { AssemblyInspectorView } from './ui/AssemblyInspectorView.jsx';
 import { LogoCat } from './ui/widgets.jsx';
 import { exportPDF } from './export/pdf.js';
 import { asset } from './asset.js';
@@ -33,7 +34,7 @@ export function App() {
   const creaseSegs = creaseSegsOf(g);
   const warnN = s.layers.reduce((a, l) => a + warnsOf(l, creaseSegs, g.sbb).length, 0);
   const okAll = warnN === 0;
-  const tabs = [['home', 'Kemasan'], ['design', 'Desain'], ['three', '3D'], ['brief', 'Brief'], ['qa', 'QA'], ['handoff', 'Handoff'], ['output', 'Output']];
+  const tabs = [['home', 'Kemasan'], ['structure', 'Model'], ['design', 'Desain'], ['three', '3D'], ['inspector', 'Assembly Inspector'], ['brief', 'Brief'], ['qa', 'QA'], ['handoff', 'Handoff'], ['output', 'Output']];
 
   const importProject = async () => {
     try {
@@ -59,7 +60,7 @@ export function App() {
             ? <img src={asset('/brand/logo-header-gold.webp')} alt="" onError={() => setIconOk(false)} style={{ width: 26, height: 26, display: 'block' }} />
             : <LogoCat size={24} />}
           <b style={{ fontSize: 14, letterSpacing: '0.06em' }}>Studio Kemasan</b>
-          <span style={{ fontSize: 10.5, color: '#c8bda9', letterSpacing: '0.04em' }}>OpenBox3D</span>
+          <span style={{ fontSize: 10.5, color: '#c8bda9', letterSpacing: '0.04em' }}>AstaKraf</span>
         </div>
         <div style={{ display: 'flex', gap: 4, marginLeft: 5 }}>
           {tabs.map(tb => (
@@ -84,6 +85,7 @@ export function App() {
         {s.view === 'structure' && <StructureView />}
         {s.view === 'design' && <DesignView />}
         {s.view === 'three' && (s.selectedCategory === 'device-gadget' ? <DeviceMockupView /> : (['apparel','merchandise','display-booth','food-beverage','print-stationery','custom-model'].includes(s.selectedCategory) ? <MultiMockupView /> : <ThreeView />))}
+        {s.view === 'inspector' && <AssemblyInspectorView />}
         {s.view === 'brief' && <BriefWorkflowView />}
         {s.view === 'qa' && <ProductionQAView />}
         {s.view === 'handoff' && <ProductionHandoffView />}

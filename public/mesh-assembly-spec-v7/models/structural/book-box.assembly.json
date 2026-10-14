@@ -1,0 +1,1507 @@
+{
+  "schemaVersion": "7.0.0-draft",
+  "identity": {
+    "id": "book-box",
+    "code": "BKB",
+    "name": "Book Style Box",
+    "catalogCategory": "packaging",
+    "modelKey": "packaging:book-box"
+  },
+  "pipeline": "unknown_requires_asset",
+  "geometrySource": {
+    "svgPathV6": "structural-dielines/BKB_book-box.svg",
+    "patternJsonPathV6": null,
+    "fileType": "STRUCTURAL_DIELINE",
+    "coordinateFrame": {
+      "svg_mm": {
+        "x": "right",
+        "y": "down",
+        "units": "mm",
+        "origin": "svg_viewBox"
+      },
+      "engine_local_mm": {
+        "x": "right",
+        "y": "up",
+        "z": "toward_visible_print_side",
+        "transform": "[x,-y,0] from SVG"
+      },
+      "export_gltf": "[x/1000,-y/1000,z/1000] in metres; choose model origin separately",
+      "fold_sign": "right-hand rotation around directed hinge in engine_local_mm coordinates; fold degrees cannot be interpreted without directed endpoints",
+      "face_orientation": "printSide=+Z only when source artwork/front is explicitly assigned",
+      "mountain_valley": "classification relative to printSide; values in candidate assembly are PROPOSED and require engineer verification"
+    },
+    "sourcePresent": true
+  },
+  "validation": {
+    "manufacturerApproved": false,
+    "physicalPrototypeTested": false,
+    "assemblySemanticsVerified": false,
+    "semanticStatus": "PROPOSED_NOT_VALIDATED",
+    "blockingIssues": [
+      "Bookboard and wrap mounting are paste zones not cutouts",
+      "Magnetic snaps and hinge clearance need vendor components",
+      "Panel semantics and attachment mates are engineering proposals inferred from prototype V5 dieline; review by CAD/converter required",
+      "Some special flaps deliberately have unresolved creaseRef rather than fabricated hinge IDs",
+      "All fold sides and signed hinge angles remain PROPOSED despite coordinate-matched crease geometry; no 3D mechanical proof",
+      "Nominal input dimensions are sourced from V5 audit description; verify actual erected internal and external dimensions, stock caliper, and supplier allowances"
+    ],
+    "missingRequired": [
+      "material_thickness",
+      "print_side",
+      "signed_hinge_calibration",
+      "glue_or_seal_mates",
+      "physical_fit"
+    ],
+    "creaseMapping": {
+      "totalSourceCreases": 10,
+      "candidateMapped": 10,
+      "candidateNonfold": 0,
+      "unassigned": 0,
+      "completeCandidate": true,
+      "verifiedFoldSide": false
+    }
+  },
+  "finalStates": {
+    "default": "closed_assembled",
+    "available": [
+      "flat_2d",
+      "folding_partial",
+      "closed_assembled",
+      "exploded_view",
+      "half_open_mockup"
+    ],
+    "physicalAccuracy": "NOT_VALIDATED"
+  },
+  "parameterDefaults": {
+    "units": "mm",
+    "nominalSourceDescription": "Wrap 372 x 149 mm, 3 board paste zones + independent insert tray 146x106x24 mm",
+    "thicknessMm": null,
+    "thicknessStatus": "REQUIRES_VENDOR_MATERIAL_SPEC",
+    "dimensionsMm": {
+      "wrapper": {
+        "L": 372,
+        "W": 149
+      },
+      "tray": {
+        "L": 146,
+        "W": 106,
+        "H": 24
+      },
+      "thickness": null
+    },
+    "dimensionStatus": "NOMINAL_REFERENCE_FROM_V5_AUDIT_NOT_MANUFACTURER_APPROVED"
+  },
+  "panels": [
+    {
+      "id": "cover_front",
+      "role": "cover_hero",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Wrap area aligned to first greyboard paste zone",
+      "anchor": true,
+      "artworkSemantic": "cover_hero",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "cover_spine",
+      "role": "spine",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Intermediate greyboard paste area between two longitudinal creases",
+      "anchor": false,
+      "artworkSemantic": "spine",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "cover_back",
+      "role": "cover_back",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Third board paste zone",
+      "anchor": false,
+      "artworkSemantic": "cover_back",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "insert_tray",
+      "role": "rigid_insert_tray",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Separate die cut tray component on right side x~467..613 y65..171",
+      "anchor": false,
+      "artworkSemantic": "rigid_insert_tray",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "insert_tray_back",
+      "role": "tray_wall",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Corner and wall of independent insert tray; panel boundaries need confirmation",
+      "anchor": false,
+      "artworkSemantic": "tray_wall",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "insert_tray_front",
+      "role": "tray_wall",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Corner and wall of independent insert tray; panel boundaries need confirmation",
+      "anchor": false,
+      "artworkSemantic": "tray_wall",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "insert_tray_left",
+      "role": "tray_wall",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Corner and wall of independent insert tray; panel boundaries need confirmation",
+      "anchor": false,
+      "artworkSemantic": "tray_wall",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "insert_tray_right",
+      "role": "tray_wall",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Corner and wall of independent insert tray; panel boundaries need confirmation",
+      "anchor": false,
+      "artworkSemantic": "tray_wall",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "tray_corner_top_left",
+      "role": "glue_corner",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Corner and wall of independent insert tray; panel boundaries need confirmation",
+      "anchor": false,
+      "artworkSemantic": "glue_corner",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "tray_corner_top_right",
+      "role": "glue_corner",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Corner and wall of independent insert tray; panel boundaries need confirmation",
+      "anchor": false,
+      "artworkSemantic": "glue_corner",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "tray_corner_bottom_left",
+      "role": "glue_corner",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Corner and wall of independent insert tray; panel boundaries need confirmation",
+      "anchor": false,
+      "artworkSemantic": "glue_corner",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "tray_corner_bottom_right",
+      "role": "glue_corner",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Corner and wall of independent insert tray; panel boundaries need confirmation",
+      "anchor": false,
+      "artworkSemantic": "glue_corner",
+      "printSide": "unresolved"
+    }
+  ],
+  "hinges": [
+    {
+      "id": "hinge_cover_spine",
+      "childPanel": "cover_spine",
+      "parentPanel": "cover_front",
+      "creaseRef": "CREASE:001",
+      "svgEndpointsMm": [
+        [
+          190.0,
+          54.0
+        ],
+        [
+          190.0,
+          169.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          190.0,
+          54.0
+        ],
+        "end_svg_mm": [
+          190.0,
+          169.0
+        ]
+      },
+      "proposedFoldDeg": null,
+      "foldStyle": "unresolved",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": ""
+    },
+    {
+      "id": "hinge_cover_back",
+      "childPanel": "cover_back",
+      "parentPanel": "cover_spine",
+      "creaseRef": "CREASE:002",
+      "svgEndpointsMm": [
+        [
+          218.0,
+          54.0
+        ],
+        [
+          218.0,
+          169.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          218.0,
+          54.0
+        ],
+        "end_svg_mm": [
+          218.0,
+          169.0
+        ]
+      },
+      "proposedFoldDeg": null,
+      "foldStyle": "unresolved",
+      "behavior": "rigid_hinge",
+      "stage": 3,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": ""
+    },
+    {
+      "id": "hinge_insert_tray_back",
+      "childPanel": "insert_tray_back",
+      "parentPanel": "insert_tray",
+      "creaseRef": "CREASE:007",
+      "svgEndpointsMm": [
+        [
+          467.0,
+          65.0
+        ],
+        [
+          613.0,
+          65.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          467.0,
+          65.0
+        ],
+        "end_svg_mm": [
+          613.0,
+          65.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Corner and wall of independent insert tray; panel boundaries need confirmation"
+    },
+    {
+      "id": "hinge_insert_tray_front",
+      "childPanel": "insert_tray_front",
+      "parentPanel": "insert_tray",
+      "creaseRef": "CREASE:008",
+      "svgEndpointsMm": [
+        [
+          467.0,
+          171.0
+        ],
+        [
+          613.0,
+          171.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          467.0,
+          171.0
+        ],
+        "end_svg_mm": [
+          613.0,
+          171.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Corner and wall of independent insert tray; panel boundaries need confirmation"
+    },
+    {
+      "id": "hinge_insert_tray_left",
+      "childPanel": "insert_tray_left",
+      "parentPanel": "insert_tray",
+      "creaseRef": "CREASE:009",
+      "svgEndpointsMm": [
+        [
+          467.0,
+          65.0
+        ],
+        [
+          467.0,
+          171.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          467.0,
+          65.0
+        ],
+        "end_svg_mm": [
+          467.0,
+          171.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Corner and wall of independent insert tray; panel boundaries need confirmation"
+    },
+    {
+      "id": "hinge_insert_tray_right",
+      "childPanel": "insert_tray_right",
+      "parentPanel": "insert_tray",
+      "creaseRef": "CREASE:010",
+      "svgEndpointsMm": [
+        [
+          613.0,
+          65.0
+        ],
+        [
+          613.0,
+          171.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          613.0,
+          65.0
+        ],
+        "end_svg_mm": [
+          613.0,
+          171.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Corner and wall of independent insert tray; panel boundaries need confirmation"
+    },
+    {
+      "id": "hinge_tray_corner_top_left",
+      "childPanel": "tray_corner_top_left",
+      "parentPanel": "insert_tray_back",
+      "creaseRef": "CREASE:003",
+      "svgEndpointsMm": [
+        [
+          467.0,
+          45.0
+        ],
+        [
+          467.0,
+          61.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          467.0,
+          45.0
+        ],
+        "end_svg_mm": [
+          467.0,
+          61.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Corner and wall of independent insert tray; panel boundaries need confirmation"
+    },
+    {
+      "id": "hinge_tray_corner_top_right",
+      "childPanel": "tray_corner_top_right",
+      "parentPanel": "insert_tray_back",
+      "creaseRef": "CREASE:004",
+      "svgEndpointsMm": [
+        [
+          613.0,
+          45.0
+        ],
+        [
+          613.0,
+          61.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          613.0,
+          45.0
+        ],
+        "end_svg_mm": [
+          613.0,
+          61.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Corner and wall of independent insert tray; panel boundaries need confirmation"
+    },
+    {
+      "id": "hinge_tray_corner_bottom_left",
+      "childPanel": "tray_corner_bottom_left",
+      "parentPanel": "insert_tray_front",
+      "creaseRef": "CREASE:005",
+      "svgEndpointsMm": [
+        [
+          467.0,
+          175.0
+        ],
+        [
+          467.0,
+          191.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          467.0,
+          175.0
+        ],
+        "end_svg_mm": [
+          467.0,
+          191.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Corner and wall of independent insert tray; panel boundaries need confirmation"
+    },
+    {
+      "id": "hinge_tray_corner_bottom_right",
+      "childPanel": "tray_corner_bottom_right",
+      "parentPanel": "insert_tray_front",
+      "creaseRef": "CREASE:006",
+      "svgEndpointsMm": [
+        [
+          613.0,
+          175.0
+        ],
+        [
+          613.0,
+          191.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          613.0,
+          175.0
+        ],
+        "end_svg_mm": [
+          613.0,
+          191.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Corner and wall of independent insert tray; panel boundaries need confirmation"
+    }
+  ],
+  "attachments": [
+    {
+      "id": "GLUE:001_attachment",
+      "sourceZoneRef": "GLUE:001",
+      "kind": "glue",
+      "fromPanel": "unresolved",
+      "toPanel": "unresolved",
+      "status": "unresolved_mate",
+      "note": "Glue polygon measured, mate must be confirmed manually"
+    },
+    {
+      "id": "GLUE:002_attachment",
+      "sourceZoneRef": "GLUE:002",
+      "kind": "glue",
+      "fromPanel": "unresolved",
+      "toPanel": "unresolved",
+      "status": "unresolved_mate",
+      "note": "Glue polygon measured, mate must be confirmed manually"
+    },
+    {
+      "id": "GLUE:003_attachment",
+      "sourceZoneRef": "GLUE:003",
+      "kind": "glue",
+      "fromPanel": "unresolved",
+      "toPanel": "unresolved",
+      "status": "unresolved_mate",
+      "note": "Glue polygon measured, mate must be confirmed manually"
+    },
+    {
+      "id": "GLUE:004_attachment",
+      "sourceZoneRef": "GLUE:004",
+      "kind": "glue",
+      "fromPanel": "unresolved",
+      "toPanel": "unresolved",
+      "status": "unresolved_mate",
+      "note": "Glue polygon measured, mate must be confirmed manually"
+    },
+    {
+      "id": "GLUE:005_attachment",
+      "sourceZoneRef": "GLUE:005",
+      "kind": "glue",
+      "fromPanel": "unresolved",
+      "toPanel": "unresolved",
+      "status": "unresolved_mate",
+      "note": "Glue polygon measured, mate must be confirmed manually"
+    },
+    {
+      "id": "GLUE:006_attachment",
+      "sourceZoneRef": "GLUE:006",
+      "kind": "glue",
+      "fromPanel": "unresolved",
+      "toPanel": "unresolved",
+      "status": "unresolved_mate",
+      "note": "Glue polygon measured, mate must be confirmed manually"
+    },
+    {
+      "id": "GLUE:007_attachment",
+      "sourceZoneRef": "GLUE:007",
+      "kind": "glue",
+      "fromPanel": "unresolved",
+      "toPanel": "unresolved",
+      "status": "unresolved_mate",
+      "note": "Glue polygon measured, mate must be confirmed manually"
+    }
+  ],
+  "specialMechanics": [],
+  "foldSequence": [
+    {
+      "stage": 1,
+      "actions": [
+        "Attach greyboard pieces to independent paper wrap paste zones"
+      ],
+      "requiresApproval": true,
+      "validationTasks": [
+        "Missing individual board dimensions / wrap turn-ins"
+      ]
+    },
+    {
+      "stage": 3,
+      "actions": [
+        "Fold book spine and close magnet flap over insert tray"
+      ],
+      "requiresApproval": true,
+      "validationTasks": [
+        "Magnet hardware CAD and hinge gap not included"
+      ]
+    }
+  ],
+  "sourceEvidence": {
+    "viewBoxMm": [
+      0.0,
+      0.0,
+      655.0,
+      218.0
+    ],
+    "sourceCounts": {
+      "INFO": 0,
+      "BLEED": 2,
+      "GLUE": 7,
+      "SEAL": 0,
+      "SAFE": 1,
+      "ARTWORK_AREA": 2,
+      "CREASE": 10,
+      "PERF": 0,
+      "KISS_CUT": 0,
+      "CUT": 2
+    },
+    "svgLayerPrimitives": {
+      "GLUE": [
+        {
+          "id": "GLUE:001",
+          "points_mm": [
+            [
+              35.0,
+              54.0
+            ],
+            [
+              35.0,
+              169.0
+            ],
+            [
+              190.0,
+              169.0
+            ],
+            [
+              190.0,
+              54.0
+            ],
+            [
+              35.0,
+              54.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            35.0,
+            54.0,
+            190.0,
+            169.0
+          ]
+        },
+        {
+          "id": "GLUE:002",
+          "points_mm": [
+            [
+              190.0,
+              54.0
+            ],
+            [
+              190.0,
+              169.0
+            ],
+            [
+              218.0,
+              169.0
+            ],
+            [
+              218.0,
+              54.0
+            ],
+            [
+              190.0,
+              54.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            190.0,
+            54.0,
+            218.0,
+            169.0
+          ]
+        },
+        {
+          "id": "GLUE:003",
+          "points_mm": [
+            [
+              218.0,
+              54.0
+            ],
+            [
+              218.0,
+              169.0
+            ],
+            [
+              373.0,
+              169.0
+            ],
+            [
+              373.0,
+              54.0
+            ],
+            [
+              218.0,
+              54.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            218.0,
+            54.0,
+            373.0,
+            169.0
+          ]
+        },
+        {
+          "id": "GLUE:004",
+          "points_mm": [
+            [
+              464.0,
+              52.0
+            ],
+            [
+              457.0,
+              52.0
+            ],
+            [
+              457.0,
+              58.9231
+            ],
+            [
+              464.0,
+              61.0769
+            ],
+            [
+              464.0,
+              52.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            457.0,
+            52.0,
+            464.0,
+            61.0769
+          ]
+        },
+        {
+          "id": "GLUE:005",
+          "points_mm": [
+            [
+              623.0,
+              52.0
+            ],
+            [
+              616.0,
+              52.0
+            ],
+            [
+              616.0,
+              61.0769
+            ],
+            [
+              623.0,
+              58.9231
+            ],
+            [
+              623.0,
+              52.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            616.0,
+            52.0,
+            623.0,
+            61.0769
+          ]
+        },
+        {
+          "id": "GLUE:006",
+          "points_mm": [
+            [
+              464.0,
+              182.0
+            ],
+            [
+              457.0,
+              182.0
+            ],
+            [
+              457.0,
+              188.9231
+            ],
+            [
+              464.0,
+              191.0769
+            ],
+            [
+              464.0,
+              182.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            457.0,
+            182.0,
+            464.0,
+            191.0769
+          ]
+        },
+        {
+          "id": "GLUE:007",
+          "points_mm": [
+            [
+              623.0,
+              182.0
+            ],
+            [
+              616.0,
+              182.0
+            ],
+            [
+              616.0,
+              191.0769
+            ],
+            [
+              623.0,
+              188.9231
+            ],
+            [
+              623.0,
+              182.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            616.0,
+            182.0,
+            623.0,
+            191.0769
+          ]
+        }
+      ],
+      "SEAL": [],
+      "CREASE": [
+        {
+          "id": "CREASE:001",
+          "points_mm": [
+            [
+              190.0,
+              54.0
+            ],
+            [
+              190.0,
+              169.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            190.0,
+            54.0,
+            190.0,
+            169.0
+          ]
+        },
+        {
+          "id": "CREASE:002",
+          "points_mm": [
+            [
+              218.0,
+              54.0
+            ],
+            [
+              218.0,
+              169.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            218.0,
+            54.0,
+            218.0,
+            169.0
+          ]
+        },
+        {
+          "id": "CREASE:003",
+          "points_mm": [
+            [
+              467.0,
+              45.0
+            ],
+            [
+              467.0,
+              61.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            467.0,
+            45.0,
+            467.0,
+            61.0
+          ]
+        },
+        {
+          "id": "CREASE:004",
+          "points_mm": [
+            [
+              613.0,
+              45.0
+            ],
+            [
+              613.0,
+              61.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            613.0,
+            45.0,
+            613.0,
+            61.0
+          ]
+        },
+        {
+          "id": "CREASE:005",
+          "points_mm": [
+            [
+              467.0,
+              175.0
+            ],
+            [
+              467.0,
+              191.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            467.0,
+            175.0,
+            467.0,
+            191.0
+          ]
+        },
+        {
+          "id": "CREASE:006",
+          "points_mm": [
+            [
+              613.0,
+              175.0
+            ],
+            [
+              613.0,
+              191.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            613.0,
+            175.0,
+            613.0,
+            191.0
+          ]
+        },
+        {
+          "id": "CREASE:007",
+          "points_mm": [
+            [
+              467.0,
+              65.0
+            ],
+            [
+              613.0,
+              65.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            467.0,
+            65.0,
+            613.0,
+            65.0
+          ]
+        },
+        {
+          "id": "CREASE:008",
+          "points_mm": [
+            [
+              467.0,
+              171.0
+            ],
+            [
+              613.0,
+              171.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            467.0,
+            171.0,
+            613.0,
+            171.0
+          ]
+        },
+        {
+          "id": "CREASE:009",
+          "points_mm": [
+            [
+              467.0,
+              65.0
+            ],
+            [
+              467.0,
+              171.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            467.0,
+            65.0,
+            467.0,
+            171.0
+          ]
+        },
+        {
+          "id": "CREASE:010",
+          "points_mm": [
+            [
+              613.0,
+              65.0
+            ],
+            [
+              613.0,
+              171.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            613.0,
+            65.0,
+            613.0,
+            171.0
+          ]
+        }
+      ],
+      "PERF": [],
+      "KISS_CUT": [],
+      "CUT": [
+        {
+          "id": "CUT:001",
+          "points_mm": [
+            [
+              467.0,
+              62.0
+            ],
+            [
+              467.0,
+              65.0
+            ],
+            [
+              443.0,
+              65.0
+            ],
+            [
+              443.0,
+              171.0
+            ],
+            [
+              467.0,
+              171.0
+            ],
+            [
+              467.0,
+              174.0
+            ],
+            [
+              454.0,
+              178.0
+            ],
+            [
+              454.0,
+              188.0
+            ],
+            [
+              467.0,
+              192.0
+            ],
+            [
+              467.0,
+              195.0
+            ],
+            [
+              613.0,
+              195.0
+            ],
+            [
+              613.0,
+              192.0
+            ],
+            [
+              626.0,
+              188.0
+            ],
+            [
+              626.0,
+              178.0
+            ],
+            [
+              613.0,
+              174.0
+            ],
+            [
+              613.0,
+              171.0
+            ],
+            [
+              637.0,
+              171.0
+            ],
+            [
+              637.0,
+              65.0
+            ],
+            [
+              613.0,
+              65.0
+            ],
+            [
+              613.0,
+              62.0
+            ],
+            [
+              626.0,
+              58.0
+            ],
+            [
+              626.0,
+              48.0
+            ],
+            [
+              613.0,
+              44.0
+            ],
+            [
+              613.0,
+              41.0
+            ],
+            [
+              467.0,
+              41.0
+            ],
+            [
+              467.0,
+              44.0
+            ],
+            [
+              454.0,
+              48.0
+            ],
+            [
+              454.0,
+              58.0
+            ],
+            [
+              467.0,
+              62.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            443.0,
+            41.0,
+            637.0,
+            195.0
+          ]
+        },
+        {
+          "id": "CUT:002",
+          "points_mm": [
+            [
+              390.0,
+              37.0
+            ],
+            [
+              18.0,
+              37.0
+            ],
+            [
+              18.0,
+              186.0
+            ],
+            [
+              390.0,
+              186.0
+            ],
+            [
+              390.0,
+              37.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            18.0,
+            37.0,
+            390.0,
+            186.0
+          ]
+        }
+      ]
+    },
+    "structuralStatusV5": "RIGID_ENGINEERING_INCOMPLETE"
+  },
+  "meshFamily": "rigid_set",
+  "assemblyMechanism": "book_cover_magnet_with_tray",
+  "outputRelativePath": "models/structural/book-box.assembly.json",
+  "creaseSemanticRegistry": [
+    {
+      "sourceRef": "CREASE:001",
+      "polylineMm": [
+        [
+          190.0,
+          54.0
+        ],
+        [
+          190.0,
+          169.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_cover_spine",
+          "panel": "cover_spine",
+          "parent": "cover_front",
+          "proposedFoldDeg": null,
+          "foldStyle": "unresolved"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:002",
+      "polylineMm": [
+        [
+          218.0,
+          54.0
+        ],
+        [
+          218.0,
+          169.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_cover_back",
+          "panel": "cover_back",
+          "parent": "cover_spine",
+          "proposedFoldDeg": null,
+          "foldStyle": "unresolved"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:003",
+      "polylineMm": [
+        [
+          467.0,
+          45.0
+        ],
+        [
+          467.0,
+          61.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_tray_corner_top_left",
+          "panel": "tray_corner_top_left",
+          "parent": "insert_tray_back",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:004",
+      "polylineMm": [
+        [
+          613.0,
+          45.0
+        ],
+        [
+          613.0,
+          61.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_tray_corner_top_right",
+          "panel": "tray_corner_top_right",
+          "parent": "insert_tray_back",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:005",
+      "polylineMm": [
+        [
+          467.0,
+          175.0
+        ],
+        [
+          467.0,
+          191.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_tray_corner_bottom_left",
+          "panel": "tray_corner_bottom_left",
+          "parent": "insert_tray_front",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:006",
+      "polylineMm": [
+        [
+          613.0,
+          175.0
+        ],
+        [
+          613.0,
+          191.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_tray_corner_bottom_right",
+          "panel": "tray_corner_bottom_right",
+          "parent": "insert_tray_front",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:007",
+      "polylineMm": [
+        [
+          467.0,
+          65.0
+        ],
+        [
+          613.0,
+          65.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_insert_tray_back",
+          "panel": "insert_tray_back",
+          "parent": "insert_tray",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:008",
+      "polylineMm": [
+        [
+          467.0,
+          171.0
+        ],
+        [
+          613.0,
+          171.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_insert_tray_front",
+          "panel": "insert_tray_front",
+          "parent": "insert_tray",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:009",
+      "polylineMm": [
+        [
+          467.0,
+          65.0
+        ],
+        [
+          467.0,
+          171.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_insert_tray_left",
+          "panel": "insert_tray_left",
+          "parent": "insert_tray",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:010",
+      "polylineMm": [
+        [
+          613.0,
+          65.0
+        ],
+        [
+          613.0,
+          171.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_insert_tray_right",
+          "panel": "insert_tray_right",
+          "parent": "insert_tray",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    }
+  ]
+}

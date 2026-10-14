@@ -1,0 +1,891 @@
+{
+  "schemaVersion": "7.0.0-draft",
+  "identity": {
+    "id": "standup-pouch",
+    "code": "SUP",
+    "name": "Stand Up Pouch",
+    "catalogCategory": "packaging",
+    "modelKey": "packaging:standup-pouch"
+  },
+  "pipeline": "unknown_requires_asset",
+  "geometrySource": {
+    "svgPathV6": "structural-dielines/SUP_standup-pouch.svg",
+    "patternJsonPathV6": null,
+    "fileType": "STRUCTURAL_DIELINE",
+    "coordinateFrame": {
+      "svg_mm": {
+        "x": "right",
+        "y": "down",
+        "units": "mm",
+        "origin": "svg_viewBox"
+      },
+      "engine_local_mm": {
+        "x": "right",
+        "y": "up",
+        "z": "toward_visible_print_side",
+        "transform": "[x,-y,0] from SVG"
+      },
+      "export_gltf": "[x/1000,-y/1000,z/1000] in metres; choose model origin separately",
+      "fold_sign": "right-hand rotation around directed hinge in engine_local_mm coordinates; fold degrees cannot be interpreted without directed endpoints",
+      "face_orientation": "printSide=+Z only when source artwork/front is explicitly assigned",
+      "mountain_valley": "classification relative to printSide; values in candidate assembly are PROPOSED and require engineer verification"
+    },
+    "sourcePresent": true
+  },
+  "validation": {
+    "manufacturerApproved": false,
+    "physicalPrototypeTested": false,
+    "assemblySemanticsVerified": false,
+    "semanticStatus": "PROPOSED_NOT_VALIDATED",
+    "blockingIssues": [
+      "Flexible shape must be simulated, not rigid 90 degree card",
+      "Center gusset is inward; sign depends on artwork side and handedness",
+      "Heat seal/weld/zipper cross-section require converter",
+      "Panel semantics and attachment mates are engineering proposals inferred from prototype V5 dieline; review by CAD/converter required",
+      "Some special flaps deliberately have unresolved creaseRef rather than fabricated hinge IDs",
+      "All fold sides and signed hinge angles remain PROPOSED despite coordinate-matched crease geometry; no 3D mechanical proof",
+      "Nominal input dimensions are sourced from V5 audit description; verify actual erected internal and external dimensions, stock caliper, and supplier allowances"
+    ],
+    "missingRequired": [
+      "material_thickness",
+      "print_side",
+      "signed_hinge_calibration",
+      "glue_or_seal_mates",
+      "physical_fit"
+    ],
+    "creaseMapping": {
+      "totalSourceCreases": 3,
+      "candidateMapped": 3,
+      "candidateNonfold": 0,
+      "unassigned": 0,
+      "completeCandidate": true,
+      "verifiedFoldSide": false
+    }
+  },
+  "finalStates": {
+    "default": "filled_flexible_preview",
+    "available": [
+      "flat_film",
+      "w_gusset_partially_folded",
+      "empty_sealed",
+      "filled_flexible_preview",
+      "exploded_film_components"
+    ],
+    "physicalAccuracy": "NOT_VALIDATED"
+  },
+  "parameterDefaults": {
+    "units": "mm",
+    "nominalSourceDescription": "Film web width 140 mm x repeat 466 mm; panel H 210 mm; W-gusset 46 mm",
+    "thicknessMm": null,
+    "thicknessStatus": "REQUIRES_VENDOR_MATERIAL_SPEC",
+    "dimensionsMm": {
+      "filmWidth": 140,
+      "filmRepeatLength": 466,
+      "panelHeight": 210,
+      "bottomGusset": 46,
+      "thickness": null
+    },
+    "dimensionStatus": "NOMINAL_REFERENCE_FROM_V5_AUDIT_NOT_MANUFACTURER_APPROVED"
+  },
+  "panels": [
+    {
+      "id": "front_film",
+      "role": "front_hero",
+      "svg_region_mm": {
+        "type": "rectangle",
+        "bbox": [
+          18.0,
+          37.0,
+          158.0,
+          247.0
+        ]
+      },
+      "geometryEvidence": "derived_from_visible_crease_coordinates",
+      "anchor": true,
+      "artworkSemantic": "hero_front_print",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "back_film",
+      "role": "back",
+      "svg_region_mm": {
+        "type": "rectangle",
+        "bbox": [
+          18.0,
+          293.0,
+          158.0,
+          503.0
+        ]
+      },
+      "geometryEvidence": "derived_from_visible_crease_coordinates",
+      "anchor": false,
+      "artworkSemantic": "back_print",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "bottom_gusset_left",
+      "role": "gusset",
+      "svg_region_mm": {
+        "type": "rectangle",
+        "bbox": [
+          18.0,
+          247.0,
+          158.0,
+          270.0
+        ]
+      },
+      "geometryEvidence": "derived_from_visible_crease_coordinates",
+      "anchor": false,
+      "artworkSemantic": "gusset",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "bottom_gusset_right",
+      "role": "gusset",
+      "svg_region_mm": {
+        "type": "rectangle",
+        "bbox": [
+          18.0,
+          270.0,
+          158.0,
+          293.0
+        ]
+      },
+      "geometryEvidence": "derived_from_visible_crease_coordinates",
+      "anchor": false,
+      "artworkSemantic": "gusset",
+      "printSide": "unresolved"
+    }
+  ],
+  "hinges": [
+    {
+      "id": "hinge_bottom_gusset_left",
+      "childPanel": "bottom_gusset_left",
+      "parentPanel": "front_film",
+      "creaseRef": "CREASE:001",
+      "svgEndpointsMm": [
+        [
+          18.0,
+          247.0
+        ],
+        [
+          158.0,
+          247.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          18.0,
+          247.0
+        ],
+        "end_svg_mm": [
+          158.0,
+          247.0
+        ]
+      },
+      "proposedFoldDeg": null,
+      "foldStyle": "mountain",
+      "behavior": "flexible_crease",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Fold INWARD; sign requires film outer-face determination | no rigid hinge; bending follows material solver and volume"
+    },
+    {
+      "id": "hinge_bottom_gusset_right",
+      "childPanel": "bottom_gusset_right",
+      "parentPanel": "bottom_gusset_left",
+      "creaseRef": "CREASE:002",
+      "svgEndpointsMm": [
+        [
+          18.0,
+          270.0
+        ],
+        [
+          158.0,
+          270.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          18.0,
+          270.0
+        ],
+        "end_svg_mm": [
+          158.0,
+          270.0
+        ]
+      },
+      "proposedFoldDeg": null,
+      "foldStyle": "valley",
+      "behavior": "flexible_crease",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Gusset mid center fold; inward W fold | no rigid hinge; bending follows material solver and volume"
+    },
+    {
+      "id": "hinge_back_film",
+      "childPanel": "back_film",
+      "parentPanel": "bottom_gusset_right",
+      "creaseRef": "CREASE:003",
+      "svgEndpointsMm": [
+        [
+          18.0,
+          293.0
+        ],
+        [
+          158.0,
+          293.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          18.0,
+          293.0
+        ],
+        "end_svg_mm": [
+          158.0,
+          293.0
+        ]
+      },
+      "proposedFoldDeg": null,
+      "foldStyle": "mountain",
+      "behavior": "flexible_crease",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": " | no rigid hinge; bending follows material solver and volume"
+    }
+  ],
+  "attachments": [
+    {
+      "id": "SEAL:001_attachment",
+      "sourceZoneRef": "SEAL:001",
+      "kind": "heat_seal",
+      "fromPanel": "front_film_or_gusset",
+      "toPanel": "back_film_or_gusset",
+      "status": "proposed_seal_pair_not_validated",
+      "note": "Heat seal shape measured; converter process undefined"
+    },
+    {
+      "id": "SEAL:002_attachment",
+      "sourceZoneRef": "SEAL:002",
+      "kind": "heat_seal",
+      "fromPanel": "front_film_or_gusset",
+      "toPanel": "back_film_or_gusset",
+      "status": "proposed_seal_pair_not_validated",
+      "note": "Heat seal shape measured; converter process undefined"
+    },
+    {
+      "id": "SEAL:003_attachment",
+      "sourceZoneRef": "SEAL:003",
+      "kind": "heat_seal",
+      "fromPanel": "front_film_or_gusset",
+      "toPanel": "back_film_or_gusset",
+      "status": "proposed_seal_pair_not_validated",
+      "note": "Heat seal shape measured; converter process undefined"
+    },
+    {
+      "id": "SEAL:004_attachment",
+      "sourceZoneRef": "SEAL:004",
+      "kind": "heat_seal",
+      "fromPanel": "front_film_or_gusset",
+      "toPanel": "back_film_or_gusset",
+      "status": "proposed_seal_pair_not_validated",
+      "note": "Heat seal shape measured; converter process undefined"
+    },
+    {
+      "id": "SEAL:005_attachment",
+      "sourceZoneRef": "SEAL:005",
+      "kind": "heat_seal",
+      "fromPanel": "front_film_or_gusset",
+      "toPanel": "back_film_or_gusset",
+      "status": "proposed_seal_pair_not_validated",
+      "note": "Heat seal shape measured; converter process undefined"
+    },
+    {
+      "id": "SEAL:006_attachment",
+      "sourceZoneRef": "SEAL:006",
+      "kind": "heat_seal",
+      "fromPanel": "front_film_or_gusset",
+      "toPanel": "back_film_or_gusset",
+      "status": "proposed_seal_pair_not_validated",
+      "note": "Heat seal shape measured; converter process undefined"
+    },
+    {
+      "id": "SEAL:007_attachment",
+      "sourceZoneRef": "SEAL:007",
+      "kind": "heat_seal",
+      "fromPanel": "front_film_or_gusset",
+      "toPanel": "back_film_or_gusset",
+      "status": "proposed_seal_pair_not_validated",
+      "note": "Heat seal shape measured; converter process undefined"
+    },
+    {
+      "id": "SEAL:008_attachment",
+      "sourceZoneRef": "SEAL:008",
+      "kind": "heat_seal",
+      "fromPanel": "front_film_or_gusset",
+      "toPanel": "back_film_or_gusset",
+      "status": "proposed_seal_pair_not_validated",
+      "note": "Heat seal shape measured; converter process undefined"
+    }
+  ],
+  "specialMechanics": [
+    {
+      "id": "seal_zone_1",
+      "role": "weld_seal",
+      "layerRef": "SEAL:001",
+      "status": "source_verified_geometry_only",
+      "notes": "No heat-seal parameter/equipment specification"
+    },
+    {
+      "id": "seal_zone_2",
+      "role": "weld_seal",
+      "layerRef": "SEAL:002",
+      "status": "source_verified_geometry_only",
+      "notes": "No heat-seal parameter/equipment specification"
+    },
+    {
+      "id": "seal_zone_3",
+      "role": "weld_seal",
+      "layerRef": "SEAL:003",
+      "status": "source_verified_geometry_only",
+      "notes": "No heat-seal parameter/equipment specification"
+    },
+    {
+      "id": "seal_zone_4",
+      "role": "weld_seal",
+      "layerRef": "SEAL:004",
+      "status": "source_verified_geometry_only",
+      "notes": "No heat-seal parameter/equipment specification"
+    },
+    {
+      "id": "seal_zone_5",
+      "role": "weld_seal",
+      "layerRef": "SEAL:005",
+      "status": "source_verified_geometry_only",
+      "notes": "No heat-seal parameter/equipment specification"
+    },
+    {
+      "id": "seal_zone_6",
+      "role": "weld_seal",
+      "layerRef": "SEAL:006",
+      "status": "source_verified_geometry_only",
+      "notes": "No heat-seal parameter/equipment specification"
+    },
+    {
+      "id": "seal_zone_7",
+      "role": "weld_seal",
+      "layerRef": "SEAL:007",
+      "status": "source_verified_geometry_only",
+      "notes": "No heat-seal parameter/equipment specification"
+    },
+    {
+      "id": "seal_zone_8",
+      "role": "weld_seal",
+      "layerRef": "SEAL:008",
+      "status": "source_verified_geometry_only",
+      "notes": "No heat-seal parameter/equipment specification"
+    },
+    {
+      "id": "zipper",
+      "role": "zipper_witness",
+      "status": "proposed",
+      "notes": "Zipper geometry is not guaranteed from SVG witness"
+    }
+  ],
+  "foldSequence": [
+    {
+      "stage": 1,
+      "actions": [
+        "Form printed front/back film surfaces with calibrated flexible mesh"
+      ],
+      "requiresApproval": true,
+      "validationTasks": [
+        "Material stiffness/elasticity and inflated volume"
+      ]
+    },
+    {
+      "stage": 2,
+      "actions": [
+        "Fold W gusset inward and weld side/bottom seal regions"
+      ],
+      "requiresApproval": true,
+      "validationTasks": [
+        "Seal width, seam center, fill volume not approved"
+      ]
+    },
+    {
+      "stage": 3,
+      "actions": [
+        "Add zipper/spout/valve only if actual hardware model is supplied"
+      ],
+      "requiresApproval": true,
+      "validationTasks": [
+        "Reject default arbitrary fittings"
+      ]
+    }
+  ],
+  "sourceEvidence": {
+    "viewBoxMm": [
+      0.0,
+      0.0,
+      176.0,
+      526.0
+    ],
+    "sourceCounts": {
+      "INFO": 0,
+      "BLEED": 1,
+      "GLUE": 0,
+      "SEAL": 8,
+      "SAFE": 2,
+      "ARTWORK_AREA": 2,
+      "CREASE": 3,
+      "PERF": 0,
+      "KISS_CUT": 0,
+      "CUT": 1
+    },
+    "svgLayerPrimitives": {
+      "GLUE": [],
+      "SEAL": [
+        {
+          "id": "SEAL:001",
+          "points_mm": [
+            [
+              28.0,
+              37.0
+            ],
+            [
+              28.0,
+              503.0
+            ],
+            [
+              18.0,
+              503.0
+            ],
+            [
+              18.0,
+              37.0
+            ],
+            [
+              28.0,
+              37.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            18.0,
+            37.0,
+            28.0,
+            503.0
+          ]
+        },
+        {
+          "id": "SEAL:002",
+          "points_mm": [
+            [
+              158.0,
+              37.0
+            ],
+            [
+              158.0,
+              503.0
+            ],
+            [
+              148.0,
+              503.0
+            ],
+            [
+              148.0,
+              37.0
+            ],
+            [
+              158.0,
+              37.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            148.0,
+            37.0,
+            158.0,
+            503.0
+          ]
+        },
+        {
+          "id": "SEAL:003",
+          "points_mm": [
+            [
+              158.0,
+              37.0
+            ],
+            [
+              158.0,
+              49.0
+            ],
+            [
+              18.0,
+              49.0
+            ],
+            [
+              18.0,
+              37.0
+            ],
+            [
+              158.0,
+              37.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            18.0,
+            37.0,
+            158.0,
+            49.0
+          ]
+        },
+        {
+          "id": "SEAL:004",
+          "points_mm": [
+            [
+              158.0,
+              491.0
+            ],
+            [
+              158.0,
+              503.0
+            ],
+            [
+              18.0,
+              503.0
+            ],
+            [
+              18.0,
+              491.0
+            ],
+            [
+              158.0,
+              491.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            18.0,
+            491.0,
+            158.0,
+            503.0
+          ]
+        },
+        {
+          "id": "SEAL:005",
+          "points_mm": [
+            [
+              29.0,
+              242.0
+            ],
+            [
+              29.0,
+              252.0
+            ],
+            [
+              19.0,
+              252.0
+            ],
+            [
+              19.0,
+              242.0
+            ],
+            [
+              29.0,
+              242.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            19.0,
+            242.0,
+            29.0,
+            252.0
+          ]
+        },
+        {
+          "id": "SEAL:006",
+          "points_mm": [
+            [
+              157.0,
+              242.0
+            ],
+            [
+              157.0,
+              252.0
+            ],
+            [
+              147.0,
+              252.0
+            ],
+            [
+              147.0,
+              242.0
+            ],
+            [
+              157.0,
+              242.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            147.0,
+            242.0,
+            157.0,
+            252.0
+          ]
+        },
+        {
+          "id": "SEAL:007",
+          "points_mm": [
+            [
+              29.0,
+              288.0
+            ],
+            [
+              29.0,
+              298.0
+            ],
+            [
+              19.0,
+              298.0
+            ],
+            [
+              19.0,
+              288.0
+            ],
+            [
+              29.0,
+              288.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            19.0,
+            288.0,
+            29.0,
+            298.0
+          ]
+        },
+        {
+          "id": "SEAL:008",
+          "points_mm": [
+            [
+              157.0,
+              288.0
+            ],
+            [
+              157.0,
+              298.0
+            ],
+            [
+              147.0,
+              298.0
+            ],
+            [
+              147.0,
+              288.0
+            ],
+            [
+              157.0,
+              288.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            147.0,
+            288.0,
+            157.0,
+            298.0
+          ]
+        }
+      ],
+      "CREASE": [
+        {
+          "id": "CREASE:001",
+          "points_mm": [
+            [
+              18.0,
+              247.0
+            ],
+            [
+              158.0,
+              247.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            18.0,
+            247.0,
+            158.0,
+            247.0
+          ]
+        },
+        {
+          "id": "CREASE:002",
+          "points_mm": [
+            [
+              18.0,
+              270.0
+            ],
+            [
+              158.0,
+              270.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            18.0,
+            270.0,
+            158.0,
+            270.0
+          ]
+        },
+        {
+          "id": "CREASE:003",
+          "points_mm": [
+            [
+              18.0,
+              293.0
+            ],
+            [
+              158.0,
+              293.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            18.0,
+            293.0,
+            158.0,
+            293.0
+          ]
+        }
+      ],
+      "PERF": [],
+      "KISS_CUT": [],
+      "CUT": [
+        {
+          "id": "CUT:001",
+          "points_mm": [
+            [
+              158.0,
+              37.0
+            ],
+            [
+              158.0,
+              503.0
+            ],
+            [
+              18.0,
+              503.0
+            ],
+            [
+              18.0,
+              37.0
+            ],
+            [
+              158.0,
+              37.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            18.0,
+            37.0,
+            158.0,
+            503.0
+          ]
+        }
+      ]
+    },
+    "structuralStatusV5": "FLEXIBLE_CONVERTER_REQUIRED"
+  },
+  "meshFamily": "flexible_gusset_pouch",
+  "assemblyMechanism": "w_gusset_zipper",
+  "outputRelativePath": "models/structural/standup-pouch.assembly.json",
+  "creaseSemanticRegistry": [
+    {
+      "sourceRef": "CREASE:001",
+      "polylineMm": [
+        [
+          18.0,
+          247.0
+        ],
+        [
+          158.0,
+          247.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_bottom_gusset_left",
+          "panel": "bottom_gusset_left",
+          "parent": "front_film",
+          "proposedFoldDeg": null,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:002",
+      "polylineMm": [
+        [
+          18.0,
+          270.0
+        ],
+        [
+          158.0,
+          270.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_bottom_gusset_right",
+          "panel": "bottom_gusset_right",
+          "parent": "bottom_gusset_left",
+          "proposedFoldDeg": null,
+          "foldStyle": "valley"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:003",
+      "polylineMm": [
+        [
+          18.0,
+          293.0
+        ],
+        [
+          158.0,
+          293.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_back_film",
+          "panel": "back_film",
+          "parent": "bottom_gusset_right",
+          "proposedFoldDeg": null,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    }
+  ]
+}

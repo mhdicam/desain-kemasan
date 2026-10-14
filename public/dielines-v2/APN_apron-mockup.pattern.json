@@ -1,0 +1,628 @@
+{
+  "schemaVersion": "6.0.0",
+  "modelId": "apron-mockup",
+  "code": "APN",
+  "name": "Apron",
+  "unit": "mm",
+  "patternStatus": "SAMPLE_DRAFT_NOT_VALIDATED",
+  "patternType": "fabric_sewing_pattern",
+  "sizeAssumption": "One-size bib apron reference: total height 740 mm stitchline; straps and pocket vary with wearer.",
+  "material": "Canvas / drill",
+  "patternPieces": [
+    {
+      "key": "bib",
+      "label": "Apron main body",
+      "cutCount": 1,
+      "seamAllowanceMm": 13,
+      "stitchAreaMm2": 303927.036,
+      "cutAreaMm2": 333254.284,
+      "grainline": [
+        [
+          235,
+          95
+        ],
+        [
+          235,
+          690
+        ]
+      ],
+      "printZoneMm": [
+        94,
+        175,
+        280,
+        320
+      ],
+      "holesMm": [],
+      "notes": "single bib apron; edges may be double turned",
+      "flatGeometryMm": {
+        "stitchContour": [
+          [
+            116.0,
+            0.0
+          ],
+          [
+            354.0,
+            0.0
+          ],
+          [
+            390.0,
+            92.0
+          ],
+          [
+            396.708,
+            107.748
+          ],
+          [
+            402.979,
+            123.48
+          ],
+          [
+            408.842,
+            139.184
+          ],
+          [
+            414.328,
+            154.844
+          ],
+          [
+            419.469,
+            170.445
+          ],
+          [
+            424.295,
+            185.973
+          ],
+          [
+            428.837,
+            201.413
+          ],
+          [
+            433.125,
+            216.75
+          ],
+          [
+            437.191,
+            231.97
+          ],
+          [
+            441.064,
+            247.059
+          ],
+          [
+            444.777,
+            262.0
+          ],
+          [
+            448.359,
+            276.781
+          ],
+          [
+            451.842,
+            291.386
+          ],
+          [
+            455.256,
+            305.801
+          ],
+          [
+            458.632,
+            320.01
+          ],
+          [
+            462.0,
+            334.0
+          ],
+          [
+            462.0,
+            740.0
+          ],
+          [
+            8.0,
+            740.0
+          ],
+          [
+            8.0,
+            334.0
+          ],
+          [
+            11.368,
+            320.01
+          ],
+          [
+            14.744,
+            305.801
+          ],
+          [
+            18.158,
+            291.386
+          ],
+          [
+            21.641,
+            276.781
+          ],
+          [
+            25.223,
+            262.0
+          ],
+          [
+            28.936,
+            247.059
+          ],
+          [
+            32.809,
+            231.97
+          ],
+          [
+            36.875,
+            216.75
+          ],
+          [
+            41.163,
+            201.413
+          ],
+          [
+            45.705,
+            185.973
+          ],
+          [
+            50.531,
+            170.445
+          ],
+          [
+            55.672,
+            154.844
+          ],
+          [
+            61.158,
+            139.184
+          ],
+          [
+            67.021,
+            123.48
+          ],
+          [
+            73.292,
+            107.748
+          ],
+          [
+            80.0,
+            92.0
+          ]
+        ],
+        "cutContour": [
+          [
+            107.127,
+            -13.0
+          ],
+          [
+            67.964,
+            87.083
+          ],
+          [
+            61.272,
+            102.793
+          ],
+          [
+            54.892,
+            118.8
+          ],
+          [
+            48.933,
+            134.761
+          ],
+          [
+            43.363,
+            150.66
+          ],
+          [
+            38.15,
+            166.481
+          ],
+          [
+            33.261,
+            182.209
+          ],
+          [
+            28.667,
+            197.828
+          ],
+          [
+            24.335,
+            213.322
+          ],
+          [
+            20.233,
+            228.676
+          ],
+          [
+            16.331,
+            243.875
+          ],
+          [
+            12.597,
+            258.902
+          ],
+          [
+            9.001,
+            273.743
+          ],
+          [
+            5.51,
+            288.381
+          ],
+          [
+            2.095,
+            302.8
+          ],
+          [
+            -1.275,
+            316.986
+          ],
+          [
+            -5.0,
+            332.457
+          ],
+          [
+            -5.0,
+            753.0
+          ],
+          [
+            475.0,
+            753.0
+          ],
+          [
+            475.0,
+            332.457
+          ],
+          [
+            471.275,
+            316.986
+          ],
+          [
+            467.905,
+            302.8
+          ],
+          [
+            464.49,
+            288.381
+          ],
+          [
+            460.999,
+            273.743
+          ],
+          [
+            457.403,
+            258.902
+          ],
+          [
+            453.669,
+            243.875
+          ],
+          [
+            449.767,
+            228.676
+          ],
+          [
+            445.665,
+            213.322
+          ],
+          [
+            441.333,
+            197.828
+          ],
+          [
+            436.739,
+            182.209
+          ],
+          [
+            431.85,
+            166.481
+          ],
+          [
+            426.637,
+            150.66
+          ],
+          [
+            421.067,
+            134.761
+          ],
+          [
+            415.108,
+            118.8
+          ],
+          [
+            408.728,
+            102.793
+          ],
+          [
+            402.036,
+            87.083
+          ],
+          [
+            362.873,
+            -13.0
+          ]
+        ]
+      },
+      "sheetOffsetMm": [
+        85.0,
+        165.0
+      ]
+    },
+    {
+      "key": "pocket",
+      "label": "Front patch pocket",
+      "cutCount": 1,
+      "seamAllowanceMm": 13,
+      "stitchAreaMm2": 69000.0,
+      "cutAreaMm2": 83456.0,
+      "grainline": [
+        [
+          150,
+          25
+        ],
+        [
+          150,
+          200
+        ]
+      ],
+      "printZoneMm": null,
+      "holesMm": [],
+      "notes": "finished top opening fold plus stitch on bib",
+      "flatGeometryMm": {
+        "stitchContour": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            300.0,
+            0.0
+          ],
+          [
+            300.0,
+            230.0
+          ],
+          [
+            0.0,
+            230.0
+          ]
+        ],
+        "cutContour": [
+          [
+            -13.0,
+            -13.0
+          ],
+          [
+            -13.0,
+            243.0
+          ],
+          [
+            313.0,
+            243.0
+          ],
+          [
+            313.0,
+            -13.0
+          ]
+        ]
+      },
+      "sheetOffsetMm": [
+        788.0,
+        165.0
+      ]
+    },
+    {
+      "key": "neck_strap",
+      "label": "Neck strap strip",
+      "cutCount": 1,
+      "seamAllowanceMm": 10,
+      "stitchAreaMm2": 36400.0,
+      "cutAreaMm2": 50920.0,
+      "grainline": [
+        [
+          80,
+          28
+        ],
+        [
+          570,
+          28
+        ]
+      ],
+      "printZoneMm": null,
+      "holesMm": [],
+      "notes": "adjustable buckle optional",
+      "flatGeometryMm": {
+        "stitchContour": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            650.0,
+            0.0
+          ],
+          [
+            650.0,
+            56.0
+          ],
+          [
+            0.0,
+            56.0
+          ]
+        ],
+        "cutContour": [
+          [
+            -10.0,
+            -10.0
+          ],
+          [
+            -10.0,
+            66.0
+          ],
+          [
+            660.0,
+            66.0
+          ],
+          [
+            660.0,
+            -10.0
+          ]
+        ]
+      },
+      "sheetOffsetMm": [
+        1326.0,
+        162.0
+      ]
+    },
+    {
+      "key": "waist_tie",
+      "label": "Waist ties",
+      "cutCount": 2,
+      "seamAllowanceMm": 10,
+      "stitchAreaMm2": 44000.0,
+      "cutAreaMm2": 61500.0,
+      "grainline": [
+        [
+          75,
+          28
+        ],
+        [
+          730,
+          28
+        ]
+      ],
+      "printZoneMm": null,
+      "holesMm": [],
+      "notes": "two straps; back tie",
+      "flatGeometryMm": {
+        "stitchContour": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            800.0,
+            0.0
+          ],
+          [
+            800.0,
+            55.0
+          ],
+          [
+            0.0,
+            55.0
+          ]
+        ],
+        "cutContour": [
+          [
+            -10.0,
+            -10.0
+          ],
+          [
+            -10.0,
+            65.0
+          ],
+          [
+            810.0,
+            65.0
+          ],
+          [
+            810.0,
+            -10.0
+          ]
+        ]
+      },
+      "sheetOffsetMm": [
+        90.0,
+        1088.0
+      ]
+    },
+    {
+      "key": "neck_loop",
+      "label": "Neck hardware reinforcement",
+      "cutCount": 2,
+      "seamAllowanceMm": 10,
+      "stitchAreaMm2": 3600.0,
+      "cutAreaMm2": 6460.0,
+      "grainline": null,
+      "printZoneMm": null,
+      "holesMm": [],
+      "notes": "",
+      "flatGeometryMm": {
+        "stitchContour": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            75.0,
+            0.0
+          ],
+          [
+            75.0,
+            48.0
+          ],
+          [
+            0.0,
+            48.0
+          ]
+        ],
+        "cutContour": [
+          [
+            -10.0,
+            -10.0
+          ],
+          [
+            -10.0,
+            58.0
+          ],
+          [
+            85.0,
+            58.0
+          ],
+          [
+            85.0,
+            -10.0
+          ]
+        ]
+      },
+      "sheetOffsetMm": [
+        1125.0,
+        1088.0
+      ]
+    }
+  ],
+  "sewingGraph": [
+    {
+      "a": "pocket.side_and_bottom",
+      "b": "bib.pocket_marks",
+      "method": "topstitch"
+    },
+    {
+      "a": "neck_strap.ends",
+      "b": "bib.upper_corners",
+      "method": "box_x_attach"
+    },
+    {
+      "a": "waist_tie.ends",
+      "b": "bib.waist_sides",
+      "method": "box_x_attach"
+    }
+  ],
+  "issuesAndLimitations": [
+    "Sewing graph connections are semantic and require seam-length fitting, fabric-specific allowances and physical sample before production.",
+    "SVG/PDF use 1:1 mm sheet dimensions; verify print scaling.",
+    "Material shrinkage, stretch, grain direction, dart and overlock allowances require vendor calibration."
+  ],
+  "exportQA": {
+    "svgReadable": true,
+    "dxfWrote": true,
+    "pdfReadable": true,
+    "geometryValid": true,
+    "layoutValid": true,
+    "outlineClosure": "verified via shapely polygon",
+    "seamMatching": "NOT_VALIDATED",
+    "physicalFit": "NOT_TESTED"
+  }
+}

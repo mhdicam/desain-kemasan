@@ -1,0 +1,1471 @@
+{
+  "schemaVersion": "7.0.0-draft",
+  "identity": {
+    "id": "burger-clamshell",
+    "code": "BGR",
+    "name": "Burger Clamshell",
+    "catalogCategory": "packaging",
+    "modelKey": "packaging:burger-clamshell"
+  },
+  "pipeline": "unknown_requires_asset",
+  "geometrySource": {
+    "svgPathV6": "structural-dielines/BGR_burger-clamshell.svg",
+    "patternJsonPathV6": null,
+    "fileType": "STRUCTURAL_DIELINE",
+    "coordinateFrame": {
+      "svg_mm": {
+        "x": "right",
+        "y": "down",
+        "units": "mm",
+        "origin": "svg_viewBox"
+      },
+      "engine_local_mm": {
+        "x": "right",
+        "y": "up",
+        "z": "toward_visible_print_side",
+        "transform": "[x,-y,0] from SVG"
+      },
+      "export_gltf": "[x/1000,-y/1000,z/1000] in metres; choose model origin separately",
+      "fold_sign": "right-hand rotation around directed hinge in engine_local_mm coordinates; fold degrees cannot be interpreted without directed endpoints",
+      "face_orientation": "printSide=+Z only when source artwork/front is explicitly assigned",
+      "mountain_valley": "classification relative to printSide; values in candidate assembly are PROPOSED and require engineer verification"
+    },
+    "sourcePresent": true
+  },
+  "validation": {
+    "manufacturerApproved": false,
+    "physicalPrototypeTested": false,
+    "assemblySemanticsVerified": false,
+    "semanticStatus": "PROPOSED_NOT_VALIDATED",
+    "blockingIssues": [
+      "Lid arch/rounded cavity requires curved shell shaping, not plain cube",
+      "Check tab engagement and food material grade",
+      "Panel semantics and attachment mates are engineering proposals inferred from prototype V5 dieline; review by CAD/converter required",
+      "Some special flaps deliberately have unresolved creaseRef rather than fabricated hinge IDs",
+      "All fold sides and signed hinge angles remain PROPOSED despite coordinate-matched crease geometry; no 3D mechanical proof",
+      "Clamshell end/side walls are candidate refs; verify flap geometry and lock slot location",
+      "Nominal input dimensions are sourced from V5 audit description; verify actual erected internal and external dimensions, stock caliper, and supplier allowances"
+    ],
+    "missingRequired": [
+      "material_thickness",
+      "print_side",
+      "signed_hinge_calibration",
+      "glue_or_seal_mates",
+      "physical_fit"
+    ],
+    "creaseMapping": {
+      "totalSourceCreases": 11,
+      "candidateMapped": 11,
+      "candidateNonfold": 0,
+      "unassigned": 0,
+      "completeCandidate": true,
+      "verifiedFoldSide": false
+    }
+  },
+  "finalStates": {
+    "default": "closed_assembled",
+    "available": [
+      "flat_2d",
+      "folding_partial",
+      "closed_assembled",
+      "exploded_view",
+      "half_open_mockup"
+    ],
+    "physicalAccuracy": "NOT_VALIDATED"
+  },
+  "parameterDefaults": {
+    "units": "mm",
+    "nominalSourceDescription": "128 x 128 x 54 mm lower tray, attached 48 mm raised lid; prototype geometry",
+    "thicknessMm": null,
+    "thicknessStatus": "REQUIRES_VENDOR_MATERIAL_SPEC",
+    "dimensionsMm": {
+      "L": 128,
+      "W": 128,
+      "H": 54,
+      "lidHeight": 48,
+      "thickness": null
+    },
+    "dimensionStatus": "NOMINAL_REFERENCE_FROM_V5_AUDIT_NOT_MANUFACTURER_APPROVED"
+  },
+  "panels": [
+    {
+      "id": "base",
+      "role": "food_bottom",
+      "svg_region_mm": {
+        "type": "rectangle",
+        "bbox": [
+          72.0,
+          289.0,
+          200.0,
+          417.0
+        ]
+      },
+      "geometryEvidence": "derived_from_visible_crease_coordinates",
+      "anchor": true,
+      "artworkSemantic": "food_contact_bottom",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "lid",
+      "role": "top_lid",
+      "svg_region_mm": {
+        "type": "rectangle",
+        "bbox": [
+          72.0,
+          107.0,
+          200.0,
+          235.0
+        ]
+      },
+      "geometryEvidence": "derived_from_visible_crease_coordinates",
+      "anchor": false,
+      "artworkSemantic": "top_lid_hero",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "rear_bridge",
+      "role": "clamshell_hinge",
+      "svg_region_mm": {
+        "type": "rectangle",
+        "bbox": [
+          72.0,
+          235.0,
+          200.0,
+          289.0
+        ]
+      },
+      "geometryEvidence": "derived_from_visible_crease_coordinates",
+      "anchor": false,
+      "artworkSemantic": "clamshell_hinge",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "base_left_wall",
+      "role": "base_left",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Trace base left wall from 11 CREASE lines and CUT contour",
+      "anchor": false,
+      "artworkSemantic": "base_wall",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "lid_left_wall",
+      "role": "lid_left",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Trace lid left wall from 11 CREASE lines and CUT contour",
+      "anchor": false,
+      "artworkSemantic": "lid_wall",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "base_right_wall",
+      "role": "base_right",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Trace base right wall from 11 CREASE lines and CUT contour",
+      "anchor": false,
+      "artworkSemantic": "base_wall",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "lid_right_wall",
+      "role": "lid_right",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Trace lid right wall from 11 CREASE lines and CUT contour",
+      "anchor": false,
+      "artworkSemantic": "lid_wall",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "base_front_wall",
+      "role": "base_front",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Trace base front wall from 11 CREASE lines and CUT contour",
+      "anchor": false,
+      "artworkSemantic": "base_wall",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "lid_front_wall",
+      "role": "lid_front",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Trace lid front wall from 11 CREASE lines and CUT contour",
+      "anchor": false,
+      "artworkSemantic": "lid_wall",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "closure_tab",
+      "role": "lock_tab",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Trace feature around lid front; match receiving base slot",
+      "anchor": false,
+      "artworkSemantic": "lock_tab",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "base_front_left_tab",
+      "role": "glue_tab",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Candidate association from measured crease line, review against cut boundary",
+      "anchor": false,
+      "artworkSemantic": "glue_tab",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "base_front_right_tab",
+      "role": "glue_tab",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Candidate association from measured crease line, review against cut boundary",
+      "anchor": false,
+      "artworkSemantic": "glue_tab",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "lid_closure_flap",
+      "role": "clamshell_tuck",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Candidate association from measured crease line, review against cut boundary",
+      "anchor": false,
+      "artworkSemantic": "clamshell_tuck",
+      "printSide": "unresolved"
+    }
+  ],
+  "hinges": [
+    {
+      "id": "hinge_rear_bridge",
+      "childPanel": "rear_bridge",
+      "parentPanel": "base",
+      "creaseRef": "CREASE:003",
+      "svgEndpointsMm": [
+        [
+          72.0,
+          289.0
+        ],
+        [
+          200.0,
+          289.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          72.0,
+          289.0
+        ],
+        "end_svg_mm": [
+          200.0,
+          289.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Back wall/hinge bridge pivots from base"
+    },
+    {
+      "id": "hinge_lid",
+      "childPanel": "lid",
+      "parentPanel": "rear_bridge",
+      "creaseRef": "CREASE:002",
+      "svgEndpointsMm": [
+        [
+          72.0,
+          235.0
+        ],
+        [
+          200.0,
+          235.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          72.0,
+          235.0
+        ],
+        "end_svg_mm": [
+          200.0,
+          235.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "valley",
+      "behavior": "rigid_hinge",
+      "stage": 3,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Lid attached at top of bridge"
+    },
+    {
+      "id": "hinge_lid_front_wall",
+      "childPanel": "lid_front_wall",
+      "parentPanel": "lid",
+      "creaseRef": "CREASE:001",
+      "svgEndpointsMm": [
+        [
+          72.0,
+          107.0
+        ],
+        [
+          200.0,
+          107.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          72.0,
+          107.0
+        ],
+        "end_svg_mm": [
+          200.0,
+          107.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Candidate association from measured crease line, review against cut boundary"
+    },
+    {
+      "id": "hinge_base_front_wall",
+      "childPanel": "base_front_wall",
+      "parentPanel": "base",
+      "creaseRef": "CREASE:004",
+      "svgEndpointsMm": [
+        [
+          72.0,
+          417.0
+        ],
+        [
+          200.0,
+          417.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          72.0,
+          417.0
+        ],
+        "end_svg_mm": [
+          200.0,
+          417.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Candidate association from measured crease line, review against cut boundary"
+    },
+    {
+      "id": "hinge_base_left_wall",
+      "childPanel": "base_left_wall",
+      "parentPanel": "base",
+      "creaseRef": "CREASE:005",
+      "svgEndpointsMm": [
+        [
+          72.0,
+          294.0
+        ],
+        [
+          72.0,
+          412.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          72.0,
+          294.0
+        ],
+        "end_svg_mm": [
+          72.0,
+          412.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Candidate association from measured crease line, review against cut boundary"
+    },
+    {
+      "id": "hinge_lid_left_wall",
+      "childPanel": "lid_left_wall",
+      "parentPanel": "lid",
+      "creaseRef": "CREASE:006",
+      "svgEndpointsMm": [
+        [
+          72.0,
+          112.0
+        ],
+        [
+          72.0,
+          230.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          72.0,
+          112.0
+        ],
+        "end_svg_mm": [
+          72.0,
+          230.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Candidate association from measured crease line, review against cut boundary"
+    },
+    {
+      "id": "hinge_base_right_wall",
+      "childPanel": "base_right_wall",
+      "parentPanel": "base",
+      "creaseRef": "CREASE:007",
+      "svgEndpointsMm": [
+        [
+          200.0,
+          294.0
+        ],
+        [
+          200.0,
+          412.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          200.0,
+          294.0
+        ],
+        "end_svg_mm": [
+          200.0,
+          412.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Candidate association from measured crease line, review against cut boundary"
+    },
+    {
+      "id": "hinge_lid_right_wall",
+      "childPanel": "lid_right_wall",
+      "parentPanel": "lid",
+      "creaseRef": "CREASE:008",
+      "svgEndpointsMm": [
+        [
+          200.0,
+          112.0
+        ],
+        [
+          200.0,
+          230.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          200.0,
+          112.0
+        ],
+        "end_svg_mm": [
+          200.0,
+          230.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Candidate association from measured crease line, review against cut boundary"
+    },
+    {
+      "id": "hinge_base_front_left_tab",
+      "childPanel": "base_front_left_tab",
+      "parentPanel": "base_front_wall",
+      "creaseRef": "CREASE:009",
+      "svgEndpointsMm": [
+        [
+          72.0,
+          423.0
+        ],
+        [
+          72.0,
+          465.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          72.0,
+          423.0
+        ],
+        "end_svg_mm": [
+          72.0,
+          465.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Candidate association from measured crease line, review against cut boundary"
+    },
+    {
+      "id": "hinge_base_front_right_tab",
+      "childPanel": "base_front_right_tab",
+      "parentPanel": "base_front_wall",
+      "creaseRef": "CREASE:010",
+      "svgEndpointsMm": [
+        [
+          200.0,
+          423.0
+        ],
+        [
+          200.0,
+          465.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          200.0,
+          423.0
+        ],
+        "end_svg_mm": [
+          200.0,
+          465.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Candidate association from measured crease line, review against cut boundary"
+    },
+    {
+      "id": "hinge_lid_closure_flap",
+      "childPanel": "lid_closure_flap",
+      "parentPanel": "lid_front_wall",
+      "creaseRef": "CREASE:011",
+      "svgEndpointsMm": [
+        [
+          117.0,
+          59.0
+        ],
+        [
+          155.0,
+          59.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          117.0,
+          59.0
+        ],
+        "end_svg_mm": [
+          155.0,
+          59.0
+        ]
+      },
+      "proposedFoldDeg": 180,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Candidate association from measured crease line, review against cut boundary"
+    }
+  ],
+  "attachments": [
+    {
+      "id": "GLUE:001_attachment",
+      "sourceZoneRef": "GLUE:001",
+      "kind": "glue",
+      "fromPanel": "unresolved",
+      "toPanel": "unresolved",
+      "status": "unresolved_mate",
+      "note": "Glue polygon measured, mate must be confirmed manually"
+    },
+    {
+      "id": "GLUE:002_attachment",
+      "sourceZoneRef": "GLUE:002",
+      "kind": "glue",
+      "fromPanel": "unresolved",
+      "toPanel": "unresolved",
+      "status": "unresolved_mate",
+      "note": "Glue polygon measured, mate must be confirmed manually"
+    }
+  ],
+  "specialMechanics": [
+    {
+      "id": "closure_slot",
+      "role": "slot",
+      "pairWith": "closure_tab",
+      "status": "source_exists_location_review",
+      "notes": "Single cut slot exists; must locate shape and clearance explicitly"
+    }
+  ],
+  "foldSequence": [
+    {
+      "stage": 2,
+      "actions": [
+        "Assemble tray and lid walls; keep lid attached to rear hinge bridge"
+      ],
+      "requiresApproval": true,
+      "validationTasks": [
+        "Hinge corner relief and wall collision check"
+      ]
+    },
+    {
+      "stage": 4,
+      "actions": [
+        "Close curved/formed lid over base and insert closure tab"
+      ],
+      "requiresApproval": true,
+      "validationTasks": [
+        "Curvature/radius and lid fit require physical confirmation"
+      ]
+    }
+  ],
+  "sourceEvidence": {
+    "viewBoxMm": [
+      0.0,
+      0.0,
+      272.0,
+      494.0
+    ],
+    "sourceCounts": {
+      "INFO": 0,
+      "BLEED": 1,
+      "GLUE": 2,
+      "SEAL": 0,
+      "SAFE": 0,
+      "ARTWORK_AREA": 0,
+      "CREASE": 11,
+      "PERF": 0,
+      "KISS_CUT": 0,
+      "CUT": 2
+    },
+    "svgLayerPrimitives": {
+      "GLUE": [
+        {
+          "id": "GLUE:001",
+          "points_mm": [
+            [
+              69.0,
+              430.0
+            ],
+            [
+              69.0,
+              458.0
+            ],
+            [
+              52.0,
+              458.0
+            ],
+            [
+              52.0,
+              430.0
+            ],
+            [
+              69.0,
+              430.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            52.0,
+            430.0,
+            69.0,
+            458.0
+          ]
+        },
+        {
+          "id": "GLUE:002",
+          "points_mm": [
+            [
+              220.0,
+              430.0
+            ],
+            [
+              220.0,
+              458.0
+            ],
+            [
+              203.0,
+              458.0
+            ],
+            [
+              203.0,
+              430.0
+            ],
+            [
+              220.0,
+              430.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            203.0,
+            430.0,
+            220.0,
+            458.0
+          ]
+        }
+      ],
+      "SEAL": [],
+      "CREASE": [
+        {
+          "id": "CREASE:001",
+          "points_mm": [
+            [
+              72.0,
+              107.0
+            ],
+            [
+              200.0,
+              107.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            72.0,
+            107.0,
+            200.0,
+            107.0
+          ]
+        },
+        {
+          "id": "CREASE:002",
+          "points_mm": [
+            [
+              72.0,
+              235.0
+            ],
+            [
+              200.0,
+              235.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            72.0,
+            235.0,
+            200.0,
+            235.0
+          ]
+        },
+        {
+          "id": "CREASE:003",
+          "points_mm": [
+            [
+              72.0,
+              289.0
+            ],
+            [
+              200.0,
+              289.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            72.0,
+            289.0,
+            200.0,
+            289.0
+          ]
+        },
+        {
+          "id": "CREASE:004",
+          "points_mm": [
+            [
+              72.0,
+              417.0
+            ],
+            [
+              200.0,
+              417.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            72.0,
+            417.0,
+            200.0,
+            417.0
+          ]
+        },
+        {
+          "id": "CREASE:005",
+          "points_mm": [
+            [
+              72.0,
+              294.0
+            ],
+            [
+              72.0,
+              412.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            72.0,
+            294.0,
+            72.0,
+            412.0
+          ]
+        },
+        {
+          "id": "CREASE:006",
+          "points_mm": [
+            [
+              72.0,
+              112.0
+            ],
+            [
+              72.0,
+              230.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            72.0,
+            112.0,
+            72.0,
+            230.0
+          ]
+        },
+        {
+          "id": "CREASE:007",
+          "points_mm": [
+            [
+              200.0,
+              294.0
+            ],
+            [
+              200.0,
+              412.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            200.0,
+            294.0,
+            200.0,
+            412.0
+          ]
+        },
+        {
+          "id": "CREASE:008",
+          "points_mm": [
+            [
+              200.0,
+              112.0
+            ],
+            [
+              200.0,
+              230.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            200.0,
+            112.0,
+            200.0,
+            230.0
+          ]
+        },
+        {
+          "id": "CREASE:009",
+          "points_mm": [
+            [
+              72.0,
+              423.0
+            ],
+            [
+              72.0,
+              465.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            72.0,
+            423.0,
+            72.0,
+            465.0
+          ]
+        },
+        {
+          "id": "CREASE:010",
+          "points_mm": [
+            [
+              200.0,
+              423.0
+            ],
+            [
+              200.0,
+              465.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            200.0,
+            423.0,
+            200.0,
+            465.0
+          ]
+        },
+        {
+          "id": "CREASE:011",
+          "points_mm": [
+            [
+              117.0,
+              59.0
+            ],
+            [
+              155.0,
+              59.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            117.0,
+            59.0,
+            155.0,
+            59.0
+          ]
+        }
+      ],
+      "PERF": [],
+      "KISS_CUT": [],
+      "CUT": [
+        {
+          "id": "CUT:001",
+          "points_mm": [
+            [
+              72.0,
+              235.0
+            ],
+            [
+              72.0,
+              289.0
+            ],
+            [
+              72.0,
+              293.0
+            ],
+            [
+              18.0,
+              299.0
+            ],
+            [
+              24.0,
+              407.0
+            ],
+            [
+              72.0,
+              413.0
+            ],
+            [
+              72.0,
+              417.0
+            ],
+            [
+              72.0,
+              422.0
+            ],
+            [
+              47.0,
+              426.0
+            ],
+            [
+              51.0,
+              463.0
+            ],
+            [
+              72.0,
+              466.0
+            ],
+            [
+              72.0,
+              471.0
+            ],
+            [
+              200.0,
+              471.0
+            ],
+            [
+              200.0,
+              466.0
+            ],
+            [
+              221.0,
+              463.0
+            ],
+            [
+              225.0,
+              426.0
+            ],
+            [
+              200.0,
+              422.0
+            ],
+            [
+              200.0,
+              417.0
+            ],
+            [
+              200.0,
+              413.0
+            ],
+            [
+              248.0,
+              407.0
+            ],
+            [
+              254.0,
+              299.0
+            ],
+            [
+              200.0,
+              293.0
+            ],
+            [
+              200.0,
+              289.0
+            ],
+            [
+              200.0,
+              235.0
+            ],
+            [
+              200.0,
+              231.0
+            ],
+            [
+              242.0,
+              225.0
+            ],
+            [
+              248.0,
+              117.0
+            ],
+            [
+              200.0,
+              111.0
+            ],
+            [
+              200.0,
+              107.0
+            ],
+            [
+              200.0,
+              59.0
+            ],
+            [
+              155.0,
+              59.0
+            ],
+            [
+              153.0,
+              48.0
+            ],
+            [
+              147.0,
+              37.0
+            ],
+            [
+              125.0,
+              37.0
+            ],
+            [
+              119.0,
+              48.0
+            ],
+            [
+              117.0,
+              59.0
+            ],
+            [
+              72.0,
+              59.0
+            ],
+            [
+              72.0,
+              107.0
+            ],
+            [
+              72.0,
+              111.0
+            ],
+            [
+              24.0,
+              117.0
+            ],
+            [
+              30.0,
+              225.0
+            ],
+            [
+              72.0,
+              231.0
+            ],
+            [
+              72.0,
+              235.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            18.0,
+            37.0,
+            254.0,
+            471.0
+          ]
+        },
+        {
+          "id": "CUT:002",
+          "points_mm": [
+            [
+              152.0,
+              460.0
+            ],
+            [
+              120.0,
+              460.0
+            ],
+            [
+              120.0,
+              457.0
+            ],
+            [
+              152.0,
+              457.0
+            ],
+            [
+              152.0,
+              460.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            120.0,
+            457.0,
+            152.0,
+            460.0
+          ]
+        }
+      ]
+    },
+    "structuralStatusV5": "REVISED_SAMPLE_REQUIRED"
+  },
+  "meshFamily": "food_clamshell",
+  "assemblyMechanism": "hinged_clamshell_lid",
+  "outputRelativePath": "models/structural/burger-clamshell.assembly.json",
+  "creaseSemanticRegistry": [
+    {
+      "sourceRef": "CREASE:001",
+      "polylineMm": [
+        [
+          72.0,
+          107.0
+        ],
+        [
+          200.0,
+          107.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_lid_front_wall",
+          "panel": "lid_front_wall",
+          "parent": "lid",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:002",
+      "polylineMm": [
+        [
+          72.0,
+          235.0
+        ],
+        [
+          200.0,
+          235.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_lid",
+          "panel": "lid",
+          "parent": "rear_bridge",
+          "proposedFoldDeg": 90,
+          "foldStyle": "valley"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:003",
+      "polylineMm": [
+        [
+          72.0,
+          289.0
+        ],
+        [
+          200.0,
+          289.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_rear_bridge",
+          "panel": "rear_bridge",
+          "parent": "base",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:004",
+      "polylineMm": [
+        [
+          72.0,
+          417.0
+        ],
+        [
+          200.0,
+          417.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_base_front_wall",
+          "panel": "base_front_wall",
+          "parent": "base",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:005",
+      "polylineMm": [
+        [
+          72.0,
+          294.0
+        ],
+        [
+          72.0,
+          412.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_base_left_wall",
+          "panel": "base_left_wall",
+          "parent": "base",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:006",
+      "polylineMm": [
+        [
+          72.0,
+          112.0
+        ],
+        [
+          72.0,
+          230.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_lid_left_wall",
+          "panel": "lid_left_wall",
+          "parent": "lid",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:007",
+      "polylineMm": [
+        [
+          200.0,
+          294.0
+        ],
+        [
+          200.0,
+          412.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_base_right_wall",
+          "panel": "base_right_wall",
+          "parent": "base",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:008",
+      "polylineMm": [
+        [
+          200.0,
+          112.0
+        ],
+        [
+          200.0,
+          230.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_lid_right_wall",
+          "panel": "lid_right_wall",
+          "parent": "lid",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:009",
+      "polylineMm": [
+        [
+          72.0,
+          423.0
+        ],
+        [
+          72.0,
+          465.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_base_front_left_tab",
+          "panel": "base_front_left_tab",
+          "parent": "base_front_wall",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:010",
+      "polylineMm": [
+        [
+          200.0,
+          423.0
+        ],
+        [
+          200.0,
+          465.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_base_front_right_tab",
+          "panel": "base_front_right_tab",
+          "parent": "base_front_wall",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:011",
+      "polylineMm": [
+        [
+          117.0,
+          59.0
+        ],
+        [
+          155.0,
+          59.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_lid_closure_flap",
+          "panel": "lid_closure_flap",
+          "parent": "lid_front_wall",
+          "proposedFoldDeg": 180,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    }
+  ]
+}

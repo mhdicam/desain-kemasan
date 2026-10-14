@@ -1,0 +1,675 @@
+{
+  "schemaVersion": "7.0.0-draft",
+  "identity": {
+    "id": "fries-box",
+    "code": "FRY",
+    "name": "Fries Box",
+    "catalogCategory": "packaging",
+    "modelKey": "packaging:fries-box"
+  },
+  "pipeline": "unknown_requires_asset",
+  "geometrySource": {
+    "svgPathV6": "structural-dielines/FRY_fries-box.svg",
+    "patternJsonPathV6": null,
+    "fileType": "STRUCTURAL_DIELINE",
+    "coordinateFrame": {
+      "svg_mm": {
+        "x": "right",
+        "y": "down",
+        "units": "mm",
+        "origin": "svg_viewBox"
+      },
+      "engine_local_mm": {
+        "x": "right",
+        "y": "up",
+        "z": "toward_visible_print_side",
+        "transform": "[x,-y,0] from SVG"
+      },
+      "export_gltf": "[x/1000,-y/1000,z/1000] in metres; choose model origin separately",
+      "fold_sign": "right-hand rotation around directed hinge in engine_local_mm coordinates; fold degrees cannot be interpreted without directed endpoints",
+      "face_orientation": "printSide=+Z only when source artwork/front is explicitly assigned",
+      "mountain_valley": "classification relative to printSide; values in candidate assembly are PROPOSED and require engineer verification"
+    },
+    "sourcePresent": true
+  },
+  "validation": {
+    "manufacturerApproved": false,
+    "physicalPrototypeTested": false,
+    "assemblySemanticsVerified": false,
+    "semanticStatus": "PROPOSED_NOT_VALIDATED",
+    "blockingIssues": [
+      "Top remains open; cannot produce closed cuboid",
+      "Tapered curved front/back and adhesive wings require shaping",
+      "Panel semantics and attachment mates are engineering proposals inferred from prototype V5 dieline; review by CAD/converter required",
+      "Some special flaps deliberately have unresolved creaseRef rather than fabricated hinge IDs",
+      "All fold sides and signed hinge angles remain PROPOSED despite coordinate-matched crease geometry; no 3D mechanical proof",
+      "Nominal input dimensions are sourced from V5 audit description; verify actual erected internal and external dimensions, stock caliper, and supplier allowances"
+    ],
+    "missingRequired": [
+      "material_thickness",
+      "print_side",
+      "signed_hinge_calibration",
+      "glue_or_seal_mates",
+      "physical_fit"
+    ],
+    "creaseMapping": {
+      "totalSourceCreases": 4,
+      "candidateMapped": 4,
+      "candidateNonfold": 0,
+      "unassigned": 0,
+      "completeCandidate": true,
+      "verifiedFoldSide": false
+    }
+  },
+  "finalStates": {
+    "default": "open_top_assembled",
+    "available": [
+      "flat_2d",
+      "folding_partial",
+      "closed_assembled",
+      "exploded_view",
+      "half_open_mockup"
+    ],
+    "physicalAccuracy": "NOT_VALIDATED"
+  },
+  "parameterDefaults": {
+    "units": "mm",
+    "nominalSourceDescription": "Reference dimensions; mm",
+    "thicknessMm": null,
+    "thicknessStatus": "REQUIRES_VENDOR_MATERIAL_SPEC",
+    "dimensionsMm": {
+      "thickness": null
+    },
+    "dimensionStatus": "NOMINAL_REFERENCE_FROM_V5_AUDIT_NOT_MANUFACTURER_APPROVED"
+  },
+  "panels": [
+    {
+      "id": "front",
+      "role": "front_hero",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Tapered curvilinear upper body",
+      "anchor": true,
+      "artworkSemantic": "front_hero",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "back",
+      "role": "back",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Opposite tapered panel",
+      "anchor": false,
+      "artworkSemantic": "back",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "bottom_bridge",
+      "role": "bottom_bridge",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Between central horizontal creases y182 and y229",
+      "anchor": false,
+      "artworkSemantic": "bottom",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "side_left",
+      "role": "left_wing",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Triangular/curved side glue wing",
+      "anchor": false,
+      "artworkSemantic": "side_wing",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "side_right",
+      "role": "right_wing",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Triangular/curved side glue wing",
+      "anchor": false,
+      "artworkSemantic": "side_wing",
+      "printSide": "unresolved"
+    }
+  ],
+  "hinges": [
+    {
+      "id": "hinge_bottom_bridge",
+      "childPanel": "bottom_bridge",
+      "parentPanel": "front",
+      "creaseRef": "CREASE:001",
+      "svgEndpointsMm": [
+        [
+          61.0,
+          182.0
+        ],
+        [
+          155.0,
+          182.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          61.0,
+          182.0
+        ],
+        "end_svg_mm": [
+          155.0,
+          182.0
+        ]
+      },
+      "proposedFoldDeg": null,
+      "foldStyle": "curved",
+      "behavior": "rigid_hinge",
+      "stage": 1,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Join front body via wide bottom bridge"
+    },
+    {
+      "id": "hinge_back",
+      "childPanel": "back",
+      "parentPanel": "bottom_bridge",
+      "creaseRef": "CREASE:002",
+      "svgEndpointsMm": [
+        [
+          65.0,
+          229.0
+        ],
+        [
+          151.0,
+          229.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          65.0,
+          229.0
+        ],
+        "end_svg_mm": [
+          151.0,
+          229.0
+        ]
+      },
+      "proposedFoldDeg": null,
+      "foldStyle": "curved",
+      "behavior": "rigid_hinge",
+      "stage": 1,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Join bridge to back panel"
+    },
+    {
+      "id": "hinge_side_left",
+      "childPanel": "side_left",
+      "parentPanel": "front",
+      "creaseRef": "CREASE:003",
+      "svgEndpointsMm": [
+        [
+          61.0,
+          37.0
+        ],
+        [
+          53.0,
+          182.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          61.0,
+          37.0
+        ],
+        "end_svg_mm": [
+          53.0,
+          182.0
+        ]
+      },
+      "proposedFoldDeg": null,
+      "foldStyle": "curved",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Flared wing from inclined source fold"
+    },
+    {
+      "id": "hinge_side_right",
+      "childPanel": "side_right",
+      "parentPanel": "front",
+      "creaseRef": "CREASE:004",
+      "svgEndpointsMm": [
+        [
+          155.0,
+          37.0
+        ],
+        [
+          163.0,
+          182.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          155.0,
+          37.0
+        ],
+        "end_svg_mm": [
+          163.0,
+          182.0
+        ]
+      },
+      "proposedFoldDeg": null,
+      "foldStyle": "curved",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Flared wing from inclined source fold"
+    }
+  ],
+  "attachments": [
+    {
+      "id": "GLUE:001_attachment",
+      "sourceZoneRef": "GLUE:001",
+      "kind": "glue",
+      "fromPanel": "unresolved",
+      "toPanel": "unresolved",
+      "status": "unresolved_mate",
+      "note": "Glue polygon measured, mate must be confirmed manually"
+    },
+    {
+      "id": "GLUE:002_attachment",
+      "sourceZoneRef": "GLUE:002",
+      "kind": "glue",
+      "fromPanel": "unresolved",
+      "toPanel": "unresolved",
+      "status": "unresolved_mate",
+      "note": "Glue polygon measured, mate must be confirmed manually"
+    }
+  ],
+  "specialMechanics": [],
+  "foldSequence": [
+    {
+      "stage": 1,
+      "actions": [
+        "Fold central bottom bridge and form flared open upper cavity"
+      ],
+      "requiresApproval": true,
+      "validationTasks": [
+        "Curved panels need developable bending, not box extrusion"
+      ]
+    },
+    {
+      "stage": 2,
+      "actions": [
+        "Glue side tapered wings and leave mouth OPEN"
+      ],
+      "requiresApproval": true,
+      "validationTasks": [
+        "Dry adhesive area and stability not tested"
+      ]
+    }
+  ],
+  "sourceEvidence": {
+    "viewBoxMm": [
+      0.0,
+      0.0,
+      216.0,
+      357.0
+    ],
+    "sourceCounts": {
+      "INFO": 0,
+      "BLEED": 1,
+      "GLUE": 2,
+      "SEAL": 0,
+      "SAFE": 0,
+      "ARTWORK_AREA": 0,
+      "CREASE": 4,
+      "PERF": 0,
+      "KISS_CUT": 0,
+      "CUT": 1
+    },
+    "svgLayerPrimitives": {
+      "GLUE": [
+        {
+          "id": "GLUE:001",
+          "points_mm": [
+            [
+              32.0,
+              154.0
+            ],
+            [
+              32.0,
+              94.0
+            ],
+            [
+              23.0,
+              94.0
+            ],
+            [
+              23.0,
+              107.4545
+            ],
+            [
+              28.12,
+              154.0
+            ],
+            [
+              32.0,
+              154.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            23.0,
+            94.0,
+            32.0,
+            154.0
+          ]
+        },
+        {
+          "id": "GLUE:002",
+          "points_mm": [
+            [
+              191.0,
+              94.0
+            ],
+            [
+              182.0,
+              94.0
+            ],
+            [
+              182.0,
+              154.0
+            ],
+            [
+              187.88,
+              154.0
+            ],
+            [
+              191.0,
+              125.6364
+            ],
+            [
+              191.0,
+              94.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            182.0,
+            94.0,
+            191.0,
+            154.0
+          ]
+        }
+      ],
+      "SEAL": [],
+      "CREASE": [
+        {
+          "id": "CREASE:001",
+          "points_mm": [
+            [
+              61.0,
+              182.0
+            ],
+            [
+              155.0,
+              182.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            61.0,
+            182.0,
+            155.0,
+            182.0
+          ]
+        },
+        {
+          "id": "CREASE:002",
+          "points_mm": [
+            [
+              65.0,
+              229.0
+            ],
+            [
+              151.0,
+              229.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            65.0,
+            229.0,
+            151.0,
+            229.0
+          ]
+        },
+        {
+          "id": "CREASE:003",
+          "points_mm": [
+            [
+              61.0,
+              37.0
+            ],
+            [
+              53.0,
+              182.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            53.0,
+            37.0,
+            61.0,
+            182.0
+          ]
+        },
+        {
+          "id": "CREASE:004",
+          "points_mm": [
+            [
+              155.0,
+              37.0
+            ],
+            [
+              163.0,
+              182.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            155.0,
+            37.0,
+            163.0,
+            182.0
+          ]
+        }
+      ],
+      "PERF": [],
+      "KISS_CUT": [],
+      "CUT": [
+        {
+          "id": "CUT:001",
+          "points_mm": [
+            [
+              29.0,
+              162.0
+            ],
+            [
+              53.0,
+              182.0
+            ],
+            [
+              61.0,
+              182.0
+            ],
+            [
+              65.0,
+              229.0
+            ],
+            [
+              73.0,
+              334.0
+            ],
+            [
+              143.0,
+              334.0
+            ],
+            [
+              151.0,
+              229.0
+            ],
+            [
+              155.0,
+              182.0
+            ],
+            [
+              163.0,
+              182.0
+            ],
+            [
+              187.0,
+              162.0
+            ],
+            [
+              198.0,
+              62.0
+            ],
+            [
+              155.0,
+              37.0
+            ],
+            [
+              61.0,
+              37.0
+            ],
+            [
+              18.0,
+              62.0
+            ],
+            [
+              29.0,
+              162.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            18.0,
+            37.0,
+            198.0,
+            334.0
+          ]
+        }
+      ]
+    },
+    "structuralStatusV5": "REVISED_SAMPLE_REQUIRED"
+  },
+  "meshFamily": "food_formed_carton",
+  "assemblyMechanism": "tapered_open_top_with_side_wings",
+  "outputRelativePath": "models/structural/fries-box.assembly.json",
+  "creaseSemanticRegistry": [
+    {
+      "sourceRef": "CREASE:001",
+      "polylineMm": [
+        [
+          61.0,
+          182.0
+        ],
+        [
+          155.0,
+          182.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_bottom_bridge",
+          "panel": "bottom_bridge",
+          "parent": "front",
+          "proposedFoldDeg": null,
+          "foldStyle": "curved"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:002",
+      "polylineMm": [
+        [
+          65.0,
+          229.0
+        ],
+        [
+          151.0,
+          229.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_back",
+          "panel": "back",
+          "parent": "bottom_bridge",
+          "proposedFoldDeg": null,
+          "foldStyle": "curved"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:003",
+      "polylineMm": [
+        [
+          61.0,
+          37.0
+        ],
+        [
+          53.0,
+          182.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_side_left",
+          "panel": "side_left",
+          "parent": "front",
+          "proposedFoldDeg": null,
+          "foldStyle": "curved"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:004",
+      "polylineMm": [
+        [
+          155.0,
+          37.0
+        ],
+        [
+          163.0,
+          182.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_side_right",
+          "panel": "side_right",
+          "parent": "front",
+          "proposedFoldDeg": null,
+          "foldStyle": "curved"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    }
+  ]
+}

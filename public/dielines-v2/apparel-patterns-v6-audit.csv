@@ -1,0 +1,10 @@
+code,modelId,name,pieceTypes,actualCutPieces,sewingGraphLinks,sheetWidthMm,sheetHeightMm,geometryQA,seamMatchQA,physicalProductionQA,warnings,svg
+TSH,tshirt-front,T-shirt Front,4,5,8,2002,1215,PASS,NOT_TESTED,NOT_TESTED,,apparel-sewing-patterns/TSH_tshirt-front.svg
+HDY,hoodie-mockup,Hoodie,10,15,12,1700,2718,PASS,NOT_TESTED,NOT_TESTED,,apparel-sewing-patterns/HDY_hoodie-mockup.svg
+JRS,jersey-mockup,Jersey,5,7,9,1972,1601,PASS,NOT_TESTED,NOT_TESTED,,apparel-sewing-patterns/JRS_jersey-mockup.svg
+POL,polo-shirt,Polo Shirt,6,10,9,1972,1487,PASS,NOT_TESTED,NOT_TESTED,,apparel-sewing-patterns/POL_polo-shirt.svg
+CRW,crewneck-sweater,Crewneck Sweater,6,8,10,1806,2050,PASS,NOT_TESTED,NOT_TESTED,,apparel-sewing-patterns/CRW_crewneck-sweater.svg
+TOT,tote-bag,Tote Bag,4,7,4,1475,2250,PASS,NOT_TESTED,NOT_TESTED,Optional gusset length is placeholder; do not combine both variants without recalculation,apparel-sewing-patterns/TOT_tote-bag.svg
+CAP,cap-mockup,Cap / Topi,6,12,5,1690,782,PASS,NOT_TESTED,NOT_TESTED,Visor base and circumference are reference dimensions; sew matching must be calibrated,apparel-sewing-patterns/CAP_cap-mockup.svg
+APN,apron-mockup,Apron,5,7,3,2051,1278,PASS,NOT_TESTED,NOT_TESTED,,apparel-sewing-patterns/APN_apron-mockup.svg
+LNY,lanyard-mockup,Lanyard,3,3,2,1652,325,PASS,NOT_TESTED,NOT_TESTED,No cut/seam allowance needed for purchased woven webbing; hardware cut ends subject to supplier process,apparel-sewing-patterns/LNY_lanyard-mockup.svg

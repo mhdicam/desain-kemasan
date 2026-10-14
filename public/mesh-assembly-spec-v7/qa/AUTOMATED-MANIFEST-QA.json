@@ -1,0 +1,17 @@
+{
+  "models": 92,
+  "structural": 27,
+  "apparel": 9,
+  "other": 56,
+  "structuralSourceCreases": 253,
+  "structuralCandidateMapped": 236,
+  "structuralCandidateNonfold": 17,
+  "structuralUnresolved": 0,
+  "totalCandidateHinges": 236,
+  "totalHingesWithSourceRef": 236,
+  "unknownRefs": [],
+  "notes": [
+    "These are candidate semantics, NOT physically validated assembly instructions",
+    "Assigned fold signs and hinge axis handedness still require 3D calibration and prototype review"
+  ]
+}

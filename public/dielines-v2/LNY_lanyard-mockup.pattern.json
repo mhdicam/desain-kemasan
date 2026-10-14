@@ -1,0 +1,235 @@
+{
+  "schemaVersion": "6.0.0",
+  "modelId": "lanyard-mockup",
+  "code": "LNY",
+  "name": "Lanyard",
+  "unit": "mm",
+  "patternStatus": "SAMPLE_DRAFT_NOT_VALIDATED",
+  "patternType": "webbing_assembly_template",
+  "sizeAssumption": "25 mm webbing; 900 mm straight strap is sample unfolded length, not guaranteed worn loop length.",
+  "material": "Polyester webbing",
+  "patternPieces": [
+    {
+      "key": "main_webbing",
+      "label": "Main continuous lanyard strip",
+      "cutCount": 1,
+      "seamAllowanceMm": 0,
+      "stitchAreaMm2": 22500.0,
+      "cutAreaMm2": 22500.0,
+      "grainline": [
+        [
+          75,
+          12.5
+        ],
+        [
+          825,
+          12.5
+        ]
+      ],
+      "printZoneMm": [
+        24,
+        2,
+        852,
+        21
+      ],
+      "holesMm": [],
+      "notes": "25mm x 900mm print webbing; fold into neck loop",
+      "flatGeometryMm": {
+        "stitchContour": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            900.0,
+            0.0
+          ],
+          [
+            900.0,
+            25.0
+          ],
+          [
+            0.0,
+            25.0
+          ]
+        ],
+        "cutContour": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            900.0,
+            0.0
+          ],
+          [
+            900.0,
+            25.0
+          ],
+          [
+            0.0,
+            25.0
+          ]
+        ]
+      },
+      "sheetOffsetMm": [
+        80.0,
+        152.0
+      ]
+    },
+    {
+      "key": "reinforcement",
+      "label": "Connector tab patch",
+      "cutCount": 1,
+      "seamAllowanceMm": 5,
+      "stitchAreaMm2": 3230.0,
+      "cutAreaMm2": 4560.0,
+      "grainline": [
+        [
+          18,
+          19
+        ],
+        [
+          68,
+          19
+        ]
+      ],
+      "printZoneMm": null,
+      "holesMm": [],
+      "notes": "",
+      "flatGeometryMm": {
+        "stitchContour": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            85.0,
+            0.0
+          ],
+          [
+            85.0,
+            38.0
+          ],
+          [
+            0.0,
+            38.0
+          ]
+        ],
+        "cutContour": [
+          [
+            -5.0,
+            -5.0
+          ],
+          [
+            -5.0,
+            43.0
+          ],
+          [
+            90.0,
+            43.0
+          ],
+          [
+            90.0,
+            -5.0
+          ]
+        ]
+      },
+      "sheetOffsetMm": [
+        1200.0,
+        157.0
+      ]
+    },
+    {
+      "key": "safety_join",
+      "label": "Breakaway joint cover",
+      "cutCount": 1,
+      "seamAllowanceMm": 5,
+      "stitchAreaMm2": 2448.0,
+      "cutAreaMm2": 3608.0,
+      "grainline": [
+        [
+          17,
+          17
+        ],
+        [
+          56,
+          17
+        ]
+      ],
+      "printZoneMm": null,
+      "holesMm": [],
+      "notes": "safety release hardware design by supplier",
+      "flatGeometryMm": {
+        "stitchContour": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            72.0,
+            0.0
+          ],
+          [
+            72.0,
+            34.0
+          ],
+          [
+            0.0,
+            34.0
+          ]
+        ],
+        "cutContour": [
+          [
+            -5.0,
+            -5.0
+          ],
+          [
+            -5.0,
+            39.0
+          ],
+          [
+            77.0,
+            39.0
+          ],
+          [
+            77.0,
+            -5.0
+          ]
+        ]
+      },
+      "sheetOffsetMm": [
+        1510.0,
+        157.0
+      ]
+    }
+  ],
+  "sewingGraph": [
+    {
+      "a": "main_webbing.endA",
+      "b": "main_webbing.endB",
+      "method": "attach_to_clip_or_safety_hardware"
+    },
+    {
+      "a": "reinforcement.center",
+      "b": "main_webbing.hardware_mount",
+      "method": "box_x_stitch"
+    }
+  ],
+  "issuesAndLimitations": [
+    "No cut/seam allowance needed for purchased woven webbing; hardware cut ends subject to supplier process",
+    "Sewing graph connections are semantic and require seam-length fitting, fabric-specific allowances and physical sample before production.",
+    "SVG/PDF use 1:1 mm sheet dimensions; verify print scaling.",
+    "Material shrinkage, stretch, grain direction, dart and overlock allowances require vendor calibration."
+  ],
+  "exportQA": {
+    "svgReadable": true,
+    "dxfWrote": true,
+    "pdfReadable": true,
+    "geometryValid": true,
+    "layoutValid": true,
+    "outlineClosure": "verified via shapely polygon",
+    "seamMatching": "NOT_VALIDATED",
+    "physicalFit": "NOT_TESTED"
+  }
+}

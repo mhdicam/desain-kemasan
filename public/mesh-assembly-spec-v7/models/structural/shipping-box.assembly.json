@@ -1,0 +1,1449 @@
+{
+  "schemaVersion": "7.0.0-draft",
+  "identity": {
+    "id": "shipping-box",
+    "code": "SHP",
+    "name": "Shipping Box RSC",
+    "catalogCategory": "packaging",
+    "modelKey": "packaging:shipping-box"
+  },
+  "pipeline": "unknown_requires_asset",
+  "geometrySource": {
+    "svgPathV6": "structural-dielines/SHP_shipping-box.svg",
+    "patternJsonPathV6": null,
+    "fileType": "STRUCTURAL_DIELINE",
+    "coordinateFrame": {
+      "svg_mm": {
+        "x": "right",
+        "y": "down",
+        "units": "mm",
+        "origin": "svg_viewBox"
+      },
+      "engine_local_mm": {
+        "x": "right",
+        "y": "up",
+        "z": "toward_visible_print_side",
+        "transform": "[x,-y,0] from SVG"
+      },
+      "export_gltf": "[x/1000,-y/1000,z/1000] in metres; choose model origin separately",
+      "fold_sign": "right-hand rotation around directed hinge in engine_local_mm coordinates; fold degrees cannot be interpreted without directed endpoints",
+      "face_orientation": "printSide=+Z only when source artwork/front is explicitly assigned",
+      "mountain_valley": "classification relative to printSide; values in candidate assembly are PROPOSED and require engineer verification"
+    },
+    "sourcePresent": true
+  },
+  "validation": {
+    "manufacturerApproved": false,
+    "physicalPrototypeTested": false,
+    "assemblySemanticsVerified": false,
+    "semanticStatus": "PROPOSED_NOT_VALIDATED",
+    "blockingIssues": [
+      "Flap slot width, flute caliper, stitching/gluing not established",
+      "Compression strength and machine erection not tested",
+      "Panel semantics and attachment mates are engineering proposals inferred from prototype V5 dieline; review by CAD/converter required",
+      "Some special flaps deliberately have unresolved creaseRef rather than fabricated hinge IDs",
+      "All fold sides and signed hinge angles remain PROPOSED despite coordinate-matched crease geometry; no 3D mechanical proof",
+      "Nominal input dimensions are sourced from V5 audit description; verify actual erected internal and external dimensions, stock caliper, and supplier allowances"
+    ],
+    "missingRequired": [
+      "material_thickness",
+      "print_side",
+      "signed_hinge_calibration",
+      "glue_or_seal_mates",
+      "physical_fit"
+    ],
+    "creaseMapping": {
+      "totalSourceCreases": 12,
+      "candidateMapped": 12,
+      "candidateNonfold": 0,
+      "unassigned": 0,
+      "completeCandidate": true,
+      "verifiedFoldSide": false
+    }
+  },
+  "finalStates": {
+    "default": "closed_assembled",
+    "available": [
+      "flat_2d",
+      "folding_partial",
+      "closed_assembled",
+      "exploded_view",
+      "half_open_mockup"
+    ],
+    "physicalAccuracy": "NOT_VALIDATED"
+  },
+  "parameterDefaults": {
+    "units": "mm",
+    "nominalSourceDescription": "250 x 160 x 140 mm nominal internal; corrugated t~3 mm, flute vertical",
+    "thicknessMm": 3,
+    "thicknessStatus": "NOMINAL_REFERENCE_NOT_VALIDATED",
+    "dimensionsMm": {
+      "L": 250,
+      "W": 160,
+      "H": 140,
+      "thickness": 3
+    },
+    "dimensionStatus": "NOMINAL_REFERENCE_FROM_V5_AUDIT_NOT_MANUFACTURER_APPROVED"
+  },
+  "panels": [
+    {
+      "id": "front",
+      "role": "front",
+      "svg_region_mm": {
+        "type": "rectangle",
+        "bbox": [
+          18.0,
+          117.0,
+          268.0,
+          257.0
+        ]
+      },
+      "geometryEvidence": "derived_from_visible_crease_coordinates",
+      "anchor": true,
+      "artworkSemantic": "front",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "side_right",
+      "role": "side_right",
+      "svg_region_mm": {
+        "type": "rectangle",
+        "bbox": [
+          268.0,
+          117.0,
+          428.0,
+          257.0
+        ]
+      },
+      "geometryEvidence": "derived_from_visible_crease_coordinates",
+      "anchor": false,
+      "artworkSemantic": "side_right",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "back",
+      "role": "back",
+      "svg_region_mm": {
+        "type": "rectangle",
+        "bbox": [
+          428.0,
+          117.0,
+          678.0,
+          257.0
+        ]
+      },
+      "geometryEvidence": "derived_from_visible_crease_coordinates",
+      "anchor": false,
+      "artworkSemantic": "back",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "side_left",
+      "role": "side_left",
+      "svg_region_mm": {
+        "type": "rectangle",
+        "bbox": [
+          678.0,
+          117.0,
+          838.0,
+          257.0
+        ]
+      },
+      "geometryEvidence": "derived_from_visible_crease_coordinates",
+      "anchor": false,
+      "artworkSemantic": "side_left",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "glue_seam",
+      "role": "glue_tab",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "side closure seam at far right; derive outer blank cut and GLUE layer",
+      "anchor": false,
+      "artworkSemantic": "glue_tab",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "front_top_flap",
+      "role": "rsc_half_flap",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Flap over wall front at y=117, cut edge from CUT path",
+      "anchor": false,
+      "artworkSemantic": "rsc_half_flap",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "front_bottom_flap",
+      "role": "rsc_half_flap",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Flap over wall front at y=257, cut edge from CUT path",
+      "anchor": false,
+      "artworkSemantic": "rsc_half_flap",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "side_right_top_flap",
+      "role": "rsc_half_flap",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Flap over wall side_right at y=117, cut edge from CUT path",
+      "anchor": false,
+      "artworkSemantic": "rsc_half_flap",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "side_right_bottom_flap",
+      "role": "rsc_half_flap",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Flap over wall side_right at y=257, cut edge from CUT path",
+      "anchor": false,
+      "artworkSemantic": "rsc_half_flap",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "back_top_flap",
+      "role": "rsc_half_flap",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Flap over wall back at y=117, cut edge from CUT path",
+      "anchor": false,
+      "artworkSemantic": "rsc_half_flap",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "back_bottom_flap",
+      "role": "rsc_half_flap",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Flap over wall back at y=257, cut edge from CUT path",
+      "anchor": false,
+      "artworkSemantic": "rsc_half_flap",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "side_left_top_flap",
+      "role": "rsc_half_flap",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Flap over wall side_left at y=117, cut edge from CUT path",
+      "anchor": false,
+      "artworkSemantic": "rsc_half_flap",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "side_left_bottom_flap",
+      "role": "rsc_half_flap",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Flap over wall side_left at y=257, cut edge from CUT path",
+      "anchor": false,
+      "artworkSemantic": "rsc_half_flap",
+      "printSide": "unresolved"
+    }
+  ],
+  "hinges": [
+    {
+      "id": "hinge_side_right",
+      "childPanel": "side_right",
+      "parentPanel": "front",
+      "creaseRef": "CREASE:001",
+      "svgEndpointsMm": [
+        [
+          268.0,
+          117.0
+        ],
+        [
+          268.0,
+          257.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          268.0,
+          117.0
+        ],
+        "end_svg_mm": [
+          268.0,
+          257.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 1,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": ""
+    },
+    {
+      "id": "hinge_back",
+      "childPanel": "back",
+      "parentPanel": "side_right",
+      "creaseRef": "CREASE:002",
+      "svgEndpointsMm": [
+        [
+          428.0,
+          117.0
+        ],
+        [
+          428.0,
+          257.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          428.0,
+          117.0
+        ],
+        "end_svg_mm": [
+          428.0,
+          257.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 1,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": ""
+    },
+    {
+      "id": "hinge_side_left",
+      "childPanel": "side_left",
+      "parentPanel": "back",
+      "creaseRef": "CREASE:003",
+      "svgEndpointsMm": [
+        [
+          678.0,
+          117.0
+        ],
+        [
+          678.0,
+          257.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          678.0,
+          117.0
+        ],
+        "end_svg_mm": [
+          678.0,
+          257.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 1,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": ""
+    },
+    {
+      "id": "hinge_glue_seam",
+      "childPanel": "glue_seam",
+      "parentPanel": "side_left",
+      "creaseRef": "CREASE:004",
+      "svgEndpointsMm": [
+        [
+          838.0,
+          117.0
+        ],
+        [
+          838.0,
+          257.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          838.0,
+          117.0
+        ],
+        "end_svg_mm": [
+          838.0,
+          257.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": ""
+    },
+    {
+      "id": "hinge_front_top_flap",
+      "childPanel": "front_top_flap",
+      "parentPanel": "front",
+      "creaseRef": "CREASE:005",
+      "svgEndpointsMm": [
+        [
+          18.0,
+          117.0
+        ],
+        [
+          267.025,
+          117.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          18.0,
+          117.0
+        ],
+        "end_svg_mm": [
+          267.025,
+          117.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 3,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Use base width and minor/major priority; physical closure may include overlap"
+    },
+    {
+      "id": "hinge_front_bottom_flap",
+      "childPanel": "front_bottom_flap",
+      "parentPanel": "front",
+      "creaseRef": "CREASE:006",
+      "svgEndpointsMm": [
+        [
+          18.0,
+          257.0
+        ],
+        [
+          267.025,
+          257.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          18.0,
+          257.0
+        ],
+        "end_svg_mm": [
+          267.025,
+          257.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 3,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Use base width and minor/major priority; physical closure may include overlap"
+    },
+    {
+      "id": "hinge_side_right_top_flap",
+      "childPanel": "side_right_top_flap",
+      "parentPanel": "side_right",
+      "creaseRef": "CREASE:007",
+      "svgEndpointsMm": [
+        [
+          268.975,
+          117.0
+        ],
+        [
+          427.025,
+          117.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          268.975,
+          117.0
+        ],
+        "end_svg_mm": [
+          427.025,
+          117.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 3,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Use base width and minor/major priority; physical closure may include overlap"
+    },
+    {
+      "id": "hinge_side_right_bottom_flap",
+      "childPanel": "side_right_bottom_flap",
+      "parentPanel": "side_right",
+      "creaseRef": "CREASE:008",
+      "svgEndpointsMm": [
+        [
+          268.975,
+          257.0
+        ],
+        [
+          427.025,
+          257.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          268.975,
+          257.0
+        ],
+        "end_svg_mm": [
+          427.025,
+          257.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 3,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Use base width and minor/major priority; physical closure may include overlap"
+    },
+    {
+      "id": "hinge_back_top_flap",
+      "childPanel": "back_top_flap",
+      "parentPanel": "back",
+      "creaseRef": "CREASE:009",
+      "svgEndpointsMm": [
+        [
+          428.975,
+          117.0
+        ],
+        [
+          677.025,
+          117.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          428.975,
+          117.0
+        ],
+        "end_svg_mm": [
+          677.025,
+          117.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 3,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Use base width and minor/major priority; physical closure may include overlap"
+    },
+    {
+      "id": "hinge_back_bottom_flap",
+      "childPanel": "back_bottom_flap",
+      "parentPanel": "back",
+      "creaseRef": "CREASE:010",
+      "svgEndpointsMm": [
+        [
+          428.975,
+          257.0
+        ],
+        [
+          677.025,
+          257.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          428.975,
+          257.0
+        ],
+        "end_svg_mm": [
+          677.025,
+          257.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 3,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Use base width and minor/major priority; physical closure may include overlap"
+    },
+    {
+      "id": "hinge_side_left_top_flap",
+      "childPanel": "side_left_top_flap",
+      "parentPanel": "side_left",
+      "creaseRef": "CREASE:011",
+      "svgEndpointsMm": [
+        [
+          678.975,
+          117.0
+        ],
+        [
+          838.0,
+          117.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          678.975,
+          117.0
+        ],
+        "end_svg_mm": [
+          838.0,
+          117.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 3,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Use base width and minor/major priority; physical closure may include overlap"
+    },
+    {
+      "id": "hinge_side_left_bottom_flap",
+      "childPanel": "side_left_bottom_flap",
+      "parentPanel": "side_left",
+      "creaseRef": "CREASE:012",
+      "svgEndpointsMm": [
+        [
+          678.975,
+          257.0
+        ],
+        [
+          838.0,
+          257.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          678.975,
+          257.0
+        ],
+        "end_svg_mm": [
+          838.0,
+          257.0
+        ]
+      },
+      "proposedFoldDeg": 90,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 3,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": "Use base width and minor/major priority; physical closure may include overlap"
+    }
+  ],
+  "attachments": [
+    {
+      "id": "GLUE:001_attachment",
+      "sourceZoneRef": "GLUE:001",
+      "kind": "glue",
+      "fromPanel": "glue_seam",
+      "toPanel": "front",
+      "status": "proposed_mate_not_validated",
+      "note": "Glue polygon measured, mate must be confirmed manually"
+    }
+  ],
+  "specialMechanics": [],
+  "foldSequence": [
+    {
+      "stage": 1,
+      "actions": [
+        "Form rectangular four-wall tube using longitudinal seam GLUE:001"
+      ],
+      "requiresApproval": true,
+      "validationTasks": [
+        "Check blank flute direction and side-wall thickness"
+      ]
+    },
+    {
+      "stage": 3,
+      "actions": [
+        "Close minor flaps then major flaps for bottom; repeat top"
+      ],
+      "requiresApproval": true,
+      "validationTasks": [
+        "Tape/adhesive process not encoded"
+      ]
+    }
+  ],
+  "sourceEvidence": {
+    "viewBoxMm": [
+      0.0,
+      0.0,
+      891.0,
+      360.0
+    ],
+    "sourceCounts": {
+      "INFO": 0,
+      "BLEED": 1,
+      "GLUE": 1,
+      "SEAL": 0,
+      "SAFE": 2,
+      "ARTWORK_AREA": 0,
+      "CREASE": 12,
+      "PERF": 0,
+      "KISS_CUT": 0,
+      "CUT": 1
+    },
+    "svgLayerPrimitives": {
+      "GLUE": [
+        {
+          "id": "GLUE:001",
+          "points_mm": [
+            [
+              869.0,
+              129.0
+            ],
+            [
+              869.0,
+              245.0
+            ],
+            [
+              843.0,
+              245.0
+            ],
+            [
+              843.0,
+              129.0
+            ],
+            [
+              869.0,
+              129.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            843.0,
+            129.0,
+            869.0,
+            245.0
+          ]
+        }
+      ],
+      "SEAL": [],
+      "CREASE": [
+        {
+          "id": "CREASE:001",
+          "points_mm": [
+            [
+              268.0,
+              117.0
+            ],
+            [
+              268.0,
+              257.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            268.0,
+            117.0,
+            268.0,
+            257.0
+          ]
+        },
+        {
+          "id": "CREASE:002",
+          "points_mm": [
+            [
+              428.0,
+              117.0
+            ],
+            [
+              428.0,
+              257.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            428.0,
+            117.0,
+            428.0,
+            257.0
+          ]
+        },
+        {
+          "id": "CREASE:003",
+          "points_mm": [
+            [
+              678.0,
+              117.0
+            ],
+            [
+              678.0,
+              257.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            678.0,
+            117.0,
+            678.0,
+            257.0
+          ]
+        },
+        {
+          "id": "CREASE:004",
+          "points_mm": [
+            [
+              838.0,
+              117.0
+            ],
+            [
+              838.0,
+              257.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            838.0,
+            117.0,
+            838.0,
+            257.0
+          ]
+        },
+        {
+          "id": "CREASE:005",
+          "points_mm": [
+            [
+              18.0,
+              117.0
+            ],
+            [
+              267.025,
+              117.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            18.0,
+            117.0,
+            267.025,
+            117.0
+          ]
+        },
+        {
+          "id": "CREASE:006",
+          "points_mm": [
+            [
+              18.0,
+              257.0
+            ],
+            [
+              267.025,
+              257.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            18.0,
+            257.0,
+            267.025,
+            257.0
+          ]
+        },
+        {
+          "id": "CREASE:007",
+          "points_mm": [
+            [
+              268.975,
+              117.0
+            ],
+            [
+              427.025,
+              117.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            268.975,
+            117.0,
+            427.025,
+            117.0
+          ]
+        },
+        {
+          "id": "CREASE:008",
+          "points_mm": [
+            [
+              268.975,
+              257.0
+            ],
+            [
+              427.025,
+              257.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            268.975,
+            257.0,
+            427.025,
+            257.0
+          ]
+        },
+        {
+          "id": "CREASE:009",
+          "points_mm": [
+            [
+              428.975,
+              117.0
+            ],
+            [
+              677.025,
+              117.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            428.975,
+            117.0,
+            677.025,
+            117.0
+          ]
+        },
+        {
+          "id": "CREASE:010",
+          "points_mm": [
+            [
+              428.975,
+              257.0
+            ],
+            [
+              677.025,
+              257.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            428.975,
+            257.0,
+            677.025,
+            257.0
+          ]
+        },
+        {
+          "id": "CREASE:011",
+          "points_mm": [
+            [
+              678.975,
+              117.0
+            ],
+            [
+              838.0,
+              117.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            678.975,
+            117.0,
+            838.0,
+            117.0
+          ]
+        },
+        {
+          "id": "CREASE:012",
+          "points_mm": [
+            [
+              678.975,
+              257.0
+            ],
+            [
+              838.0,
+              257.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            678.975,
+            257.0,
+            838.0,
+            257.0
+          ]
+        }
+      ],
+      "PERF": [],
+      "KISS_CUT": [],
+      "CUT": [
+        {
+          "id": "CUT:001",
+          "points_mm": [
+            [
+              18.0,
+              257.0
+            ],
+            [
+              18.0,
+              337.0
+            ],
+            [
+              267.025,
+              337.0
+            ],
+            [
+              267.025,
+              257.0
+            ],
+            [
+              268.975,
+              257.0
+            ],
+            [
+              268.975,
+              337.0
+            ],
+            [
+              427.025,
+              337.0
+            ],
+            [
+              427.025,
+              257.0
+            ],
+            [
+              428.975,
+              257.0
+            ],
+            [
+              428.975,
+              337.0
+            ],
+            [
+              677.025,
+              337.0
+            ],
+            [
+              677.025,
+              257.0
+            ],
+            [
+              678.975,
+              257.0
+            ],
+            [
+              678.975,
+              337.0
+            ],
+            [
+              838.0,
+              337.0
+            ],
+            [
+              838.0,
+              257.0
+            ],
+            [
+              838.0,
+              247.0
+            ],
+            [
+              873.0,
+              247.0
+            ],
+            [
+              873.0,
+              127.0
+            ],
+            [
+              838.0,
+              127.0
+            ],
+            [
+              838.0,
+              117.0
+            ],
+            [
+              838.0,
+              37.0
+            ],
+            [
+              678.975,
+              37.0
+            ],
+            [
+              678.975,
+              117.0
+            ],
+            [
+              677.025,
+              117.0
+            ],
+            [
+              677.025,
+              37.0
+            ],
+            [
+              428.975,
+              37.0
+            ],
+            [
+              428.975,
+              117.0
+            ],
+            [
+              427.025,
+              117.0
+            ],
+            [
+              427.025,
+              37.0
+            ],
+            [
+              268.975,
+              37.0
+            ],
+            [
+              268.975,
+              117.0
+            ],
+            [
+              267.025,
+              117.0
+            ],
+            [
+              267.025,
+              37.0
+            ],
+            [
+              18.0,
+              37.0
+            ],
+            [
+              18.0,
+              117.0
+            ],
+            [
+              18.0,
+              257.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            18.0,
+            37.0,
+            873.0,
+            337.0
+          ]
+        }
+      ]
+    },
+    "structuralStatusV5": "REFERENCE_GEOMETRY_CHECKED"
+  },
+  "meshFamily": "rsc_corrugated",
+  "assemblyMechanism": "rsc_fefco_0201_reference",
+  "outputRelativePath": "models/structural/shipping-box.assembly.json",
+  "creaseSemanticRegistry": [
+    {
+      "sourceRef": "CREASE:001",
+      "polylineMm": [
+        [
+          268.0,
+          117.0
+        ],
+        [
+          268.0,
+          257.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_side_right",
+          "panel": "side_right",
+          "parent": "front",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:002",
+      "polylineMm": [
+        [
+          428.0,
+          117.0
+        ],
+        [
+          428.0,
+          257.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_back",
+          "panel": "back",
+          "parent": "side_right",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:003",
+      "polylineMm": [
+        [
+          678.0,
+          117.0
+        ],
+        [
+          678.0,
+          257.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_side_left",
+          "panel": "side_left",
+          "parent": "back",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:004",
+      "polylineMm": [
+        [
+          838.0,
+          117.0
+        ],
+        [
+          838.0,
+          257.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_glue_seam",
+          "panel": "glue_seam",
+          "parent": "side_left",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:005",
+      "polylineMm": [
+        [
+          18.0,
+          117.0
+        ],
+        [
+          267.025,
+          117.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_front_top_flap",
+          "panel": "front_top_flap",
+          "parent": "front",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:006",
+      "polylineMm": [
+        [
+          18.0,
+          257.0
+        ],
+        [
+          267.025,
+          257.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_front_bottom_flap",
+          "panel": "front_bottom_flap",
+          "parent": "front",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:007",
+      "polylineMm": [
+        [
+          268.975,
+          117.0
+        ],
+        [
+          427.025,
+          117.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_side_right_top_flap",
+          "panel": "side_right_top_flap",
+          "parent": "side_right",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:008",
+      "polylineMm": [
+        [
+          268.975,
+          257.0
+        ],
+        [
+          427.025,
+          257.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_side_right_bottom_flap",
+          "panel": "side_right_bottom_flap",
+          "parent": "side_right",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:009",
+      "polylineMm": [
+        [
+          428.975,
+          117.0
+        ],
+        [
+          677.025,
+          117.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_back_top_flap",
+          "panel": "back_top_flap",
+          "parent": "back",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:010",
+      "polylineMm": [
+        [
+          428.975,
+          257.0
+        ],
+        [
+          677.025,
+          257.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_back_bottom_flap",
+          "panel": "back_bottom_flap",
+          "parent": "back",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:011",
+      "polylineMm": [
+        [
+          678.975,
+          117.0
+        ],
+        [
+          838.0,
+          117.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_side_left_top_flap",
+          "panel": "side_left_top_flap",
+          "parent": "side_left",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:012",
+      "polylineMm": [
+        [
+          678.975,
+          257.0
+        ],
+        [
+          838.0,
+          257.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_side_left_bottom_flap",
+          "panel": "side_left_bottom_flap",
+          "parent": "side_left",
+          "proposedFoldDeg": 90,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    }
+  ]
+}

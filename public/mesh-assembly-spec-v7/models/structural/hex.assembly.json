@@ -1,0 +1,1586 @@
+{
+  "schemaVersion": "7.0.0-draft",
+  "identity": {
+    "id": "hex",
+    "code": "HEX",
+    "name": "Hexagon box",
+    "catalogCategory": "packaging",
+    "modelKey": "packaging:hex"
+  },
+  "pipeline": "unknown_requires_asset",
+  "geometrySource": {
+    "svgPathV6": "structural-dielines/HEX_hex.svg",
+    "patternJsonPathV6": null,
+    "fileType": "STRUCTURAL_DIELINE",
+    "coordinateFrame": {
+      "svg_mm": {
+        "x": "right",
+        "y": "down",
+        "units": "mm",
+        "origin": "svg_viewBox"
+      },
+      "engine_local_mm": {
+        "x": "right",
+        "y": "up",
+        "z": "toward_visible_print_side",
+        "transform": "[x,-y,0] from SVG"
+      },
+      "export_gltf": "[x/1000,-y/1000,z/1000] in metres; choose model origin separately",
+      "fold_sign": "right-hand rotation around directed hinge in engine_local_mm coordinates; fold degrees cannot be interpreted without directed endpoints",
+      "face_orientation": "printSide=+Z only when source artwork/front is explicitly assigned",
+      "mountain_valley": "classification relative to printSide; values in candidate assembly are PROPOSED and require engineer verification"
+    },
+    "sourcePresent": true
+  },
+  "validation": {
+    "manufacturerApproved": false,
+    "physicalPrototypeTested": false,
+    "assemblySemanticsVerified": false,
+    "semanticStatus": "PROPOSED_NOT_VALIDATED",
+    "blockingIssues": [
+      "Circular approximation forbidden; 6 scored vertical facets",
+      "Top/bottom closure discs are separate items and interfaces need engineering",
+      "Panel semantics and attachment mates are engineering proposals inferred from prototype V5 dieline; review by CAD/converter required",
+      "Some special flaps deliberately have unresolved creaseRef rather than fabricated hinge IDs",
+      "All fold sides and signed hinge angles remain PROPOSED despite coordinate-matched crease geometry; no 3D mechanical proof",
+      "Nominal input dimensions are sourced from V5 audit description; verify actual erected internal and external dimensions, stock caliper, and supplier allowances"
+    ],
+    "missingRequired": [
+      "material_thickness",
+      "print_side",
+      "signed_hinge_calibration",
+      "glue_or_seal_mates",
+      "physical_fit"
+    ],
+    "creaseMapping": {
+      "totalSourceCreases": 18,
+      "candidateMapped": 6,
+      "candidateNonfold": 12,
+      "unassigned": 0,
+      "completeCandidate": true,
+      "verifiedFoldSide": false
+    }
+  },
+  "finalStates": {
+    "default": "closed_assembled",
+    "available": [
+      "flat_2d",
+      "folding_partial",
+      "closed_assembled",
+      "exploded_view",
+      "half_open_mockup"
+    ],
+    "physicalAccuracy": "NOT_VALIDATED"
+  },
+  "parameterDefaults": {
+    "units": "mm",
+    "nominalSourceDescription": "6-facet tube nominal diameter 75 mm x height 125 mm; cap tabs separate, material tolerance pending",
+    "thicknessMm": null,
+    "thicknessStatus": "REQUIRES_VENDOR_MATERIAL_SPEC",
+    "dimensionsMm": {
+      "nominalDiameter": 75,
+      "H": 125,
+      "thickness": null
+    },
+    "dimensionStatus": "NOMINAL_REFERENCE_FROM_V5_AUDIT_NOT_MANUFACTURER_APPROVED"
+  },
+  "panels": [
+    {
+      "id": "facet_front",
+      "role": "facet_front",
+      "svg_region_mm": {
+        "type": "rectangle",
+        "bbox": [
+          18.0,
+          37.0,
+          55.5,
+          162.0
+        ]
+      },
+      "geometryEvidence": "derived_from_visible_crease_coordinates",
+      "anchor": true,
+      "artworkSemantic": "facet_front",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "facet_1",
+      "role": "facet_1",
+      "svg_region_mm": {
+        "type": "rectangle",
+        "bbox": [
+          55.5,
+          37.0,
+          93.0,
+          162.0
+        ]
+      },
+      "geometryEvidence": "derived_from_visible_crease_coordinates",
+      "anchor": false,
+      "artworkSemantic": "facet_1",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "facet_2",
+      "role": "facet_2",
+      "svg_region_mm": {
+        "type": "rectangle",
+        "bbox": [
+          93.0,
+          37.0,
+          130.5,
+          162.0
+        ]
+      },
+      "geometryEvidence": "derived_from_visible_crease_coordinates",
+      "anchor": false,
+      "artworkSemantic": "facet_2",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "facet_back",
+      "role": "facet_back",
+      "svg_region_mm": {
+        "type": "rectangle",
+        "bbox": [
+          130.5,
+          37.0,
+          168.0,
+          162.0
+        ]
+      },
+      "geometryEvidence": "derived_from_visible_crease_coordinates",
+      "anchor": false,
+      "artworkSemantic": "facet_back",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "facet_4",
+      "role": "facet_4",
+      "svg_region_mm": {
+        "type": "rectangle",
+        "bbox": [
+          168.0,
+          37.0,
+          205.5,
+          162.0
+        ]
+      },
+      "geometryEvidence": "derived_from_visible_crease_coordinates",
+      "anchor": false,
+      "artworkSemantic": "facet_4",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "facet_5",
+      "role": "facet_5",
+      "svg_region_mm": {
+        "type": "rectangle",
+        "bbox": [
+          205.5,
+          37.0,
+          243.0,
+          162.0
+        ]
+      },
+      "geometryEvidence": "derived_from_visible_crease_coordinates",
+      "anchor": false,
+      "artworkSemantic": "facet_5",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "glue_seam",
+      "role": "glue_tab",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "side closure seam at far right; derive outer blank cut and GLUE layer",
+      "anchor": false,
+      "artworkSemantic": "glue_tab",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "hex_bottom_disc",
+      "role": "closure_insert",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Six-sided disc isolated below tube; no hinge to tube (separate component)",
+      "anchor": false,
+      "artworkSemantic": "closure_insert",
+      "printSide": "unresolved"
+    },
+    {
+      "id": "hex_top_disc",
+      "role": "closure_insert",
+      "svg_region_mm": null,
+      "geometryEvidence": "unresolved_manual_region_mapping",
+      "geometryLocatorHint": "Six-sided disc isolated below tube; no hinge to tube (separate component)",
+      "anchor": false,
+      "artworkSemantic": "closure_insert",
+      "printSide": "unresolved"
+    }
+  ],
+  "hinges": [
+    {
+      "id": "hinge_facet_1",
+      "childPanel": "facet_1",
+      "parentPanel": "facet_front",
+      "creaseRef": "CREASE:001",
+      "svgEndpointsMm": [
+        [
+          55.5,
+          37.0
+        ],
+        [
+          55.5,
+          162.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          55.5,
+          37.0
+        ],
+        "end_svg_mm": [
+          55.5,
+          162.0
+        ]
+      },
+      "proposedFoldDeg": 60,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 1,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": ""
+    },
+    {
+      "id": "hinge_facet_2",
+      "childPanel": "facet_2",
+      "parentPanel": "facet_1",
+      "creaseRef": "CREASE:002",
+      "svgEndpointsMm": [
+        [
+          93.0,
+          37.0
+        ],
+        [
+          93.0,
+          162.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          93.0,
+          37.0
+        ],
+        "end_svg_mm": [
+          93.0,
+          162.0
+        ]
+      },
+      "proposedFoldDeg": 60,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 1,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": ""
+    },
+    {
+      "id": "hinge_facet_back",
+      "childPanel": "facet_back",
+      "parentPanel": "facet_2",
+      "creaseRef": "CREASE:003",
+      "svgEndpointsMm": [
+        [
+          130.5,
+          37.0
+        ],
+        [
+          130.5,
+          162.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          130.5,
+          37.0
+        ],
+        "end_svg_mm": [
+          130.5,
+          162.0
+        ]
+      },
+      "proposedFoldDeg": 60,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 1,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": ""
+    },
+    {
+      "id": "hinge_facet_4",
+      "childPanel": "facet_4",
+      "parentPanel": "facet_back",
+      "creaseRef": "CREASE:004",
+      "svgEndpointsMm": [
+        [
+          168.0,
+          37.0
+        ],
+        [
+          168.0,
+          162.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          168.0,
+          37.0
+        ],
+        "end_svg_mm": [
+          168.0,
+          162.0
+        ]
+      },
+      "proposedFoldDeg": 60,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 1,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": ""
+    },
+    {
+      "id": "hinge_facet_5",
+      "childPanel": "facet_5",
+      "parentPanel": "facet_4",
+      "creaseRef": "CREASE:005",
+      "svgEndpointsMm": [
+        [
+          205.5,
+          37.0
+        ],
+        [
+          205.5,
+          162.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          205.5,
+          37.0
+        ],
+        "end_svg_mm": [
+          205.5,
+          162.0
+        ]
+      },
+      "proposedFoldDeg": 60,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 1,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": ""
+    },
+    {
+      "id": "hinge_glue_seam",
+      "childPanel": "glue_seam",
+      "parentPanel": "facet_5",
+      "creaseRef": "CREASE:006",
+      "svgEndpointsMm": [
+        [
+          243.0,
+          37.0
+        ],
+        [
+          243.0,
+          162.0
+        ]
+      ],
+      "axisDirectionMm": {
+        "start_svg_mm": [
+          243.0,
+          37.0
+        ],
+        "end_svg_mm": [
+          243.0,
+          162.0
+        ]
+      },
+      "proposedFoldDeg": 60,
+      "foldStyle": "mountain",
+      "behavior": "rigid_hinge",
+      "stage": 2,
+      "evidence": "proposed",
+      "requiresSignedAngleCalibration": true,
+      "notes": ""
+    }
+  ],
+  "attachments": [
+    {
+      "id": "GLUE:001_attachment",
+      "sourceZoneRef": "GLUE:001",
+      "kind": "glue",
+      "fromPanel": "glue_seam",
+      "toPanel": "facet_front",
+      "status": "proposed_mate_not_validated",
+      "note": "Glue polygon measured, mate must be confirmed manually"
+    }
+  ],
+  "specialMechanics": [],
+  "foldSequence": [
+    {
+      "stage": 3,
+      "actions": [
+        "Place end discs and seal rim"
+      ],
+      "requiresApproval": true,
+      "validationTasks": [
+        "Tube and disc separation, caliper, bonding require engineering"
+      ]
+    }
+  ],
+  "sourceEvidence": {
+    "viewBoxMm": [
+      0.0,
+      0.0,
+      274.0,
+      453.997
+    ],
+    "sourceCounts": {
+      "INFO": 0,
+      "BLEED": 3,
+      "GLUE": 1,
+      "SEAL": 0,
+      "SAFE": 0,
+      "ARTWORK_AREA": 0,
+      "CREASE": 18,
+      "PERF": 0,
+      "KISS_CUT": 0,
+      "CUT": 3
+    },
+    "svgLayerPrimitives": {
+      "GLUE": [
+        {
+          "id": "GLUE:001",
+          "points_mm": [
+            [
+              254.0,
+              47.0
+            ],
+            [
+              254.0,
+              152.0
+            ],
+            [
+              245.0,
+              152.0
+            ],
+            [
+              245.0,
+              47.0
+            ],
+            [
+              254.0,
+              47.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            245.0,
+            47.0,
+            254.0,
+            152.0
+          ]
+        }
+      ],
+      "SEAL": [],
+      "CREASE": [
+        {
+          "id": "CREASE:001",
+          "points_mm": [
+            [
+              55.5,
+              37.0
+            ],
+            [
+              55.5,
+              162.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            55.5,
+            37.0,
+            55.5,
+            162.0
+          ]
+        },
+        {
+          "id": "CREASE:002",
+          "points_mm": [
+            [
+              93.0,
+              37.0
+            ],
+            [
+              93.0,
+              162.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            93.0,
+            37.0,
+            93.0,
+            162.0
+          ]
+        },
+        {
+          "id": "CREASE:003",
+          "points_mm": [
+            [
+              130.5,
+              37.0
+            ],
+            [
+              130.5,
+              162.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            130.5,
+            37.0,
+            130.5,
+            162.0
+          ]
+        },
+        {
+          "id": "CREASE:004",
+          "points_mm": [
+            [
+              168.0,
+              37.0
+            ],
+            [
+              168.0,
+              162.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            168.0,
+            37.0,
+            168.0,
+            162.0
+          ]
+        },
+        {
+          "id": "CREASE:005",
+          "points_mm": [
+            [
+              205.5,
+              37.0
+            ],
+            [
+              205.5,
+              162.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            205.5,
+            37.0,
+            205.5,
+            162.0
+          ]
+        },
+        {
+          "id": "CREASE:006",
+          "points_mm": [
+            [
+              243.0,
+              37.0
+            ],
+            [
+              243.0,
+              162.0
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            243.0,
+            37.0,
+            243.0,
+            162.0
+          ]
+        },
+        {
+          "id": "CREASE:007",
+          "points_mm": [
+            [
+              79.3013,
+              300.3013
+            ],
+            [
+              41.8013,
+              278.6506
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            41.8013,
+            278.6506,
+            79.3013,
+            300.3013
+          ]
+        },
+        {
+          "id": "CREASE:008",
+          "points_mm": [
+            [
+              41.8013,
+              278.6506
+            ],
+            [
+              41.8013,
+              235.3494
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            41.8013,
+            235.3494,
+            41.8013,
+            278.6506
+          ]
+        },
+        {
+          "id": "CREASE:009",
+          "points_mm": [
+            [
+              41.8013,
+              235.3494
+            ],
+            [
+              79.3013,
+              213.6987
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            41.8013,
+            213.6987,
+            79.3013,
+            235.3494
+          ]
+        },
+        {
+          "id": "CREASE:010",
+          "points_mm": [
+            [
+              79.3013,
+              213.6987
+            ],
+            [
+              116.8013,
+              235.3494
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            79.3013,
+            213.6987,
+            116.8013,
+            235.3494
+          ]
+        },
+        {
+          "id": "CREASE:011",
+          "points_mm": [
+            [
+              116.8013,
+              235.3494
+            ],
+            [
+              116.8013,
+              278.6506
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            116.8013,
+            235.3494,
+            116.8013,
+            278.6506
+          ]
+        },
+        {
+          "id": "CREASE:012",
+          "points_mm": [
+            [
+              116.8013,
+              278.6506
+            ],
+            [
+              79.3013,
+              300.3013
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            79.3013,
+            278.6506,
+            116.8013,
+            300.3013
+          ]
+        },
+        {
+          "id": "CREASE:013",
+          "points_mm": [
+            [
+              79.3013,
+              421.9038
+            ],
+            [
+              41.8013,
+              400.2532
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            41.8013,
+            400.2532,
+            79.3013,
+            421.9038
+          ]
+        },
+        {
+          "id": "CREASE:014",
+          "points_mm": [
+            [
+              41.8013,
+              400.2532
+            ],
+            [
+              41.8013,
+              356.9519
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            41.8013,
+            356.9519,
+            41.8013,
+            400.2532
+          ]
+        },
+        {
+          "id": "CREASE:015",
+          "points_mm": [
+            [
+              41.8013,
+              356.9519
+            ],
+            [
+              79.3013,
+              335.3013
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            41.8013,
+            335.3013,
+            79.3013,
+            356.9519
+          ]
+        },
+        {
+          "id": "CREASE:016",
+          "points_mm": [
+            [
+              79.3013,
+              335.3013
+            ],
+            [
+              116.8013,
+              356.9519
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            79.3013,
+            335.3013,
+            116.8013,
+            356.9519
+          ]
+        },
+        {
+          "id": "CREASE:017",
+          "points_mm": [
+            [
+              116.8013,
+              356.9519
+            ],
+            [
+              116.8013,
+              400.2532
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            116.8013,
+            356.9519,
+            116.8013,
+            400.2532
+          ]
+        },
+        {
+          "id": "CREASE:018",
+          "points_mm": [
+            [
+              116.8013,
+              400.2532
+            ],
+            [
+              79.3013,
+              421.9038
+            ]
+          ],
+          "closed": false,
+          "bbox_mm": [
+            79.3013,
+            400.2532,
+            116.8013,
+            421.9038
+          ]
+        }
+      ],
+      "PERF": [],
+      "KISS_CUT": [],
+      "CUT": [
+        {
+          "id": "CUT:001",
+          "points_mm": [
+            [
+              41.8013,
+              235.3494
+            ],
+            [
+              27.8013,
+              241.4115
+            ],
+            [
+              27.8013,
+              272.5885
+            ],
+            [
+              41.8013,
+              278.6506
+            ],
+            [
+              40.0513,
+              293.8061
+            ],
+            [
+              67.0513,
+              309.3945
+            ],
+            [
+              79.3013,
+              300.3013
+            ],
+            [
+              91.5513,
+              309.3945
+            ],
+            [
+              118.5513,
+              293.8061
+            ],
+            [
+              116.8013,
+              278.6506
+            ],
+            [
+              130.8013,
+              272.5885
+            ],
+            [
+              130.8013,
+              241.4115
+            ],
+            [
+              116.8013,
+              235.3494
+            ],
+            [
+              118.5513,
+              220.1939
+            ],
+            [
+              91.5513,
+              204.6055
+            ],
+            [
+              79.3013,
+              213.6987
+            ],
+            [
+              67.0513,
+              204.6055
+            ],
+            [
+              40.0513,
+              220.1939
+            ],
+            [
+              41.8013,
+              235.3494
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            27.8013,
+            204.6055,
+            130.8013,
+            309.3945
+          ]
+        },
+        {
+          "id": "CUT:002",
+          "points_mm": [
+            [
+              27.8013,
+              363.0141
+            ],
+            [
+              27.8013,
+              394.191
+            ],
+            [
+              41.8013,
+              400.2532
+            ],
+            [
+              40.0513,
+              415.4086
+            ],
+            [
+              67.0513,
+              430.9971
+            ],
+            [
+              79.3013,
+              421.9038
+            ],
+            [
+              91.5513,
+              430.9971
+            ],
+            [
+              118.5513,
+              415.4086
+            ],
+            [
+              116.8013,
+              400.2532
+            ],
+            [
+              130.8013,
+              394.191
+            ],
+            [
+              130.8013,
+              363.0141
+            ],
+            [
+              116.8013,
+              356.9519
+            ],
+            [
+              118.5513,
+              341.7965
+            ],
+            [
+              91.5513,
+              326.208
+            ],
+            [
+              79.3013,
+              335.3013
+            ],
+            [
+              67.0513,
+              326.208
+            ],
+            [
+              40.0513,
+              341.7965
+            ],
+            [
+              41.8013,
+              356.9519
+            ],
+            [
+              27.8013,
+              363.0141
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            27.8013,
+            326.208,
+            130.8013,
+            430.9971
+          ]
+        },
+        {
+          "id": "CUT:003",
+          "points_mm": [
+            [
+              243.0,
+              162.0
+            ],
+            [
+              243.0,
+              155.0
+            ],
+            [
+              256.0,
+              155.0
+            ],
+            [
+              256.0,
+              44.0
+            ],
+            [
+              243.0,
+              44.0
+            ],
+            [
+              243.0,
+              37.0
+            ],
+            [
+              18.0,
+              37.0
+            ],
+            [
+              18.0,
+              162.0
+            ],
+            [
+              243.0,
+              162.0
+            ]
+          ],
+          "closed": true,
+          "bbox_mm": [
+            18.0,
+            37.0,
+            256.0,
+            162.0
+          ]
+        }
+      ]
+    },
+    "structuralStatusV5": "REVISED_SAMPLE_REQUIRED"
+  },
+  "meshFamily": "faceted_tube",
+  "assemblyMechanism": "six_facets_and_disc_closures",
+  "outputRelativePath": "models/structural/hex.assembly.json",
+  "creaseSemanticRegistry": [
+    {
+      "sourceRef": "CREASE:001",
+      "polylineMm": [
+        [
+          55.5,
+          37.0
+        ],
+        [
+          55.5,
+          162.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_facet_1",
+          "panel": "facet_1",
+          "parent": "facet_front",
+          "proposedFoldDeg": 60,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:002",
+      "polylineMm": [
+        [
+          93.0,
+          37.0
+        ],
+        [
+          93.0,
+          162.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_facet_2",
+          "panel": "facet_2",
+          "parent": "facet_1",
+          "proposedFoldDeg": 60,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:003",
+      "polylineMm": [
+        [
+          130.5,
+          37.0
+        ],
+        [
+          130.5,
+          162.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_facet_back",
+          "panel": "facet_back",
+          "parent": "facet_2",
+          "proposedFoldDeg": 60,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:004",
+      "polylineMm": [
+        [
+          168.0,
+          37.0
+        ],
+        [
+          168.0,
+          162.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_facet_4",
+          "panel": "facet_4",
+          "parent": "facet_back",
+          "proposedFoldDeg": 60,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:005",
+      "polylineMm": [
+        [
+          205.5,
+          37.0
+        ],
+        [
+          205.5,
+          162.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_facet_5",
+          "panel": "facet_5",
+          "parent": "facet_4",
+          "proposedFoldDeg": 60,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:006",
+      "polylineMm": [
+        [
+          243.0,
+          37.0
+        ],
+        [
+          243.0,
+          162.0
+        ]
+      ],
+      "semanticAssignments": [
+        {
+          "hingeId": "hinge_glue_seam",
+          "panel": "glue_seam",
+          "parent": "facet_5",
+          "proposedFoldDeg": 60,
+          "foldStyle": "mountain"
+        }
+      ],
+      "status": "mapped_candidate_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": null
+    },
+    {
+      "sourceRef": "CREASE:007",
+      "polylineMm": [
+        [
+          79.3013,
+          300.3013
+        ],
+        [
+          41.8013,
+          278.6506
+        ]
+      ],
+      "semanticAssignments": [],
+      "status": "candidate_nonfold_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": {
+        "sourceRef": "CREASE:007",
+        "role": "hex_disc_perimeter",
+        "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+        "reviewStatus": "proposed_classification_needs_cad_review"
+      }
+    },
+    {
+      "sourceRef": "CREASE:008",
+      "polylineMm": [
+        [
+          41.8013,
+          278.6506
+        ],
+        [
+          41.8013,
+          235.3494
+        ]
+      ],
+      "semanticAssignments": [],
+      "status": "candidate_nonfold_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": {
+        "sourceRef": "CREASE:008",
+        "role": "hex_disc_perimeter",
+        "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+        "reviewStatus": "proposed_classification_needs_cad_review"
+      }
+    },
+    {
+      "sourceRef": "CREASE:009",
+      "polylineMm": [
+        [
+          41.8013,
+          235.3494
+        ],
+        [
+          79.3013,
+          213.6987
+        ]
+      ],
+      "semanticAssignments": [],
+      "status": "candidate_nonfold_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": {
+        "sourceRef": "CREASE:009",
+        "role": "hex_disc_perimeter",
+        "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+        "reviewStatus": "proposed_classification_needs_cad_review"
+      }
+    },
+    {
+      "sourceRef": "CREASE:010",
+      "polylineMm": [
+        [
+          79.3013,
+          213.6987
+        ],
+        [
+          116.8013,
+          235.3494
+        ]
+      ],
+      "semanticAssignments": [],
+      "status": "candidate_nonfold_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": {
+        "sourceRef": "CREASE:010",
+        "role": "hex_disc_perimeter",
+        "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+        "reviewStatus": "proposed_classification_needs_cad_review"
+      }
+    },
+    {
+      "sourceRef": "CREASE:011",
+      "polylineMm": [
+        [
+          116.8013,
+          235.3494
+        ],
+        [
+          116.8013,
+          278.6506
+        ]
+      ],
+      "semanticAssignments": [],
+      "status": "candidate_nonfold_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": {
+        "sourceRef": "CREASE:011",
+        "role": "hex_disc_perimeter",
+        "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+        "reviewStatus": "proposed_classification_needs_cad_review"
+      }
+    },
+    {
+      "sourceRef": "CREASE:012",
+      "polylineMm": [
+        [
+          116.8013,
+          278.6506
+        ],
+        [
+          79.3013,
+          300.3013
+        ]
+      ],
+      "semanticAssignments": [],
+      "status": "candidate_nonfold_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": {
+        "sourceRef": "CREASE:012",
+        "role": "hex_disc_perimeter",
+        "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+        "reviewStatus": "proposed_classification_needs_cad_review"
+      }
+    },
+    {
+      "sourceRef": "CREASE:013",
+      "polylineMm": [
+        [
+          79.3013,
+          421.9038
+        ],
+        [
+          41.8013,
+          400.2532
+        ]
+      ],
+      "semanticAssignments": [],
+      "status": "candidate_nonfold_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": {
+        "sourceRef": "CREASE:013",
+        "role": "hex_disc_perimeter",
+        "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+        "reviewStatus": "proposed_classification_needs_cad_review"
+      }
+    },
+    {
+      "sourceRef": "CREASE:014",
+      "polylineMm": [
+        [
+          41.8013,
+          400.2532
+        ],
+        [
+          41.8013,
+          356.9519
+        ]
+      ],
+      "semanticAssignments": [],
+      "status": "candidate_nonfold_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": {
+        "sourceRef": "CREASE:014",
+        "role": "hex_disc_perimeter",
+        "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+        "reviewStatus": "proposed_classification_needs_cad_review"
+      }
+    },
+    {
+      "sourceRef": "CREASE:015",
+      "polylineMm": [
+        [
+          41.8013,
+          356.9519
+        ],
+        [
+          79.3013,
+          335.3013
+        ]
+      ],
+      "semanticAssignments": [],
+      "status": "candidate_nonfold_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": {
+        "sourceRef": "CREASE:015",
+        "role": "hex_disc_perimeter",
+        "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+        "reviewStatus": "proposed_classification_needs_cad_review"
+      }
+    },
+    {
+      "sourceRef": "CREASE:016",
+      "polylineMm": [
+        [
+          79.3013,
+          335.3013
+        ],
+        [
+          116.8013,
+          356.9519
+        ]
+      ],
+      "semanticAssignments": [],
+      "status": "candidate_nonfold_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": {
+        "sourceRef": "CREASE:016",
+        "role": "hex_disc_perimeter",
+        "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+        "reviewStatus": "proposed_classification_needs_cad_review"
+      }
+    },
+    {
+      "sourceRef": "CREASE:017",
+      "polylineMm": [
+        [
+          116.8013,
+          356.9519
+        ],
+        [
+          116.8013,
+          400.2532
+        ]
+      ],
+      "semanticAssignments": [],
+      "status": "candidate_nonfold_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": {
+        "sourceRef": "CREASE:017",
+        "role": "hex_disc_perimeter",
+        "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+        "reviewStatus": "proposed_classification_needs_cad_review"
+      }
+    },
+    {
+      "sourceRef": "CREASE:018",
+      "polylineMm": [
+        [
+          116.8013,
+          400.2532
+        ],
+        [
+          79.3013,
+          421.9038
+        ]
+      ],
+      "semanticAssignments": [],
+      "status": "candidate_nonfold_requires_review",
+      "sourceGeometryVerified": true,
+      "nonFoldClassification": {
+        "sourceRef": "CREASE:018",
+        "role": "hex_disc_perimeter",
+        "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+        "reviewStatus": "proposed_classification_needs_cad_review"
+      }
+    }
+  ],
+  "nonFoldingCreaseWitnesses": [
+    {
+      "sourceRef": "CREASE:007",
+      "role": "hex_disc_perimeter",
+      "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+      "reviewStatus": "proposed_classification_needs_cad_review"
+    },
+    {
+      "sourceRef": "CREASE:008",
+      "role": "hex_disc_perimeter",
+      "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+      "reviewStatus": "proposed_classification_needs_cad_review"
+    },
+    {
+      "sourceRef": "CREASE:009",
+      "role": "hex_disc_perimeter",
+      "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+      "reviewStatus": "proposed_classification_needs_cad_review"
+    },
+    {
+      "sourceRef": "CREASE:010",
+      "role": "hex_disc_perimeter",
+      "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+      "reviewStatus": "proposed_classification_needs_cad_review"
+    },
+    {
+      "sourceRef": "CREASE:011",
+      "role": "hex_disc_perimeter",
+      "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+      "reviewStatus": "proposed_classification_needs_cad_review"
+    },
+    {
+      "sourceRef": "CREASE:012",
+      "role": "hex_disc_perimeter",
+      "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+      "reviewStatus": "proposed_classification_needs_cad_review"
+    },
+    {
+      "sourceRef": "CREASE:013",
+      "role": "hex_disc_perimeter",
+      "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+      "reviewStatus": "proposed_classification_needs_cad_review"
+    },
+    {
+      "sourceRef": "CREASE:014",
+      "role": "hex_disc_perimeter",
+      "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+      "reviewStatus": "proposed_classification_needs_cad_review"
+    },
+    {
+      "sourceRef": "CREASE:015",
+      "role": "hex_disc_perimeter",
+      "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+      "reviewStatus": "proposed_classification_needs_cad_review"
+    },
+    {
+      "sourceRef": "CREASE:016",
+      "role": "hex_disc_perimeter",
+      "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+      "reviewStatus": "proposed_classification_needs_cad_review"
+    },
+    {
+      "sourceRef": "CREASE:017",
+      "role": "hex_disc_perimeter",
+      "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+      "reviewStatus": "proposed_classification_needs_cad_review"
+    },
+    {
+      "sourceRef": "CREASE:018",
+      "role": "hex_disc_perimeter",
+      "reason": "These measured hexagonal edges belong to independent closure inserts; do not rotate as wall hinges; confirm the CUT layer also provides die cut path",
+      "reviewStatus": "proposed_classification_needs_cad_review"
+    }
+  ]
+}

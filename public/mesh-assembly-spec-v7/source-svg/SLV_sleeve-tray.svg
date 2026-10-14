@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="420.000mm" version="1.1" viewBox="0 0 425.000 420.000" width="425.000mm">
+  <defs/>
+  <rect fill="white" height="420.0" width="425.0" x="0" y="0"/>
+  <g fill="#334155" id="INFO">
+    <text font-family="DejaVu Sans,Arial,sans-serif" font-size="7" font-weight="bold" x="18" y="13">Sleeve + Tray</text>
+    <text font-family="Arial,sans-serif" font-size="3.6" x="18" y="21">Tray 155 x 98 x 28 mm; sleeve clearances nominal +3 mm width/+2 mm depth</text>
+    <text font-family="Arial,sans-serif" font-size="3" x="18" y="27">REVISED_SAMPLE_REQUIRED | STRUCTURAL_DIELINE</text>
+    <text font-family="Arial,sans-serif" font-size="2.6" x="18" y="404.0">Revision V5 - open tray with corner glue tabs + separate 4-face sleeve; drawer includes sleeve thumb notch | VECTOR</text>
+    <text font-family="Arial,sans-serif" font-size="2.6" x="18" y="408.0"> PROTOTYPE ONLY; verify material caliper, fold allowance, tooling and assembly with converter.</text>
+  </g>
+  <g color="#dc4eb8" id="BLEED">
+    <polyline fill="none" points="394.0,400.0 396.1213,399.1213 397.0,397.0 397.0,395.0 407.0,395.0 409.1213,394.1213 410.0,392.0 410.0,301.0 409.1213,298.8787 407.0,298.0 397.0,298.0 397.0,296.0 396.1213,293.8787 394.0,293.0 18.0,293.0 15.8787,293.8787 15.0,296.0 15.0,397.0 15.8787,399.1213 18.0,400.0 394.0,400.0" stroke="#dc4eb8" stroke-dasharray="1.3,1.1" stroke-width="0.16"/>
+    <polyline fill="none" points="34.3569,62.0 18.0,62.0 15.8787,62.8787 15.0,65.0 15.0,163.0 15.8787,165.1213 18.0,166.0 34.3569,166.0 30.227,167.1013 28.621,168.1723 28.0,170.0 28.0,184.0 28.621,185.8277 30.227,186.8987 43.0,190.3048 43.0,191.0 43.8787,193.1213 46.0,194.0 201.0,194.0 203.1213,193.1213 204.0,191.0 204.0,190.3048 216.773,186.8987 218.379,185.8277 219.0,184.0 219.0,170.0 218.379,168.1723 216.773,167.1013 212.6431,166.0 229.0,166.0 231.1213,165.1213 232.0,163.0 232.0,65.0 231.1213,62.8787 229.0,62.0 212.6431,62.0 216.773,60.8987 218.379,59.8277 219.0,58.0 219.0,44.0 218.379,42.1723 216.773,41.1013 204.0,37.6952 204.0,37.0 203.1213,34.8787 201.0,34.0 46.0,34.0 43.8787,34.8787 43.0,37.0 43.0,37.6952 30.227,41.1013 28.621,42.1723 28.0,44.0 28.0,58.0 28.621,59.8277 30.227,60.8987 34.3569,62.0" stroke="#dc4eb8" stroke-dasharray="1.3,1.1" stroke-width="0.16"/>
+  </g>
+  <g fill="none" id="GLUE" stroke="#9199a4">
+    <polyline fill="none" points="43.0,48.0 43.0,54.0 34.0,54.0 34.0,48.0 43.0,48.0" stroke="#9199a4" stroke-dasharray="2,1" stroke-width="0.22"/>
+    <polyline fill="none" points="213.0,48.0 213.0,54.0 204.0,54.0 204.0,48.0 213.0,48.0" stroke="#9199a4" stroke-dasharray="2,1" stroke-width="0.22"/>
+    <polyline fill="none" points="43.0,174.0 43.0,180.0 34.0,180.0 34.0,174.0 43.0,174.0" stroke="#9199a4" stroke-dasharray="2,1" stroke-width="0.22"/>
+    <polyline fill="none" points="213.0,174.0 213.0,180.0 204.0,180.0 204.0,174.0 213.0,174.0" stroke="#9199a4" stroke-dasharray="2,1" stroke-width="0.22"/>
+    <polyline fill="none" points="405.0,304.0 405.0,389.0 395.0,389.0 395.0,304.0 405.0,304.0" stroke="#9199a4" stroke-dasharray="2,1" stroke-width="0.22"/>
+  </g>
+  <g fill="none" id="SEAL" stroke="#9c62be"/>
+  <g fill="none" id="SAFE" stroke="#21a068">
+    <polyline fill="none" points="195.0,71.0 195.0,157.0 52.0,157.0 52.0,71.0 195.0,71.0" stroke="#21a068" stroke-dasharray="1.4,1.4" stroke-width="0.18"/>
+    <polyline fill="none" points="168.0,304.0 168.0,389.0 26.0,389.0 26.0,304.0 168.0,304.0" stroke="#21a068" stroke-dasharray="1.4,1.4" stroke-width="0.18"/>
+  </g>
+  <g fill="none" id="ARTWORK_AREA" stroke="#334155"/>
+  <g fill="none" id="CREASE" stroke="#176ac8">
+    <polyline fill="none" points="46.0,41.0 46.0,61.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="201.0,41.0 201.0,61.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="46.0,167.0 46.0,187.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="201.0,167.0 201.0,187.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="46.0,65.0 201.0,65.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="46.0,163.0 201.0,163.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="46.0,65.0 46.0,163.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="201.0,65.0 201.0,163.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="176.0,296.0 176.0,397.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="206.0,296.0 206.0,397.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="364.0,296.0 364.0,397.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="394.0,296.0 394.0,397.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+  </g>
+  <g fill="none" id="PERF" stroke="#ed8d20"/>
+  <g fill="none" id="KISS_CUT" stroke="#cb7619"/>
+  <g fill="none" id="CUT" stroke="#d8313d">
+    <polyline fill="none" points="46.0,62.0 46.0,65.0 18.0,65.0 18.0,163.0 46.0,163.0 46.0,166.0 31.0,170.0 31.0,184.0 46.0,188.0 46.0,191.0 201.0,191.0 201.0,188.0 216.0,184.0 216.0,170.0 201.0,166.0 201.0,163.0 229.0,163.0 229.0,65.0 201.0,65.0 201.0,62.0 216.0,58.0 216.0,44.0 201.0,40.0 201.0,37.0 46.0,37.0 46.0,40.0 31.0,44.0 31.0,58.0 46.0,62.0" stroke="#d8313d" stroke-width="0.35"/>
+    <polyline fill="none" points="394.0,397.0 394.0,392.0 407.0,392.0 407.0,301.0 394.0,301.0 394.0,296.0 18.0,296.0 18.0,397.0 394.0,397.0" stroke="#d8313d" stroke-width="0.35"/>
+  </g>
+  <text fill="#475569" font-family="Arial,sans-serif" font-size="2.7" x="18" y="414.0">RED=cut  BLUE=crease  ORANGE=perforation/kiss  PURPLE=seal  GRAY=glue  MAGENTA=bleed</text>
+</svg>

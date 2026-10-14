@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Assembly Model Draft V7",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "identity",
+    "geometrySource",
+    "panels",
+    "hinges",
+    "attachments",
+    "finalStates",
+    "validation"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string"
+    },
+    "identity": {
+      "type": "object",
+      "required": [
+        "id",
+        "code",
+        "modelKey"
+      ]
+    },
+    "geometrySource": {
+      "type": "object",
+      "required": [
+        "coordinateFrame",
+        "sourcePresent"
+      ]
+    },
+    "panels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "role"
+        ]
+      }
+    },
+    "hinges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "parentPanel",
+          "childPanel",
+          "creaseRef",
+          "proposedFoldDeg",
+          "requiresSignedAngleCalibration"
+        ],
+        "properties": {
+          "parentPanel": {
+            "type": "string"
+          },
+          "childPanel": {
+            "type": "string"
+          },
+          "creaseRef": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "proposedFoldDeg": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "requiresSignedAngleCalibration": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "attachments": {
+      "type": "array"
+    },
+    "finalStates": {
+      "type": "object",
+      "required": [
+        "default",
+        "available"
+      ]
+    },
+    "validation": {
+      "type": "object",
+      "required": [
+        "manufacturerApproved",
+        "physicalPrototypeTested",
+        "semanticStatus"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

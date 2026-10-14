@@ -14,11 +14,12 @@ export function boxPreviewContextOf(s, m) {
   return { g, bakeKey, sbbKey: g.sbb.join(',') };
 }
 
-export function BoxPreview({ s, m, context, engineRef, fitFold = false, shadowSamples = 5, lightEdit = '0', selLight = '', onLightSelect, onLightEdit }) {
+export function BoxPreview({ s, m, mesh, qa, context, engineRef, fitFold = false, shadowSamples = 5, lightEdit = '0', selLight = '', onLightSelect, onLightEdit }) {
   const ctx = context || boxPreviewContextOf(s, m);
   return <BoxCanvas
     l={s.L} w={s.W} h={s.H} t={m.t} tpl={s.tpl} fold={s.fold} paper={s.paper3d} film={s.film3d} glue={s.glue} paperTint={s.paperTint3d}
-    layers={s.layers} panels={ctx.g.panels} sbb={ctx.g.sbb} bleed={s.bleed} sbbKey={ctx.sbbKey} bakeKey={ctx.bakeKey}
+    layers={s.layers} panels={mesh?.faces || ctx.g.panels} sbb={ctx.g.sbb} bleed={s.bleed} sbbKey={ctx.sbbKey} bakeKey={ctx.bakeKey}
+    mesh={mesh} qa={qa}
     foilOn={s.fx.foil ? '1' : '0'} suvOn={s.fx.suv ? '1' : '0'} glossOn={s.fx.gloss !== false ? '1' : '0'} embOn={s.fx.emb ? '1' : '0'} holoOn={s.fx.holo !== false ? '1' : '0'}
     spin={s.spin ? '1' : '0'} check={s.check}
     studio={s.studio3d} environment={s.environment3d} stage={s.stage3d} exposure={s.expo3d}

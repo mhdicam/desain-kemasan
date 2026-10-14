@@ -48,6 +48,22 @@ export function StructureView() {
   const curSegT = selSegOk ? g.segs[s.selSeg].t : '';
 
   return (<>
+    <style>{`
+      .structure-model-category, .structure-model-card {
+        transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease, background .16s ease;
+      }
+      .structure-model-category:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(70,50,25,.12);
+        border-color: #c99654 !important;
+      }
+      .structure-model-card:hover {
+        transform: translateX(3px);
+        box-shadow: 0 8px 18px rgba(70,50,25,.12);
+        border-color: #9a5b1f !important;
+        background: #fff7ea !important;
+      }
+    `}</style>
     <div style={{ width: 246, flex: 'none', background: '#faf7f0', borderRight: '1px solid #ded5c4', overflowY: 'auto' }}>
       <Block>
         <ST>Management Model Packaging</ST>
@@ -57,7 +73,7 @@ export function StructureView() {
             const activeInCat = cat.templates.some(tpl => tpl.id === s.tpl);
             const isOpen = openCat === cat.id || activeInCat;
             return (
-              <div key={cat.id} style={{ border: '1px solid ' + (activeInCat ? '#c99654' : '#e2dac9'), background: activeInCat ? '#fbf2e4' : '#fff', borderRadius: 8, overflow: 'hidden' }}>
+              <div key={cat.id} className="structure-model-category" style={{ border: '1px solid ' + (activeInCat ? '#c99654' : '#e2dac9'), background: activeInCat ? '#fbf2e4' : '#fff', borderRadius: 8, overflow: 'hidden' }}>
                 <button onClick={() => setOpenCat(isOpen && !activeInCat ? '' : cat.id)} style={{ width: '100%', border: 'none', background: 'transparent', cursor: 'pointer', padding: '8px 9px', textAlign: 'left', display: 'flex', alignItems: 'center', gap: 8 }}>
                   <span style={{ width: 18, height: 18, borderRadius: 99, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', background: activeInCat ? '#9a5b1f' : '#efe7d8', color: activeInCat ? '#fff' : '#6d6557', fontSize: 11, flex: 'none' }}>{cat.templates.length}</span>
                   <span style={{ flex: 1, minWidth: 0 }}>
@@ -71,7 +87,7 @@ export function StructureView() {
                     {cat.templates.map(b => {
                       const meta = templateMeta(b.id);
                       return (
-                        <div key={b.id} onClick={() => store.set(st => { const mat = store.mat(), next = { ...st, tpl: b.id, ovr: {}, typeOvr: {} }; return { tpl: b.id, ovr: {}, typeOvr: {}, selSeg: null, fitNonce: st.fitNonce + 1, layers: reflowLayersToContainers(st.layers, geomOf(st, mat.t), geomOf(next, mat.t)) }; })}
+                        <div key={b.id} className="structure-model-card" onClick={() => store.set(st => { const mat = store.mat(), next = { ...st, tpl: b.id, ovr: {}, typeOvr: {} }; return { tpl: b.id, ovr: {}, typeOvr: {}, selSeg: null, fitNonce: st.fitNonce + 1, layers: reflowLayersToContainers(st.layers, geomOf(st, mat.t), geomOf(next, mat.t)) }; })}
                           style={{ cursor: 'pointer', border: '1px solid ' + (s.tpl === b.id ? '#9a5b1f' : '#eadfce'), background: s.tpl === b.id ? '#f7efe2' : '#fff', borderRadius: 7, padding: '8px 9px' }}>
                           <div style={{ display: 'flex', alignItems: 'center', gap: 7 }}>
                             <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 10.5, fontWeight: 700, color: s.tpl === b.id ? '#9a5b1f' : '#a59a85' }}>{b.code}</div>

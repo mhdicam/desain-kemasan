@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="526.000mm" version="1.1" viewBox="0 0 176.000 526.000" width="176.000mm">
+  <defs/>
+  <rect fill="white" height="526.0" width="176.0" x="0" y="0"/>
+  <g fill="#334155" id="INFO">
+    <text font-family="DejaVu Sans,Arial,sans-serif" font-size="7" font-weight="bold" x="18" y="13">Stand Up Pouch</text>
+    <text font-family="Arial,sans-serif" font-size="3.6" x="18" y="21">Film web width 140 mm x repeat 466 mm; panel H 210 mm; W-gusset 46 mm</text>
+    <text font-family="Arial,sans-serif" font-size="3" x="18" y="27">FLEXIBLE_CONVERTER_REQUIRED | STRUCTURAL_DIELINE</text>
+    <text font-family="Arial,sans-serif" font-size="2.6" x="18" y="510.0">Revision V5 - web layout for connected front, W-bottom gusset and back; side heat-seal + top seal + zipper placemen</text>
+    <text font-family="Arial,sans-serif" font-size="2.6" x="18" y="514.0">t zones | VECTOR PROTOTYPE ONLY; verify material caliper, fold allowance, tooling and assembly with converter. | Zi</text>
+  </g>
+  <g color="#dc4eb8" id="BLEED">
+    <polyline fill="none" points="158.0,34.0 18.0,34.0 15.8787,34.8787 15.0,37.0 15.0,503.0 15.8787,505.1213 18.0,506.0 158.0,506.0 160.1213,505.1213 161.0,503.0 161.0,37.0 160.1213,34.8787 158.0,34.0" stroke="#dc4eb8" stroke-dasharray="1.3,1.1" stroke-width="0.16"/>
+  </g>
+  <g fill="none" id="GLUE" stroke="#9199a4"/>
+  <g fill="none" id="SEAL" stroke="#9c62be">
+    <polyline fill="none" points="28.0,37.0 28.0,503.0 18.0,503.0 18.0,37.0 28.0,37.0" stroke="#9c62be" stroke-dasharray="1.2,1.0" stroke-width="0.2"/>
+    <polyline fill="none" points="158.0,37.0 158.0,503.0 148.0,503.0 148.0,37.0 158.0,37.0" stroke="#9c62be" stroke-dasharray="1.2,1.0" stroke-width="0.2"/>
+    <polyline fill="none" points="158.0,37.0 158.0,49.0 18.0,49.0 18.0,37.0 158.0,37.0" stroke="#9c62be" stroke-dasharray="1.2,1.0" stroke-width="0.2"/>
+    <polyline fill="none" points="158.0,491.0 158.0,503.0 18.0,503.0 18.0,491.0 158.0,491.0" stroke="#9c62be" stroke-dasharray="1.2,1.0" stroke-width="0.2"/>
+    <polyline fill="none" points="29.0,242.0 29.0,252.0 19.0,252.0 19.0,242.0 29.0,242.0" stroke="#9c62be" stroke-dasharray="1.2,1.0" stroke-width="0.2"/>
+    <polyline fill="none" points="157.0,242.0 157.0,252.0 147.0,252.0 147.0,242.0 157.0,242.0" stroke="#9c62be" stroke-dasharray="1.2,1.0" stroke-width="0.2"/>
+    <polyline fill="none" points="29.0,288.0 29.0,298.0 19.0,298.0 19.0,288.0 29.0,288.0" stroke="#9c62be" stroke-dasharray="1.2,1.0" stroke-width="0.2"/>
+    <polyline fill="none" points="157.0,288.0 157.0,298.0 147.0,298.0 147.0,288.0 157.0,288.0" stroke="#9c62be" stroke-dasharray="1.2,1.0" stroke-width="0.2"/>
+  </g>
+  <g fill="none" id="SAFE" stroke="#21a068">
+    <polyline fill="none" points="142.0,76.0 142.0,231.0 34.0,231.0 34.0,76.0 142.0,76.0" stroke="#21a068" stroke-dasharray="1.4,1.4" stroke-width="0.18"/>
+    <polyline fill="none" points="142.0,332.0 142.0,487.0 34.0,487.0 34.0,332.0 142.0,332.0" stroke="#21a068" stroke-dasharray="1.4,1.4" stroke-width="0.18"/>
+  </g>
+  <g fill="none" id="ARTWORK_AREA" stroke="#334155">
+    <polyline fill="none" points="146.0,62.0 146.0,66.0 30.0,66.0 30.0,62.0 146.0,62.0" stroke="#334155" stroke-dasharray="1.7,1.3" stroke-width="0.18"/>
+    <polyline fill="none" points="146.0,474.0 146.0,478.0 30.0,478.0 30.0,474.0 146.0,474.0" stroke="#334155" stroke-dasharray="1.7,1.3" stroke-width="0.18"/>
+  </g>
+  <g fill="none" id="CREASE" stroke="#176ac8">
+    <polyline fill="none" points="18.0,247.0 158.0,247.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="18.0,270.0 158.0,270.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+    <polyline fill="none" points="18.0,293.0 158.0,293.0" stroke="#176ac8" stroke-dasharray="3,1.6" stroke-width="0.32"/>
+  </g>
+  <g fill="none" id="PERF" stroke="#ed8d20"/>
+  <g fill="none" id="KISS_CUT" stroke="#cb7619"/>
+  <g fill="none" id="CUT" stroke="#d8313d">
+    <polyline fill="none" points="158.0,37.0 158.0,503.0 18.0,503.0 18.0,37.0 158.0,37.0" stroke="#d8313d" stroke-width="0.35"/>
+  </g>
+  <text fill="#475569" font-family="Arial,sans-serif" font-size="2.7" x="18" y="520.0">RED=cut  BLUE=crease  ORANGE=perforation/kiss  PURPLE=seal  GRAY=glue  MAGENTA=bleed</text>
+</svg>

@@ -1,11 +1,10 @@
 import React, { useMemo } from 'react';
 import { store, useStore } from '../state/store.js';
 import { TPLS } from '../dieline/templates.js';
-import { categoryCards, saveCategoryThumbnail, templateMeta, searchModels, catalogStats, modelStatus, selectableTemplateId, packagingFallbackNote, unsupportedProductionPackaging, modelDielineAudit, modelDielineOutput } from '../dieline/templateCatalog.js';
+import { categoryCards, saveCategoryThumbnail, templateMeta, searchModels, catalogStats, modelStatus, selectableTemplateId, packagingFallbackNote, unsupportedProductionPackaging, modelDielineAudit, modelDielineOutput, modelThumbShape } from '../dieline/templateCatalog.js';
 import { geomOf } from '../dieline/geom.js';
 import { reflowLayersToContainers } from '../design/containers.js';
 import { CatalogExportButtons } from './CatalogExport.jsx';
-import { ModelAuditPanel } from './ModelAuditPanel.jsx';
 
 function CategoryThumb({ cat }) {
   if (cat.thumbnail) return <img src={cat.thumbnail} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />;
@@ -25,7 +24,8 @@ function CategoryThumb({ cat }) {
 
 function ModelThumb({ model }) {
   const c = model.color || '#9a5b1f';
-  return <div style={{ height: 72, borderRadius: 10, overflow: 'hidden', background: '#f3eadb', marginBottom: 10 }}><CategoryThumb cat={{ thumb: model.mockup ? 'custom' : 'folding', color: c }} /></div>;
+  const variant = model.thumb || (model.category === 'tube' ? 'tube' : model.category === 'mailer' ? 'mailer' : model.mockup ? 'custom' : 'folding');
+  return <div style={{ width: '100%', height: '100%', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><CategoryThumb cat={{ thumb: variant, color: c }} /></div>;
 }
 
 function readUpload(file, categoryId) {
@@ -49,16 +49,11 @@ function openModel(model) {
   }
   if (model.mockup) {
     const tpl = selectableTemplateId(model, TPLS);
-    if (tpl === model.id) {
-      store.set(st => {
-        const mat = store.mat();
-        const next = { ...st, tpl, ovr: {}, typeOvr: {} };
-        return { selectedCategory: model.productCategory || model.category, selectedMockup: model.id, selectedPackagingModel: model.id, selectedPackagingName: model.name, packagingFallbackNote: packagingFallbackNote(model, TPLS), tpl, ovr: {}, typeOvr: {}, selSeg: null, view: 'design', fitNonce: st.fitNonce + 1, layers: reflowLayersToContainers(st.layers, geomOf(st, mat.t), geomOf(next, mat.t)) };
-      });
-      return;
-    }
-    const directMockup = ['device-gadget','apparel','merchandise','display-booth','food-beverage','print-stationery','custom-model'].includes(model.category);
-    store.set({ selectedCategory: model.productCategory || model.category, selectedMockup: model.id, view: directMockup ? 'three' : (model.mode === 'Brief' ? 'home' : 'design') });
+    store.set(st => {
+      const mat = store.mat();
+      const next = { ...st, tpl, ovr: {}, typeOvr: {} };
+      return { selectedCategory: model.productCategory || model.category, selectedMockup: model.id, selectedPackagingModel: model.id, selectedPackagingName: model.name, packagingFallbackNote: packagingFallbackNote(model, TPLS), tpl, ovr: {}, typeOvr: {}, selSeg: null, view: model.mode === 'Brief' ? 'home' : 'three', fitNonce: st.fitNonce + 1, layers: reflowLayersToContainers(st.layers, geomOf(st, mat.t), geomOf(next, mat.t)) };
+    });
     return;
   }
   store.set(st => {
@@ -73,12 +68,42 @@ export function PackagingHome() {
   const cards = useMemo(() => categoryCards(s.categoryThumbnails || {}, TPLS), [s.categoryThumbnails]);
   const stats = useMemo(() => catalogStats(TPLS), []);
   const unsupportedPackaging = useMemo(() => unsupportedProductionPackaging(TPLS), []);
-  const selectedId = s.selectedCategory || cards[0]?.id || '';
-  const selected = cards.find(c => c.id === selectedId) || cards[0];
+  const selectedId = s.selectedCategory || '';
+  const selected = selectedId ? cards.find(c => c.id === selectedId) : null;
   const q = s.catalogSearch || '';
   const models = selected ? searchModels(q, selected.id, TPLS) : [];
   return (
     <div style={{ flex: 1, overflow: 'auto', padding: 22, background: 'linear-gradient(180deg,#f7f1e7,#efe7da)' }}>
+      <style>{`
+        .catalog-category-card, .catalog-model-card {
+          transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+          will-change: transform;
+        }
+        .catalog-category-card:hover {
+          transform: translateY(-5px) scale(1.015);
+          box-shadow: 0 18px 44px rgba(70,50,25,.18) !important;
+          border-color: #9a5b1f !important;
+        }
+        .catalog-category-card:hover img,
+        .catalog-category-card:hover svg,
+        .catalog-model-card:hover img,
+        .catalog-model-card:hover svg {
+          transform: scale(1.045);
+        }
+        .catalog-category-card img, .catalog-category-card svg,
+        .catalog-model-card img, .catalog-model-card svg {
+          transition: transform .22s ease;
+        }
+        .catalog-model-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 16px 38px rgba(70,50,25,.15) !important;
+          border-color: #9a5b1f !important;
+          background: #fffaf2 !important;
+        }
+        .catalog-model-card:hover .model-card-overlay {
+          opacity: 1 !important;
+        }
+      `}</style>
       <div style={{ maxWidth: 1220, margin: '0 auto' }}>
         <div style={{ display: 'flex', alignItems: 'end', justifyContent: 'space-between', gap: 16, marginBottom: 18 }}>
           <div>
@@ -99,18 +124,17 @@ export function PackagingHome() {
           {Object.entries(stats.statusCounts || {}).map(([label, count]) => <span key={label} style={{ background: '#fffdf8', border: '1px solid #ded3c1', borderRadius: 99, padding: '5px 9px', fontSize: 11, color: '#6d6557' }}><b>{count}</b> {label}</span>)}
         </div>
         <div style={{ marginBottom: 16 }}><CatalogExportButtons /></div>
-        {unsupportedPackaging.length > 0 && <div style={{ marginBottom: 14, background: '#fff8e6', border: '1px solid #ead7ad', borderRadius: 12, padding: 12, color: '#6b4b16' }}>
+        {selected && unsupportedPackaging.length > 0 && <div style={{ marginBottom: 14, background: '#fff8e6', border: '1px solid #ead7ad', borderRadius: 12, padding: 12, color: '#6b4b16' }}>
           <b>Catatan jujur: {unsupportedPackaging.length} model packaging belum siap produksi.</b>
           <div style={{ fontSize: 12, marginTop: 5, lineHeight: 1.5 }}>Model ini belum punya dieline parametris/mesh/PDF sendiri. Saat dipilih, panel Desain dan 3D tetap memakai fitur model lama fallback <b>Folding Carton STE</b> supaya layer, validator, PDF, dan preview tetap jalan.</div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 8 }}>{unsupportedPackaging.map(m => <span key={m.id} style={{ background: '#fff', border: '1px solid #ead7ad', borderRadius: 999, padding: '4px 8px', fontSize: 11, fontWeight: 800 }}>{m.name}</span>)}</div>
         </div>}
-        <ModelAuditPanel selectedId={selected?.id} />
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: 14, marginBottom: 22 }}>
           {cards.map(cat => {
             const active = cat.id === selectedId;
             return (
-              <div key={cat.id} onClick={() => store.set({ selectedCategory: cat.id })} style={{ cursor: 'pointer', border: '1px solid ' + (active ? '#9a5b1f' : '#ded3c1'), background: active ? '#fff7ea' : '#fffdf8', borderRadius: 14, boxShadow: active ? '0 12px 32px rgba(154,91,31,.16)' : '0 6px 18px rgba(70,50,25,.07)', overflow: 'hidden' }}>
+              <div key={cat.id} className="catalog-category-card" onClick={() => store.set({ selectedCategory: cat.id })} style={{ cursor: 'pointer', border: '1px solid ' + (active ? '#9a5b1f' : '#ded3c1'), background: active ? '#fff7ea' : '#fffdf8', borderRadius: 14, boxShadow: active ? '0 12px 32px rgba(154,91,31,.16)' : '0 6px 18px rgba(70,50,25,.07)', overflow: 'hidden' }}>
                 <div style={{ height: 118, background: '#f3eadb', position: 'relative', overflow: 'hidden' }}><CategoryThumb cat={cat} /><div style={{ position: 'absolute', right: 10, top: 10, background: 'rgba(255,255,255,.88)', color: cat.color, borderRadius: 99, padding: '4px 8px', fontSize: 11, fontWeight: 800 }}>{cat.count} model</div></div>
                 <div style={{ padding: 13 }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', gap: 8 }}><div style={{ fontSize: 15, fontWeight: 900, color: '#211d18' }}>{cat.name}</div><span style={{ fontSize: 10, color: cat.color, fontWeight: 900 }}>{cat.group}</span></div>
@@ -132,22 +156,19 @@ export function PackagingHome() {
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(210px,1fr))', gap: 12 }}>
             {models.map(model => {
-              const meta = model.mockup ? model : templateMeta(model.id);
-              const status = modelStatus(model);
-              const audit = modelDielineAudit(model);
-              const output = modelDielineOutput(model);
               const active = (!model.mockup && s.tpl === model.id) || (model.mockup && s.selectedMockup === model.id);
-              return <div key={model.id} onClick={() => openModel(model)} title={status.detail} style={{ border: '1px solid ' + (active ? '#9a5b1f' : '#e7dccb'), background: active ? '#f8efe1' : '#fff', borderRadius: 12, padding: 13, cursor: 'pointer' }}>
-                <ModelThumb model={{ ...model, color: selected.color }} />
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}><span style={{ fontFamily: "'JetBrains Mono',monospace", fontWeight: 900, color: selected.color, fontSize: 12 }}>{model.code}</span><b style={{ fontSize: 14 }}>{model.name}</b></div>
-                <div style={{ marginTop: 7, display: 'inline-flex', alignItems: 'center', gap: 6, borderRadius: 99, padding: '4px 8px', fontSize: 10, fontWeight: 900, background: status.tone + '18', color: status.tone, border: '1px solid ' + status.tone + '55' }}>{status.label}</div>
-                {packagingFallbackNote(model, TPLS) && <div style={{ marginTop: 7, background: '#fff8e6', border: '1px solid #ead7ad', borderRadius: 8, padding: 8, fontSize: 11, color: '#7a5818', lineHeight: 1.35 }}>Belum siap produksi. Desain & 3D pakai fallback STE.</div>}
-                {audit && <div style={{ marginTop: 7, background: '#f6fbf7', border: '1px solid #cfe5d4', borderRadius: 8, padding: 8, fontSize: 11, color: '#315f3f', lineHeight: 1.35 }}><b>{audit.dielineKind || 'NO_GEOMETRY'}</b> · {audit.reviewStatus}<br />{audit.nominalDimensions}</div>}
-                {output && <div onClick={e => e.stopPropagation()} style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 7 }}>{output.svg && <a href={output.svg} target="_blank" style={{ fontSize: 10, fontWeight: 900, color: '#7a5430' }}>SVG</a>}{output.dxf && <a href={output.dxf} download style={{ fontSize: 10, fontWeight: 900, color: '#7a5430' }}>DXF</a>}{output.pdf && <a href={output.pdf} target="_blank" style={{ fontSize: 10, fontWeight: 900, color: '#7a5430' }}>PDF</a>}</div>}
-                <div style={{ fontSize: 12, color: '#756b5b', marginTop: 7 }}>{model.sub}</div>
-                <div style={{ fontSize: 11, color: '#8a8071', marginTop: 8 }}>{meta.stock} · {meta.difficulty} · {meta.mode}</div>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5, marginTop: 8 }}>{(meta.tags || []).map(t => <span key={t} style={{ background: '#f0ebe0', color: '#6d6557', borderRadius: 99, padding: '3px 7px', fontSize: 10 }}>{t}</span>)}</div>
-                <button style={{ marginTop: 12, width: '100%', border: 'none', borderRadius: 8, padding: '9px 10px', color: '#fff', background: selected.color, fontWeight: 900, cursor: 'pointer' }}>{selectableTemplateId(model, TPLS) === model.id ? 'Buka Desain SVG' : (model.mockup ? 'Buka Mockup' : 'Buka Desain & 3D')}</button>
+              return <div key={model.id} className="catalog-model-card" onClick={() => openModel(model)} aria-label={`Buka ${model.name}`} title={`Buka ${model.name}`} style={{ minHeight: 230, border: '1px solid ' + (active ? '#9a5b1f' : '#eee5d7'), background: '#fff', borderRadius: 16, padding: 0, cursor: 'pointer', boxShadow: active ? '0 14px 30px rgba(154,91,31,.14)' : '0 8px 22px rgba(70,50,25,.06)', overflow: 'hidden', position: 'relative' }}>
+                <div style={{ position: 'relative', width: '100%', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ flex: 1, minHeight: 180 }}>
+                    <ModelThumb model={{ ...model, color: selected.color, thumb: modelThumbShape(model.id) }} />
+                  </div>
+                  <div style={{ padding: '10px 12px', background: '#fff', borderTop: '1px solid #f0e8dc', textAlign: 'center' }}>
+                    <div style={{ fontSize: 13, fontWeight: 900, color: '#211d18', lineHeight: 1.3 }}>{model.name}</div>
+                  </div>
+                </div>
+                <div className="model-card-overlay" style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(33,29,24,.65)', opacity: 0, transition: 'opacity .22s ease', display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none' }}>
+                  <button style={{ border: 'none', background: selected.color, color: '#fff', borderRadius: 10, padding: '11px 18px', fontWeight: 900, cursor: 'pointer', fontSize: 14 }}>Mulai Desain</button>
+                </div>
               </div>;
             })}
           </div>

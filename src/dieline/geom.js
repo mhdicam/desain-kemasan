@@ -47,6 +47,7 @@ export function geomOf(s, t) {
     (imp.layers.seal || []).forEach(seal);
     (imp.layers.safe || []).forEach(pts => { const xs = pts.map(p => p[0]), ys = pts.map(p => p[1]); o.safes.push([Math.min(...xs), Math.min(...ys), Math.max(...xs)-Math.min(...xs), Math.max(...ys)-Math.min(...ys)]); tr(pts, o.sbb); tr(pts, o.vbb); });
     (imp.panels || []).forEach(p => { region(p.pts, { panelId: p.panelId, role: p.role, surface: p.surface || 'outside', up: p.up || 'top' }); });
+    if (!o.panels.length) (imp.fills || []).forEach((pts, i) => { if (pts.length >= 3) region(pts, { panelId: i === 0 ? 'front' : `panel-${i + 1}`, role: i === 0 ? 'hero' : 'design', surface: 'outside', up: 'top' }); });
     label((imp.viewBox?.[2] || 0) / 2, 14, `${s.tpl} · SVG import`, 4);
   } else if (s.tpl === 'rte' || s.tpl === 'ste') genTuck(ctx, s, t, s.tpl === 'rte');
   else if (s.tpl === 'gable-box') genGableBox(ctx, s, t);

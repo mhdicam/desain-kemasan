@@ -1,0 +1,308 @@
+{
+  "schemaVersion": "6.0.0",
+  "modelId": "tote-bag",
+  "code": "TOT",
+  "name": "Tote Bag",
+  "unit": "mm",
+  "patternStatus": "SAMPLE_DRAFT_NOT_VALIDATED",
+  "patternType": "fabric_sewing_pattern",
+  "sizeAssumption": "Sample body 425 x 455 mm stitchline, not net finished bag size; two construction options shown, choose one.",
+  "material": "Canvas / blacu",
+  "patternPieces": [
+    {
+      "key": "body",
+      "label": "Bag body",
+      "cutCount": 2,
+      "seamAllowanceMm": 12,
+      "stitchAreaMm2": 193375.0,
+      "cutAreaMm2": 215071.0,
+      "grainline": [
+        [
+          210,
+          55
+        ],
+        [
+          210,
+          395
+        ]
+      ],
+      "printZoneMm": [
+        70,
+        75,
+        285,
+        240
+      ],
+      "holesMm": [],
+      "notes": "separate front/back; optional bottom-boxing 60mm, construction sample",
+      "flatGeometryMm": {
+        "stitchContour": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            425.0,
+            0.0
+          ],
+          [
+            425.0,
+            455.0
+          ],
+          [
+            0.0,
+            455.0
+          ]
+        ],
+        "cutContour": [
+          [
+            -12.0,
+            -12.0
+          ],
+          [
+            -12.0,
+            467.0
+          ],
+          [
+            437.0,
+            467.0
+          ],
+          [
+            437.0,
+            -12.0
+          ]
+        ]
+      },
+      "sheetOffsetMm": [
+        92.0,
+        164.0
+      ]
+    },
+    {
+      "key": "handle",
+      "label": "Folded tote handles",
+      "cutCount": 2,
+      "seamAllowanceMm": 8,
+      "stitchAreaMm2": 40300.0,
+      "cutAreaMm2": 51948.0,
+      "grainline": [
+        [
+          60,
+          31
+        ],
+        [
+          590,
+          31
+        ]
+      ],
+      "printZoneMm": null,
+      "holesMm": [],
+      "notes": "fold width 3x/4x and attach 85 mm from center",
+      "flatGeometryMm": {
+        "stitchContour": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            650.0,
+            0.0
+          ],
+          [
+            650.0,
+            62.0
+          ],
+          [
+            0.0,
+            62.0
+          ]
+        ],
+        "cutContour": [
+          [
+            -8.0,
+            -8.0
+          ],
+          [
+            -8.0,
+            70.0
+          ],
+          [
+            658.0,
+            70.0
+          ],
+          [
+            658.0,
+            -8.0
+          ]
+        ]
+      },
+      "sheetOffsetMm": [
+        752.0,
+        160.0
+      ]
+    },
+    {
+      "key": "top_facing",
+      "label": "Top opening facing",
+      "cutCount": 2,
+      "seamAllowanceMm": 10,
+      "stitchAreaMm2": 30600.0,
+      "cutAreaMm2": 40940.0,
+      "grainline": [
+        [
+          60,
+          36
+        ],
+        [
+          350,
+          36
+        ]
+      ],
+      "printZoneMm": null,
+      "holesMm": [],
+      "notes": "",
+      "flatGeometryMm": {
+        "stitchContour": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            425.0,
+            0.0
+          ],
+          [
+            425.0,
+            72.0
+          ],
+          [
+            0.0,
+            72.0
+          ]
+        ],
+        "cutContour": [
+          [
+            -10.0,
+            -10.0
+          ],
+          [
+            -10.0,
+            82.0
+          ],
+          [
+            435.0,
+            82.0
+          ],
+          [
+            435.0,
+            -10.0
+          ]
+        ]
+      },
+      "sheetOffsetMm": [
+        90.0,
+        801.0
+      ]
+    },
+    {
+      "key": "gusset",
+      "label": "Optional gusset strip",
+      "cutCount": 1,
+      "seamAllowanceMm": 12,
+      "stitchAreaMm2": 117900.0,
+      "cutAreaMm2": 152076.0,
+      "grainline": [
+        [
+          45,
+          65
+        ],
+        [
+          45,
+          1200
+        ]
+      ],
+      "printZoneMm": null,
+      "holesMm": [],
+      "notes": "optional variant only; requires matched side/bottom stitching",
+      "flatGeometryMm": {
+        "stitchContour": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            90.0,
+            0.0
+          ],
+          [
+            90.0,
+            1310.0
+          ],
+          [
+            0.0,
+            1310.0
+          ]
+        ],
+        "cutContour": [
+          [
+            -12.0,
+            -12.0
+          ],
+          [
+            -12.0,
+            1322.0
+          ],
+          [
+            102.0,
+            1322.0
+          ],
+          [
+            102.0,
+            -12.0
+          ]
+        ]
+      },
+      "sheetOffsetMm": [
+        752.0,
+        803.0
+      ]
+    }
+  ],
+  "sewingGraph": [
+    {
+      "a": "body.left+bottom+right",
+      "b": "body.left+bottom+right",
+      "method": "sew_two_panels"
+    },
+    {
+      "a": "handle.ends",
+      "b": "body.top_marks",
+      "method": "bar_tack"
+    },
+    {
+      "a": "top_facing.edge",
+      "b": "body.top_edge",
+      "method": "sew"
+    },
+    {
+      "a": "gusset.long_edge",
+      "b": "body.side_and_bottom",
+      "method": "OPTIONAL alternative construction; length recalibration"
+    }
+  ],
+  "issuesAndLimitations": [
+    "Optional gusset length is placeholder; do not combine both variants without recalculation",
+    "Sewing graph connections are semantic and require seam-length fitting, fabric-specific allowances and physical sample before production.",
+    "SVG/PDF use 1:1 mm sheet dimensions; verify print scaling.",
+    "Material shrinkage, stretch, grain direction, dart and overlock allowances require vendor calibration."
+  ],
+  "exportQA": {
+    "svgReadable": true,
+    "dxfWrote": true,
+    "pdfReadable": true,
+    "geometryValid": true,
+    "layoutValid": true,
+    "outlineClosure": "verified via shapely polygon",
+    "seamMatching": "NOT_VALIDATED",
+    "physicalFit": "NOT_TESTED"
+  }
+}

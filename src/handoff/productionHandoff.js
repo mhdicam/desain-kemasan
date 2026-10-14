@@ -18,7 +18,7 @@ export function handoffManifest(opts = {}) {
     qa,
     exports: ['QA Markdown', 'QA JSON', 'Handoff Markdown', 'Handoff JSON', 'Handoff Bundle TXT'],
     productionPaths: {
-      repo: '/home/ubuntu/OpenBox3D',
+      repo: 'AstaKraf local deployment',
       staticRoot: '/var/www/packaging.pojokinfo.my.id',
       nginxSite: '/etc/nginx/sites-enabled/packaging.pojokinfo.my.id',
       certDir: '/etc/letsencrypt/live/packaging.pojokinfo.my.id/'

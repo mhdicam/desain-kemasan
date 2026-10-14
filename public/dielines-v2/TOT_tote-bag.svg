@@ -1,2 +1,71 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<svg baseProfile="full" height="860.000mm" version="1.1" viewBox="0 0 650.000 860.000" width="650.000mm" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink"><defs /><rect fill="#ffffff" height="860" width="650" x="0" y="0" /><g id="PRODUCT_REFERENCE"><polygon fill="#f1f5f9" points="110,280 540,280 540,750 110,750" stroke="#94a3b8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.95" /><polyline fill="none" points="179.0,275.0 179.37865196645117,261.0688503049724 180.50948724752988,247.32609551090718 182.37721323598913,233.95758280091977 184.9565721418889,221.14409837594454 188.21268256087555,209.05892263150326 192.10151118533724,197.8654868376153 196.5704682793509,187.71516301123415 201.55911886464398,178.74521686939477 206.99999999999997,171.0769515458674 212.81953310180722,164.81406717436712 218.9390189681789,160.04125852214133 225.2757020506519,156.82306963853503 231.74388958101338,155.2030210074478 238.25611041898665,155.20302100744783 244.72429794934808,156.82306963853503 251.06098103182106,160.04125852214133 257.1804668981928,164.8140671743671 262.99999999999994,171.0769515458673 268.440881135356,178.7452168693947 273.4295317206491,187.71516301123415 277.8984888146628,197.86548683761532 281.7873174391244,209.0589226315032 285.0434278581111,221.1440983759445 287.62278676401087,233.95758280091977 289.4905127524701,247.32609551090715 290.6213480335488,261.0688503049724 291.0,274.99999999999994" stroke="#94a3b8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.95" /><polyline fill="none" points="359.0,275.0 359.3786519664512,261.0688503049724 360.5094872475299,247.32609551090718 362.37721323598913,233.95758280091977 364.9565721418889,221.14409837594454 368.2126825608756,209.05892263150326 372.10151118533724,197.8654868376153 376.5704682793509,187.71516301123415 381.559118864644,178.74521686939477 387.0,171.0769515458674 392.8195331018072,164.81406717436712 398.9390189681789,160.04125852214133 405.2757020506519,156.82306963853503 411.7438895810134,155.2030210074478 418.2561104189866,155.20302100744783 424.72429794934806,156.82306963853503 431.06098103182103,160.04125852214133 437.1804668981928,164.8140671743671 442.99999999999994,171.0769515458673 448.440881135356,178.7452168693947 453.4295317206491,187.71516301123415 457.8984888146628,197.86548683761532 461.7873174391244,209.0589226315032 465.0434278581111,221.1440983759445 467.62278676401087,233.95758280091977 469.4905127524701,247.32609551090715 470.6213480335488,261.0688503049724 471.0,274.99999999999994" stroke="#94a3b8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.95" /></g><g id="ARTWORK_PRINT"><polygon fill="#e2f5ff" points="175.0,365 475.0,365 475.0,685 175.0,685" stroke="#147dbe" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.925" /></g><g id="SAFE_REFERENCE"><polygon fill="none" points="187.0,377 463.0,377 463.0,673 187.0,673" stroke="#16975a" stroke-dasharray="5.85 3.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.95" /></g><g id="BLEED_REFERENCE" /><g id="SEAM_REFERENCE"><polyline fill="none" points="110,735 540,735" stroke="#8660c1" stroke-dasharray="7 5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4625" /></g><g id="HARDWARE_REFERENCE" /><g id="CENTER_REFERENCE"><polyline fill="none" points="325.0,365 325.0,685" stroke="#64748b" stroke-dasharray="3.9 5.85" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4625" /></g><g id="TRIM_REFERENCE" /><text fill="#106a9f" font-family="DejaVu Sans,Arial,sans-serif" font-size="10.920000000000002" font-weight="bold" text-anchor="middle" x="325.0" y="525.0">300.000 x 320.000 mm</text><text fill="#172b45" font-family="DejaVu Sans,Arial,sans-serif" font-size="18.427500000000002" font-weight="bold" x="24" y="35">TOT  |  Tote bag front</text><text fill="#bd3947" font-family="DejaVu Sans,Arial,sans-serif" font-size="9.555" font-weight="bold" x="24" y="57">ARTWORK / PRINT PLACEMENT - ENGINEERING REFERENCE (NOT A CERTIFIED DIE)</text><text fill="#536579" font-family="DejaVu Sans,Arial,sans-serif" font-size="8.8725" font-weight="normal" x="24" y="836">BLUE: PRINT   GREEN: SAFE   GREY: PRODUCT REFERENCE   PURPLE: SEAM   AMBER: HARDWARE</text><text fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif" font-size="8.8725" font-weight="normal" x="24" y="851">Exact blue artwork size: 300.000 x 320.000 mm   |   NOT FOR GARMENT / FRAME / TOOLING CUTTING</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="2250mm" version="1.1" viewBox="0 0 1475 2250" width="1475mm">
+  <defs/>
+  <rect fill="#ffffff" height="2250" width="1475" x="0" y="0"/>
+  <g id="CUT">
+    <polygon fill="none" points="80.0,152.0 80.0,631.0 529.0,631.0 529.0,152.0" stroke="#d83b55" stroke-linejoin="round" stroke-width="1.5"/>
+    <polygon fill="none" points="744.0,152.0 744.0,230.0 1410.0,230.0 1410.0,152.0" stroke="#d83b55" stroke-linejoin="round" stroke-width="1.5"/>
+    <polygon fill="none" points="80.0,791.0 80.0,883.0 525.0,883.0 525.0,791.0" stroke="#d83b55" stroke-linejoin="round" stroke-width="1.5"/>
+    <polygon fill="none" points="740.0,791.0 740.0,2125.0 854.0,2125.0 854.0,791.0" stroke="#d83b55" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+  <g id="STITCH">
+    <polygon fill="none" points="92.0,164.0 517.0,164.0 517.0,619.0 92.0,619.0" stroke="#267bbd" stroke-dasharray="8,4" stroke-width="0.9"/>
+    <polygon fill="none" points="752.0,160.0 1402.0,160.0 1402.0,222.0 752.0,222.0" stroke="#267bbd" stroke-dasharray="8,4" stroke-width="0.9"/>
+    <polygon fill="none" points="90.0,801.0 515.0,801.0 515.0,873.0 90.0,873.0" stroke="#267bbd" stroke-dasharray="8,4" stroke-width="0.9"/>
+    <polygon fill="none" points="752.0,803.0 842.0,803.0 842.0,2113.0 752.0,2113.0" stroke="#267bbd" stroke-dasharray="8,4" stroke-width="0.9"/>
+  </g>
+  <g id="GRAIN">
+    <line stroke="#2e9b74" stroke-dasharray="4,3" stroke-width="1.1" x1="302.0" x2="302.0" y1="219.0" y2="559.0"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="302.0" x2="306.5855788267213" y1="219.0" y2="228.99862324642373"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="302.0" x2="297.4144211732787" y1="219.0" y2="228.99862324642373"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="302.0" x2="297.4144211732787" y1="559.0" y2="549.0013767535762"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="302.0" x2="306.5855788267213" y1="559.0" y2="549.0013767535762"/>
+    <line stroke="#2e9b74" stroke-dasharray="4,3" stroke-width="1.1" x1="812.0" x2="1342.0" y1="191.0" y2="191.0"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="812.0" x2="821.9986232464238" y1="191.0" y2="186.41442117327867"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="812.0" x2="821.9986232464238" y1="191.0" y2="195.58557882672133"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="1342.0" x2="1332.0013767535763" y1="191.0" y2="195.58557882672133"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="1342.0" x2="1332.0013767535763" y1="191.0" y2="186.41442117327867"/>
+    <line stroke="#2e9b74" stroke-dasharray="4,3" stroke-width="1.1" x1="150.0" x2="440.0" y1="837.0" y2="837.0"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="150.0" x2="159.99862324642373" y1="837.0" y2="832.4144211732787"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="150.0" x2="159.99862324642373" y1="837.0" y2="841.5855788267213"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="440.0" x2="430.00137675357627" y1="837.0" y2="841.5855788267213"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="440.0" x2="430.00137675357627" y1="837.0" y2="832.4144211732787"/>
+    <line stroke="#2e9b74" stroke-dasharray="4,3" stroke-width="1.1" x1="797.0" x2="797.0" y1="868.0" y2="2003.0"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="797.0" x2="801.5855788267213" y1="868.0" y2="877.9986232464238"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="797.0" x2="792.4144211732787" y1="868.0" y2="877.9986232464238"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="797.0" x2="792.4144211732787" y1="2003.0" y2="1993.0013767535763"/>
+    <line stroke="#2e9b74" stroke-width="1" x1="797.0" x2="801.5855788267213" y1="2003.0" y2="1993.0013767535763"/>
+  </g>
+  <g id="MARK">
+    <line stroke="#e1942e" stroke-width="1.25" x1="513.3460591994153" x2="522.1155171208186" y1="167.4130216269198" y2="159.22176972231227"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="513.3460591994153" x2="522.1155171208186" y1="615.5869783730802" y2="623.7782302776877"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="95.65394080058472" x2="86.88448287918139" y1="615.5869783730802" y2="623.7782302776877"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="1401.525231806659" x2="1402.6646754706774" y1="164.97740847857514" y2="153.0316281299948"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="1401.525231806659" x2="1402.6646754706774" y1="217.02259152142486" y2="228.9683718700052"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="752.474768193341" x2="751.3353245293226" y1="217.02259152142486" y2="228.9683718700052"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="514.1648410727742" x2="516.1692224981161" y1="805.9297575565412" y2="794.0983394208423"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="514.1648410727742" x2="516.1692224981161" y1="868.0702424434588" y2="879.9016605791577"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="90.8351589272258" x2="88.83077750188387" y1="868.0702424434588" y2="879.9016605791577"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="837.0117584031998" x2="848.9835382355203" y1="803.3427036211542" y2="802.5202149303841"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="837.0117584031998" x2="848.9835382355203" y1="2112.657296378846" y2="2113.479785069616"/>
+    <line stroke="#e1942e" stroke-width="1.25" x1="756.9882415968002" x2="745.0164617644797" y1="2112.657296378846" y2="2113.479785069616"/>
+    <line stroke="#202d4a" stroke-width="2" x1="1295" x2="1395" y1="85" y2="85"/>
+    <line stroke="#202d4a" stroke-width="2" x1="1295" x2="1295" y1="79" y2="91"/>
+    <line stroke="#202d4a" stroke-width="2" x1="1395" x2="1395" y1="79" y2="91"/>
+  </g>
+  <g id="PRINT">
+    <polygon fill="#8d6ad6" fill-opacity="0.065" points="162.0,479.0 447.0,479.0 447.0,239.0 162.0,239.0" stroke="#8d6ad6" stroke-dasharray="5,5" stroke-width="1.2"/>
+  </g>
+  <g id="LABEL">
+    <text fill="#21314c" font-family="DejaVu Sans, Arial" font-size="17" font-weight="bold" x="80.0" y="134.0">BODY  ×2  | SA 12 mm</text>
+    <text fill="#21314c" font-family="DejaVu Sans, Arial" font-size="17" font-weight="bold" x="744.0" y="134.0">HANDLE  ×2  | SA 8 mm</text>
+    <text fill="#21314c" font-family="DejaVu Sans, Arial" font-size="17" font-weight="bold" x="80.0" y="773.0">TOP_FACING  ×2  | SA 10 mm</text>
+    <text fill="#21314c" font-family="DejaVu Sans, Arial" font-size="17" font-weight="bold" x="740.0" y="773.0">GUSSET  ×1  | SA 12 mm</text>
+    <text fill="#21314c" font-family="DejaVu Sans" font-size="30" font-weight="bold" x="55" y="49">TOT  /  TOTE BAG — SEWING PATTERN V6</text>
+    <text fill="#af4d12" font-family="DejaVu Sans" font-size="16" x="55" y="82">ACTUAL 1:1 · mm ·  SAMPLE PATTERN ONLY (NOT MANUFACTURING APPROVED) · 4 UNIQUE PIECES</text>
+    <text fill="#21314c" font-family="DejaVu Sans" font-size="14" x="55" y="107">RED CUT   BLUE STITCH   GREEN GRAIN   ORANGE NOTCH/FEATURE   PURPLE PRINT AREA   |  Page may exceed standard paper sizes</text>
+    <text fill="#8f5036" font-family="DejaVu Sans" font-size="13" x="55" y="2200">Sample body 425 x 455 mm stitchline, not net finished bag size; two construction options shown, choose one.</text>
+    <text fill="#8f5036" font-family="DejaVu Sans" font-size="13" x="55" y="2226">Print at 100% scale; measure 100 mm scale bar before use.</text>
+    <text fill="#202d4a" font-family="DejaVu Sans" font-size="13" x="1305" y="72">100 mm</text>
+  </g>
+</svg>

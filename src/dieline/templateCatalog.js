@@ -1,6 +1,7 @@
 import { TPLS } from './templates.js';
 import { dielineAuditOf } from './dielineAuditData.js';
 import { artworkGuideOf } from '../artwork/artworkGuideData.js';
+import { apparelPatternOf } from '../artwork/apparelSewingPatternData.js';
 import { IMPORTED_DIELINES } from './importedDielines.js';
 
 export const PRODUCT_CATEGORIES = [
@@ -160,6 +161,18 @@ export function templateMeta(id) {
   return TEMPLATE_META[id] || { category: 'folding-carton', productCategory: 'packaging', tags: [], stock: '-', difficulty: '-', mode: 'Desain + 3D' };
 }
 
+export function modelThumbShape(modelId) {
+  const shapeMap = {
+    'rte': 'folding', 'ste': 'folding', 'gable-box': 'folding', 'window-carton': 'folding', 'auto-lock-bottom': 'folding', 'pillow-box': 'folding',
+    'pizza-box': 'food', 'shipping-box': 'mailer', 'sleeve-tray': 'folding', 'fries-box': 'food',
+    'paper-cup-packaging': 'tube', 'cup-sleeve': 'tube', 'cyl': 'tube', 'hex': 'tube',
+    'bottle-label-packaging': 'folding', 'belly-band': 'folding', 'hangtag': 'display', 'sticker-label-roll': 'folding',
+    'mailer': 'mailer', 'lidbase': 'folding', 'drawer': 'folding', 'hanger-box': 'folding', 'book-box': 'display',
+    'standup-pouch': 'folding', 'flat-sachet': 'folding', 'pillow-pack': 'folding', 'spout-pouch': 'folding', 'burger-clamshell': 'display'
+  };
+  return shapeMap[modelId] || 'folding';
+}
+
 export function categoryOfTemplate(id) {
   const meta = templateMeta(id);
   return PRODUCT_CATEGORIES.find(c => c.id === meta.productCategory) || PRODUCT_CATEGORIES[0];
@@ -200,13 +213,26 @@ export function mockupModelById(id) {
   const model = MOCKUP_MODELS.find(m => m.id === id) || PACKAGING_EXTRA_MODELS.find(m => m.id === id) || null;
   if (!model) return null;
   const guide = artworkGuideOf(model.id);
-  return guide ? { ...model, artworkGuide: guide, mode: model.mode || 'Desain + PDF' } : model;
+  const pattern = apparelPatternOf(model.id);
+  return { ...model, ...(guide ? { artworkGuide: guide, mode: model.mode || 'Desain + PDF' } : {}), ...(pattern ? { apparelPattern: pattern, mode: 'Pola Jahit + Desain + 3D' } : {}) };
 }
 
 export function modelDielineAudit(modelOrId) {
   const id = typeof modelOrId === 'string' ? modelOrId : modelOrId?.id;
   if (!id) return null;
   const guide = artworkGuideOf(id);
+  const pattern = apparelPatternOf(id);
+  if (pattern) return {
+    dielineKind: 'APPAREL_SEWING_PATTERN',
+    reviewStatus: pattern.status || 'SAMPLE_DRAFT_NOT_VALIDATED',
+    manufacturerApproved: false,
+    physicalPrototypeValidated: false,
+    nominalDimensions: `${guide?.model || id}: ${pattern.sheetWidthMm} x ${pattern.sheetHeightMm} mm sheet; ${pattern.actualCutPieces} cut pieces`,
+    output: { svg: pattern.svg, dxf: pattern.dxf, pdf: pattern.pdf, patternJson: pattern.patternJson },
+    preview: pattern.preview,
+    apparelPatternV6: true,
+    notes: `${guide?.note || 'Draft apparel sewing pattern.'} Seam match QA: ${pattern.seamMatchQA}; physical production QA: ${pattern.physicalProductionQA}. ${pattern.warnings || ''}`.trim()
+  };
   if (guide) return {
     dielineKind: 'ARTWORK_GUIDE',
     reviewStatus: guide.status || 'PRINT_REFERENCE_ONLY',
@@ -260,9 +286,12 @@ export function searchModels(query = '', categoryId = '', templates = TPLS) {
 
 export function modelStatus(model) {
   const audit = modelDielineAudit(model);
-  const guide = artworkGuideOf(model.id);
+  const id = typeof model === 'string' ? model : model?.id;
+  const guide = artworkGuideOf(id);
+  const pattern = apparelPatternOf(id);
+  if (pattern) return { label: 'Pola Jahit Draft', tone: '#9a5aa6', detail: `${guide?.model || model?.name || id}: pola jahit sample ${pattern.sheetWidthMm} x ${pattern.sheetHeightMm} mm, ${pattern.actualCutPieces} cut pieces. Belum production/fit validated.` };
   if (guide) return { label: 'Artwork Guide', tone: '#3f72b5', detail: `${guide.model}: area print ${guide.artworkSizeMM} mm. Bukan cutline manufaktur; ${guide.note}` };
-  if (!model.mockup) return { label: audit?.reviewStatus === 'PROTOTYPE_REQUIRED' ? 'Draft Prototype' : 'Produksi Draft', tone: audit?.reviewStatus === 'PROTOTYPE_REQUIRED' ? '#b7791f' : '#2f8f55', detail: audit ? `${audit.reviewStatus}: ${audit.nominalDimensions || 'engineering draft, belum manufacturer approved'}` : 'Struktur dieline, desain, dan 3D sudah sinkron engine OpenBox3D.' };
+  if (!model.mockup) return { label: audit?.reviewStatus === 'PROTOTYPE_REQUIRED' ? 'Draft Prototype' : 'Produksi Draft', tone: audit?.reviewStatus === 'PROTOTYPE_REQUIRED' ? '#b7791f' : '#2f8f55', detail: audit ? `${audit.reviewStatus}: ${audit.nominalDimensions || 'engineering draft, belum manufacturer approved'}` : 'Struktur dieline, desain, dan 3D sudah sinkron engine AstaKraf.' };
   if (designTemplateIds().has(model.id)) return { label: audit?.reviewStatus === 'PROTOTYPE_REQUIRED' ? 'Draft SVG' : 'SVG Cocok', tone: '#2f8f55', detail: audit ? `${audit.reviewStatus}: Desain memakai koordinat SVG asli dan safe printing hijau.` : 'Desain memakai koordinat SVG asli.' };
   if (model.productCategory === 'packaging' || model.category === 'packaging') return { label: 'Butuh Dieline', tone: '#b7791f', detail: 'Belum siap produksi: belum punya dieline parametris/mesh/PDF sendiri. Panel Desain dan 3D memakai fallback STE agar fitur lama tetap jalan.' };
   if (model.category === 'custom-model') return { label: model.surface === 'upload3d' ? 'Butuh 3D Mesh' : 'Butuh Brief', tone: '#6f6a60', detail: 'Perlu file/brief dari user sebelum bisa valid produksi.' };
