@@ -43,7 +43,7 @@ function openModel(model) {
     store.set(st => {
       const mat = store.mat();
       const next = { ...st, tpl, ovr: {}, typeOvr: {} };
-      return { selectedCategory: 'packaging', selectedMockup: model.id, selectedPackagingModel: model.id, selectedPackagingName: model.name, packagingFallbackNote: packagingFallbackNote(model, TPLS), tpl, ovr: {}, typeOvr: {}, selSeg: null, view: 'design', fitNonce: st.fitNonce + 1, layers: reflowLayersToContainers(st.layers, geomOf(st, mat.t), geomOf(next, mat.t)) };
+      return { activeModelId:model.id, selectedCategory: 'packaging', selectedMockup: model.id, selectedPackagingModel: model.id, selectedPackagingName: model.name, packagingFallbackNote: packagingFallbackNote(model, TPLS), tpl, ovr: {}, typeOvr: {}, selSeg: null, view: 'design', fitNonce: st.fitNonce + 1, layers: reflowLayersToContainers(st.layers, geomOf(st, mat.t), geomOf(next, mat.t)) };
     });
     return;
   }
@@ -52,14 +52,14 @@ function openModel(model) {
     store.set(st => {
       const mat = store.mat();
       const next = { ...st, tpl, ovr: {}, typeOvr: {} };
-      return { selectedCategory: model.productCategory || model.category, selectedMockup: model.id, selectedPackagingModel: model.id, selectedPackagingName: model.name, packagingFallbackNote: packagingFallbackNote(model, TPLS), tpl, ovr: {}, typeOvr: {}, selSeg: null, view: model.mode === 'Brief' ? 'home' : 'three', fitNonce: st.fitNonce + 1, layers: reflowLayersToContainers(st.layers, geomOf(st, mat.t), geomOf(next, mat.t)) };
+      return { activeModelId:model.id, selectedCategory: model.productCategory || model.category, selectedMockup: model.id, selectedPackagingModel: model.id, selectedPackagingName: model.name, packagingFallbackNote: packagingFallbackNote(model, TPLS), tpl, ovr: {}, typeOvr: {}, selSeg: null, view: model.mode === 'Brief' ? 'home' : 'three', fitNonce: st.fitNonce + 1, layers: reflowLayersToContainers(st.layers, geomOf(st, mat.t), geomOf(next, mat.t)) };
     });
     return;
   }
   store.set(st => {
     const mat = store.mat();
     const next = { ...st, tpl: model.id, ovr: {}, typeOvr: {} };
-    return { selectedCategory: 'packaging', tpl: model.id, ovr: {}, typeOvr: {}, selSeg: null, view: 'design', fitNonce: st.fitNonce + 1, layers: reflowLayersToContainers(st.layers, geomOf(st, mat.t), geomOf(next, mat.t)) };
+    return { activeModelId:model.id, selectedCategory: 'packaging', tpl: model.id, ovr: {}, typeOvr: {}, selSeg: null, view: 'design', fitNonce: st.fitNonce + 1, layers: reflowLayersToContainers(st.layers, geomOf(st, mat.t), geomOf(next, mat.t)) };
   });
 }
 

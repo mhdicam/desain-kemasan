@@ -3,6 +3,7 @@
 // edit manual存为override stream (ovr pergeseran node, typeOvr ganti tipe garis)，在template求值replay di hasil。
 import { genTuck, genGableBox, genWindowCarton, genAutoLockBottom, genPillowBox, genPizzaBox, genRSCBox, genSleeveTray, genPaperCup, genCupSleeve, genFriesBox, genBottleLabel, genBellyBand, genHangtag, genStickerLabelRoll, genHangerBox, genBookBox, genStandupPouch, genFlatSachet, genPillowPack, genSpoutPouch, genBurgerClamshell, genMailer, genTray, genSleeve, genTube } from './templates.js';
 import { IMPORTED_DIELINES } from './importedDielines.js';
+import { NATIVE_PROCEDURAL_IDS } from '../render3d/modelAssetRegistry.js';
 
 let _key = null, _val = null;
 
@@ -37,7 +38,7 @@ export function geomOf(s, t) {
   const fmt = v => Math.round(v * 10) / 10;
   const ctx = { cut, crease, seal, glueLine, perf, fill, panel, region, safeR, label, dimH, dimV, q, rect, fmt };
 
-  if (IMPORTED_DIELINES[s.tpl]) {
+  if (IMPORTED_DIELINES[s.tpl] && !NATIVE_PROCEDURAL_IDS.includes(s.tpl)) {
     const imp = IMPORTED_DIELINES[s.tpl];
     (imp.fills || []).forEach(fill);
     (imp.layers.glue || []).forEach(glueLine);
@@ -95,6 +96,9 @@ export function geomOf(s, t) {
   const len = ty => o.segs.filter(g => g.t === ty).reduce((a, g) => { let l = 0; for (let i = 0; i < g.pts.length - 1; i++) l += Math.hypot(g.pts[i + 1][0] - g.pts[i][0], g.pts[i + 1][1] - g.pts[i][1]); return a + l; }, 0);
   o.cutLen = len('cut'); o.creaseLen = len('crease'); o.glueLen = len('glue');
   o.cutN = o.segs.filter(g => g.t === 'cut').length; o.creaseN = o.segs.filter(g => g.t === 'crease').length; o.sealN = o.segs.filter(g => g.t === 'seal').length; o.glueN = o.segs.filter(g => g.t === 'glue').length; o.perfN = o.segs.filter(g => g.t === 'perf').length;
+  o.geometryKind=NATIVE_PROCEDURAL_IDS.includes(s.tpl)?'native-parametric':IMPORTED_DIELINES[s.tpl]?'imported-static-svg':'missing';
+  o.parametricDimensions=o.geometryKind==='native-parametric';
+  if(o.sbb[0]===1e9){o.sbb=[0,0,Math.max(20,s.L||80),Math.max(20,s.H||120)];o.vbb=[...o.sbb];}
   _key = key; _val = o; return o;
 }
 

@@ -12,7 +12,7 @@ const initialPaper = qp.get('paper') || legacy3d[0], initialFilm = qp.get('film'
 const paper0 = paperPreset(initialPaper), film0 = filmPreset(initialFilm);
 const rig0 = scenePreset(qp.get('studio') || 'lab-default'); // Scene default即Bawaan lab-default (lama「候选21」红studioparameter固化)；lama id neutral/high-key/dark-craft tetapkompatibel
 const initial = {
-  view: 'home', tpl: qp.get('tpl') || 'rte', selectedCategory: qp.get('category') || '', categoryThumbnails: {}, L: 80, W: 40, H: 120, matId: 'sbs350', bleed: 3, glue: 14,
+  view: 'home', activeModelId:qp.get('model')||qp.get('tpl')||'rte', tpl: qp.get('tpl') || 'rte', selectedCategory: qp.get('category') || '', categoryThumbnails: {}, L: 80, W: 40, H: 120, matId: 'sbs350', bleed: 3, glue: 14,
   show: { bleed: true, safe: true, dims: true, labels: true },
   k: 2.2, tx: 160, ty: 200,
   fold: qp.has('fold') ? +qp.get('fold') : 24, foldFromQuery: qp.has('fold'), mat3d: qp.get('mat3d') || 'sbs', paper3d: initialPaper, film3d: initialFilm,
@@ -101,7 +101,7 @@ export const store = {
       histLast = now;
       histFuture = [];
     }
-    state = { ...state, ...p };
+    state = { ...state, ...p, activeModelId:p.activeModelId||p.tpl||state.activeModelId };
     listeners.forEach(l => l());
   },
   undo() {
@@ -123,7 +123,7 @@ export const store = {
   histDepth: () => [histPast.length, histFuture.length],
   reset(patch = {}) {
     histPast = []; histFuture = []; histLast = 0;
-    state = { ...cloneInitial(), ...patch };
+    state = { ...cloneInitial(), ...patch, activeModelId:patch.activeModelId||patch.tpl||initial.activeModelId };
     listeners.forEach(l => l());
   },
   subscribe(l) { listeners.add(l); return () => listeners.delete(l); },

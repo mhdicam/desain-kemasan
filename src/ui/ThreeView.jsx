@@ -3,7 +3,9 @@ import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { store, useStore } from '../state/store.js';
 import { TPLS } from '../dieline/templates.js';
 import { embDirOf } from '../design/emboss.js';
-import { BoxPreview, boxPreviewContextOf } from '../render3d/BoxPreview.jsx';
+import { boxPreviewContextOf } from '../render3d/BoxPreview.jsx';
+import { ModelPreview } from '../render3d/ModelPreview.jsx';
+import { NATIVE_PROCEDURAL_IDS } from '../render3d/modelAssetRegistry.js';
 import { STAGES } from '../render3d/stage.js';
 import { PAPER_PRESETS, FILM_PRESETS, paperPreset, filmPreset } from '../render3d/presets.js';
 import { SCENE_PRESETS, scenePreset, rigToStorePatch } from '../render3d/rig.js';
@@ -19,7 +21,9 @@ export function ThreeView() {
   const pf = useRef(null);
   const engRef = useRef(null);
   const [foldPlaying, setFoldPlaying] = useState(false);
-  const activeModel = allModels().find(x => x.id === (s.selectedPackagingModel || s.selectedMockup || s.tpl)) || allModels().find(x => x.id === s.tpl) || { id: s.tpl, name: (TPLS.find(x => x.id === s.tpl) || TPLS[0]).name, category: s.selectedCategory || 'packaging' };
+  const activeModelId=s.activeModelId||s.tpl;
+  const nativeReady=NATIVE_PROCEDURAL_IDS.includes(activeModelId);
+  const activeModel = allModels().find(x => x.id === activeModelId) || allModels().find(x => x.id === s.tpl) || { id: s.tpl, name: (TPLS.find(x => x.id === s.tpl) || TPLS[0]).name, category: s.selectedCategory || 'packaging' };
   const tplName = s.selectedPackagingName || activeModel.name || (TPLS.find(x => x.id === s.tpl) || TPLS[0]).name;
   const fallbackNote = s.selectedPackagingModel ? packagingFallbackNote(activeModel) : '';
   const finCount = f => s.layers.filter(l => l.finish === f).length;
@@ -27,7 +31,7 @@ export function ThreeView() {
   const finSummary = 'Layer finishing: foil×' + (finCount('foil') + finCount('silver')) + ' · UV×' + finCount('uv') + ' · gloss×' + finCount('gloss') + ' · holografik×' + finCount('holo') + ' · emboss×' + embCount('up') + ' · deboss×' + embCount('down') + '(dari halaman Desain)';
   // 烘焙输入：整 plat包围盒 + 全部Layer (atlasmenimpasemua面板，Layer放在哪 3D 就Tampilan在哪)
   const preview = boxPreviewContextOf(s, m);
-  const mesh = productionMesh({ tpl: s.tpl, L: s.L, W: s.W, H: s.H, t, glue: s.glue, quality: s.meshQuality || 'medium' });
+  const mesh = nativeReady ? productionMesh({ tpl: s.tpl, L: s.L, W: s.W, H: s.H, t, glue: s.glue, quality: s.meshQuality || 'medium' }) : {id:activeModelId,faces:[],vertices:[],scale:[s.L,s.W,s.H],features:[],panelGraph:{nodes:[],components:[]},units:'millimeter',factory:'prebuilt-required',unsupported:true,validationNotes:['GLB assembled required']};
   const meshStatus = meshChecklist(mesh);
   const qa = meshQAReport(mesh);
   const factoryLabel = meshStrategyForModel(activeModel);
@@ -155,7 +159,7 @@ export function ThreeView() {
         <div style={{ background: qa.valid ? '#e6f4ea' : '#fff8e6', border: '1px solid ' + (qa.valid ? '#b9dfc4' : '#ead7ad'), borderRadius: 6, padding: '7px 9px', fontSize: 10.5, lineHeight: 1.55, color: qa.valid ? '#2f7044' : '#7a5818', marginBottom: 8 }}>
           Factory: <b>{factoryLabel}</b><br />Panel graph {qa.panelGraphNodes} node · bbox {qa.bboxMm.slice(3).map((v, i) => Math.round((v - qa.bboxMm[i]) * 10) / 10).join(' × ')} mm<br />Status: software QA only, bukan approval produksi fisik.
         </div>
-        <button onClick={() => downloadMeshFiles(s, m)} style={{ ...btnSt, width: '100%', padding: '8px 0', fontWeight: 800, background: '#9a5b1f', color: '#fff', border: 'none' }}>Download OBJ + MTL + glTF + GLB + QA</button>
+        <button disabled={!nativeReady} onClick={() => downloadMeshFiles(s, m)} style={{ ...btnSt, width: '100%', padding: '8px 0', fontWeight: 800, background: '#9a5b1f', color: '#fff', border: 'none' }}>Download OBJ + MTL + glTF + GLB + QA</button>
         <div style={{ marginTop: 8, fontSize: 10.5, color: '#a59a85', lineHeight: 1.55 }}>Wave 1: GLB valid meter units, komponen bernama, UV, panel graph, dan QA JSON. Model tanpa rule native tetap diberi status butuh konstruksi/aset, bukan cube generik atau klaim production approved.</div>
       </Block>
       <Block>
@@ -183,7 +187,7 @@ export function ThreeView() {
     </div>
 
     <div style={{ flex: 1, position: 'relative', overflow: 'hidden', background: 'radial-gradient(ellipse at 50% 38%, #efe9db 0%, #ddd4c0 65%, #cfc4ab 100%)' }}>
-      <BoxPreview s={s} m={m} mesh={mesh} qa={qa} context={preview} fitFold={foldPlaying} engineRef={engRef} />
+      <ModelPreview modelId={activeModelId} s={s} m={m} mesh={mesh} qa={qa} context={preview} fitFold={foldPlaying} engineRef={engRef} />
       <div style={{ position: 'absolute', left: 12, bottom: 12, background: 'rgba(250,247,240,0.92)', border: '1px solid #ded5c4', borderRadius: 6, padding: '6px 12px', fontSize: 11, color: '#5c554a', whiteSpace: 'nowrap' }} title="Pilih mode kiri atas lalu drag kiri; scroll untuk zoom; klik dua kali untuk fit">Scroll untuk zoom · klik dua kali untuk fit</div>
     </div>
   </>);
