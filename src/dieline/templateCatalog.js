@@ -260,7 +260,7 @@ export function designTemplateIds(templates = TPLS) {
 
 export function selectableTemplateId(model, templates = TPLS) {
   if (!model) return 'ste';
-  return designTemplateIds(templates).has(model.id) ? model.id : 'ste';
+  return model.id; // Never silently turn an unsupported model into STE
 }
 
 export function unsupportedProductionPackaging(templates = TPLS) {

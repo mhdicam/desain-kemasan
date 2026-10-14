@@ -87,7 +87,7 @@ export function StructureView() {
                     {cat.templates.map(b => {
                       const meta = templateMeta(b.id);
                       return (
-                        <div key={b.id} className="structure-model-card" onClick={() => store.set(st => { const mat = store.mat(), next = { ...st, tpl: b.id, ovr: {}, typeOvr: {} }; return { tpl: b.id, ovr: {}, typeOvr: {}, selSeg: null, fitNonce: st.fitNonce + 1, layers: reflowLayersToContainers(st.layers, geomOf(st, mat.t), geomOf(next, mat.t)) }; })}
+                        <div key={b.id} className="structure-model-card" onClick={() => store.set(st => { const mat = store.mat(), next = { ...st, tpl: b.id, ovr: {}, typeOvr: {} }; return { activeModelId:b.id, selectedPackagingModel:b.id, selectedPackagingName:b.name, selectedMockup:b.id, selectedCategory:'packaging', tpl: b.id, ovr: {}, typeOvr: {}, selSeg: null, fitNonce: st.fitNonce + 1, layers: reflowLayersToContainers(st.layers, geomOf(st, mat.t), geomOf(next, mat.t)) }; })}
                           style={{ cursor: 'pointer', border: '1px solid ' + (s.tpl === b.id ? '#9a5b1f' : '#eadfce'), background: s.tpl === b.id ? '#f7efe2' : '#fff', borderRadius: 7, padding: '8px 9px' }}>
                           <div style={{ display: 'flex', alignItems: 'center', gap: 7 }}>
                             <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 10.5, fontWeight: 700, color: s.tpl === b.id ? '#9a5b1f' : '#a59a85' }}>{b.code}</div>

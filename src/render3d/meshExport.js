@@ -1,4 +1,5 @@
 import { buildMeshByFactory } from './meshFactories.js';
+import {exportGLBBuffer,exportGLTFText,inspectGLBBuffer} from './gltfBinary.js';
 
 const r = v => Math.round(v * 10000) / 10000;
 const enc = s => new TextEncoder().encode(s);
@@ -17,7 +18,7 @@ export function meshChecklist(mesh) {
     hasProductionScale: mesh.units === 'millimeter' && mesh.scale.every(v => v > 0),
     hasPanelGraph: !!mesh.panelGraph && Array.isArray(mesh.panelGraph.nodes),
     hasSpecialFeatures: mesh.features.length > 0,
-    hasNoGenericCubeFallback: named && mesh.factory !== 'generic-cube'
+    hasNoGenericCubeFallback: named && mesh.factory !== 'generic-cube' && !mesh.unsupported
   };
 }
 
@@ -63,54 +64,9 @@ export function exportMTL() {
   return `newmtl paper\nKd 0.92 0.88 0.78\nKs 0.08 0.08 0.08\nNs 30\n\nnewmtl corrugated\nKd 0.72 0.60 0.42\nKs 0.02 0.02 0.02\nNs 5\n\nnewmtl glue\nKd 0.58 0.58 0.58\n\nnewmtl paper-pe\nKd 0.96 0.94 0.86\nKs 0.12 0.12 0.12\nNs 45\n\nnewmtl rim\nKd 0.98 0.98 0.94\n\nnewmtl screen\nKd 0.05 0.06 0.08\n`;
 }
 
-function gltfJson(mesh) {
-  const meterScale = 0.001;
-  return {
-    asset: { version: '2.0', generator: 'AstaKraf meshFactories Wave1' },
-    scene: 0,
-    scenes: [{ nodes: [0] }],
-    nodes: [{ name: mesh.id, mesh: 0 }],
-    meshes: [{ name: mesh.id, primitives: mesh.faces.map((f, i) => ({ mode: 4, material: i, attributes: {}, extras: { component: f.name, panelId: f.panelId || f.name, verticesMeters: f.verts.map(v => v.map(n => r(n * meterScale))), uv: f.uv, mat: f.mat } })) }],
-    materials: mesh.faces.map(f => ({ name: f.mat || 'paper', pbrMetallicRoughness: { baseColorFactor: f.mat === 'corrugated' ? [0.72,0.60,0.42,1] : [0.92,0.88,0.78,1], roughnessFactor: 0.72, metallicFactor: 0 } })),
-    animations: mesh.features.some(f => f.foldAnimation) ? [{ name: 'fold-unfold', channels: [], samplers: [], extras: { foldState: '0..100', panelGraph: mesh.panelGraph } }] : [],
-    extras: { units: 'meter', sourceUnits: mesh.units, sourceScaleMm: mesh.scale, factory: mesh.factory, features: mesh.features, panelGraph: mesh.panelGraph, qa: meshQAReport(mesh), physicalProductionApproved: false }
-  };
-}
-
-export function exportGLTF(mesh) {
-  return JSON.stringify(gltfJson(mesh), null, 2);
-}
-
-export function exportGLB(mesh) {
-  const json = JSON.stringify(gltfJson(mesh));
-  const jb = enc(json);
-  const jpad = (4 - (jb.length % 4)) % 4;
-  const total = 12 + 8 + jb.length + jpad;
-  const ab = new ArrayBuffer(total);
-  const dv = new DataView(ab);
-  let o = 0;
-  dv.setUint32(o, 0x46546c67, true); o += 4;
-  dv.setUint32(o, 2, true); o += 4;
-  dv.setUint32(o, total, true); o += 4;
-  dv.setUint32(o, jb.length + jpad, true); o += 4;
-  dv.setUint32(o, 0x4e4f534a, true); o += 4;
-  new Uint8Array(ab, o, jb.length).set(jb); o += jb.length;
-  for (let i=0;i<jpad;i++) new Uint8Array(ab)[o+i] = 0x20;
-  return ab;
-}
-
-export function verifyGLB(buffer) {
-  const dv = new DataView(buffer);
-  if (dv.getUint32(0, true) !== 0x46546c67) throw new Error('Invalid GLB magic');
-  if (dv.getUint32(4, true) !== 2) throw new Error('Invalid GLB version');
-  if (dv.getUint32(8, true) !== buffer.byteLength) throw new Error('Invalid GLB length');
-  const len = dv.getUint32(12, true), type = dv.getUint32(16, true);
-  if (type !== 0x4e4f534a) throw new Error('Missing JSON chunk');
-  const text = new TextDecoder().decode(new Uint8Array(buffer, 20, len)).trim();
-  const json = JSON.parse(text);
-  if (json.asset?.version !== '2.0') throw new Error('Invalid glTF asset');
-  return { version: json.asset.version, meshes: json.meshes?.length || 0, nodes: json.nodes?.length || 0, animations: json.animations?.length || 0, factory: json.extras?.factory };
-}
+export function exportGLTF(mesh){return exportGLTFText(mesh);}
+export function exportGLB(mesh){return exportGLBBuffer(mesh);}
+export function verifyGLB(buffer){return inspectGLBBuffer(buffer);}
 
 function downloadBlob(name, data, type) {
   const a = document.createElement('a');
@@ -120,6 +76,7 @@ function downloadBlob(name, data, type) {
 }
 
 export function downloadMeshFiles(state, mat = { t: 0.45 }) {
+  if(!['rte','ste','mailer','lidbase','drawer','cyl','hex'].includes(state.tpl))throw Error('Prebuilt asset required; cannot export generic placeholder');
   const mesh = productionMesh({ tpl: state.tpl, L: state.L, W: state.W, H: state.H, t: mat.t, glue: state.glue, quality: state.meshQuality || 'medium' });
   downloadBlob(`${mesh.id}.obj`, exportOBJ(mesh), 'text/plain');
   downloadBlob(`${mesh.id}.mtl`, exportMTL(mesh), 'text/plain');

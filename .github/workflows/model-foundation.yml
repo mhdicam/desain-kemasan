@@ -1,0 +1,27 @@
+name: Model foundation QA
+on:
+  push:
+    branches: [refactor/model-sync-glb-foundation]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install
+        run: npm ci
+      - name: Check original template compatibility
+        run: npm run check:template-sync
+      - name: Model asset and GLB tests
+        run: npm run check:model-foundation
+      - name: Build Vite application
+        run: npm run build
