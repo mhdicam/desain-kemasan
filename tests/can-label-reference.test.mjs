@@ -1,3 +1,4 @@
+import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -17,3 +18,17 @@ test('reference is registered as preview, not manufacturer approved',()=>{assert
 test('six real assembled components exist',()=>{const ns=parsed.json.nodes.map(n=>n.name);for(const n of ['label-wrap','can-body','top-rim','bottom-rim','can-top','can-bottom'])assert.ok(ns.includes(n),n);assert.equal(ns.length,6)});
 test('printed label UV covers cut region within atlas bleed',()=>{const {a,offset,dv,stride}=attr('label-wrap','TEXCOORD_0');assert.equal(a.componentType,5126);let lo=[Infinity,Infinity],hi=[-Infinity,-Infinity];for(let i=0;i<a.count;i++){for(let k=0;k<2;k++){const f=dv.getFloat32(offset+4*(i*stride+k),true);lo[k]=Math.min(lo[k],f);hi[k]=Math.max(hi[k],f);}}const target=[(18-12)/222,(228-12)/222,1-(152-31)/127,1-(37-31)/127];assert.ok(Math.abs(lo[0]-target[0])<1e-5);assert.ok(Math.abs(hi[0]-target[1])<1e-5);assert.ok(Math.abs(lo[1]-target[2])<1e-5);assert.ok(Math.abs(hi[1]-target[3])<1e-5)});
 test('print surface has indexed triangles',()=>{const node=parsed.json.nodes.find(n=>n.name==='label-wrap'),p=parsed.json.meshes[node.mesh].primitives[0];assert.ok(Number.isInteger(p.indices));assert.equal(parsed.json.accessors[p.indices].count,48*6)});
+
+test('real Three.js GLTFLoader parses and reconstructs Can Label reference', async ()=>{
+  const view=glb.buffer.slice(glb.byteOffset,glb.byteOffset+glb.byteLength);
+  const result=await new Promise((resolve,reject)=>new GLTFLoader().parse(view,'',resolve,reject));
+  const meshes=[];
+  result.scene.traverse(o=>{if(o.isMesh)meshes.push(o)});
+  assert.equal(meshes.length,6);
+  const label=meshes.find(o=>o.name==='label-wrap');
+  assert.ok(label,'printable label mesh');
+  assert.ok(label.geometry.getAttribute('position').count>90);
+  assert.ok(label.geometry.getAttribute('uv').count>90);
+  assert.ok(label.geometry.index.count>200);
+  assert.ok(meshes.every(o=>o.geometry.boundingSphere===null || Number.isFinite(o.geometry.boundingSphere.radius)));
+});
