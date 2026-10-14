@@ -10,7 +10,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "npm run check:template-sync && npm run check:model-foundation && npm run check:reference-assets && npm run check:server-assets",
+    "prebuild": "npm run check:template-sync && npm run check:model-foundation && npm run check:reference-assets && npm run check:gable-box && npm run check:server-assets",
     "build": "vite build",
     "build:pages": "npm run check:template-sync && vite build --base=/",
     "check:template-sync": "node scripts/check-template-sync.mjs",
@@ -18,7 +18,8 @@
     "preview": "vite preview",
     "check:model-foundation": "node --test tests/model-foundation.test.mjs",
     "check:reference-assets": "node --test tests/can-label-reference.test.mjs",
-    "check:server-assets": "node --test tests/server-assets.test.mjs"
+    "check:server-assets": "node --test tests/server-assets.test.mjs",
+    "check:gable-box": "node --test tests/gable-box-reference.test.mjs"
   },
   "dependencies": {
     "react": "18.3.1",

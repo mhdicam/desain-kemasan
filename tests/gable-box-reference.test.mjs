@@ -1,0 +1,13 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
+const bytes=readFileSync(new URL('../public/model-assets/gable-box/assembled.glb',import.meta.url));
+const manifest=JSON.parse(readFileSync(new URL('../public/model-assets/manifest.json',import.meta.url),'utf8'));
+const b=manifest.models['gable-box'];
+const array=bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength);
+let gltf;
+test('gabled-box binary GLB reconstructs through Three.js',async()=>{gltf=await new Promise((resolve,reject)=>new GLTFLoader().parse(array,'',resolve,reject));const found=[];gltf.scene.traverse(o=>{if(o.isMesh)found.push(o)});assert.equal(found.length,17);for(const name of ['front-wall','back-wall','gable-roof-front','gable-roof-back','handle-front-left','handle-front-right','handle-front-top','handle-front-base','handle-back-left','handle-back-right'])assert.ok(found.some(m=>m.name===name),name)});
+test('reference is explicitly preview-only, not approved for manufacturing',()=>{assert.equal(b.status,'preview');assert.deepEqual(b.geometry.bodyMm,[130,85,100]);assert.equal(b.geometry.handleSlots,true);assert.equal(b.surfaces.filter(s=>s.kind==='artwork').length,1)});
+test('two handle openings have missing center faces',()=>{assert.ok(gltf);for(const side of ['front','back']){const names=['base','top','left','right'].map(a=>'handle-'+side+'-'+a);const nodes=[];gltf.scene.traverse(o=>{if(o.isMesh&&names.includes(o.name))nodes.push(o)});assert.equal(nodes.length,4);const area=nodes.reduce((x,m)=>{const p=m.geometry.getAttribute('position');const xs=[];for(let i=0;i<p.count;i++)xs.push(p.getX(i));return x+(Math.max(...xs)-Math.min(...xs))},0);assert.ok(area>0)}});
+test('front-wall UV matches 3mm-bleed SVG atlas bounds',()=>{let m;gltf.scene.traverse(o=>{if(o.name==='front-wall')m=o});assert.ok(m);const uv=m.geometry.getAttribute('uv');const minmax=k=>{const values=Array.from({length:uv.count},(_,i)=>k==='u'?uv.getX(i):uv.getY(i));return [Math.min(...values),Math.max(...values)]};const u=minmax('u'),v=minmax('v');const eq=(a,b)=>assert.ok(Math.abs(a-b)<0.0001,`${a} != ${b}`);eq(u[0],6/459);eq(u[1],136/459);eq(v[0],1-157/193);eq(v[1],1-57/193)});

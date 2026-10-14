@@ -43,6 +43,37 @@
         "diameterMm": 66.84507609859604,
         "nonParametric": true
       }
+    },
+    "gable-box": {
+      "modelId": "gable-box",
+      "glb": "/model-assets/gable-box/assembled.glb",
+      "status": "preview",
+      "surfaces": [
+        {
+          "surfaceId": "front-print",
+          "nodeName": "front-wall",
+          "panelId": "front",
+          "kind": "artwork",
+          "uvMode": "atlas"
+        },
+        {
+          "surfaceId": "gable-handle",
+          "nodeName": "handle-front-base",
+          "kind": "material"
+        }
+      ],
+      "geometry": {
+        "reference": "imported-svg",
+        "source": "/dielines-v2/GBL_gable-box.svg",
+        "bodyMm": [
+          130,
+          85,
+          100
+        ],
+        "handleSlots": true,
+        "nonParametric": true,
+        "referenceOnly": true
+      }
     }
   }
 }
