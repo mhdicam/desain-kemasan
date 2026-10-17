@@ -1,5 +1,7 @@
 // Desainview：Layerdaftar + berlapiskanvas + panel properti (Konten/Transformasi/selaras/Tipografi/Ukuran/Finishing/Susunan/Peringatan)
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { apparelPatternOf } from '../artwork/apparelSewingPatternData.js';
+import { ApparelPatternInspector } from './ApparelPatternInspector.jsx';
 import { store, useStore } from '../state/store.js';
 import { geomOf, creaseSegsOf } from '../dieline/geom.js';
 import { heroPanelOf } from '../dieline/hero.js';
@@ -14,6 +16,9 @@ import { packagingFallbackNote } from '../dieline/templateCatalog.js';
 
 export function DesignView() {
   const s = useStore();
+  const apparelPattern=apparelPatternOf(s.activeModelId||s.tpl);
+  const [showSewingMap,setShowSewingMap]=useState(!!apparelPattern);
+  useEffect(()=>setShowSewingMap(!!apparelPattern),[s.activeModelId,s.tpl]);
   const m = store.mat();
   const g = geomOf(s, m.t);
   const hero = heroPanelOf(g);
@@ -94,6 +99,7 @@ export function DesignView() {
   return (<>
     {fallbackNote && <div style={{ position: 'absolute', zIndex: 5, left: 260, right: 274, top: 58, background: '#fff8e6', border: '1px solid #ead7ad', borderRadius: 10, padding: '8px 11px', color: '#7a5818', fontSize: 12, fontWeight: 800, boxShadow: '0 8px 22px rgba(80,55,20,.12)' }}>Catatan jujur: {fallbackNote}</div>}
     <div style={{ width: 246, flex: 'none', background: '#faf7f0', borderRight: '1px solid #ded5c4', overflowY: 'auto', display: 'flex', flexDirection: 'column' }}>
+      {apparelPattern && <div style={{padding:'10px 14px',borderBottom:'1px solid #e4d6c4',background:'#fff4e4'}}><button type="button" onClick={()=>setShowSewingMap(v=>!v)} style={{...btnSt,width:'100%',background:'#9a5b1f',color:'#fff',fontWeight:800}}>{showSewingMap?'Kembali ke Canvas Artwork':'Pola & Pasangan Jahitan'}</button><div style={{fontSize:10,color:'#83613b',lineHeight:1.5,marginTop:6}}>Pola draft: part potong, nomor pasangan dan highlight ruas jahit. Bukan pola produksi tervalidasi.</div></div>}
       <Block>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 9 }}>
           <ST style={{ marginBottom: 0 }}>Layer</ST>
@@ -133,7 +139,7 @@ export function DesignView() {
       </div>
     </div>
 
-    <SheetCanvas view="design" g={g} onImageDrop={dropImages} />
+    {showSewingMap && apparelPattern ? <div style={{ flex: 1, minWidth: 0, position: 'relative' }}><ApparelPatternInspector modelId={s.activeModelId||s.tpl} pattern={apparelPattern} /></div> : <SheetCanvas view="design" g={g} onImageDrop={dropImages} />}
 
     <div style={{ width: 258, flex: 'none', background: '#faf7f0', borderLeft: '1px solid #ded5c4', overflowY: 'auto' }}>
       {!sel && <div style={{ padding: '20px 14px', fontSize: 12, color: '#8a8071', lineHeight: 1.7 }}>Belum ada layer dipilih. Klik elemen di kanvas atau daftar layer kiri untuk edit.</div>}
