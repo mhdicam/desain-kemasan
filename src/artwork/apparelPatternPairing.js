@@ -64,3 +64,32 @@ export function pieceCenter(p){
   return [(Math.min(...xs)+Math.max(...xs))/2+(p.sheetOffsetMm?.[0]||0),
     (Math.min(...ys)+Math.max(...ys))/2+(p.sheetOffsetMm?.[1]||0)];
 }
+
+// Explicit contour vertex ranges in the SOURCE DRAFT for T-shirt and Hoodie only.
+// These are NOT authored seam-edge IDs, and must be rechecked when source contours change.
+const BODY_SEAM_INDEX={
+  shoulder_L:[80,0],shoulder_R:[28,29],side_L:[55,56],side_R:[53,54]
+};
+function stitchSegment(pattern,ref){
+  if(!['tshirt-front','hoodie-mockup'].includes(pattern.modelId))return null;
+  if(!['front','back'].includes(ref.pieceKey))return null;
+  const inds=BODY_SEAM_INDEX[ref.edge];
+  if(!inds)return null;
+  const piece=pattern.patternPieces.find(p=>p.key===ref.pieceKey);
+  const contour=piece?.flatGeometryMm?.stitchContour;
+  // Fail closed if the legacy source contour has been regenerated.
+  if(!contour||contour.length!==81||contour[0][1]!==50||
+     contour[53][0]!==Math.max(...contour.map(p=>p[0]))||
+     contour[55][1]!==Math.max(...contour.map(p=>p[1])))return null;
+  const points=inds.map(i=>contour[i]);
+  const lengthMm=Math.hypot(points[0][0]-points[1][0],points[0][1]-points[1][1]);
+  return {pieceKey:ref.pieceKey,edge:ref.edge,points,offset:piece.sheetOffsetMm,lengthMm};
+}
+export function measuredStitchPair(pattern,relationship){
+  if(!pattern||!relationship||relationship.a.length!==1||relationship.b.length!==1)return null;
+  const a=stitchSegment(pattern,relationship.a[0]),b=stitchSegment(pattern,relationship.b[0]);
+  if(!a||!b)return null;
+  return {a,b,deltaMm:Math.abs(a.lengthMm-b.lengthMm),
+    geometricMatch:Math.abs(a.lengthMm-b.lengthMm)<=2,
+    source:'draft-stitchContour-segment',physicalQA:'NOT_VALIDATED'};
+}
